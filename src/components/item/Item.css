@@ -1,0 +1,23 @@
+.item {
+    padding: 2px;
+    width: 70px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: #E84C4C;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    overflow: hidden;
+    line-height: 12px;
+}
+
+.item:hover {
+    border-color: white;
+}
+
+.item-icon-box {
+    width: 65px;
+    height: 65px;
+}
+
