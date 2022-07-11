@@ -2,7 +2,7 @@ import Unit from "./Unit";
 import spearmanIcon from '../../icons/spearman.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 
-const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
+const Units: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     SPEARMAN: {
         id: 'SPEARMAN',
         icon: spearmanIcon,
@@ -15,6 +15,4 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     }
 }));
 
-UNITS.values()
-
-export default UNITS;
+export default Units;

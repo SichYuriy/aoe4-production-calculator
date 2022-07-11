@@ -1,0 +1,7 @@
+.units-count-management {
+    display: flex;
+}
+
+.units-count-management__item {
+    padding: 2px;
+}

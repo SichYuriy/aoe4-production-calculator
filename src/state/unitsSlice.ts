@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-interface UnitsState {
+export interface UnitsState {
     [key: string]: number
 }
 
@@ -37,5 +37,4 @@ export const unitsSlice = createSlice({
 });
 
 export const {toggle, increment, decrement} = unitsSlice.actions;
-
 export default unitsSlice.reducer;
