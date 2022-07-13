@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import unitsReducer from './state/unitsSlice'
+import unitsReducer from './state/UnitsSlice'
 
 export const store = configureStore({
     reducer: {

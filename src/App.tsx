@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Units from "./data/unit/Units";
+import UNITS from "./data/unit/Units";
 import UnitsRoster from "./components/units-roster/UnitsRoster";
 import ProductionCalculator from "./components/production-calculator/ProductionCalculator";
 import UnitsCountManagement from "./components/untis-count-management/UnitsCountManagement";
@@ -8,7 +8,7 @@ import UnitsCountManagement from "./components/untis-count-management/UnitsCount
 function App() {
     return (
         <div className={'app'}>
-            <UnitsRoster units={Array.from(Units.values())}/>
+            <UnitsRoster units={Array.from(UNITS.values())}/>
             <UnitsCountManagement/>
             <ProductionCalculator/>
         </div>

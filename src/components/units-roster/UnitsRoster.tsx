@@ -1,7 +1,7 @@
 import './units-roster.css'
 import Unit from "../../data/unit/Unit";
 import Item from "../item/Item";
-import {toggle} from "../../state/unitsSlice";
+import {toggle} from "../../state/UnitsSlice";
 import {useAppDispatch} from "../../hooks";
 
 function UnitsRoster(props: {units: Unit[]}) {

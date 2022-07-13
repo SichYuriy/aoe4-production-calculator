@@ -1,8 +1,8 @@
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {shallowEqual} from "react-redux";
 import ItemCounter from "../item-counter/ItemCounter";
-import {decrement, increment, UnitsState} from "../../state/unitsSlice";
-import Units from "../../data/unit/Units";
+import {decrement, increment, UnitsState} from "../../state/UnitsSlice";
+import UNITS from "../../data/unit/Units";
 import './units-count-management.css'
 
 function UnitsCountManagement() {
@@ -10,7 +10,7 @@ function UnitsCountManagement() {
     const selectedUnits: UnitsState = useAppSelector((rootState) => rootState.units, shallowEqual);
 
     let unitAndCountList = Object.entries(selectedUnits)
-        .map(([unitId, unitCount]) => ({unit: Units.get(unitId)!, count: unitCount}));
+        .map(([unitId, unitCount]) => ({unit: UNITS.get(unitId)!, count: unitCount}));
 
     return (
         <div className={'units-count-management'}>
