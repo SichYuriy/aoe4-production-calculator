@@ -1,23 +1,26 @@
 .item {
     padding: 2px;
     width: 70px;
-    height: 100px;
-    border: 1px solid black;
+    height: 107px;
     box-sizing: border-box;
-    background-color: #E84C4C;
+    background-color: #754e2f;
     text-align: center;
-    font-size: 12px;
-    color: white;
-    overflow: hidden;
-    line-height: 12px;
 }
 
 .item:hover {
-    border-color: white;
+    border: 1px solid white;
 }
 
 .item-icon-box {
     width: 65px;
     height: 65px;
+}
+
+.item-name-block {
+    color: white;
+    font-size: 12px;
+    overflow: hidden;
+    line-height: 15px;
+    text-overflow: ellipsis;
 }
 

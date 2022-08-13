@@ -14,16 +14,18 @@ function UnitsCountManagement() {
 
     return (
         <div className={'units-count-management'}>
-            {unitAndCountList.map(({unit, count}) =>
-                <div key={unit.id} className={'units-count-management__item'}>
-                    <ItemCounter name={unit.name}
-                                 icon={unit.icon}
-                                 count={count}
-                                 onIncrement={() => dispatch(increment(unit.id))}
-                                 onDecrement={() => dispatch(decrement(unit.id))}/>
-                </div>
-
-            )}
+            <div><h3>Production:</h3></div>
+            <div className={'counters-block'}>
+                {unitAndCountList.map(({unit, count}) =>
+                    <div key={unit.id} className={'counters-block__item'}>
+                        <ItemCounter name={unit.name}
+                                     icon={unit.icon}
+                                     count={count}
+                                     onIncrement={() => dispatch(increment(unit.id))}
+                                     onDecrement={() => dispatch(decrement(unit.id))}/>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

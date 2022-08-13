@@ -13,11 +13,14 @@ function UnitsRoster(props: {units: Unit[]}) {
 
     return (
         <div className={'units-roster'}>
-            {props.units.map(unit =>
-                <div key={unit.id} className={'units-roster__item'}>
-                    <Item icon={unit.icon} name={unit.name} onClick={() => handleUnitClick(unit)}/>
-                </div>
-            )}
+            <div><h3>Units:</h3></div>
+            <div className={'units-block'}>
+                {props.units.map(unit =>
+                    <div key={unit.id} className={'units-block__item'}>
+                        <Item icon={unit.icon} name={unit.name} onClick={() => handleUnitClick(unit)}/>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

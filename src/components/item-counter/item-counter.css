@@ -3,38 +3,39 @@
     justify-content: center;
     width: 70px;
     padding: 2px 0;
+    color: #f3dc8d;
 }
 
 .counter-minus {
-    border: 1px solid black;
+    border: 2px solid #f3dc8d;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     cursor: pointer;
 }
 
 .counter-minus:hover {
-    background-color: white;
+    background-color: black;
 }
 
 .counter-plus {
-    border: 1px solid black;
+    border: 2px solid #f3dc8d;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     cursor: pointer;
 }
 
 .counter-plus:hover {
-    background-color: white;
+    background-color: black;
 }
 
 .counter-count {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px solid #f3dc8d;
+    border-bottom: 2px solid #f3dc8d;
 }
 
 .counter-block {
     text-align: center;
-    background-color: gray;
+    /*background-color: gray;*/
     min-width: 15px;
 }
 
