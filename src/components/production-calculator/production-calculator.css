@@ -1,0 +1,16 @@
+.villagers-by-resources-block {
+    border: 2px solid #393e49;
+    background-color: #161a23;
+    width: 135px;
+    height: 165px;
+}
+
+.resource-villager-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resource-icon {
+    height: 40px;
+}

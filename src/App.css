@@ -5,3 +5,7 @@
     padding: 5px;
     border-bottom: 2px solid #f3dc8d;
 }
+
+.main-block:last-child {
+    border-bottom: none;
+}

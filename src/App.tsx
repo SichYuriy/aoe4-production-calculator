@@ -4,6 +4,9 @@ import UNITS from "./data/unit/Units";
 import UnitsRoster from "./components/units-roster/UnitsRoster";
 import ProductionCalculator from "./components/production-calculator/ProductionCalculator";
 import UnitsCountManagement from "./components/untis-count-management/UnitsCountManagement";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 function App() {
     return (
