@@ -8,6 +8,10 @@
 }
 
 .item:hover {
+    border: 2px solid white;
+}
+
+.selected-item {
     border: 1px solid white;
 }
 

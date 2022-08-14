@@ -12,7 +12,7 @@ type Props = {
 function ItemCounter(props: Props) {
     return (
         <div>
-            <Item icon={props.icon} name={props.name}/>
+            <Item icon={props.icon} name={props.name} selected={false}/>
             <div className={'counter'}>
                 <div onClick={props.onDecrement} className={'counter-minus counter-block'}>-</div>
                 <div className={'counter-count counter-block'}>{props.count}</div>
