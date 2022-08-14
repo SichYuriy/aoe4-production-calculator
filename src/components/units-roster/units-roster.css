@@ -1,13 +1,3 @@
-.units-roster {
-    border-bottom: 2px solid #f3dc8d;
-    padding: 5px;
-}
-
-.units-roster h3 {
-    color: #f3dc8d;
-    margin: 0;
-}
-
 .units-block {
     display: flex;
     flex-wrap: wrap;

@@ -12,7 +12,7 @@ function UnitsRoster(props: {units: Unit[]}) {
     }
 
     return (
-        <div className={'units-roster'}>
+        <div>
             <div><h3>Units:</h3></div>
             <div className={'units-block'}>
                 {props.units.map(unit =>

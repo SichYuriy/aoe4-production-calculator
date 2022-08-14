@@ -1,13 +1,3 @@
-.units-count-management {
-    padding: 5px;
-    border-bottom: 2px solid #f3dc8d;
-}
-
-.units-count-management h3 {
-    color: #f3dc8d;
-    margin: 0;
-}
-
 .counters-block {
     display: flex;
     flex-wrap: wrap;

@@ -13,7 +13,7 @@ function UnitsCountManagement() {
         .map(([unitId, unitCount]) => ({unit: UNITS.get(unitId)!, count: unitCount}));
 
     return (
-        <div className={'units-count-management'}>
+        <div>
             <div><h3>Production:</h3></div>
             <div className={'counters-block'}>
                 {unitAndCountList.map(({unit, count}) =>

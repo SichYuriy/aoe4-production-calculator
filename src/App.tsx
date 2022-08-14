@@ -8,9 +8,15 @@ import UnitsCountManagement from "./components/untis-count-management/UnitsCount
 function App() {
     return (
         <div className={'app'}>
-            <UnitsRoster units={Array.from(UNITS.values())}/>
-            <UnitsCountManagement/>
-            <ProductionCalculator/>
+            <div className={'main-block'}>
+                <UnitsRoster units={Array.from(UNITS.values())}/>
+            </div>
+            <div className={'main-block'}>
+                <UnitsCountManagement/>
+            </div>
+            <div className={'main-block'}>
+                <ProductionCalculator/>
+            </div>
         </div>
     );
 }
