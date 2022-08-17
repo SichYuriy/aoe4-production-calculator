@@ -11,13 +11,19 @@ config.autoAddCss = false
 function App() {
     return (
         <div className={'app'}>
-            <div className={'main-block'}>
+            <div className={'row-block content-container'}>
                 <UnitsRoster units={Array.from(UNITS.values())}/>
             </div>
-            <div className={'main-block'}>
-                <UnitsCountManagement/>
+            <div className={'row-block'}>
+                <div className={'column-block content-container units-count-management-block'}>
+                    <UnitsCountManagement/>
+                </div>
+                <div className={'column-block content-container'}>
+                </div>
+                <div className={'column-block content-container'}>
+                </div>
             </div>
-            <div className={'main-block'}>
+            <div className={'row-block content-container'}>
                 <ProductionCalculator/>
             </div>
         </div>

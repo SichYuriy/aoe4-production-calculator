@@ -1,11 +1,28 @@
 .app {
 }
 
-.main-block {
-    padding: 5px;
+.row-block {
+    display: flex;
     border-bottom: 2px solid #f3dc8d;
 }
 
-.main-block:last-child {
+.row-block:last-child {
     border-bottom: none;
 }
+
+.column-block {
+    border-right: 2px solid #f3dc8d;
+}
+
+.column-block:last-child {
+    border-right: none;
+}
+
+.content-container {
+    padding: 5px;
+}
+
+.units-count-management-block {
+    max-width: 370px;
+}
+
