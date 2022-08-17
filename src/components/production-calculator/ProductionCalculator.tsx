@@ -1,6 +1,5 @@
 import {useAppSelector} from "../../hooks";
 import serviceLocator from "../../application/ServiceLocator";
-import DEFAULT_GATHERING_RATES from "../../data/BaseGatheringRates";
 import foodIcon from "../../icons/food.png";
 import woodIcon from "../../icons/wood.png";
 import goldIcon from "../../icons/gold.png";
@@ -9,10 +8,13 @@ import './production-calculator.css'
 import VillagerCounter from "./villager-counter/VillagerCounter";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
+const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
 
 function ProductionCalculator() {
-    const selectedUnits = useAppSelector((rootState) => rootState.units);
-    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(DEFAULT_GATHERING_RATES, selectedUnits, [], [], []);
+    const selectedUnits = useAppSelector(rootState => rootState.units);
+    const foodSource = useAppSelector(rootState => rootState.foodSource.value);
+    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource);
+    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, [], [], []);
     return (
         <div className={'villagers-by-resources-block'}>
             <div className={'resource-villager-block'}>

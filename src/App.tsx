@@ -6,6 +6,7 @@ import ProductionCalculator from "./components/production-calculator/ProductionC
 import UnitsCountManagement from "./components/untis-count-management/UnitsCountManagement";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import FoodSourceSelector from "./components/food-source-selector/FoodSourceSelector";
 config.autoAddCss = false
 
 function App() {
@@ -23,8 +24,13 @@ function App() {
                 <div className={'column-block content-container'}>
                 </div>
             </div>
-            <div className={'row-block content-container'}>
-                <ProductionCalculator/>
+            <div className={'row-block'}>
+                <div className={'column-block content-container'}>
+                    <ProductionCalculator/>
+                </div>
+                <div className={'column-block content-container'}>
+                    <FoodSourceSelector/>
+                </div>
             </div>
         </div>
     );
