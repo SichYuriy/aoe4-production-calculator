@@ -5,11 +5,11 @@ import farmIcon from '../../icons/farm.png';
 import s from './food-source-selector.module.css'
 import FoodSource from "../../model/FoodSource";
 import {useAppDispatch, useAppSelector} from "../../hooks";
-import {changeFoodSource} from "../../state/FoodSourceSlice";
+import {changeFoodSource} from "../../state/GatheringRatesSlice";
 
 function FoodSourceSelector() {
     const dispatch = useAppDispatch();
-    const foodSource: FoodSource = useAppSelector((rootState) => rootState.foodSource.value);
+    const foodSource: FoodSource = useAppSelector((rootState) => rootState.gatheringRates.foodSource);
 
     function dispatchChange(event:any) {
         dispatch(changeFoodSource(event.target.value));

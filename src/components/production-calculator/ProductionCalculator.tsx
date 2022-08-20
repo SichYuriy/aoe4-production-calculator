@@ -12,8 +12,10 @@ const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
 
 function ProductionCalculator() {
     const selectedUnits = useAppSelector(rootState => rootState.units);
-    const foodSource = useAppSelector(rootState => rootState.foodSource.value);
-    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource);
+    const foodSource = useAppSelector(rootState => rootState.gatheringRates.foodSource);
+    const useCustomGatheringRates = useAppSelector(rootState => rootState.gatheringRates.useCustomGatheringRates);
+    const customGatheringRates = useAppSelector(rootState => rootState.gatheringRates.customGatheringRates);
+    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates);
     let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, [], [], []);
     return (
         <div className={s.villagersByResourcesBlock}>

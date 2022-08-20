@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import unitsReducer from './state/UnitsSlice'
-import foodSourceReducer from "./state/FoodSourceSlice";
+import gatheringRatesReducer from "./state/GatheringRatesSlice";
 
 export const store = configureStore({
     reducer: {
         units: unitsReducer,
-        foodSource: foodSourceReducer
+        gatheringRates: gatheringRatesReducer
     }
 })
 

@@ -16,3 +16,30 @@ th {
     border: 2px solid #393e49;
     padding: 0;
 }
+
+.disabled {
+    cursor: not-allowed;
+    color: #51545d;
+}
+
+input {
+    width: 35px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[disabled] {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: not-allowed;
+}

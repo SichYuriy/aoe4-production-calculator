@@ -7,7 +7,14 @@ import {
 } from "../data/BaseGatheringRates";
 
 class GatheringRatesService {
-    getGatheringRates(foodSource: FoodSource): GatheringRates {
+    getGatheringRates(foodSource: FoodSource, useCustomGatheringRates: boolean, customGatheringRates: GatheringRates): GatheringRates {
+        if (useCustomGatheringRates) {
+            return customGatheringRates;
+        }
+        return this.getCalculatedGatheringRates(foodSource);
+    }
+
+    getCalculatedGatheringRates(foodSource: FoodSource) {
         return {
             food: this.getFoodGatheringRate(foodSource),
             gold: BASE_GOLD_GATHERING_RATE,
