@@ -2,7 +2,7 @@ import sheepIcon from '../../icons/sheep.png';
 import berryIcon from '../../icons/berrybush.png';
 import deerIcon from '../../icons/deer.png';
 import farmIcon from '../../icons/farm.png';
-import './food-source-selector.css'
+import s from './food-source-selector.module.css'
 import FoodSource from "../../model/FoodSource";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {changeFoodSource} from "../../state/FoodSourceSlice";
@@ -17,23 +17,23 @@ function FoodSourceSelector() {
 
     return (
         <div>
-            <div className={'food-source-title'}><h3>Food source:</h3></div>
+            <div className={s.foodSourceTitle}><h3>Food source:</h3></div>
 
             <label>
                 <input type={'radio'} value={FoodSource.SHEEP} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.SHEEP}/>
-                <img src={sheepIcon} className={'food-source-radio-icon'} alt={'sheep'}/>
+                <img src={sheepIcon} className={s.foodSourceRadioIcon} alt={'sheep'}/>
             </label>
             <label>
                 <input type={'radio'} value={FoodSource.BERRY} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.BERRY}/>
-                <img src={berryIcon} className={'food-source-radio-icon'} alt={'berry'}/>
+                <img src={berryIcon} className={s.foodSourceRadioIcon} alt={'berry'}/>
             </label>
             <label>
                 <input type={'radio'} value={FoodSource.DEER} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.DEER}/>
-                <img src={deerIcon} className={'food-source-radio-icon'} alt={'deer'}/>
+                <img src={deerIcon} className={s.foodSourceRadioIcon} alt={'deer'}/>
             </label>
             <label>
                 <input type={'radio'} value={FoodSource.FARM} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.FARM}/>
-                <img src={farmIcon} className={'food-source-radio-icon'} alt={'farm'}/>
+                <img src={farmIcon} className={s.foodSourceRadioIcon} alt={'farm'}/>
             </label>
         </div>
     )

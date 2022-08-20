@@ -1,8 +1,8 @@
-.units-block {
+.unitsBlock {
     display: flex;
     flex-wrap: wrap;
 }
 
-.units-block__item {
+.unitsBlockItem {
     padding: 2px;
 }

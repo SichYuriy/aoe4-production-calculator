@@ -1,14 +1,14 @@
-import './villager-counter.css'
+import s from './villager-counter.module.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPerson} from '@fortawesome/free-solid-svg-icons'
 
 function VillagerCounter(props: { count: number }) {
     return (
-        <div className={'villager-counter' + (props.count > 0 ? ' villager-counter-box' : ' villager-counter-zero-box')}>
+        <div className={`${s.villagerCounter} ${props.count > 0 ? s.villagerCounterBox : s.villagerCounterZeroBox}`}>
             <div>
-                <FontAwesomeIcon icon={faPerson} className={'villager-icon'}/>
+                <FontAwesomeIcon icon={faPerson} className={s.villagerIcon}/>
             </div>
-            <div className={'villagers-count'}><span>{props.count}</span></div>
+            <div className={s.villagersCount}><span>{props.count}</span></div>
         </div>
     );
 }

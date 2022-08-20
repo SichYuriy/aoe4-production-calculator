@@ -1,4 +1,4 @@
-import './units-roster.css'
+import s from './units-roster.module.css'
 import Unit from "../../data/unit/Unit";
 import Item from "../item/Item";
 import {toggle, UnitsState} from "../../state/UnitsSlice";
@@ -15,9 +15,9 @@ function UnitsRoster(props: { units: Unit[] }) {
     return (
         <div>
             <div><h3>Units:</h3></div>
-            <div className={'units-block'}>
+            <div className={s.unitsBlock}>
                 {props.units.map(unit =>
-                    <div key={unit.id} className={'units-block__item'}>
+                    <div key={unit.id} className={s.unitsBlockItem}>
                         <Item icon={unit.icon}
                               name={unit.name}
                               onClick={() => handleUnitClick(unit)}

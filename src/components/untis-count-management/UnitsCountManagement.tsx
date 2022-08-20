@@ -2,7 +2,7 @@ import {useAppDispatch, useAppSelector} from "../../hooks";
 import ItemCounter from "../item-counter/ItemCounter";
 import {decrement, increment, UnitsState} from "../../state/UnitsSlice";
 import UNITS from "../../data/unit/Units";
-import './units-count-management.css'
+import s from './units-count-management.module.css'
 
 function UnitsCountManagement() {
     const dispatch = useAppDispatch();
@@ -12,11 +12,11 @@ function UnitsCountManagement() {
         .map(([unitId, unitCount]) => ({unit: UNITS.get(unitId)!, count: unitCount}));
 
     return (
-        <div>
+        <div className={s.unitsCountManagement}>
             <div><h3>Production:</h3></div>
-            <div className={'counters-block'}>
+            <div className={s.countersBlock}>
                 {unitAndCountList.map(({unit, count}) =>
-                    <div key={unit.id} className={'counters-block__item'}>
+                    <div key={unit.id} className={s.countersBlockItem}>
                         <ItemCounter name={unit.name}
                                      icon={unit.icon}
                                      count={count}

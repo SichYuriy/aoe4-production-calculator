@@ -6,36 +6,35 @@
     color: #f3dc8d;
 }
 
-.counter-minus {
+.counterMinus {
     border: 2px solid #f3dc8d;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     cursor: pointer;
 }
 
-.counter-minus:hover {
+.counterMinus:hover {
     background-color: black;
 }
 
-.counter-plus {
+.counterPlus {
     border: 2px solid #f3dc8d;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     cursor: pointer;
 }
 
-.counter-plus:hover {
+.counterPlus:hover {
     background-color: black;
 }
 
-.counter-count {
+.counterCount {
     border-top: 2px solid #f3dc8d;
     border-bottom: 2px solid #f3dc8d;
 }
 
-.counter-block {
+.counterBlock {
     text-align: center;
-    /*background-color: gray;*/
     min-width: 15px;
 }
 

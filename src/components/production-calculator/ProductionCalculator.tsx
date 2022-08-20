@@ -4,7 +4,7 @@ import foodIcon from "../../icons/food.png";
 import woodIcon from "../../icons/wood.png";
 import goldIcon from "../../icons/gold.png";
 import stoneIcon from "../../icons/stone.png";
-import './production-calculator.css'
+import s from './production-calculator.module.css'
 import VillagerCounter from "./villager-counter/VillagerCounter";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
@@ -16,18 +16,18 @@ function ProductionCalculator() {
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource);
     let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, [], [], []);
     return (
-        <div className={'villagers-by-resources-block'}>
-            <div className={'resource-villager-block'}>
-                <img src={foodIcon} alt='food' className={'resource-icon'}/><VillagerCounter count={villagerCost.foodVillagers}/>
+        <div className={s.villagersByResourcesBlock}>
+            <div className={s.resourceVillagerBlock}>
+                <img src={foodIcon} alt='food' className={s.resourceIcon}/><VillagerCounter count={villagerCost.foodVillagers}/>
             </div>
-            <div className={'resource-villager-block'}>
-                <img src={woodIcon} alt='wood' className={'resource-icon'}/><VillagerCounter count={villagerCost.woodVillagers}/>
+            <div className={s.resourceVillagerBlock}>
+                <img src={woodIcon} alt='wood' className={s.resourceIcon}/><VillagerCounter count={villagerCost.woodVillagers}/>
             </div>
-            <div className={'resource-villager-block'}>
-                <img src={goldIcon} alt='gold' className={'resource-icon'}/><VillagerCounter count={villagerCost.goldVillagers}/>
+            <div className={s.resourceVillagerBlock}>
+                <img src={goldIcon} alt='gold' className={s.resourceIcon}/><VillagerCounter count={villagerCost.goldVillagers}/>
             </div>
-            <div className={'resource-villager-block'}>
-                <img src={stoneIcon} alt='stone' className={'resource-icon'}/><VillagerCounter count={villagerCost.stoneVillagers}/>
+            <div className={s.resourceVillagerBlock}>
+                <img src={stoneIcon} alt='stone' className={s.resourceIcon}/><VillagerCounter count={villagerCost.stoneVillagers}/>
             </div>
         </div>
     );

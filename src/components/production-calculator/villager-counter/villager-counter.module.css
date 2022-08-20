@@ -1,28 +1,28 @@
-.villager-counter {
+.villagerCounter {
     padding: 7px;
     width: 50px;
     display: flex;
     gap: 5px;
 }
 
-.villager-counter-box {
+.villagerCounterBox {
     background-color: #282e3c;
     box-shadow: 3px 3px 2px 1px black;
 }
 
-.villager-counter-zero-box {
+.villagerCounterZeroBox {
     color: #51545d;
 }
 
-.villager-icon {
+.villagerIcon {
     font-size: 20px;
 }
 
-.villager-counter-box .villager-icon {
+.villagerCounterBox .villagerIcon {
     color: #d9cba1;
 }
 
-.villager-counter-box .villagers-count {
+.villagerCounterBox .villagersCount {
     color: white;
 }
 

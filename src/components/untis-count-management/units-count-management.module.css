@@ -1,0 +1,12 @@
+.unitsCountManagement {
+    min-width: 150px;
+}
+
+.countersBlock {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.countersBlockItem {
+    padding: 2px;
+}

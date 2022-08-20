@@ -11,16 +11,16 @@
     border: 2px solid white;
 }
 
-.selected-item {
+.selectedItem {
     border: 1px solid white;
 }
 
-.item-icon-box {
+.itemIconBox {
     width: 65px;
     height: 65px;
 }
 
-.item-name-block {
+.itemNameBlock {
     color: white;
     font-size: 12px;
     overflow: hidden;
