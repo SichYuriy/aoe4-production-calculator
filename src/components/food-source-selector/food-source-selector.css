@@ -16,3 +16,8 @@
 .food-source-title {
     padding-bottom: 3px;
 }
+
+.food-source-radio-icon {
+    width: 48px;
+    height: 48px;
+}

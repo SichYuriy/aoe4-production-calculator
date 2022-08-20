@@ -1,0 +1,18 @@
+.resourceIcon {
+    width: 48px;
+}
+
+table {
+    color: white;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 3px;
+    border: 2px solid #393e49;
+}
+
+th {
+    border: 2px solid #393e49;
+    padding: 0;
+}

@@ -26,3 +26,7 @@
     max-width: 370px;
 }
 
+hr {
+    border-top: 2px solid #f3dc8d;
+}
+
