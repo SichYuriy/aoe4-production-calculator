@@ -7,6 +7,11 @@ export interface GatheringRateModifierState {
     [key: string]: boolean
 }
 
+export interface UpdateSelectedModifierPayload {
+    unselect: string[],
+    select: string[]
+}
+
 const initialState: GatheringRateModifierState = Object.values(GATHERING_RATES_MODIFIERS)
     .reduce((state: GatheringRateModifierState, modifier) => {
         state[modifier.id] = false;
@@ -21,6 +26,10 @@ export const gatheringRateModifiers = createSlice({
         toggle: (state, action: PayloadAction<string>) => {
             let id: string = action.payload;
             state[id] = !state[id];
+        },
+        unselectSelect: (state, action: PayloadAction<UpdateSelectedModifierPayload>) => {
+            action.payload.unselect.forEach(id => state[id] = false);
+            action.payload.select.forEach(id => state[id] = true);
         }
     }
 });
@@ -31,5 +40,5 @@ export let selectActiveGatheringRateModifiers = (state: RootState): GatheringRat
         .map(id => GATHERING_RATES_MODIFIERS[id]);
 }
 
-export const {toggle} = gatheringRateModifiers.actions;
+export const {toggle, unselectSelect} = gatheringRateModifiers.actions;
 export default gatheringRateModifiers.reducer;

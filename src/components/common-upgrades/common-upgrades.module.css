@@ -1,3 +1,13 @@
 .upgradesBlock {
     padding-top: 5px;
 }
+
+.singleUpgrade {
+    padding: 1px;
+}
+
+.upgradesColumn {
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+}
