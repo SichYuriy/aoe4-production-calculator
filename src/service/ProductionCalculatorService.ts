@@ -1,7 +1,7 @@
 import GatheringRates from "../model/GatheringRates";
 import ProductionSpeedModifier from "../model/ProductionSpeedModifier";
 import ProductionVillagerCost from "../model/ProductionVillagerCost";
-import Unit from "../data/unit/Unit";
+import Unit from "../model/Unit";
 import UnitCostModifier from "../model/UnitCostModifier";
 import UNITS from "../data/unit/Units";
 

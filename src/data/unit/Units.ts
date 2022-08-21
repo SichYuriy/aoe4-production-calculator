@@ -1,4 +1,4 @@
-import Unit, {UnitCost} from "./Unit";
+import Unit, {UnitCost} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 import villagerIcon from '../../icons/villager.png'

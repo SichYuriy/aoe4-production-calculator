@@ -1,5 +1,5 @@
 import s from './units-roster.module.css'
-import Unit from "../../data/unit/Unit";
+import Unit from "../../model/Unit";
 import Item from "../item/Item";
 import {toggle, UnitsState} from "../../state/UnitsSlice";
 import {useAppDispatch, useAppSelector} from "../../hooks";

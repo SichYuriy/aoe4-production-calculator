@@ -1,4 +1,4 @@
-import Unit from "../data/unit/Unit";
+import Unit from "./Unit";
 
 export default interface ProductionSpeedModifier {
     canBeApplied: (unit: Unit) => boolean,
