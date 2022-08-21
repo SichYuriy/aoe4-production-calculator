@@ -6,8 +6,13 @@
     padding: 1px;
 }
 
+.upgradesRow {
+    display: flex;
+    gap: 10px;
+}
+
 .upgradesColumn {
     display: flex;
     flex-flow: column;
-    gap: 2px;
+    gap: 10px;
 }
