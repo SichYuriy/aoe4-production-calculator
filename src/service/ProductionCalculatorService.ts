@@ -1,5 +1,4 @@
 import GatheringRates from "../model/GatheringRates";
-import GatheringRateModifier from "../model/GatheringRateModifier";
 import ProductionSpeedModifier from "../model/ProductionSpeedModifier";
 import ProductionVillagerCost from "../model/ProductionVillagerCost";
 import Unit from "../data/unit/Unit";
@@ -9,15 +8,11 @@ import UNITS from "../data/unit/Units";
 class ProductionCalculatorService {
     calculateProductionVillagerCost(gatheringRates: GatheringRates,
                                     unitsSelected: { [key: string]: number },
-                                    gatheringRatesModifiers: GatheringRateModifier[],
                                     productionSpeedModifiers: ProductionSpeedModifier[],
                                     costModifiers: UnitCostModifier[]): ProductionVillagerCost {
-        let effectiveGatheringRates = gatheringRatesModifiers.reduce(
-            (previousRates, modifier) => modifier.apply(previousRates),
-            gatheringRates
-        );
+
         let villagersCost = Object.entries(unitsSelected)
-            .map(([unit, count]) => this.calculateProductionVillagerCostForUnit(effectiveGatheringRates, UNITS.get(unit)!, count, productionSpeedModifiers, costModifiers))
+            .map(([unit, count]) => this.calculateProductionVillagerCostForUnit(gatheringRates, UNITS.get(unit)!, count, productionSpeedModifiers, costModifiers))
             .reduce(
                 (previousValue, currentValue) => ({
                     foodVillagers: previousValue.foodVillagers + currentValue.foodVillagers,

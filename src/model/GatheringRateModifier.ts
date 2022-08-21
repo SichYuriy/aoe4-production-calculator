@@ -1,5 +1,7 @@
 import GatheringRates from "./GatheringRates";
+import FoodSource from "./FoodSource";
 
 export default interface GatheringRateModifier {
-    apply: (gatheringRates: GatheringRates) => GatheringRates;
+    id: string;
+    apply: (gatheringRates: GatheringRates, foodSource: FoodSource) => GatheringRates;
 }

@@ -1,0 +1,25 @@
+.item {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: #507866;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.item:hover {
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+.selectedItem {
+    border: 2px solid white;
+    opacity: 1;
+}
+
+.itemIconBox {
+    margin: auto;
+    width: 57px;
+    height: 57px;
+}
+

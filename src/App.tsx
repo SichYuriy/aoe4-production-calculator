@@ -8,6 +8,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import FoodSourceSelector from "./components/food-source-selector/FoodSourceSelector";
 import GatheringRatesManagement from "./components/gathering-rates/GatheringRatesManagement";
+import CommonUpgrades from "./components/common-upgrades/CommonUpgrades";
 config.autoAddCss = false
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                     <UnitsCountManagement/>
                 </div>
                 <div className={'column-block content-container'}>
+                    <CommonUpgrades/>
                 </div>
                 <div className={'column-block content-container'}>
                 </div>
