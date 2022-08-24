@@ -23,7 +23,7 @@ export const gatheringRateModifiers = createSlice({
     name: 'gatheringRateModifiers',
     initialState: initialState,
     reducers: {
-        toggle: (state, action: PayloadAction<string>) => {
+        toggleGatheringRateModifier: (state, action: PayloadAction<string>) => {
             let id: string = action.payload;
             state[id] = !state[id];
         },
@@ -40,5 +40,5 @@ export let selectActiveGatheringRateModifiers = (state: RootState): GatheringRat
         .map(id => GATHERING_RATES_MODIFIERS[id]);
 }
 
-export const {toggle, unselectSelect} = gatheringRateModifiers.actions;
+export const {toggleGatheringRateModifier, unselectSelect} = gatheringRateModifiers.actions;
 export default gatheringRateModifiers.reducer;

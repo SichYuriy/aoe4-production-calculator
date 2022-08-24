@@ -1,17 +1,17 @@
-export default class Unit {
-    public id: string;
-    public name: string;
-    public icon: any;
-    public productionTime: number;
-    public cost: UnitCost;
+export default interface Unit {
+    id: string;
+    name: string;
+    icon: any;
+    productionTime: number;
+    cost: UnitCost;
+    types: UnitType[];
+}
 
-    constructor(id: string, name: string, icon: any, productionTime: number, cost: UnitCost) {
-        this.id = id;
-        this.name = name;
-        this.icon = icon;
-        this.productionTime = productionTime;
-        this.cost = cost;
-    }
+export enum UnitType {
+    INFANTRY,
+    CAVALRY,
+    SIEGE,
+    TRANSPORT,
 }
 
 export class UnitCost {

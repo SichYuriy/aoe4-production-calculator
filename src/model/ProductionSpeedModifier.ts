@@ -1,6 +1,7 @@
 import Unit from "./Unit";
 
 export default interface ProductionSpeedModifier {
+    id: string,
     canBeApplied: (unit: Unit) => boolean,
-    apply: (currentProductionSpeed: number, unit: Unit) => number
+    apply: (currentProductionTime: number, unit: Unit) => number
 }

@@ -7,6 +7,7 @@ import stoneIcon from "../../icons/stone.png";
 import s from './production-calculator.module.css'
 import VillagerCounter from "./villager-counter/VillagerCounter";
 import {selectActiveGatheringRateModifiers} from "../../state/GatheringRateModifiersSlice";
+import {selectActiveProductionSpeedModifiers} from "../../state/ProducationSpeedModifiersSlice";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
@@ -17,8 +18,9 @@ function ProductionCalculator() {
     const useCustomGatheringRates = useAppSelector(rootState => rootState.gatheringRates.useCustomGatheringRates);
     const customGatheringRates = useAppSelector(rootState => rootState.gatheringRates.customGatheringRates);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
+    const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers);
-    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, [], []);
+    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, productionSpeedModifiers, []);
     return (
         <div className={s.villagersByResourcesBlock}>
             <div className={s.resourceVillagerBlock}>
