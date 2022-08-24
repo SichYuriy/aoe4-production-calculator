@@ -2,14 +2,16 @@ import { configureStore } from '@reduxjs/toolkit'
 import unitsReducer from './state/UnitsSlice'
 import gatheringRatesReducer from "./state/GatheringRatesSlice";
 import gatheringRateModifiersReducer from "./state/GatheringRateModifiersSlice";
-import productionSpeedModifiers from "./state/ProducationSpeedModifiersSlice";
+import productionSpeedModifiersReducer from "./state/ProducationSpeedModifiersSlice";
+import civilizationReducer from "./state/CivilizationSlice";
 
 export const store = configureStore({
     reducer: {
         units: unitsReducer,
         gatheringRates: gatheringRatesReducer,
         gatheringRateModifiers: gatheringRateModifiersReducer,
-        productionSpeedModifiers: productionSpeedModifiers
+        productionSpeedModifiers: productionSpeedModifiersReducer,
+        civilization: civilizationReducer
     }
 })
 
