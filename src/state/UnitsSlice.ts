@@ -11,7 +11,7 @@ export const unitsSlice = createSlice({
         toggle: (state, action: PayloadAction<string>) => {
             let unitId: string = action.payload;
             if (state[unitId] !== undefined) {
-                delete state[unitId];
+                state[unitId]++;
             } else {
                 state[unitId] = 1;
             }
