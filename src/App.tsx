@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import FoodSourceSelector from "./components/food-source-selector/FoodSourceSelector";
 import GatheringRatesManagement from "./components/gathering-rates/GatheringRatesManagement";
 import CommonUpgrades from "./components/common-upgrades/CommonUpgrades";
+import CivilizationSpecificFeatures from "./components/civilization-specific-feautres/CivilizationSpecificFeatures";
 config.autoAddCss = false
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <CommonUpgrades/>
                 </div>
                 <div className={'column-block content-container'}>
+                    <CivilizationSpecificFeatures/>
                 </div>
             </div>
             <div className={'row-block'}>
