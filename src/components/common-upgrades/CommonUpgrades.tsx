@@ -4,24 +4,24 @@ import wheelbarrowIcon from '../../icons/wheelbarrow.png';
 import forestryIcon from '../../icons/forestry.png';
 import militaryAcademyIcon from '../../icons/military-academy.png';
 import {toggleGatheringRateModifier} from "../../state/GatheringRateModifiersSlice";
-import {GATHERING_RATE_MODIFIERS_ID} from "../../data/AllGatheringRateModifiers";
 import s from './common-upgrades.module.css';
 import WoodUpgrades from "./wood-upgrades/WoodUpgrades";
 import FoodUpgrades from "./food-upgrades/FoodUpgrades";
 import GoldUpgrades from "./gold-upgrades/GoldUpgrades";
 import {toggleProductionSpeedModifier} from "../../state/ProducationSpeedModifiersSlice";
 import ProductionSpeedModifierId from "../../data/production-speed-modifiers/ProductionSpeedModifierId";
+import GatheringRateModifierId from "../../data/gathering-rate-modifiers/GatheringRateModifierId";
 
 function CommonUpgrades() {
     const dispatch = useAppDispatch();
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
     const productionSpeedModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.productionSpeedModifiers);
     let wheelbarrowItem =  <UpgradeItem icon={wheelbarrowIcon}
-                                        selected={gatheringRateModifiers[GATHERING_RATE_MODIFIERS_ID.WHEELBARROW]}
-                                        onClick={() => dispatch(toggleGatheringRateModifier(GATHERING_RATE_MODIFIERS_ID.WHEELBARROW))}/>
+                                        selected={gatheringRateModifiers[GatheringRateModifierId.WHEELBARROW]}
+                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WHEELBARROW))}/>
     let forestryItem =  <UpgradeItem icon={forestryIcon}
-                                        selected={gatheringRateModifiers[GATHERING_RATE_MODIFIERS_ID.FORESTRY]}
-                                        onClick={() => dispatch(toggleGatheringRateModifier(GATHERING_RATE_MODIFIERS_ID.FORESTRY))}/>
+                                        selected={gatheringRateModifiers[GatheringRateModifierId.FORESTRY]}
+                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.FORESTRY))}/>
     let militaryAcademyItem =  <UpgradeItem icon={militaryAcademyIcon}
                                      selected={productionSpeedModifiers[ProductionSpeedModifierId.MILITARY_ACADEMY]}
                                      onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.MILITARY_ACADEMY))}/>

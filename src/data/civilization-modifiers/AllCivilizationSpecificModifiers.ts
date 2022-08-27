@@ -1,25 +1,25 @@
-import CivilizationsEnum from "../CivilizationsEnum";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
-import {
-    DEFAULT_FRENCH_COST_MODIFIERS,
-    DEFAULT_FRENCH_PRODUCTION_SPEED_MODIFIERS,
-    FRENCH_COST_MODIFIERS,
-    FRENCH_PRODUCTION_SPEED_MODIFIERS
-} from "./FrenchModifiers";
 import CostModifierId from "../cost-modifiers/CostModifierId";
+import allCivilizationModifiers from "./AllCivilizationModifiersRegistry";
+import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 
-export const PRODUCTION_SPEED_MODIFIERS_DEFAULT: {[key:string]: ProductionSpeedModifierId[]} = {
-    [CivilizationsEnum.FRENCH]: DEFAULT_FRENCH_PRODUCTION_SPEED_MODIFIERS,
-}
+export const GATHERING_RATE_MODIFIERS_DEFAULT: {[key:string]: GatheringRateModifierId[]} = {};
+export const ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS: GatheringRateModifierId[] = [];
+export const PRODUCTION_SPEED_MODIFIERS_DEFAULT: {[key:string]: ProductionSpeedModifierId[]} = {};
+export const ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS: ProductionSpeedModifierId[] = [];
+export const COST_MODIFIERS_DEFAULT: {[key:string]: CostModifierId[]} = {};
+export const ALL_CIVILIZATIONS_COST_MODIFIERS: CostModifierId[] = [];
 
-export const ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS: ProductionSpeedModifierId[] = [
-    FRENCH_PRODUCTION_SPEED_MODIFIERS
-].flatMap(arr => arr);
+allCivilizationModifiers.forEach(civilizationModifiers => {
+    GATHERING_RATE_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultGatheringRateModifiers;
+    // @ts-ignore
+    ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS.push(...Object.keys(civilizationModifiers.allGatheringRateModifiers));
 
-export const COST_MODIFIERS_DEFAULT: {[key:string]: CostModifierId[]} = {
-    [CivilizationsEnum.FRENCH]: DEFAULT_FRENCH_COST_MODIFIERS
-};
+    PRODUCTION_SPEED_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultProductionSpeedModifiers;
+    // @ts-ignore
+    ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS.push(...Object.keys(civilizationModifiers.allProductionSpeedModifiers));
 
-export const ALL_CIVILIZATIONS_COST_MODIFIERS: CostModifierId[] = [
-    FRENCH_COST_MODIFIERS
-].flatMap(arr => arr);
+    COST_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultCostModifiers;
+    // @ts-ignore
+    ALL_CIVILIZATIONS_COST_MODIFIERS.push(...Object.keys(civilizationModifiers.allCostModifiers));
+})

@@ -1,10 +1,11 @@
 import UnitCostModifier from "../../model/UnitCostModifier";
-import CostModifierId from "./CostModifierId";
-import {enlistmentIncentives, frenchCastle} from "../civilization-modifiers/FrenchModifiers";
+import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationModifiersRegistry";
 
-const COST_MODIFIERS: { [key: string]: UnitCostModifier } = {
-    [CostModifierId.FRENCH_CASTLE]: frenchCastle,
-    [CostModifierId.ENLISTMENTS_INCENTIVES]: enlistmentIncentives
-}
+const COST_MODIFIERS: { [key: string]: UnitCostModifier } = {};
+
+allCivilizationModifiers.forEach(civilizationModifiers => {
+    Object.values(civilizationModifiers.allCostModifiers)
+        .forEach(modifier => COST_MODIFIERS[modifier.id] = modifier);
+});
 
 export default COST_MODIFIERS;

@@ -1,22 +1,19 @@
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import {UnitType} from "../../model/Unit";
-import {
-    frenchCastleAgeProductionSpeedModifier, frenchDarkAgeProductionSpeedModifier,
-    frenchFeudalAgeProductionSpeedModifier, frenchImperialAgeProductionSpeedModifier, schoolOfCavalry
-} from "../civilization-modifiers/FrenchModifiers";
 import ProductionSpeedModifierId from "./ProductionSpeedModifierId";
+import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationModifiersRegistry";
 
 const PRODUCTION_SPEED_MODIFIERS: { [key: string]: ProductionSpeedModifier } = {
     [ProductionSpeedModifierId.MILITARY_ACADEMY]: {
         id: ProductionSpeedModifierId.MILITARY_ACADEMY,
         canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
         apply: currentProductionTime => currentProductionTime * 0.75
-    },
-    [ProductionSpeedModifierId.FRENCH_DARK_AGE]: frenchDarkAgeProductionSpeedModifier,
-    [ProductionSpeedModifierId.FRENCH_FEUDAL_AGE]: frenchFeudalAgeProductionSpeedModifier,
-    [ProductionSpeedModifierId.FRENCH_CASTLE_AGE]: frenchCastleAgeProductionSpeedModifier,
-    [ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE]: frenchImperialAgeProductionSpeedModifier,
-    [ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]: schoolOfCavalry,
-}
+    }
+};
+
+allCivilizationModifiers.forEach(civilizationModifiers => {
+    Object.values(civilizationModifiers.allProductionSpeedModifiers)
+        .forEach(modifier => PRODUCTION_SPEED_MODIFIERS[modifier.id] = modifier);
+});
 
 export default PRODUCTION_SPEED_MODIFIERS;

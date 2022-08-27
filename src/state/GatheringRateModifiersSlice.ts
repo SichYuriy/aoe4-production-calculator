@@ -1,7 +1,12 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import GATHERING_RATES_MODIFIERS from "../data/AllGatheringRateModifiers";
+import GATHERING_RATES_MODIFIERS from "../data/gathering-rate-modifiers/AllGatheringRateModifiers";
 import {RootState} from "../store";
 import GatheringRateModifier from "../model/GatheringRateModifier";
+import changeCivilization from "./actions/CivilizationChnagedAction";
+import {
+    ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS,
+    GATHERING_RATE_MODIFIERS_DEFAULT
+} from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 
 export interface GatheringRateModifierState {
     [key: string]: boolean
@@ -31,6 +36,12 @@ export const gatheringRateModifiers = createSlice({
             action.payload.unselect.forEach(id => state[id] = false);
             action.payload.select.forEach(id => state[id] = true);
         }
+    },
+    extraReducers: builder => {
+        builder.addCase(changeCivilization, (state, action) => {
+            ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS.forEach(id => state[id] = false);
+            (GATHERING_RATE_MODIFIERS_DEFAULT[action.payload] || []).forEach(id => state[id] = true);
+        })
     }
 });
 

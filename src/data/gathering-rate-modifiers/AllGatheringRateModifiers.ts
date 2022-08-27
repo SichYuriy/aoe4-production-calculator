@@ -1,23 +1,11 @@
-import GatheringRateModifier from "../model/GatheringRateModifier";
-import FoodSource from "../model/FoodSource";
-
-export enum GATHERING_RATE_MODIFIERS_ID {
-    WHEELBARROW = 'WHEELBARROW',
-    DOUBLE_BROADAX = 'DOUBLE_BROADAX',
-    LUMBER_PRESERVATION = 'LUMBER_PRESERVATION',
-    CROSSCUT_SAW = 'CROSSCUT_SAW',
-    HORTICULTURE = 'HORTICULTURE',
-    FERTILIZATION = 'FERTILIZATION',
-    CROSS_BREEDING = 'CROSS_BREEDING',
-    SPECIALIZED_PICK = 'SPECIALIZED_PICK',
-    ACID_DISTILLATION = 'ACID_DISTILLATION',
-    CUPELLATION = 'CUPELLATION',
-    FORESTRY = 'FORESTRY'
-}
+import GatheringRateModifier from "../../model/GatheringRateModifier";
+import FoodSource from "../../model/FoodSource";
+import GatheringRateModifierId from "./GatheringRateModifierId";
+import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationModifiersRegistry";
 
 const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
-    [GATHERING_RATE_MODIFIERS_ID.WHEELBARROW]: {
-        id: GATHERING_RATE_MODIFIERS_ID.WHEELBARROW,
+    [GatheringRateModifierId.WHEELBARROW]: {
+        id: GatheringRateModifierId.WHEELBARROW,
         apply: (rates, foodSource) => {
             let foodMultiplier = [FoodSource.BERRY, FoodSource.DEER].includes(foodSource) ? 1.0952 : 1.01;
             return {
@@ -28,8 +16,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.DOUBLE_BROADAX]: {
-        id: GATHERING_RATE_MODIFIERS_ID.DOUBLE_BROADAX,
+    [GatheringRateModifierId.DOUBLE_BROADAX]: {
+        id: GatheringRateModifierId.DOUBLE_BROADAX,
         apply: rates => {
             return {
                 ...rates,
@@ -37,8 +25,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.LUMBER_PRESERVATION]: {
-        id: GATHERING_RATE_MODIFIERS_ID.LUMBER_PRESERVATION,
+    [GatheringRateModifierId.LUMBER_PRESERVATION]: {
+        id: GatheringRateModifierId.LUMBER_PRESERVATION,
         apply: rates => {
             return {
                 ...rates,
@@ -46,8 +34,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.CROSSCUT_SAW]: {
-        id: GATHERING_RATE_MODIFIERS_ID.CROSSCUT_SAW,
+    [GatheringRateModifierId.CROSSCUT_SAW]: {
+        id: GatheringRateModifierId.CROSSCUT_SAW,
         apply: rates => {
             return {
                 ...rates,
@@ -55,8 +43,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.HORTICULTURE]: {
-        id: GATHERING_RATE_MODIFIERS_ID.HORTICULTURE,
+    [GatheringRateModifierId.HORTICULTURE]: {
+        id: GatheringRateModifierId.HORTICULTURE,
         apply: rates => {
             return {
                 ...rates,
@@ -64,8 +52,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.FERTILIZATION]: {
-        id: GATHERING_RATE_MODIFIERS_ID.FERTILIZATION,
+    [GatheringRateModifierId.FERTILIZATION]: {
+        id: GatheringRateModifierId.FERTILIZATION,
         apply: rates => {
             return {
                 ...rates,
@@ -73,8 +61,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.CROSS_BREEDING]: {
-        id: GATHERING_RATE_MODIFIERS_ID.CROSS_BREEDING,
+    [GatheringRateModifierId.CROSS_BREEDING]: {
+        id: GatheringRateModifierId.CROSS_BREEDING,
         apply: rates => {
             return {
                 ...rates,
@@ -82,8 +70,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.SPECIALIZED_PICK]: {
-        id: GATHERING_RATE_MODIFIERS_ID.SPECIALIZED_PICK,
+    [GatheringRateModifierId.SPECIALIZED_PICK]: {
+        id: GatheringRateModifierId.SPECIALIZED_PICK,
         apply: rates => {
             return {
                 ...rates,
@@ -92,8 +80,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.ACID_DISTILLATION]: {
-        id: GATHERING_RATE_MODIFIERS_ID.ACID_DISTILLATION,
+    [GatheringRateModifierId.ACID_DISTILLATION]: {
+        id: GatheringRateModifierId.ACID_DISTILLATION,
         apply: rates => {
             return {
                 ...rates,
@@ -102,8 +90,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.CUPELLATION]: {
-        id: GATHERING_RATE_MODIFIERS_ID.CUPELLATION,
+    [GatheringRateModifierId.CUPELLATION]: {
+        id: GatheringRateModifierId.CUPELLATION,
         apply: rates => {
             return {
                 ...rates,
@@ -112,8 +100,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         }
     },
-    [GATHERING_RATE_MODIFIERS_ID.FORESTRY]: {
-        id: GATHERING_RATE_MODIFIERS_ID.FORESTRY,
+    [GatheringRateModifierId.FORESTRY]: {
+        id: GatheringRateModifierId.FORESTRY,
         apply: rates => {
             return {
                 ...rates,
@@ -122,5 +110,10 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
         }
     }
 }
+
+allCivilizationModifiers.forEach(civilizationModifiers => {
+    Object.values(civilizationModifiers.allGatheringRateModifiers)
+        .forEach(modifier => GATHERING_RATES_MODIFIERS[modifier.id] = modifier);
+});
 
 export default GATHERING_RATES_MODIFIERS;
