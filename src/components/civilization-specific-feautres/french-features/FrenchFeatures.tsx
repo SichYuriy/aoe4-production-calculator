@@ -5,6 +5,7 @@ import ProductionSpeedModifierId from "../../../data/production-speed-modifiers/
 import {toggleProductionSpeedModifier} from "../../../state/ProducationSpeedModifiersSlice";
 import schoolOfCavalryIcon from '../../../icons/school-of-cavalry.png';
 import s from './french-features.module.css';
+import FrenchCastles from "./french-castles/FrenchCastles";
 
 function FrenchFeatures() {
     const dispatch = useAppDispatch();
@@ -16,6 +17,7 @@ function FrenchFeatures() {
         <div className={s.frenchFeatures}>
             <FrenchAgeSelect/>
             {schoolOfCavalryItem}
+            <FrenchCastles/>
         </div>
     )
 }

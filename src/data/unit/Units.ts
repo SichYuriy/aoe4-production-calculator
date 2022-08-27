@@ -1,4 +1,4 @@
-import Unit, {UnitCost, UnitType} from "../../model/Unit";
+import Unit, {Building, UnitCost, UnitType} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 import villagerIcon from '../../icons/villager.png'
@@ -29,6 +29,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 20,
         cost: new UnitCost(50, 0, 0, 0),
         types: [],
+        building: null,
     },
     ARCHER: {
         id: 'ARCHER',
@@ -37,6 +38,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 15,
         cost: new UnitCost(30, 0, 50, 0),
         types: [UnitType.INFANTRY],
+        building: Building.ARCHERY
     },
     SPEARMAN: {
         id: 'SPEARMAN',
@@ -45,6 +47,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 15,
         cost: new UnitCost(60, 0, 20, 0),
         types: [UnitType.INFANTRY],
+        building: null
     },
     HORSEMAN: {
         id: 'HORSEMAN',
@@ -53,6 +56,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(100, 0, 20, 0),
         types: [UnitType.CAVALRY],
+        building: Building.STABLE
     },
     LANCER: {
         id: 'LANCER',
@@ -61,6 +65,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 35,
         cost: new UnitCost(140, 100, 0, 0),
         types: [UnitType.CAVALRY],
+        building: Building.STABLE
     },
     MAN_AT_ARMS: {
         id: 'MAN_AT_ARMS',
@@ -69,6 +74,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(100, 20, 0, 0),
         types: [UnitType.INFANTRY],
+        building: null
     },
     CROSSBOWMAN: {
         id: 'CROSSBOWMAN',
@@ -77,6 +83,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(80, 40, 0, 0),
         types: [UnitType.INFANTRY],
+        building: Building.ARCHERY
     },
     HANDCANNONEER: {
         id: 'HANDCANNONEER',
@@ -85,6 +92,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 35,
         cost: new UnitCost(120, 120, 0, 0),
         types: [UnitType.INFANTRY],
+        building: Building.ARCHERY
     },
     HORSE_ARCHER: {
         id: 'HORSE_ARCHER',
@@ -93,6 +101,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(80, 0, 40, 0),
         types: [UnitType.CAVALRY],
+        building: null
     },
     TRADER: {
         id: 'TRADER',
@@ -101,6 +110,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 35,
         cost: new UnitCost(0, 75, 75, 0),
         types: [],
+        building: null
     },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',
@@ -109,6 +119,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 35,
         cost: new UnitCost(180, 0, 60, 0),
         types: [UnitType.CAVALRY],
+        building: null
     },
     CAMEL_RIDER: {
         id: 'CAMEL_RIDER',
@@ -117,6 +128,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(180, 60, 0, 0),
         types: [UnitType.CAVALRY],
+        building: null
     },
     ZHUGE_NU: {
         id: 'ZHUGE_NU',
@@ -125,6 +137,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(60, 30, 30, 0),
         types: [UnitType.INFANTRY],
+        building: null
     },
     GRENADIER: {
         id: 'GRENADIER',
@@ -133,6 +146,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 30,
         cost: new UnitCost(120, 60, 60, 0),
         types: [UnitType.INFANTRY],
+        building: null
     },
     FIRE_LANCER: {
         id: 'FIRE_LANCER',
@@ -141,6 +155,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 22,
         cost: new UnitCost(80, 20, 20, 0),
         types: [UnitType.CAVALRY],
+        building: null
     },
     SCOUT: {
         id: 'SCOUT',
@@ -149,6 +164,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 25,
         cost: new UnitCost(60, 0, 0, 0),
         types: [UnitType.CAVALRY],
+        building: Building.STABLE
     },
     FISHING_BOAT: {
         id: 'FISHING_BOAT',
@@ -157,6 +173,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 25,
         cost: new UnitCost(0, 0, 60, 0),
         types: [],
+        building: null
     },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',
@@ -165,6 +182,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 60,
         cost: new UnitCost(0, 100, 300, 0),
         types: [UnitType.TRANSPORT],
+        building: null
     },
     DHOW: {
         id: 'DHOW',
@@ -173,6 +191,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 40,
         cost: new UnitCost(0, 90, 180, 0),
         types: [],
+        building: null
     },
     BAGHLAH: {
         id: 'BAGHLAH',
@@ -181,6 +200,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 45,
         cost: new UnitCost(0, 180, 240, 0),
         types: [],
+        building: null
     },
     IMPERIAL_OFFICIAL: {
         id: 'IMPERIAL_OFFICIAL',
@@ -189,6 +209,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 20,
         cost: new UnitCost(150, 0, 0, 0),
         types: [],
+        building: null
     }
 }));
 

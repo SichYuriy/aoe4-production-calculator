@@ -46,7 +46,7 @@ class ProductionCalculatorService {
         let effectiveCost = unitsCostModifiers
             .filter(modifier => modifier.canBeApplied(unit))
             .reduce(
-                (previousCost, modifier) => modifier.apply(previousCost, unit),
+                (previousCost, modifier) => modifier.apply(previousCost),
                 unit.cost
             );
 

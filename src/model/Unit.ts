@@ -5,6 +5,7 @@ export default interface Unit {
     productionTime: number;
     cost: UnitCost;
     types: UnitType[];
+    building: Building | null
 }
 
 export enum UnitType {
@@ -12,6 +13,11 @@ export enum UnitType {
     CAVALRY,
     SIEGE,
     TRANSPORT,
+}
+
+export enum Building {
+    STABLE,
+    ARCHERY
 }
 
 export class UnitCost {

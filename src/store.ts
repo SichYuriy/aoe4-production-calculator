@@ -3,6 +3,7 @@ import unitsReducer from './state/UnitsSlice'
 import gatheringRatesReducer from "./state/GatheringRatesSlice";
 import gatheringRateModifiersReducer from "./state/GatheringRateModifiersSlice";
 import productionSpeedModifiersReducer from "./state/ProducationSpeedModifiersSlice";
+import costModifiersReducer from "./state/CostModifiersSlice";
 import civilizationReducer from "./state/CivilizationSlice";
 
 export const store = configureStore({
@@ -11,7 +12,8 @@ export const store = configureStore({
         gatheringRates: gatheringRatesReducer,
         gatheringRateModifiers: gatheringRateModifiersReducer,
         productionSpeedModifiers: productionSpeedModifiersReducer,
-        civilization: civilizationReducer
+        costModifiers: costModifiersReducer,
+        civilization: civilizationReducer,
     }
 })
 

@@ -1,4 +1,4 @@
-import UpgradeGroup, {UpgradeGroupItem} from "../upgrade-group/UpgradeGroup";
+import UpgradeGroup, {UpgradeGroupItem, UpgradeType} from "../upgrade-group/UpgradeGroup";
 import GATHERING_RATES_MODIFIERS, {GATHERING_RATE_MODIFIERS_ID} from "../../../data/AllGatheringRateModifiers";
 import icon1 from '../../../icons/double-broadaxe.png';
 import icon2 from '../../../icons/lumber-preservation.png';
@@ -21,7 +21,7 @@ function WoodUpgrades() {
     ]
 
     return (
-        <UpgradeGroup items={items}/>
+        <UpgradeGroup items={items} type={UpgradeType.GATHERING_RATE}/>
     );
 }
 
