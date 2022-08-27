@@ -33,7 +33,7 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
     return (
         <div className={s.dropdown}>
             <Dropdown>
-                <Dropdown.Toggle variant="secondary">
+                <Dropdown.Toggle variant="secondary" className={s.toggle}>
                     <img className={s.civIcon} src={civilizations[props.selected].icon} alt={'flag'}/>
                 </Dropdown.Toggle>
                 <Dropdown.Menu variant="dark">
