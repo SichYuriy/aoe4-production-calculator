@@ -9,8 +9,8 @@ import s from './common-upgrades.module.css';
 import WoodUpgrades from "./wood-upgrades/WoodUpgrades";
 import FoodUpgrades from "./food-upgrades/FoodUpgrades";
 import GoldUpgrades from "./gold-upgrades/GoldUpgrades";
-import {PRODUCTION_SPEED_MODIFIERS_ID} from "../../data/AllProductionSpeedModifiers";
 import {toggleProductionSpeedModifier} from "../../state/ProducationSpeedModifiersSlice";
+import ProductionSpeedModifierId from "../../data/production-speed-modifiers/ProductionSpeedModifierId";
 
 function CommonUpgrades() {
     const dispatch = useAppDispatch();
@@ -23,8 +23,8 @@ function CommonUpgrades() {
                                         selected={gatheringRateModifiers[GATHERING_RATE_MODIFIERS_ID.FORESTRY]}
                                         onClick={() => dispatch(toggleGatheringRateModifier(GATHERING_RATE_MODIFIERS_ID.FORESTRY))}/>
     let militaryAcademyItem =  <UpgradeItem icon={militaryAcademyIcon}
-                                     selected={productionSpeedModifiers[PRODUCTION_SPEED_MODIFIERS_ID.MILITARY_ACADEMY]}
-                                     onClick={() => dispatch(toggleProductionSpeedModifier(PRODUCTION_SPEED_MODIFIERS_ID.MILITARY_ACADEMY))}/>
+                                     selected={productionSpeedModifiers[ProductionSpeedModifierId.MILITARY_ACADEMY]}
+                                     onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.MILITARY_ACADEMY))}/>
     return (
         <div>
             <div><h3>Upgrades:</h3></div>

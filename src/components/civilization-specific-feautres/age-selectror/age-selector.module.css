@@ -1,0 +1,20 @@
+.ageIconDiv {
+    border-radius: 50%;
+    border: 2px solid #f3dc8d;
+    color: #f3dc8d;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 30px;
+}
+
+label {
+    padding: 2px;
+    cursor: pointer;
+}
+
+[type=radio]:checked + div{
+    outline: 2px solid white;
+}

@@ -20,19 +20,19 @@ function FoodSourceSelector() {
             <div className={s.foodSourceTitle}><h3>Food source:</h3></div>
 
             <label>
-                <input type={'radio'} value={FoodSource.SHEEP} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.SHEEP}/>
+                <input type={'radio'} value={FoodSource.SHEEP} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.SHEEP}/>
                 <img src={sheepIcon} className={s.foodSourceRadioIcon} alt={'sheep'}/>
             </label>
             <label>
-                <input type={'radio'} value={FoodSource.BERRY} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.BERRY}/>
+                <input type={'radio'} value={FoodSource.BERRY} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.BERRY}/>
                 <img src={berryIcon} className={s.foodSourceRadioIcon} alt={'berry'}/>
             </label>
             <label>
-                <input type={'radio'} value={FoodSource.DEER} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.DEER}/>
+                <input type={'radio'} value={FoodSource.DEER} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.DEER}/>
                 <img src={deerIcon} className={s.foodSourceRadioIcon} alt={'deer'}/>
             </label>
             <label>
-                <input type={'radio'} value={FoodSource.FARM} name={'name-1'} onChange={dispatchChange} checked={foodSource === FoodSource.FARM}/>
+                <input type={'radio'} value={FoodSource.FARM} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.FARM}/>
                 <img src={farmIcon} className={s.foodSourceRadioIcon} alt={'farm'}/>
             </label>
         </div>
