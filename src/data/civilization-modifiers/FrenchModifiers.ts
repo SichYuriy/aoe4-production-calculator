@@ -1,12 +1,13 @@
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
-import Unit from "../../model/Unit";
+import Unit, {UnitType} from "../../model/Unit";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 
 export const FRENCH_PRODUCTION_SPEED_MODIFIERS = [
     ProductionSpeedModifierId.FRENCH_DARK_AGE,
     ProductionSpeedModifierId.FRENCH_FEUDAL_AGE,
     ProductionSpeedModifierId.FRENCH_CASTLE_AGE,
-    ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE
+    ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE,
+    ProductionSpeedModifierId.SCHOOL_OF_CAVALRY
 ]
 
 export const DEFAULT_FRENCH_PRODUCTION_SPEED_MODIFIERS = [
@@ -34,6 +35,12 @@ export const frenchCastleAgeProductionSpeedModifier: ProductionSpeedModifier = {
 export const frenchImperialAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
+    apply: (currentProductionTime: number) => currentProductionTime * 0.8
+}
+
+export const schoolOfCavalry: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.SCHOOL_OF_CAVALRY,
+    canBeApplied: (unit: Unit) => unit.types.includes(UnitType.CAVALRY),
     apply: (currentProductionTime: number) => currentProductionTime * 0.8
 }
 

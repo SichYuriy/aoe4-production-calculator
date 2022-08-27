@@ -4,6 +4,7 @@ enum ProductionSpeedModifierId {
     FRENCH_FEUDAL_AGE = 'FRENCH_FEUDAL_AGE',
     FRENCH_CASTLE_AGE = 'FRENCH_CASTLE_AGE',
     FRENCH_IMPERIAL_AGE = 'FRENCH_IMPERIAL_AGE',
+    SCHOOL_OF_CAVALRY = 'SCHOOL_OF_CAVALRY'
 }
 
 export default ProductionSpeedModifierId;

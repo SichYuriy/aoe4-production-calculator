@@ -2,7 +2,7 @@ import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import {UnitType} from "../../model/Unit";
 import {
     frenchCastleAgeProductionSpeedModifier, frenchDarkAgeProductionSpeedModifier,
-    frenchFeudalAgeProductionSpeedModifier, frenchImperialAgeProductionSpeedModifier
+    frenchFeudalAgeProductionSpeedModifier, frenchImperialAgeProductionSpeedModifier, schoolOfCavalry
 } from "../civilization-modifiers/FrenchModifiers";
 import ProductionSpeedModifierId from "./ProductionSpeedModifierId";
 
@@ -16,6 +16,7 @@ const PRODUCTION_SPEED_MODIFIERS: { [key: string]: ProductionSpeedModifier } = {
     [ProductionSpeedModifierId.FRENCH_FEUDAL_AGE]: frenchFeudalAgeProductionSpeedModifier,
     [ProductionSpeedModifierId.FRENCH_CASTLE_AGE]: frenchCastleAgeProductionSpeedModifier,
     [ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE]: frenchImperialAgeProductionSpeedModifier,
+    [ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]: schoolOfCavalry,
 }
 
 export default PRODUCTION_SPEED_MODIFIERS;
