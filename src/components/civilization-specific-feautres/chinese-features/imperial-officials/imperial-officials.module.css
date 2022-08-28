@@ -1,0 +1,11 @@
+.imperialOfficials {
+    display: flex;
+    gap: 5px;
+    color: #f3dc8d;
+    font-size: 30px;
+    flex-wrap: wrap;
+}
+
+.imperialOfficialIcon {
+    height: 60px;
+}

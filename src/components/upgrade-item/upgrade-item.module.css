@@ -5,6 +5,8 @@
     background-color: #507866;
     text-align: center;
     opacity: 0.9;
+    display: flex;
+    justify-content: center;
 }
 
 .item:hover {

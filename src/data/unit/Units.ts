@@ -173,7 +173,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 25,
         cost: new UnitCost(0, 0, 60, 0),
         types: [],
-        building: null
+        building: Building.DOCK
     },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',
@@ -182,7 +182,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 60,
         cost: new UnitCost(0, 100, 300, 0),
         types: [UnitType.TRANSPORT],
-        building: null
+        building: Building.DOCK
     },
     DHOW: {
         id: 'DHOW',
@@ -191,7 +191,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 40,
         cost: new UnitCost(0, 90, 180, 0),
         types: [],
-        building: null
+        building: Building.DOCK
     },
     BAGHLAH: {
         id: 'BAGHLAH',
@@ -200,7 +200,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         productionTime: 45,
         cost: new UnitCost(0, 180, 240, 0),
         types: [],
-        building: null
+        building: Building.DOCK
     },
     IMPERIAL_OFFICIAL: {
         id: 'IMPERIAL_OFFICIAL',

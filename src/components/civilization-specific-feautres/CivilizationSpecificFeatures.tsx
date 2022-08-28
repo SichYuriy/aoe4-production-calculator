@@ -3,13 +3,14 @@ import {useAppSelector} from "../../hooks";
 import CivilizationsEnum from "../../data/CivilizationsEnum";
 import FrenchFeatures from "./french-features/FrenchFeatures";
 import EnglishFeatures from "./english-featrues/EnglishFeatures";
+import ChineseFeatures from "./chinese-features/ChineseFeatures";
 
 function CivilizationSpecificFeatures() {
     const civilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
     let civilizationSpecificComponents = {
         [CivilizationsEnum.RANDOM]: () => <div/>,
         [CivilizationsEnum.ABBASID]: () => <div/>,
-        [CivilizationsEnum.CHINESE]: () => <div/>,
+        [CivilizationsEnum.CHINESE]: () => <ChineseFeatures/>,
         [CivilizationsEnum.HRE]: () => <div/>,
         [CivilizationsEnum.ENGLAND]: () => <EnglishFeatures/>,
         [CivilizationsEnum.DELHI]: () => <div/>,
