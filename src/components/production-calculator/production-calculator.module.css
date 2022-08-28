@@ -1,7 +1,7 @@
 .villagersByResourcesBlock {
     border: 2px solid #393e49;
     background-color: #161a23;
-    width: 135px;
+    width: 150px;
     height: 165px;
 }
 
@@ -13,4 +13,10 @@
 
 .resourceIcon {
     height: 40px;
+}
+
+.seePreciseNumbersInput {
+    padding-top: 10px;
+    color: #9daab2;
+    font-size: 15px;
 }

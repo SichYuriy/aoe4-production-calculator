@@ -24,10 +24,10 @@ class ProductionCalculatorService {
             );
 
         return {
-            foodVillagers: Math.ceil(villagersCost.foodVillagers),
-            goldVillagers: Math.ceil(villagersCost.goldVillagers),
-            woodVillagers: Math.ceil(villagersCost.woodVillagers),
-            stoneVillagers: Math.ceil(villagersCost.stoneVillagers),
+            foodVillagers: villagersCost.foodVillagers,
+            goldVillagers: villagersCost.goldVillagers,
+            woodVillagers: villagersCost.woodVillagers,
+            stoneVillagers: villagersCost.stoneVillagers,
         };
     }
 
