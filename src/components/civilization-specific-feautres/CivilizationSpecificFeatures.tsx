@@ -5,6 +5,7 @@ import FrenchFeatures from "./french-features/FrenchFeatures";
 import EnglishFeatures from "./english-featrues/EnglishFeatures";
 import ChineseFeatures from "./chinese-features/ChineseFeatures";
 import HreFeatures from "./hre-features/HreFeatures";
+import MongolsFeatures from "./mongols-features/MongolsFeatures";
 
 function CivilizationSpecificFeatures() {
     const civilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -16,7 +17,7 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.ENGLAND]: () => <EnglishFeatures/>,
         [CivilizationsEnum.DELHI]: () => <div/>,
         [CivilizationsEnum.FRENCH]: () => <FrenchFeatures/>,
-        [CivilizationsEnum.MONGOLS]: () => <div/>,
+        [CivilizationsEnum.MONGOLS]: () => <MongolsFeatures/>,
         [CivilizationsEnum.RUS]: () => <div/>,
     }
 
