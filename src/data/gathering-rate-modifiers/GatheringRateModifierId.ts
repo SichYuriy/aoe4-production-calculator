@@ -28,7 +28,8 @@ enum GatheringRateModifierId {
     GOLDEN_AGE_1 = 'GOLDEN_AGE_1',
     GOLDEN_AGE_2 = 'GOLDEN_AGE_2',
     GOLDEN_AGE_3 = 'GOLDEN_AGE_3',
-    AGRICULTURE = 'AGRICULTURE'
+    AGRICULTURE = 'AGRICULTURE',
+    IMPROVED_PROCESSING = 'IMPROVED_PROCESSING'
 }
 
 export default GatheringRateModifierId;

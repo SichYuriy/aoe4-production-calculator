@@ -72,12 +72,23 @@ const agriculture: GatheringRateModifier = {
         : gatheringRates
 }
 
+const improvedProcessing: GatheringRateModifier = {
+    id: GatheringRateModifierId.IMPROVED_PROCESSING,
+    apply: gatheringRates => ({
+        food: gatheringRates.food * 1.08,
+        wood: gatheringRates.wood * 1.08,
+        gold: gatheringRates.gold * 1.08,
+        stone: gatheringRates.stone * 1.08,
+    })
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries,
     [GatheringRateModifierId.GOLDEN_AGE_1]: goldenAgeTier1,
     [GatheringRateModifierId.GOLDEN_AGE_2]: goldenAgeTier2,
     [GatheringRateModifierId.GOLDEN_AGE_3]: goldenAgeTier3GatheringRate,
-    [GatheringRateModifierId.AGRICULTURE]: agriculture
+    [GatheringRateModifierId.AGRICULTURE]: agriculture,
+    [GatheringRateModifierId.IMPROVED_PROCESSING]: improvedProcessing
 }
 
 const PRODUCTION_SPEED_MODIFIERS = {

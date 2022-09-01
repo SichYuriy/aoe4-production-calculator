@@ -6,6 +6,7 @@ import {useAppDispatch, useAppSelector} from "../../../hooks";
 import UpgradeItem from "../../upgrade-item/UpgradeItem";
 import freshFoodIcon from "../../../icons/fresh-foodstuffs.png";
 import agricultureIcon from "../../../icons/agriculture.png";
+import improvedProcessing from "../../../icons/improved-processing.png";
 import CostModifierId from "../../../data/cost-modifiers/CostModifierId";
 import {toggleCostModifier} from "../../../state/CostModifiersSlice";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
@@ -22,6 +23,9 @@ function AbbasidFeatures() {
     let agricultureItem = <UpgradeItem icon={agricultureIcon}
                                        selected={gatheringRateModifiers[GatheringRateModifierId.AGRICULTURE]}
                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.AGRICULTURE))}/>
+    let improvedProcessingItem = <UpgradeItem icon={improvedProcessing}
+                                       selected={gatheringRateModifiers[GatheringRateModifierId.IMPROVED_PROCESSING]}
+                                       onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.IMPROVED_PROCESSING))}/>
 
     return (
         <div className={s.abbasidFeatures}>
@@ -31,6 +35,7 @@ function AbbasidFeatures() {
             <div className={s.upgradesRow}>
                 {freshFoodItem}
                 {agricultureItem}
+                {improvedProcessingItem}
             </div>
         </div>
     );
