@@ -3,3 +3,8 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.upgradesRow {
+    display: flex;
+    gap: 10px;
+}

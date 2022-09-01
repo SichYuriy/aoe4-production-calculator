@@ -55,6 +55,15 @@ const goldenAgeTier3ProductionSpeed: ProductionSpeedModifier = {
     apply: currentProductionTime => currentProductionTime * 0.8
 };
 
+const freshFood: UnitCostModifier = {
+    id: CostModifierId.FRESH_FOOD,
+    canBeApplied: unit => unit.id === 'VILLAGER',
+    apply: currentCost => ({
+        ...currentCost,
+        food: currentCost.food * 0.5
+    })
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries,
     [GatheringRateModifierId.GOLDEN_AGE_1]: goldenAgeTier1,
@@ -67,7 +76,8 @@ const PRODUCTION_SPEED_MODIFIERS = {
 }
 
 const COST_MODIFIERS = {
-    [CostModifierId.ABBASID_TRADER_DISCOUNT]: tradersDiscount
+    [CostModifierId.ABBASID_TRADER_DISCOUNT]: tradersDiscount,
+    [CostModifierId.FRESH_FOOD]: freshFood
 }
 
 const ABBASID_MODIFIERS: CivilizationModifiers = {
