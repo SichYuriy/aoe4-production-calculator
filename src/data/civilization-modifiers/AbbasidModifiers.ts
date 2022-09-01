@@ -17,7 +17,8 @@ const tradersDiscount: UnitCostModifier = {
         wood: currentCost.wood * 0.67,
         gold: currentCost.gold * 0.67,
         stone: currentCost.stone * 0.67,
-    })
+    }),
+    description: 'traderCost * 0.67'
 }
 
 const goldenAgeTier1: GatheringRateModifier = {
@@ -66,7 +67,8 @@ const freshFood: UnitCostModifier = {
     apply: currentCost => ({
         ...currentCost,
         food: currentCost.food * 0.5
-    })
+    }),
+    description: 'villagerCost * 0.5'
 }
 
 const agriculture: GatheringRateModifier = {

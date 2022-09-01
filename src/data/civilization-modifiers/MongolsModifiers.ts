@@ -20,7 +20,8 @@ const silverTreeCost: UnitCostModifier = {
     apply: currentCost => ({
         ...currentCost,
         gold: currentCost.gold * 0.5
-    })
+    }),
+    description: 'traderCost.gold * 0.5'
 }
 
 const steppeRedoubt: GatheringRateModifier = {

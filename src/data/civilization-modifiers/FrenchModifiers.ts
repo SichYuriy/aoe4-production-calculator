@@ -49,7 +49,8 @@ const frenchCastle: UnitCostModifier = {
         wood: currentCost.wood * 0.8,
         gold: currentCost.gold * 0.8,
         stone: currentCost.stone * 0.8,
-    })
+    }),
+    description: '[stableUnitCost, archeryUnitCost] * 0.8'
 }
 
 const enlistmentIncentives: UnitCostModifier = {
@@ -60,7 +61,8 @@ const enlistmentIncentives: UnitCostModifier = {
         wood: currentCost.wood * 0.95,
         gold: currentCost.gold * 0.95,
         stone: currentCost.stone * 0.95,
-    })
+    }),
+    description: '[stableUnitCost, archeryUnitCost] * 0.95'
 }
 
 const PRODUCTION_SPEED_MODIFIERS: {[key:string]: ProductionSpeedModifier} = {
