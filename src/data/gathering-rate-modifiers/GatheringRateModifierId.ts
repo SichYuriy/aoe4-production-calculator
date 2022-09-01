@@ -24,7 +24,10 @@ enum GatheringRateModifierId {
     BOUNTY_250 = 'BOUNTY_250',
     BOUNTY_500 = 'BOUNTY_500',
     WOODEN_FORTRESS = 'WOODEN_FORTRESS',
-    MUSLIM_BERRIES = 'MUSLIM_BERRIES'
+    MUSLIM_BERRIES = 'MUSLIM_BERRIES',
+    GOLDEN_AGE_1 = 'GOLDEN_AGE_1',
+    GOLDEN_AGE_2 = 'GOLDEN_AGE_2',
+    GOLDEN_AGE_3 = 'GOLDEN_AGE_3',
 }
 
 export default GatheringRateModifierId;

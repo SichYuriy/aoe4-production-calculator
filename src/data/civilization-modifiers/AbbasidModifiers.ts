@@ -4,6 +4,9 @@ import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateMo
 import {muslimBerries} from "./MuslimModifiers";
 import UnitCostModifier from "../../model/UnitCostModifier";
 import CostModifierId from "../cost-modifiers/CostModifierId";
+import GatheringRateModifier from "../../model/GatheringRateModifier";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 
 const tradersDiscount: UnitCostModifier = {
     id: CostModifierId.ABBASID_TRADER_DISCOUNT,
@@ -16,8 +19,51 @@ const tradersDiscount: UnitCostModifier = {
     })
 }
 
+const goldenAgeTier1: GatheringRateModifier = {
+    id: GatheringRateModifierId.GOLDEN_AGE_1,
+    apply: gatheringRates => ({
+        food: gatheringRates.food * 1.1,
+        wood: gatheringRates.wood * 1.1,
+        gold: gatheringRates.gold * 1.1,
+        stone: gatheringRates.stone * 1.1,
+    })
+};
+
+const goldenAgeTier2: GatheringRateModifier = {
+    id: GatheringRateModifierId.GOLDEN_AGE_2,
+    apply: gatheringRates => ({
+        food: gatheringRates.food * 1.1,
+        wood: gatheringRates.wood * 1.1,
+        gold: gatheringRates.gold * 1.1,
+        stone: gatheringRates.stone * 1.1,
+    })
+};
+
+const goldenAgeTier3GatheringRate: GatheringRateModifier = {
+    id: GatheringRateModifierId.GOLDEN_AGE_3,
+    apply: gatheringRates => ({
+        food: gatheringRates.food * 1.155,
+        wood: gatheringRates.wood * 1.155,
+        gold: gatheringRates.gold * 1.155,
+        stone: gatheringRates.stone * 1.155,
+    })
+};
+
+const goldenAgeTier3ProductionSpeed: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.GOLDEN_AGE_3,
+    canBeApplied: () => true,
+    apply: currentProductionTime => currentProductionTime * 0.8
+};
+
 const GATHERING_RATE_MODIFIERS = {
-    [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries
+    [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries,
+    [GatheringRateModifierId.GOLDEN_AGE_1]: goldenAgeTier1,
+    [GatheringRateModifierId.GOLDEN_AGE_2]: goldenAgeTier2,
+    [GatheringRateModifierId.GOLDEN_AGE_3]: goldenAgeTier3GatheringRate,
+}
+
+const PRODUCTION_SPEED_MODIFIERS = {
+    [ProductionSpeedModifierId.GOLDEN_AGE_3]: goldenAgeTier3ProductionSpeed
 }
 
 const COST_MODIFIERS = {
@@ -28,7 +74,7 @@ const ABBASID_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ABBASID,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [GatheringRateModifierId.MUSLIM_BERRIES],
-    allProductionSpeedModifiers: {},
+    allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ABBASID_TRADER_DISCOUNT]

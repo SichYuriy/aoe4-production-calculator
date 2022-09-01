@@ -1,0 +1,24 @@
+.goldenAgeItem {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goldenAgeItem img {
+    width: 48px;
+    height: 48px;
+}
+
+.goldenAgeItem.selected {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.goldenAgeItem:hover {
+    border: 3px solid white;
+}
+
