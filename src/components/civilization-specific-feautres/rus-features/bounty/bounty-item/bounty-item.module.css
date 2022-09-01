@@ -1,0 +1,29 @@
+.bountyItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 54px;
+    height: 74px;
+    justify-content: center;
+    align-items: center;
+    color: #f3dc8d;
+    border: 2px solid #f3dc8d;
+    box-sizing: border-box;
+}
+
+.bountyItem.selected {
+    border: 2px solid white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bountyItem:hover {
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.bountyItem img {
+    width: 48px;
+    height: 48px;
+}
