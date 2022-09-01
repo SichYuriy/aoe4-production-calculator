@@ -9,31 +9,36 @@ import CivilizationsEnum from "../CivilizationsEnum";
 const frenchDarkAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_DARK_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.9
+    apply: (currentProductionTime: number) => currentProductionTime * 0.9,
+    description: 'villagerTime * 0.9'
 }
 
 const frenchFeudalAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_FEUDAL_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.9
+    apply: (currentProductionTime: number) => currentProductionTime * 0.9,
+    description: 'villagerTime * 0.9'
 }
 
 const frenchCastleAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_CASTLE_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.85
+    apply: (currentProductionTime: number) => currentProductionTime * 0.85,
+    description: 'villagerTime * 0.85'
 }
 
 const frenchImperialAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.8
+    apply: (currentProductionTime: number) => currentProductionTime * 0.8,
+    description: 'villagerTime * 0.8'
 }
 
 const schoolOfCavalry: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SCHOOL_OF_CAVALRY,
     canBeApplied: (unit: Unit) => unit.types.includes(UnitType.CAVALRY),
-    apply: (currentProductionTime: number) => currentProductionTime * 0.8
+    apply: (currentProductionTime: number) => currentProductionTime * 0.8,
+    description: 'cavalryTime * 0.8'
 }
 
 const frenchCastle: UnitCostModifier = {

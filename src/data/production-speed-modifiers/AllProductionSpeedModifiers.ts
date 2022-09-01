@@ -7,7 +7,8 @@ const PRODUCTION_SPEED_MODIFIERS: { [key: string]: ProductionSpeedModifier } = {
     [ProductionSpeedModifierId.MILITARY_ACADEMY]: {
         id: ProductionSpeedModifierId.MILITARY_ACADEMY,
         canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-        apply: currentProductionTime => currentProductionTime * 0.75
+        apply: currentProductionTime => currentProductionTime * 0.75,
+        description: 'militaryTime * 0.75'
     }
 };
 

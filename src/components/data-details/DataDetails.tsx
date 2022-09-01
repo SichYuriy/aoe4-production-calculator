@@ -4,10 +4,12 @@ import UnitsDataDetails from "./units-data-details/UnitsDataDetails";
 import {useAppSelector} from "../../hooks";
 import {selectActiveGatheringRateModifiers} from "../../state/GatheringRateModifiersSlice";
 import ModifierDetails from "./modifier-details/ModifierDetails";
+import {selectActiveProductionSpeedModifiers} from "../../state/ProducationSpeedModifiersSlice";
 
 function DataDetails() {
     const [seeDataDetails, setSeeDataDetails] = useState(false);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
+    const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
 
 
     return (
@@ -23,6 +25,9 @@ function DataDetails() {
                 </div>
                 <div>
                   <ModifierDetails modifiersLabel={'Gathering rates:'} items={gatheringRateModifiers}/>
+                </div>
+                <div>
+                  <ModifierDetails modifiersLabel={'Production time:'} items={productionSpeedModifiers}/>
                 </div>
               </div>
             }

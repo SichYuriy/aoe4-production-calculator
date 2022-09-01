@@ -15,7 +15,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 stone: rates.stone * 1.07
             };
         },
-        description: '[berries, deer] * 1.0952, other food * 1.01, [wood, gold, stone] * 1.01'
+        description: '[berries, deer] * 1.0952, other food * 1.01, [wood, gold, stone] * 1.07'
     },
     [GatheringRateModifierId.DOUBLE_BROADAX]: {
         id: GatheringRateModifierId.DOUBLE_BROADAX,

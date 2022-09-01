@@ -10,7 +10,8 @@ import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateMo
 const silverTreeProductionSpeed: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SILVER_TREE,
     canBeApplied: unit => unit.id === 'TRADER',
-    apply: currentProductionTime => currentProductionTime * 0.5
+    apply: currentProductionTime => currentProductionTime * 0.5,
+    description: 'traderTime * 0.5'
 }
 
 const silverTreeCost: UnitCostModifier = {
