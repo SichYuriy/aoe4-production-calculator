@@ -14,7 +14,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 gold: rates.gold * 1.07,
                 stone: rates.stone * 1.07
             };
-        }
+        },
+        description: '[berries, deer] * 1.0952, other food * 1.01, [wood, gold, stone] * 1.01'
     },
     [GatheringRateModifierId.DOUBLE_BROADAX]: {
         id: GatheringRateModifierId.DOUBLE_BROADAX,
@@ -23,7 +24,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 wood: rates.wood * 1.1
             };
-        }
+        },
+        description: 'wood * 1.1'
     },
     [GatheringRateModifierId.LUMBER_PRESERVATION]: {
         id: GatheringRateModifierId.LUMBER_PRESERVATION,
@@ -32,7 +34,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 wood: rates.wood * 1.09
             };
-        }
+        },
+        description: 'wood * 1.09'
     },
     [GatheringRateModifierId.CROSSCUT_SAW]: {
         id: GatheringRateModifierId.CROSSCUT_SAW,
@@ -41,7 +44,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 wood: rates.wood * 1.08
             };
-        }
+        },
+        description: 'wood * 1.08'
     },
     [GatheringRateModifierId.HORTICULTURE]: {
         id: GatheringRateModifierId.HORTICULTURE,
@@ -50,7 +54,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 food: rates.food * 1.12
             };
-        }
+        },
+        description: 'food * 1.12'
     },
     [GatheringRateModifierId.FERTILIZATION]: {
         id: GatheringRateModifierId.FERTILIZATION,
@@ -59,7 +64,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 food: rates.food * 1.1
             };
-        }
+        },
+        description: 'food * 1.1'
     },
     [GatheringRateModifierId.CROSS_BREEDING]: {
         id: GatheringRateModifierId.CROSS_BREEDING,
@@ -68,7 +74,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 food: rates.food * 1.1
             };
-        }
+        },
+        description: 'food * 1.1'
     },
     [GatheringRateModifierId.SPECIALIZED_PICK]: {
         id: GatheringRateModifierId.SPECIALIZED_PICK,
@@ -78,7 +85,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 gold: rates.gold * 1.12,
                 stone: rates.stone * 1.12,
             };
-        }
+        },
+        description: '[gold, stone] * 1.11'
     },
     [GatheringRateModifierId.ACID_DISTILLATION]: {
         id: GatheringRateModifierId.ACID_DISTILLATION,
@@ -88,7 +96,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 gold: rates.gold * 1.11,
                 stone: rates.stone * 1.11,
             };
-        }
+        },
+        description: '[gold, stone] * 1.11'
     },
     [GatheringRateModifierId.CUPELLATION]: {
         id: GatheringRateModifierId.CUPELLATION,
@@ -98,7 +107,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 gold: rates.gold * 1.1,
                 stone: rates.stone * 1.1,
             };
-        }
+        },
+        description: '[gold, stone] * 1.1'
     },
     [GatheringRateModifierId.FORESTRY]: {
         id: GatheringRateModifierId.FORESTRY,
@@ -107,7 +117,8 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 ...rates,
                 wood: rates.wood * 1.04
             };
-        }
+        },
+        description: 'wood * 1.04'
     }
 }
 

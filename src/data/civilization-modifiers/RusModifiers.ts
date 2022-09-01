@@ -8,7 +8,8 @@ const bounty100: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         food: gatheringRates.food * 1.03
-    })
+    }),
+    description: 'food * 1.03'
 }
 
 const bounty250: GatheringRateModifier = {
@@ -16,7 +17,8 @@ const bounty250: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         food: gatheringRates.food * 1.07
-    })
+    }),
+    description: 'food * 1.07'
 }
 
 const bounty500: GatheringRateModifier = {
@@ -24,7 +26,8 @@ const bounty500: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         food: gatheringRates.food * 1.11
-    })
+    }),
+    description: 'food * 1.11'
 }
 
 const woodenFortress: GatheringRateModifier = {
@@ -32,7 +35,8 @@ const woodenFortress: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         wood: gatheringRates.wood * 1.2
-    })
+    }),
+    description: 'wood * 1.2'
 }
 
 const GATHERING_RATE_MODIFIERS = {

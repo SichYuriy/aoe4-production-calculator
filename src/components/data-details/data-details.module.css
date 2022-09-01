@@ -1,4 +1,19 @@
 .dataDetails {
-  padding: 5px;
-  color: #9daab2;;
+    padding: 5px;
+    color: #9daab2;
+    text-wrap: normal;
+}
+
+.detailsRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unitsDetailsBlock {
+    /*width: 280px;*/
+}
+
+.detailsRow > div {
+    border: 1px solid #9daab2;
+    padding: 10px;
 }

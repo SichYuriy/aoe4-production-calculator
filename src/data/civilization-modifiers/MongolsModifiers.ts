@@ -27,7 +27,8 @@ const steppeRedoubt: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         gold: gatheringRates.gold * 1.5
-    })
+    }),
+    description: 'gold * 1.5'
 }
 
 const GATHERING_RATE_MODIFIERS = {

@@ -8,6 +8,7 @@ function UnitsDataDetails() {
 
     return (
         <div>
+            <div>Units:</div>
             {units.map(unit =>
                 <div key={unit.id}>{unit.id}: ({unit.cost.food}, {unit.cost.wood}, {unit.cost.gold}) {unit.productionTime}s</div>
             )}

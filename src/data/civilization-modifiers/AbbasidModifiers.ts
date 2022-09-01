@@ -27,7 +27,8 @@ const goldenAgeTier1: GatheringRateModifier = {
         wood: gatheringRates.wood * 1.1,
         gold: gatheringRates.gold * 1.1,
         stone: gatheringRates.stone * 1.1,
-    })
+    }),
+    description: 'gatheringRate * 1.1'
 };
 
 const goldenAgeTier2: GatheringRateModifier = {
@@ -37,7 +38,8 @@ const goldenAgeTier2: GatheringRateModifier = {
         wood: gatheringRates.wood * 1.1,
         gold: gatheringRates.gold * 1.1,
         stone: gatheringRates.stone * 1.1,
-    })
+    }),
+    description: 'gatheringRate * 1.1'
 };
 
 const goldenAgeTier3GatheringRate: GatheringRateModifier = {
@@ -47,7 +49,8 @@ const goldenAgeTier3GatheringRate: GatheringRateModifier = {
         wood: gatheringRates.wood * 1.155,
         gold: gatheringRates.gold * 1.155,
         stone: gatheringRates.stone * 1.155,
-    })
+    }),
+    description: 'gatheringRate * 1.155'
 };
 
 const goldenAgeTier3ProductionSpeed: ProductionSpeedModifier = {
@@ -69,7 +72,8 @@ const agriculture: GatheringRateModifier = {
     id: GatheringRateModifierId.AGRICULTURE,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? ({...gatheringRates, food: gatheringRates.food * 1.1})
-        : gatheringRates
+        : gatheringRates,
+    description: 'farm * 1.1'
 }
 
 const improvedProcessing: GatheringRateModifier = {
@@ -79,7 +83,8 @@ const improvedProcessing: GatheringRateModifier = {
         wood: gatheringRates.wood * 1.08,
         gold: gatheringRates.gold * 1.08,
         stone: gatheringRates.stone * 1.08,
-    })
+    }),
+    description: 'gatheringRate * 1.08'
 }
 
 const GATHERING_RATE_MODIFIERS = {

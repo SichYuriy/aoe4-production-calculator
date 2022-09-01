@@ -24,7 +24,8 @@ const foodImperialOfficial: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         food: gatheringRates.food * 1.2
-    })
+    }),
+    description: 'food * 1.2'
 }
 
 const woodImperialOfficial: GatheringRateModifier = {
@@ -32,7 +33,8 @@ const woodImperialOfficial: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         wood: gatheringRates.wood * 1.2
-    })
+    }),
+    description: 'wood * 1.2'
 }
 
 const goldImperialOfficial: GatheringRateModifier = {
@@ -40,7 +42,8 @@ const goldImperialOfficial: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         gold: gatheringRates.gold * 1.2
-    })
+    }),
+    description: 'gold * 1.2'
 }
 
 const stoneImperialOfficial: GatheringRateModifier = {
@@ -48,14 +51,16 @@ const stoneImperialOfficial: GatheringRateModifier = {
     apply: gatheringRates => ({
         ...gatheringRates,
         stone: gatheringRates.stone * 1.2
-    })
+    }),
+    description: 'stone * 1.2'
 }
 
 const granary: GatheringRateModifier = {
     id: GatheringRateModifierId.GRANARY,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {...gatheringRates, food: gatheringRates.food * 1.12}
-        : gatheringRates
+        : gatheringRates,
+    description: 'farm * 1.12'
 }
 
 
