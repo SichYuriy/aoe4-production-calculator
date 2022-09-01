@@ -7,6 +7,7 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
+import FoodSource from "../../model/FoodSource";
 
 const tradersDiscount: UnitCostModifier = {
     id: CostModifierId.ABBASID_TRADER_DISCOUNT,
@@ -64,11 +65,19 @@ const freshFood: UnitCostModifier = {
     })
 }
 
+const agriculture: GatheringRateModifier = {
+    id: GatheringRateModifierId.AGRICULTURE,
+    apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
+        ? ({...gatheringRates, food: gatheringRates.food * 1.1})
+        : gatheringRates
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries,
     [GatheringRateModifierId.GOLDEN_AGE_1]: goldenAgeTier1,
     [GatheringRateModifierId.GOLDEN_AGE_2]: goldenAgeTier2,
     [GatheringRateModifierId.GOLDEN_AGE_3]: goldenAgeTier3GatheringRate,
+    [GatheringRateModifierId.AGRICULTURE]: agriculture
 }
 
 const PRODUCTION_SPEED_MODIFIERS = {
