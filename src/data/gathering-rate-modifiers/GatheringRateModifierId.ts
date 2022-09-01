@@ -22,7 +22,8 @@ enum GatheringRateModifierId {
     STEPPE_REDOUBT = 'STEPPE_REDOUBT',
     BOUNTY_100 = 'BOUNTY_100',
     BOUNTY_250 = 'BOUNTY_250',
-    BOUNTY_500 = 'BOUNTY_500'
+    BOUNTY_500 = 'BOUNTY_500',
+    WOODEN_FORTRESS = 'WOODEN_FORTRESS'
 }
 
 export default GatheringRateModifierId;
