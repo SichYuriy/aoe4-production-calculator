@@ -10,6 +10,7 @@ import FoodSourceSelector from "./components/food-source-selector/FoodSourceSele
 import GatheringRatesManagement from "./components/gathering-rates/GatheringRatesManagement";
 import CommonUpgrades from "./components/common-upgrades/CommonUpgrades";
 import CivilizationSpecificFeatures from "./components/civilization-specific-feautres/CivilizationSpecificFeatures";
+import DataDetails from "./components/data-details/DataDetails";
 config.autoAddCss = false
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
                     <hr/>
                     <GatheringRatesManagement/>
                 </div>
+            </div>
+            <div className={'row-block'}>
+                <DataDetails/>
             </div>
         </div>
     );
