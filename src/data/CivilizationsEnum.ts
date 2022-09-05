@@ -1,13 +1,13 @@
 enum CivilizationsEnum {
-    RANDOM,
-    ABBASID,
-    CHINESE,
-    HRE,
-    ENGLAND,
-    DELHI,
-    FRENCH,
-    MONGOLS,
-    RUS
+    RANDOM = 'RANDOM',
+    ABBASID = 'ABBASID',
+    CHINESE = 'CHINESE',
+    HRE = 'HRE',
+    ENGLAND = 'ENGLAND',
+    DELHI = 'DELHI',
+    FRENCH = 'FRENCH',
+    MONGOLS = 'MONGOLS',
+    RUS = 'RUS'
 }
 
 export default CivilizationsEnum;

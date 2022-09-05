@@ -9,26 +9,35 @@ import MongolsFeatures from "./mongols-features/MongolsFeatures";
 import RusFeatures from "./rus-features/RusFeatures";
 import DelhiFeatures from "./delhi-features/DelhiFeatures";
 import AbbasidFeatures from "./abbasid-features/AbbasidFeatures";
+import shared from '../../shared.module.css'
 
 function CivilizationSpecificFeatures() {
-    const civilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
-    let civilizationSpecificComponents = {
-        [CivilizationsEnum.RANDOM]: () => <div/>,
-        [CivilizationsEnum.ABBASID]: () => <AbbasidFeatures/>,
-        [CivilizationsEnum.CHINESE]: () => <ChineseFeatures/>,
-        [CivilizationsEnum.HRE]: () => <HreFeatures/>,
-        [CivilizationsEnum.ENGLAND]: () => <EnglishFeatures/>,
-        [CivilizationsEnum.DELHI]: () => <DelhiFeatures/>,
-        [CivilizationsEnum.FRENCH]: () => <FrenchFeatures/>,
-        [CivilizationsEnum.MONGOLS]: () => <MongolsFeatures/>,
-        [CivilizationsEnum.RUS]: () => <RusFeatures/>,
-    }
+    const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
+    let civilizationSpecificComponents: Map<CivilizationsEnum, any> = new Map<CivilizationsEnum, any>([
+        [CivilizationsEnum.RANDOM, <div/>],
+        [CivilizationsEnum.ABBASID, <AbbasidFeatures/>],
+        [CivilizationsEnum.CHINESE, <ChineseFeatures/>],
+        [CivilizationsEnum.HRE, <HreFeatures/>],
+        [CivilizationsEnum.ENGLAND, <EnglishFeatures/>],
+        [CivilizationsEnum.DELHI, <DelhiFeatures/>],
+        [CivilizationsEnum.FRENCH, <FrenchFeatures/>],
+        [CivilizationsEnum.MONGOLS, <MongolsFeatures/>],
+        [CivilizationsEnum.RUS, <RusFeatures/>],
+    ]);
+    let components: any[] = [];
+    civilizationSpecificComponents.forEach((component, civilization) => {
+        components.push(
+            <div key={civilization} className={civilization === selectedCivilization ? '' : shared.hidden}>
+                {component}
+            </div>
+        )
+    });
 
     return (
         <div>
             <div><h3>Civilization:</h3></div>
             <GlobalCivilizationSelect/>
-            {civilizationSpecificComponents[civilization]()}
+            {components}
         </div>
     )
 }
