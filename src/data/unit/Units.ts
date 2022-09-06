@@ -3,6 +3,13 @@ import spearmanIcon from '../../icons/spearman.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 import villagerIcon from '../../icons/villager.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
+import mangudaiIcon from '../../icons/mangudai.png'
+import springaldIcon from '../../icons/springald.png'
+import mangonelIcon from '../../icons/mangonel.png'
+import counterweightTrebuchetIcon from '../../icons/counterweight-trebuchet.png'
+import tractionTrebuchetIcon from '../../icons/traction-trebuchet.png'
+import nestOfBeesIcon from '../../icons/nest-of-bees.png'
+import bombardIcon from '../../icons/bombard.png'
 import scoutIcon from '../../icons/scout.png'
 import fishingBoatIcon from '../../icons/fishing-boat.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
@@ -103,6 +110,15 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: null
     },
+    MANGUDAI: {
+        id: 'MANGUDAI',
+        icon: mangudaiIcon,
+        name: 'mangudai',
+        productionTime: 30,
+        cost: new UnitCost(120, 40, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.ARCHERY
+    },
     TRADER: {
         id: 'TRADER',
         icon: traderIcon,
@@ -174,6 +190,60 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 0, 60, 0),
         types: [],
         building: Building.DOCK
+    },
+    SPRINGALD: {
+        id: 'SPRINGALD',
+        icon: springaldIcon,
+        name: 'springald',
+        productionTime: 30,
+        cost: new UnitCost(0, 250, 250, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
+    },
+    MANGONEL: {
+        id: 'MANGONEL',
+        icon: mangonelIcon,
+        name: 'mangonel',
+        productionTime: 40,
+        cost: new UnitCost(0, 200, 400, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
+    },
+    NEST_OF_BEES: {
+        id: 'NEST_OF_BEES',
+        icon: nestOfBeesIcon,
+        name: 'nest of bees',
+        productionTime: 40,
+        cost: new UnitCost(0, 300, 300, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
+    },
+    COUNTERWEIGHT_TREBUCHET: {
+        id: 'COUNTERWEIGHT_TREBUCHET',
+        icon: counterweightTrebuchetIcon,
+        name: 'counterweight trebuchet',
+        productionTime: 40,
+        cost: new UnitCost(0, 250, 500, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
+    },
+    TRACTION_TREBUCHET: {
+        id: 'TRACTION_TREBUCHET',
+        icon: tractionTrebuchetIcon,
+        name: 'traction trebuchet',
+        productionTime: 35,
+        cost: new UnitCost(0, 150, 400, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
+    },
+    BOMBARD: {
+        id: 'BOMBARD',
+        icon: bombardIcon,
+        name: 'bombard',
+        productionTime: 45,
+        cost: new UnitCost(0, 600, 400, 0),
+        types: [UnitType.SIEGE],
+        building: Building.SIEGE_WORKSHOP
     },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',

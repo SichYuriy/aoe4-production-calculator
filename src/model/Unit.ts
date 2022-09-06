@@ -18,7 +18,8 @@ export enum UnitType {
 export enum Building {
     STABLE,
     ARCHERY,
-    DOCK
+    DOCK,
+    SIEGE_WORKSHOP
 }
 
 export class UnitCost {
