@@ -49,33 +49,24 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
     },
     [GatheringRateModifierId.HORTICULTURE]: {
         id: GatheringRateModifierId.HORTICULTURE,
-        apply: rates => {
-            return {
-                ...rates,
-                food: rates.food * 1.12
-            };
-        },
-        description: 'food * 1.12'
+        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
+            ? ({...rates, food: rates.food * 1.12})
+            : rates,
+        description: '[sheep, berry, farm] * 1.12'
     },
     [GatheringRateModifierId.FERTILIZATION]: {
         id: GatheringRateModifierId.FERTILIZATION,
-        apply: rates => {
-            return {
-                ...rates,
-                food: rates.food * 1.1
-            };
-        },
-        description: 'food * 1.1'
+        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
+            ? ({...rates, food: rates.food * 1.1})
+            : rates,
+        description: '[sheep, berry, farm] * 1.1'
     },
     [GatheringRateModifierId.CROSS_BREEDING]: {
         id: GatheringRateModifierId.CROSS_BREEDING,
-        apply: rates => {
-            return {
-                ...rates,
-                food: rates.food * 1.1
-            };
-        },
-        description: 'food * 1.1'
+        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
+            ? ({...rates, food: rates.food * 1.1})
+            : rates,
+        description: '[sheep, berry, farm] * 1.1'
     },
     [GatheringRateModifierId.SPECIALIZED_PICK]: {
         id: GatheringRateModifierId.SPECIALIZED_PICK,
