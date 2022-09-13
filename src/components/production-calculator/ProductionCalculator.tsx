@@ -51,7 +51,7 @@ function ProductionCalculator() {
                 </div>
             </div>
             <div className={s.seePreciseNumbersInput}>
-                <input type={'checkbox'} checked={seePreciseNumbers} onChange={e => setSeePreciseNumbers(e.target.checked)}/>See faction
+                <input type={'checkbox'} checked={seePreciseNumbers} onChange={e => setSeePreciseNumbers(e.target.checked)}/>See fractions
             </div>
         </div>
     );
