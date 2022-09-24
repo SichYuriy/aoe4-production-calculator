@@ -3,13 +3,20 @@ import Unit from "../../model/Unit";
 import Item from "../item/Item";
 import {toggle, UnitsState} from "../../state/UnitsSlice";
 import {useAppDispatch, useAppSelector} from "../../hooks";
+import CivilizationsEnum from "../../data/CivilizationsEnum";
+import shared from '../../shared.module.css';
 
 function UnitsRoster(props: { units: Unit[] }) {
     const dispatch = useAppDispatch();
     const selectedUnits: UnitsState = useAppSelector((rootState) => rootState.units);
+    const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
 
     function handleUnitClick(unit: Unit) {
         dispatch(toggle(unit.id));
+    }
+
+    function availableByCivilization(unit: Unit): boolean {
+        return selectedCivilization === CivilizationsEnum.RANDOM || unit.civilizations.includes(selectedCivilization);
     }
 
     return (
@@ -17,7 +24,7 @@ function UnitsRoster(props: { units: Unit[] }) {
             <div><h3>Units:</h3></div>
             <div className={s.unitsBlock}>
                 {props.units.map(unit =>
-                    <div key={unit.id} className={s.unitsBlockItem}>
+                    <div key={unit.id} className={`${s.unitsBlockItem} ${availableByCivilization(unit) ? '' : shared.hidden}`}>
                         <Item icon={unit.icon}
                               name={unit.name}
                               onClick={() => handleUnitClick(unit)}

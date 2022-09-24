@@ -1,3 +1,5 @@
+import CivilizationsEnum from "../data/CivilizationsEnum";
+
 export default interface Unit {
     id: string;
     name: string;
@@ -5,7 +7,8 @@ export default interface Unit {
     productionTime: number;
     cost: UnitCost;
     types: UnitType[];
-    building: Building | null
+    building: Building | null,
+    civilizations: CivilizationsEnum[]
 }
 
 export enum UnitType {
