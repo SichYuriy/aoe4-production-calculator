@@ -1,0 +1,21 @@
+.modalBody {
+    background-color: #282e3c;
+    padding: 15px;
+    border: 1px solid #f3dc8d;
+    box-shadow: 3px 3px 2px 1px black;
+    color: #f3dc8d;
+    border-radius: 5px;
+}
+
+.modalLink {
+    cursor: pointer;
+}
+
+.closeButton {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}

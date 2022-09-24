@@ -1,0 +1,40 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin:0;
+}
+
+.rowBlock {
+    display: flex;
+    border-bottom: 2px solid #f3dc8d;
+}
+
+.rowBlock:last-child {
+    border-bottom: none;
+}
+
+.columnBlock {
+    border-right: 2px solid #f3dc8d;
+}
+
+.columnBlock:last-child {
+    border-right: none;
+}
+
+.contentContainer {
+    padding: 5px;
+}
+
+.unitsCountManagementBlock {
+    max-width: 315px;
+}
+
+hr {
+    border-top: 2px solid #f3dc8d;
+}
+
+.footer {
+    margin-top: auto;
+}
+

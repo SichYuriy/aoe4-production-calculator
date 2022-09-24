@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './app.module.css';
 import UNITS from "./data/unit/Units";
 import UnitsRoster from "./components/units-roster/UnitsRoster";
 import ProductionCalculator from "./components/production-calculator/ProductionCalculator";
@@ -11,38 +11,41 @@ import GatheringRatesManagement from "./components/gathering-rates/GatheringRate
 import CommonUpgrades from "./components/common-upgrades/CommonUpgrades";
 import CivilizationSpecificFeatures from "./components/civilization-specific-feautres/CivilizationSpecificFeatures";
 import DataDetails from "./components/data-details/DataDetails";
+import Footer from "./components/footer/Footer";
+import s from './app.module.css';
 config.autoAddCss = false
 
 function App() {
     return (
-        <div className={'app'}>
-            <div className={'row-block content-container'}>
+        <div className={s.app}>
+            <div className={`${s.rowBlock} ${s.contentContainer}`}>
                 <UnitsRoster units={Array.from(UNITS.values())}/>
             </div>
-            <div className={'row-block'}>
-                <div className={'column-block content-container units-count-management-block'}>
+            <div className={s.rowBlock}>
+                <div className={`${s.columnBlock} ${s.contentContainer} ${s.unitsCountManagementBlock}`}>
                     <UnitsCountManagement/>
                 </div>
-                <div className={'column-block content-container'}>
+                <div className={`${s.columnBlock} ${s.contentContainer}`}>
                     <CommonUpgrades/>
                 </div>
-                <div className={'column-block content-container'}>
+                <div className={`${s.columnBlock} ${s.contentContainer}`}>
                     <CivilizationSpecificFeatures/>
                 </div>
             </div>
-            <div className={'row-block'}>
-                <div className={'column-block content-container'}>
+            <div className={s.rowBlock}>
+                <div className={`${s.columnBlock} ${s.contentContainer}`}>
                     <ProductionCalculator/>
                 </div>
-                <div className={'column-block content-container'}>
+                <div className={`${s.columnBlock} ${s.contentContainer}`}>
                     <FoodSourceSelector/>
                     <hr/>
                     <GatheringRatesManagement/>
                 </div>
             </div>
-            <div className={'row-block'}>
+            <div className={s.rowBlock}>
                 <DataDetails/>
             </div>
+            <div className={s.footer}><Footer/></div>
         </div>
     );
 }
