@@ -18,16 +18,16 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         }
     }
 
-    let civilizations: { [key: string]: { id: CivilizationsEnum, icon: string } } = {
-        [CivilizationsEnum.RANDOM]: {id: CivilizationsEnum.RANDOM, icon: randomFlagIcon},
-        [CivilizationsEnum.ABBASID]: {id: CivilizationsEnum.ABBASID, icon: abbasidFlagIcon},
-        [CivilizationsEnum.CHINESE]: {id: CivilizationsEnum.CHINESE, icon: chineseFlagIcon},
-        [CivilizationsEnum.HRE]: {id: CivilizationsEnum.HRE, icon: hreFlagIcon},
-        [CivilizationsEnum.ENGLAND]: {id: CivilizationsEnum.ENGLAND, icon: englandFlagIcon},
-        [CivilizationsEnum.DELHI]: {id: CivilizationsEnum.DELHI, icon: delhiFlagIcon},
-        [CivilizationsEnum.FRENCH]: {id: CivilizationsEnum.FRENCH, icon: frenchFlagIcon},
-        [CivilizationsEnum.MONGOLS]: {id: CivilizationsEnum.MONGOLS, icon: mongolsFlagIcon},
-        [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon}
+    let civilizations: { [key: string]: { id: CivilizationsEnum, icon: string, name: string } } = {
+        [CivilizationsEnum.RANDOM]: {id: CivilizationsEnum.RANDOM, icon: randomFlagIcon, name: ''},
+        [CivilizationsEnum.ABBASID]: {id: CivilizationsEnum.ABBASID, icon: abbasidFlagIcon, name: 'Abbasid Dynasty'},
+        [CivilizationsEnum.CHINESE]: {id: CivilizationsEnum.CHINESE, icon: chineseFlagIcon, name: 'Chinese'},
+        [CivilizationsEnum.HRE]: {id: CivilizationsEnum.HRE, icon: hreFlagIcon, name: 'Holy Roman Empire'},
+        [CivilizationsEnum.ENGLAND]: {id: CivilizationsEnum.ENGLAND, icon: englandFlagIcon, name: 'English'},
+        [CivilizationsEnum.DELHI]: {id: CivilizationsEnum.DELHI, icon: delhiFlagIcon, name: 'Delhi Sultanate'},
+        [CivilizationsEnum.FRENCH]: {id: CivilizationsEnum.FRENCH, icon: frenchFlagIcon, name: 'French'},
+        [CivilizationsEnum.MONGOLS]: {id: CivilizationsEnum.MONGOLS, icon: mongolsFlagIcon, name: 'Mongols'},
+        [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'}
     }
 
     return (
@@ -41,7 +41,7 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
                         <Dropdown.Item onClick={() => handleNewCivSelect(civilization.id)}
                                        key={civilization.id}
                                        active={civilization.id === props.selected}>
-                            <img className={s.civIcon} src={civilization.icon} alt={'flag'}/>
+                            <span><img className={s.itemIcon} src={civilization.icon} alt={'flag'}/> {civilization.name}</span>
                         </Dropdown.Item>
                     )}
                 </Dropdown.Menu>

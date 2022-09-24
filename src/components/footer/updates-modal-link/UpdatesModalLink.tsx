@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li>[24 Sept 2022] Reduced civilizations dropdown size to contain more civs in the future</li>
                         <li>[24 Sept 2022] Added updates modal</li>
                     </ul>
                 </Modal.Body>

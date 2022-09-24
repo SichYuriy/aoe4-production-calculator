@@ -11,3 +11,12 @@
     border: none;
     box-shadow: none;
 }
+
+.itemIcon {
+    width: 25px;
+    height: 14px;
+}
+
+span {
+    color: #c4ccd0;
+}
