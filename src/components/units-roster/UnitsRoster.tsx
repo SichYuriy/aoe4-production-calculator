@@ -16,7 +16,8 @@ function UnitsRoster(props: { units: Unit[] }) {
     }
 
     function availableByCivilization(unit: Unit): boolean {
-        return selectedCivilization === CivilizationsEnum.RANDOM || unit.civilizations.includes(selectedCivilization);
+        return (selectedCivilization === CivilizationsEnum.RANDOM && unit.common)
+            || unit.civilizations.includes(selectedCivilization);
     }
 
     return (

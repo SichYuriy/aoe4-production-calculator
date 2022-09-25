@@ -20,10 +20,13 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
-                        <li>[24 Sept 2022] Added streltsy unit</li>
-                        <li>[24 Sept 2022] Added unit filter by selected civilization</li>
-                        <li>[24 Sept 2022] Reduced civilizations dropdown size to contain more civs in the future</li>
-                        <li>[24 Sept 2022] Added updates modal</li>
+                        <li><span>[25 Sept 2022]</span> Show only common units without civilization selected</li>
+                        <li><span>[25 Sept 2022]</span> Fix: longbowman cost (40, 50) differs from archer cost (30, 50)</li>
+                        <li><span>[25 Sept 2022]</span> Added units: arbaletrier, knight, landsknecht, longbowman, royal knight, tower war elephant, war elephant, palace guard</li>
+                        <li><span>[24 Sept 2022]</span> Added streltsy unit</li>
+                        <li><span>[24 Sept 2022]</span> Added unit filter by selected civilization</li>
+                        <li><span>[24 Sept 2022]</span> Reduced civilizations dropdown size to contain more civs in the future</li>
+                        <li><span>[24 Sept 2022]</span> Added updates modal</li>
                     </ul>
                 </Modal.Body>
             </Modal>

@@ -8,7 +8,8 @@ export default interface Unit {
     cost: UnitCost;
     types: UnitType[];
     building: Building | null,
-    civilizations: CivilizationsEnum[]
+    civilizations: CivilizationsEnum[],
+    common: boolean
 }
 
 export enum UnitType {
