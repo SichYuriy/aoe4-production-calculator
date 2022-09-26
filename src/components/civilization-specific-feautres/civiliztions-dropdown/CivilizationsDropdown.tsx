@@ -12,6 +12,7 @@ import ottomansFlagIcon from "../../../icons/flag_ottomans.png";
 import maliansFlagIcon from "../../../icons/flag_malians.png";
 import CivilizationsEnum from "../../../data/CivilizationsEnum";
 import s from './civilizations-dropdown.module.css'
+import shared from '../../../shared.module.css'
 
 function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (civilization: CivilizationsEnum) => any }) {
     function handleNewCivSelect(newCivilization: CivilizationsEnum) {
@@ -30,15 +31,17 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.FRENCH]: {id: CivilizationsEnum.FRENCH, icon: frenchFlagIcon, name: 'French'},
         [CivilizationsEnum.MONGOLS]: {id: CivilizationsEnum.MONGOLS, icon: mongolsFlagIcon, name: 'Mongols'},
         [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'},
-        [CivilizationsEnum.OTTOMANS]: {id: CivilizationsEnum.OTTOMANS, icon: ottomansFlagIcon, name: 'Ottomans'},
-        [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians'}
+        [CivilizationsEnum.OTTOMANS]: {id: CivilizationsEnum.OTTOMANS, icon: ottomansFlagIcon, name: 'Ottomans (beta)'},
+        [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians (beta)'}
     }
 
     return (
         <div className={s.dropdown}>
             <Dropdown>
                 <Dropdown.Toggle variant="secondary" className={s.toggle}>
-                    <img className={s.civIcon} src={civilizations[props.selected].icon} alt={'flag'}/>
+                    {Object.values(civilizations).map(civilization =>
+                        <img key={civilization.id} className={`${s.civIcon} ${civilization.id === props.selected ? '' : shared.hidden}`} src={civilizations[civilization.id].icon} alt={'flag'}/>
+                    )}
                 </Dropdown.Toggle>
                 <Dropdown.Menu variant="dark">
                     {Object.values(civilizations).map(civilization =>
