@@ -7,7 +7,9 @@ enum CivilizationsEnum {
     DELHI = 'DELHI',
     FRENCH = 'FRENCH',
     MONGOLS = 'MONGOLS',
-    RUS = 'RUS'
+    RUS = 'RUS',
+    OTTOMANS = 'OTTOMANS',
+    MALIANS = 'MALIANS'
 }
 
 export default CivilizationsEnum;

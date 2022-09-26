@@ -8,6 +8,8 @@ import delhiFlagIcon from "../../../icons/flag_delhi.png";
 import frenchFlagIcon from "../../../icons/flag_french.png";
 import mongolsFlagIcon from "../../../icons/flag_mongol.png";
 import rusFlagIcon from "../../../icons/flag_rus.png";
+import ottomansFlagIcon from "../../../icons/flag_ottomans.png";
+import maliansFlagIcon from "../../../icons/flag_malians.png";
 import CivilizationsEnum from "../../../data/CivilizationsEnum";
 import s from './civilizations-dropdown.module.css'
 
@@ -27,7 +29,9 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.DELHI]: {id: CivilizationsEnum.DELHI, icon: delhiFlagIcon, name: 'Delhi Sultanate'},
         [CivilizationsEnum.FRENCH]: {id: CivilizationsEnum.FRENCH, icon: frenchFlagIcon, name: 'French'},
         [CivilizationsEnum.MONGOLS]: {id: CivilizationsEnum.MONGOLS, icon: mongolsFlagIcon, name: 'Mongols'},
-        [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'}
+        [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'},
+        [CivilizationsEnum.OTTOMANS]: {id: CivilizationsEnum.OTTOMANS, icon: ottomansFlagIcon, name: 'Ottomans'},
+        [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians'}
     }
 
     return (

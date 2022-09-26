@@ -20,6 +20,8 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[26 Sept 2022]</span> Add new civs beta - only units with wrong icons for now</li>
+                        <li><span>[26 Sept 2022]</span> Scout cost fix. Before - 60 food, after - 70 food</li>
                         <li><span>[25 Sept 2022]</span> Show only common units without civilization selected</li>
                         <li><span>[25 Sept 2022]</span> Fix: longbowman cost (40, 50) differs from archer cost (30, 50)</li>
                         <li><span>[25 Sept 2022]</span> Added units: arbaletrier, knight, landsknecht, longbowman, royal knight, tower war elephant, war elephant, palace guard</li>

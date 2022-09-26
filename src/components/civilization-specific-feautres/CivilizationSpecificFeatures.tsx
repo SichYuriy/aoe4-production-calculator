@@ -23,6 +23,8 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.FRENCH, <FrenchFeatures/>],
         [CivilizationsEnum.MONGOLS, <MongolsFeatures/>],
         [CivilizationsEnum.RUS, <RusFeatures/>],
+        [CivilizationsEnum.OTTOMANS, <div/>],
+        [CivilizationsEnum.MALIANS, <div/>],
     ]);
     let components: any[] = [];
     civilizationSpecificComponents.forEach((component, civilization) => {
