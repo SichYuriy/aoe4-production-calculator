@@ -6,6 +6,8 @@ import FoodSource from "../../model/FoodSource";
 import UnitCostModifier from "../../model/UnitCostModifier";
 import CostModifierId from "../cost-modifiers/CostModifierId";
 import {Building} from "../../model/Unit";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 
 const englishDarkAge: GatheringRateModifier = {
     id: GatheringRateModifierId.ENGLISH_DARK_AGE,
@@ -51,11 +53,22 @@ const englishDocks: UnitCostModifier = {
     description: 'shipCost * 0.9'
 }
 
+const englishMma: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.ENGLISH_MMA,
+    canBeApplied: unit => unit.id === 'MAN_AT_ARMS',
+    apply: currentProductionTime => currentProductionTime * 0.5,
+    description: 'mmaTime * 0.5'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.ENGLISH_DARK_AGE]: englishDarkAge,
     [GatheringRateModifierId.ENGLISH_FEUDAL_AGE]: englishFeudalAge,
     [GatheringRateModifierId.ENGLISH_CASTLE_AGE]: englishCastleAge,
     [GatheringRateModifierId.ENGLISH_IMPERIAL_AGE]: englishImperialAge,
+}
+
+const PRODUCTION_SPEED_MODIFIERS = {
+    [ProductionSpeedModifierId.ENGLISH_MMA]: englishMma
 }
 
 const COST_MODIFIERS = {
@@ -66,8 +79,8 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ENGLAND,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [GatheringRateModifierId.ENGLISH_DARK_AGE],
-    allProductionSpeedModifiers: {},
-    defaultProductionSpeedModifiers: [],
+    allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
+    defaultProductionSpeedModifiers: [ProductionSpeedModifierId.ENGLISH_MMA],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS]
 }

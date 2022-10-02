@@ -8,7 +8,8 @@ enum ProductionSpeedModifierId {
     SONG_DYNASTY = 'SONG_DYNASTY',
     CHINESE_DOCKS = 'CHINESE_DOCKS',
     SILVER_TREE = 'SILVER_TREE',
-    GOLDEN_AGE_3 = 'GOLDEN_AGE_3'
+    GOLDEN_AGE_3 = 'GOLDEN_AGE_3',
+    ENGLISH_MMA = 'ENGLISH_MMA'
 }
 
 export default ProductionSpeedModifierId;
