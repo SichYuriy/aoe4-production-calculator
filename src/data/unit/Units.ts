@@ -17,6 +17,8 @@ import fishingBoatIcon from '../../icons/fishing-boat.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
 import dhowIcon from '../../icons/dhow.png'
 import baghlahIcon from '../../icons/baghlah.png'
+import galleyIcon from '../../icons/galley.png'
+import hulkIcon from '../../icons/hulk.png'
 import traderIcon from '../../icons/trader.png'
 import archerIcon from '../../icons/archer.png'
 import longbowmanIcon from '../../icons/longbowman.png'
@@ -545,6 +547,28 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.ABBASID],
+        common: false
+    },
+    GALLEY: {
+        id: 'GALLEY',
+        icon: galleyIcon,
+        name: 'galley',
+        productionTime: 40,
+        cost: new UnitCost(0, 180, 180, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE],
+        common: false
+    },
+    HULK: {
+        id: 'HULK',
+        icon: hulkIcon,
+        name: 'hulk',
+        productionTime: 45,
+        cost: new UnitCost(0, 240, 300, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE],
         common: false
     },
     IMPERIAL_OFFICIAL: {
