@@ -3,6 +3,9 @@ import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import FoodSource from "../../model/FoodSource";
+import UnitCostModifier from "../../model/UnitCostModifier";
+import CostModifierId from "../cost-modifiers/CostModifierId";
+import {Building} from "../../model/Unit";
 
 const englishDarkAge: GatheringRateModifier = {
     id: GatheringRateModifierId.ENGLISH_DARK_AGE,
@@ -36,11 +39,27 @@ const englishImperialAge: GatheringRateModifier = {
     description: 'farm * 1.24'
 }
 
+const englishDocks: UnitCostModifier = {
+    id: CostModifierId.ENGLISH_DOCKS,
+    canBeApplied: unit => unit.building === Building.DOCK,
+    apply: cost => ({
+        food: cost.food * 0.9,
+        wood: cost.wood * 0.9,
+        gold: cost.gold * 0.9,
+        stone: cost.stone * 0.9,
+    }),
+    description: 'shipCost * 0.9'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.ENGLISH_DARK_AGE]: englishDarkAge,
     [GatheringRateModifierId.ENGLISH_FEUDAL_AGE]: englishFeudalAge,
     [GatheringRateModifierId.ENGLISH_CASTLE_AGE]: englishCastleAge,
     [GatheringRateModifierId.ENGLISH_IMPERIAL_AGE]: englishImperialAge,
+}
+
+const COST_MODIFIERS = {
+    [CostModifierId.ENGLISH_DOCKS]: englishDocks
 }
 
 const ENGLISH_MODIFIERS: CivilizationModifiers = {
@@ -49,8 +68,8 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     defaultGatheringRateModifiers: [GatheringRateModifierId.ENGLISH_DARK_AGE],
     allProductionSpeedModifiers: {},
     defaultProductionSpeedModifiers: [],
-    allCostModifiers: {},
-    defaultCostModifiers: []
+    allCostModifiers: COST_MODIFIERS,
+    defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS]
 }
 
 export default ENGLISH_MODIFIERS;
