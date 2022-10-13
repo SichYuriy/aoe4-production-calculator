@@ -1,7 +1,17 @@
 import Unit, {Building, UnitCost, UnitType} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
+import donsoIcon from '../../icons/donso.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
+import musofadiWarriorIcon from '../../icons/musofadi-warrior.png'
+import sofaIcon from '../../icons/sofa.png'
+import javelinThrowerIcon from '../../icons/javelin_thrower.png'
+import musofadiGunnerIcon from '../../icons/musofadi-gunner.png'
+import warriorScoutIcon from '../../icons/warrior_scout.png'
+import sipahiIcon from '../../icons/sipahi.png'
+import mehterIcon from '../../icons/mehter.png'
+import janissaryIcon from '../../icons/janissary.png'
+import greatBombardIcon from '../../icons/great_bombard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
@@ -89,7 +99,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     DONSO: {
         id: 'DONSO',
-        icon: spearmanIcon,
+        icon: donsoIcon,
         name: 'donso',
         productionTime: 15,
         cost: new UnitCost(60, 0, 30, 0),
@@ -111,7 +121,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     SIPAHI: {
         id: 'SIPAHI',
-        icon: horsemanIcon,
+        icon: sipahiIcon,
         name: 'sipahi',
         productionTime: 24,
         cost: new UnitCost(110, 0, 20, 0),
@@ -155,7 +165,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     SOFA: {
         id: 'SOFA',
-        icon: camelRiderIcon,
+        icon: sofaIcon,
         name: 'sofa',
         productionTime: 30,
         cost: new UnitCost(120, 60, 0, 0),
@@ -172,7 +182,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(100, 20, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
         common: true
     },
     PALACE_GUARD: {
@@ -186,10 +196,10 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.CHINESE],
         common: false
     },
-    MUSOFARDI_WARRIOR: {
-        id: 'MUSOFARDI_WARRIOR',
-        icon: palaceGuardIcon,
-        name: 'musofardi warrior',
+    MUSOFADI_WARRIOR: {
+        id: 'MUSOFADI_WARRIOR',
+        icon: musofadiWarriorIcon,
+        name: 'musofadi warrior',
         productionTime: 15,
         cost: new UnitCost(50, 30, 0, 0),
         types: [UnitType.INFANTRY],
@@ -199,7 +209,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     MEHTER: {
         id: 'MEHTER',
-        icon: camelRiderIcon,
+        icon: mehterIcon,
         name: 'mehter',
         productionTime: 28,
         cost: new UnitCost(100, 80, 0, 0),
@@ -243,7 +253,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     JAVELIN_THROWER: {
         id: 'JAVELIN_THROWER',
-        icon: crossbowmanIcon,
+        icon: javelinThrowerIcon,
         name: 'javelin thrower',
         productionTime: 22,
         cost: new UnitCost(80, 40, 0, 0),
@@ -276,7 +286,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     JANISSARY: {
         id: 'JANISSARY',
-        icon: handcannoneerIcon,
+        icon: janissaryIcon,
         name: 'janissary',
         productionTime: 28,
         cost: new UnitCost(60, 100, 0, 0),
@@ -285,10 +295,10 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS],
         common: false
     },
-    MUSOFARDI_GUNNER: {
-        id: 'MUSOFARDI_GUNNER',
-        icon: handcannoneerIcon,
-        name: 'musofardi gunner',
+    MUSOFADI_GUNNER: {
+        id: 'MUSOFADI_GUNNER',
+        icon: musofadiGunnerIcon,
+        name: 'musofadi gunner',
         productionTime: 35,
         cost: new UnitCost(110, 130, 0, 0),
         types: [UnitType.INFANTRY],
@@ -419,7 +429,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     WARRIOR_SCOUT: {
         id: 'WARRIOR_SCOUT',
-        icon: scoutIcon,
+        icon: warriorScoutIcon,
         name: 'warrior scout',
         productionTime: 15,
         cost: new UnitCost(90, 0, 0, 0),
@@ -507,7 +517,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     GREAT_BOMBARD: {
         id: 'GREAT_BOMBARD',
-        icon: bombardIcon,
+        icon: greatBombardIcon,
         name: 'great bombard',
         productionTime: 60,
         cost: new UnitCost(0, 900, 600, 0),

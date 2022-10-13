@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[13 Oct 2022]</span> Fix icons for Ottomans and Malians units</li>
                         <li><span>[02 Oct 2022]</span> English update: add ships discount, mma production speed, galley unit, hulk unit</li>
                         <li><span>[26 Sept 2022]</span> Add new civs beta - only units with wrong icons for now</li>
                         <li><span>[26 Sept 2022]</span> Scout cost fix. Before - 60 food, after - 70 food</li>
