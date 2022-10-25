@@ -6,6 +6,7 @@ import MONGOLS_MODIFIERS from "./MongolsModifiers";
 import RUS_MODIFIERS from "./RusModifiers";
 import DELHI_MODIFIERS from "./DelhiModifiers";
 import ABBASID_MODIFIERS from "./AbbasidModifiers";
+import OTTOMANS_MODIFIERS from "./OttomansModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [
     FRENCH_MODIFIERS,
@@ -14,7 +15,8 @@ const allCivilizationModifiers: CivilizationModifiers[] = [
     MONGOLS_MODIFIERS,
     RUS_MODIFIERS,
     DELHI_MODIFIERS,
-    ABBASID_MODIFIERS
+    ABBASID_MODIFIERS,
+    OTTOMANS_MODIFIERS
 ]
 
 export default allCivilizationModifiers;
