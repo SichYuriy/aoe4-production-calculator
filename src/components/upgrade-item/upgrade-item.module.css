@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.item:hover {
+.clickableItem:hover {
     border: 3px solid white;
     cursor: pointer;
 }

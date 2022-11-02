@@ -5,6 +5,7 @@ import gatheringRateModifiersReducer from "./state/GatheringRateModifiersSlice";
 import productionSpeedModifiersReducer from "./state/ProducationSpeedModifiersSlice";
 import costModifiersReducer from "./state/CostModifiersSlice";
 import civilizationReducer from "./state/CivilizationSlice";
+import passiveIncomeModifiers from "./state/PassiveIncomeModifiersSlice";
 
 export const store = configureStore({
     reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
         gatheringRateModifiers: gatheringRateModifiersReducer,
         productionSpeedModifiers: productionSpeedModifiersReducer,
         costModifiers: costModifiersReducer,
+        passiveIncomeModifiers: passiveIncomeModifiers,
         civilization: civilizationReducer,
     }
 })

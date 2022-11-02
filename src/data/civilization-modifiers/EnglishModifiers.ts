@@ -82,7 +82,8 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.ENGLISH_MMA],
     allCostModifiers: COST_MODIFIERS,
-    defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS]
+    defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS],
+    allPassiveIncomeModifiers: {}
 }
 
 export default ENGLISH_MODIFIERS;

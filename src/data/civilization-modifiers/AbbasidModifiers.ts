@@ -115,7 +115,8 @@ const ABBASID_MODIFIERS: CivilizationModifiers = {
     allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
-    defaultCostModifiers: [CostModifierId.ABBASID_TRADER_DISCOUNT]
+    defaultCostModifiers: [CostModifierId.ABBASID_TRADER_DISCOUNT],
+    allPassiveIncomeModifiers: {}
 }
 
 export default ABBASID_MODIFIERS;

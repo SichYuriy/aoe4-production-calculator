@@ -52,7 +52,8 @@ const MONGOLS_MODIFIERS: CivilizationModifiers = {
     allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
-    defaultCostModifiers: []
+    defaultCostModifiers: [],
+    allPassiveIncomeModifiers: {}
 }
 
 export default MONGOLS_MODIFIERS;

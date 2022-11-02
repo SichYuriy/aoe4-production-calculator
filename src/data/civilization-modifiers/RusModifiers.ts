@@ -53,7 +53,8 @@ const RUS_MODIFIERS: CivilizationModifiers = {
     allProductionSpeedModifiers: {},
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
-    defaultCostModifiers: []
+    defaultCostModifiers: [],
+    allPassiveIncomeModifiers: {}
 }
 
 export default RUS_MODIFIERS;

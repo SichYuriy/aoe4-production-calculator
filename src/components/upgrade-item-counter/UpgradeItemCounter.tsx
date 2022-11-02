@@ -1,21 +1,20 @@
-import Item from "../item/Item";
+import UpgradeItem from "../upgrade-item/UpgradeItem";
 import Counter from "../counter/Counter";
 
 type Props = {
-    name: string,
     icon: string,
     count: number,
     onIncrement: () => any,
     onDecrement: () => any
 }
 
-function ItemCounter(props: Props) {
+function UpgradeItemCounter(props: Props) {
     return (
         <div>
-            <Item icon={props.icon} name={props.name} selected={false}/>
+            <UpgradeItem icon={props.icon} selected={props.count > 0} disabled={true}/>
             <Counter count={props.count} onIncrement={props.onIncrement} onDecrement={props.onDecrement}/>
         </div>
     );
 }
 
-export default ItemCounter;
+export default UpgradeItemCounter;

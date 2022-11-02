@@ -13,6 +13,7 @@ import {useState} from "react";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
+const passiveIncomeService = serviceLocator.PASSIVE_INCOME_SERVICE;
 
 function ProductionCalculator() {
     const [seePreciseNumbers, setSeePreciseNumbers] = useState(false);
@@ -23,8 +24,10 @@ function ProductionCalculator() {
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
     const costModifiers = useAppSelector(selectActiveCostModifiers);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
+    const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers);
-    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, productionSpeedModifiers, costModifiers);
+    let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers);
+    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, productionSpeedModifiers, costModifiers, passiveIncome);
     if (!seePreciseNumbers) {
         villagerCost = {
             foodVillagers: roundVillagerCount(villagerCost.foodVillagers),
