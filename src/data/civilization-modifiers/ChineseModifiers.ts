@@ -87,7 +87,8 @@ const CHINESE_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.CHINESE_DOCKS],
     allCostModifiers: {},
     defaultCostModifiers: [],
-    allPassiveIncomeModifiers: {}
+    allPassiveIncomeModifiers: {},
+    allLimitedFoodGatheringSourceModifiers: {}
 }
 
 export default CHINESE_MODIFIERS;

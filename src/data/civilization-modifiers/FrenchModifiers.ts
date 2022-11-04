@@ -86,7 +86,8 @@ const FRENCH_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.FRENCH_DARK_AGE],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [],
-    allPassiveIncomeModifiers: {}
+    allPassiveIncomeModifiers: {},
+    allLimitedFoodGatheringSourceModifiers: {}
 }
 
 export default FRENCH_MODIFIERS;

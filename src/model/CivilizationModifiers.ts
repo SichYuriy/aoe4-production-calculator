@@ -6,6 +6,7 @@ import CostModifierId from "../data/cost-modifiers/CostModifierId";
 import CivilizationsEnum from "../data/CivilizationsEnum";
 import GatheringRateModifierId from "../data/gathering-rate-modifiers/GatheringRateModifierId";
 import PassiveIncomeModifier from "./PassiveIncomeModifier";
+import LimitedFoodGatheringSourceModifier from "./LimitedFoodGatheringSourceModifier";
 
 interface CivilizationModifiers {
     civilization: CivilizationsEnum,
@@ -15,7 +16,8 @@ interface CivilizationModifiers {
     defaultProductionSpeedModifiers: ProductionSpeedModifierId[],
     allCostModifiers: { [key: string]: UnitCostModifier }
     defaultCostModifiers: CostModifierId[],
-    allPassiveIncomeModifiers: { [key: string]: PassiveIncomeModifier }
+    allPassiveIncomeModifiers: { [key: string]: PassiveIncomeModifier },
+    allLimitedFoodGatheringSourceModifiers: { [key: string]: LimitedFoodGatheringSourceModifier }
 }
 
 export default CivilizationModifiers;

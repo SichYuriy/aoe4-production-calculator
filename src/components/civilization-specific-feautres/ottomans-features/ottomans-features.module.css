@@ -4,3 +4,9 @@
     color: white;
     gap: 10px;
 }
+
+.row {
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+}

@@ -13,7 +13,8 @@ const DELHI_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
     defaultCostModifiers: [],
-    allPassiveIncomeModifiers: {}
+    allPassiveIncomeModifiers: {},
+    allLimitedFoodGatheringSourceModifiers: {}
 }
 
 export default DELHI_MODIFIERS;

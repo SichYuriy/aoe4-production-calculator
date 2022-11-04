@@ -1,0 +1,17 @@
+.tooltip {
+    background-color: #282e3c;
+    border: 2px solid #f3dc8d;
+    color: #f3dc8d;
+}
+
+.header {
+    padding: 5px;
+    background-color: #282e3c;
+    color: #f3dc8d;
+    border-bottom: 1px solid #f3dc8d;
+}
+
+.body {
+    color: #f3dc8d;
+    padding: 5px;
+}

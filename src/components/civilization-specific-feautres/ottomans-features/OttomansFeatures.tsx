@@ -5,6 +5,7 @@ import antolianHillsIcon from "../../../icons/anatolian-hills.png";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import SultanhaniTradeNetwork from "./sultanhani-trade-network/SultanhaniTradeNetwork";
+import TwinMinaretMedrese from "./twin-minaret-medrese/TwinMinaretMedrese";
 
 function OttomansFeatures() {
     const dispatch = useAppDispatch();
@@ -12,8 +13,12 @@ function OttomansFeatures() {
     let anatolianHillsUpgradeItem = <UpgradeItem icon={antolianHillsIcon}
                                           selected={gatheringRateModifiers[GatheringRateModifierId.ANATOLIAN_HILLS]}
                                           onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.ANATOLIAN_HILLS))}/>
+
     return <div className={s.ottomanFeatures}>
-        {anatolianHillsUpgradeItem}
+        <div className={s.row}>
+            <TwinMinaretMedrese/>
+            {anatolianHillsUpgradeItem}
+        </div>
         <SultanhaniTradeNetwork/>
     </div>
 }

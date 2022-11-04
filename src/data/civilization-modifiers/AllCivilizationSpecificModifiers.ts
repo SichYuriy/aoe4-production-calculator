@@ -11,6 +11,7 @@ export const ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS: ProductionSpeedModifi
 export const COST_MODIFIERS_DEFAULT: {[key:string]: CostModifierId[]} = {};
 export const ALL_CIVILIZATIONS_COST_MODIFIERS: CostModifierId[] = [];
 export const ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS: PassiveIncomeModifierId[] = [];
+export const ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS: PassiveIncomeModifierId[] = [];
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
     GATHERING_RATE_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultGatheringRateModifiers;
@@ -27,4 +28,7 @@ allCivilizationModifiers.forEach(civilizationModifiers => {
 
     // @ts-ignore
     ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveIncomeModifiers));
+
+    // @ts-ignore
+    ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS.push(...Object.keys(civilizationModifiers.allLimitedFoodGatheringSourceModifiers));
 })
