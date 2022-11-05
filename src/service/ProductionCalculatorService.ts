@@ -5,20 +5,36 @@ import Unit, {UnitCost} from "../model/Unit";
 import UnitCostModifier from "../model/UnitCostModifier";
 import UNITS from "../data/unit/Units";
 import ResourcesAmount from "../model/ResourcesAmount";
+import LimitedFoodGatheringSource from "../model/LimitedFoodGatheringSource";
+import LimitedFoodGatheringSourceService from "./LimitedFoodGatheringSourceService";
 
 class ProductionCalculatorService {
+    private limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService;
+
+    constructor(limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService) {
+        this.limitedFoodGatheringSourceService = limitedFoodGatheringSourceService;
+    }
+
     calculateProductionVillagerCost(gatheringRates: GatheringRates,
                                     unitsSelected: { [key: string]: number },
                                     productionSpeedModifiers: ProductionSpeedModifier[],
                                     costModifiers: UnitCostModifier[],
-                                    passiveIncome: ResourcesAmount): ProductionVillagerCost {
-        let resourcesNeededPerMinute = this.calculateResourcesNeededPerMinute(unitsSelected, productionSpeedModifiers, costModifiers);
-        return resourcesNeededPerMinute
-            .subtractToZero(passiveIncome)
-            .divideByGatheringRate(gatheringRates)
+                                    passiveIncome: ResourcesAmount,
+                                    limitedFoodGatheringSources: LimitedFoodGatheringSource[]): ProductionVillagerCost {
+        let resourcesNeeded = this.calculateResourcesNeededForUnitProduction(unitsSelected, productionSpeedModifiers, costModifiers);
+
+        resourcesNeeded = resourcesNeeded.subtractToZero(passiveIncome);
+
+        let uniqueFoodSourceVillagers = this.limitedFoodGatheringSourceService.sendVillagersToUniqueSources(limitedFoodGatheringSources, resourcesNeeded);
+        resourcesNeeded = resourcesNeeded.subtractToZero(uniqueFoodSourceVillagers.gatheringRate);
+
+        let villagersCost = resourcesNeeded.divideByGatheringRate(gatheringRates);
+        villagersCost.foodVillagers += uniqueFoodSourceVillagers.villagersCount;
+
+        return villagersCost;
     }
 
-    private calculateResourcesNeededPerMinute(unitsSelected: { [key: string]: number }, productionSpeedModifiers: ProductionSpeedModifier[], costModifiers: UnitCostModifier[]): ResourcesAmount {
+    private calculateResourcesNeededForUnitProduction(unitsSelected: { [key: string]: number }, productionSpeedModifiers: ProductionSpeedModifier[], costModifiers: UnitCostModifier[]): ResourcesAmount {
         return Object.keys(unitsSelected)
             .map(unitId => this.calculateUnitCostPerMinute(UNITS.get(unitId)!, unitsSelected[unitId], productionSpeedModifiers, costModifiers))
             .reduce(

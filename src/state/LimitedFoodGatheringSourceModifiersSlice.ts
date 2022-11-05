@@ -5,6 +5,7 @@ import {
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 import LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
     from "../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
+import {RootState} from "../store";
 
 export interface LimitedFoodGatheringSourceModifierState {
     id: string;
@@ -40,6 +41,11 @@ export const limitedFoodGatheringSourceModifiers = createSlice({
         });
     }
 });
+
+export let selectActiveLimitedFoodGatheringSourceModifiers = (state: RootState): LimitedFoodGatheringSourceModifierState[] => {
+    return Object.values(state.limitedFoodGatheringSourceModifiers)
+        .filter(modifierState => modifierState.selected);
+}
 
 export const {toggleLimitedFoodGatheringSource} = limitedFoodGatheringSourceModifiers.actions;
 export default limitedFoodGatheringSourceModifiers.reducer;

@@ -1,11 +1,18 @@
 import ProductionCalculatorService from "../service/ProductionCalculatorService";
-import GatheringRatesService from "../service/GatheringRatesService";
 import PassiveIncomeService from "../service/PassiveIncomeService";
+import LimitedFoodGatheringSourceService from "../service/LimitedFoodGatheringSourceService";
+import GatheringRatesService from "../service/GatheringRatesService";
+
+let gatheringRatesService = new GatheringRatesService();
+let passiveIncomeService = new PassiveIncomeService();
+let limitedFoodGatheringService = new LimitedFoodGatheringSourceService(gatheringRatesService);
+let productionCalculatorService = new ProductionCalculatorService(limitedFoodGatheringService);
 
 const serviceLocator =  {
-    PRODUCTION_CALCULATOR_SERVICE: new ProductionCalculatorService(),
-    GATHERING_RATES_SERVICE: new GatheringRatesService(),
-    PASSIVE_INCOME_SERVICE: new PassiveIncomeService()
+    GATHERING_RATES_SERVICE: gatheringRatesService,
+    PASSIVE_INCOME_SERVICE: passiveIncomeService,
+    LIMITED_FOOD_GATHERING_SOURCE_SERVICE: limitedFoodGatheringService,
+    PRODUCTION_CALCULATOR_SERVICE: productionCalculatorService
 }
 
  export default serviceLocator;

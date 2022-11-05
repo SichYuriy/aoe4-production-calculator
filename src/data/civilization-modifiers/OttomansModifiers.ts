@@ -32,11 +32,11 @@ const BUSHES_COUNT = 4;
 const FOOD_AMOUNT_PER_BUSH = 175;
 const BUSH_RESTORE_TIME_IN_SECONDS = 120;
 const MINUTE_IN_SECONDS = 60;
+export const TWIN_MINARET_BASE_GATHERING_RATE = 50;
 let twinMinaretMedrese: LimitedFoodGatheringSourceModifier = {
     id: LimitedFoodGatheringSourceModifierId.TWIN_MINARET_MEDRESE,
     gatheringRateLimit: ((BUSHES_COUNT - 1) * FOOD_AMOUNT_PER_BUSH) / (BUSH_RESTORE_TIME_IN_SECONDS / MINUTE_IN_SECONDS),
     foodSource: FoodSource.TWIN_MINARET_BERRY,
-    baseGatheringRate: 50
 }
 
 const GATHERING_RATE_MODIFIERS = {

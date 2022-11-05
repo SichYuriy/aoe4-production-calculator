@@ -4,5 +4,4 @@ export default interface LimitedFoodGatheringSourceModifier {
     id: string;
     gatheringRateLimit: number;
     foodSource: foodSource;
-    baseGatheringRate: number;
 }

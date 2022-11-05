@@ -2,10 +2,15 @@ import GatheringRates from "../model/GatheringRates";
 import FoodSource from "../model/FoodSource";
 import {
     BASE_BERRY_GATHERING_RATE,
-    BASE_DEER_GATHERING_RATE, BASE_FARM_GATHERING_RATE, BASE_GOLD_GATHERING_RATE,
-    BASE_SHEEP_GATHERING_RATE, BASE_STONE_GATHERING_RATE, BASE_WOOD_GATHERING_RATE
+    BASE_DEER_GATHERING_RATE,
+    BASE_FARM_GATHERING_RATE,
+    BASE_GOLD_GATHERING_RATE,
+    BASE_SHEEP_GATHERING_RATE,
+    BASE_STONE_GATHERING_RATE,
+    BASE_WOOD_GATHERING_RATE
 } from "../data/BaseGatheringRates";
 import GatheringRateModifier from "../model/GatheringRateModifier";
+import {TWIN_MINARET_BASE_GATHERING_RATE} from "../data/civilization-modifiers/OttomansModifiers";
 
 class GatheringRatesService {
     getGatheringRates(foodSource: FoodSource, useCustomGatheringRates: boolean, customGatheringRates: GatheringRates, modifiers: GatheringRateModifier[]): GatheringRates {
@@ -35,6 +40,8 @@ class GatheringRatesService {
             return BASE_BERRY_GATHERING_RATE;
         } else if (foodSource === FoodSource.DEER) {
             return BASE_DEER_GATHERING_RATE;
+        } else if (foodSource === FoodSource.TWIN_MINARET_BERRY) {
+            return TWIN_MINARET_BASE_GATHERING_RATE;
         } else {
             return BASE_FARM_GATHERING_RATE;
         }

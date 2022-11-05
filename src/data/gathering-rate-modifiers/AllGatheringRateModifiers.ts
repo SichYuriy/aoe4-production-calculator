@@ -7,7 +7,12 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
     [GatheringRateModifierId.WHEELBARROW]: {
         id: GatheringRateModifierId.WHEELBARROW,
         apply: (rates, foodSource) => {
-            let foodMultiplier = [FoodSource.BERRY, FoodSource.DEER].includes(foodSource) ? 1.0952 : 1.01;
+            let foodMultiplier = 1;
+            if ([FoodSource.BERRY, FoodSource.DEER].includes(foodSource)) {
+                foodMultiplier = 1.0952;
+            } else if ([FoodSource.FARM, FoodSource.SHEEP].includes(foodSource)) {
+                foodMultiplier = 1.01;
+            }
             return {
                 food: rates.food * foodMultiplier,
                 wood: rates.wood * 1.07,
@@ -15,7 +20,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 stone: rates.stone * 1.07
             };
         },
-        description: '[berries, deer] * 1.0952, other food * 1.01, [wood, gold, stone] * 1.07'
+        description: '[berries, deer] * 1.0952, [farm, sheep] * 1.01, [wood, gold, stone] * 1.07'
     },
     [GatheringRateModifierId.DOUBLE_BROADAX]: {
         id: GatheringRateModifierId.DOUBLE_BROADAX,
@@ -49,24 +54,42 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
     },
     [GatheringRateModifierId.HORTICULTURE]: {
         id: GatheringRateModifierId.HORTICULTURE,
-        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
-            ? ({...rates, food: rates.food * 1.12})
-            : rates,
-        description: '[sheep, berry, farm] * 1.12'
+        apply: (rates, foodSource) => {
+            if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
+                return ({...rates, food: rates.food * 1.12});
+            } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
+                return ({...rates, food: rates.food * 1.15});
+            } else {
+                return rates;
+            }
+        },
+        description: '[sheep, berry, farm] * 1.12, [twin-minaret-berry] * 1.15'
     },
     [GatheringRateModifierId.FERTILIZATION]: {
         id: GatheringRateModifierId.FERTILIZATION,
-        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
-            ? ({...rates, food: rates.food * 1.1})
-            : rates,
-        description: '[sheep, berry, farm] * 1.1'
+        apply: (rates, foodSource) => {
+            if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
+                return ({...rates, food: rates.food * 1.1});
+            } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
+                return ({...rates, food: rates.food * 1.13});
+            } else {
+                return rates;
+            }
+        },
+        description: '[sheep, berry, farm] * 1.1, [twin-minaret-berry] * 1.13'
     },
     [GatheringRateModifierId.CROSS_BREEDING]: {
         id: GatheringRateModifierId.CROSS_BREEDING,
-        apply: (rates, foodSource) => [FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)
-            ? ({...rates, food: rates.food * 1.1})
-            : rates,
-        description: '[sheep, berry, farm] * 1.1'
+        apply: (rates, foodSource) => {
+            if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
+                return ({...rates, food: rates.food * 1.1});
+            } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
+                return ({...rates, food: rates.food * 1.1154});
+            } else {
+                return rates;
+            }
+        },
+        description: '[sheep, berry, farm] * 1.1, [twin-minaret-berry] * 1.1154'
     },
     [GatheringRateModifierId.SPECIALIZED_PICK]: {
         id: GatheringRateModifierId.SPECIALIZED_PICK,

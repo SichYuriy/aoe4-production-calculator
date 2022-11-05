@@ -14,7 +14,7 @@ function TwinMinaretMedrese() {
     const limitedFoodGatheringSourceModifiers: LimitedFoodGatheringSourceModifiersState = useAppSelector((rootState) => rootState.limitedFoodGatheringSourceModifiers);
 
     return (
-        <Tooltip header={'Twin Minaret Medrese'} text={'Takes some villagers on infinite fast berries depending on your food upgrades'}>
+        <Tooltip header={'Twin Minaret Medrese'} text={'Assumes you send first 5/4/4/3 villagers on berry depending on your food upgrades'}>
             <UpgradeItem
                 icon={twinMinaretMedreseIcon}
                 selected={limitedFoodGatheringSourceModifiers[LimitedFoodGatheringSourceModifierId.TWIN_MINARET_MEDRESE].selected}
