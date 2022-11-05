@@ -9,13 +9,16 @@ import {
     PassiveIncomeModifierState
 } from "../../../../state/PassiveIncomeModifiersSlice";
 import PassiveIncomeModifierId from "../../../../data/passive-income-modifiers/PassiveIncomeModifierId";
+import Tooltip from "../../../tooltip/Tooltip";
 
 function SultanhaniTradeNetwork() {
     const dispatch = useAppDispatch();
     const modifierState: PassiveIncomeModifierState = useAppSelector((rootState) => rootState.passiveIncomeModifiers[PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK]);
     return (
         <div className={s.sultanhaniTradeNetwork}>
-            <div><img className={s.landmarkIcon} src={sultanhaniTradeNetworkIcon} alt={'sultanhani-trade-network'}/></div>
+            <Tooltip header={'Sultanhani Trade Network'} text={'Generates passive gold income depending on the traders count inside'}>
+                <img className={s.landmarkIcon} src={sultanhaniTradeNetworkIcon} alt={'sultanhani-trade-network'}/>
+            </Tooltip>
             <div>:</div>
             <UpgradeItemCounter icon={traderIcon}
                                 count={modifierState.count}
