@@ -1,6 +1,6 @@
-import ProductionCalculatorService from "../service/ProductionCalculatorService";
+import ProductionCalculatorService from "../service/production-calculator-service/ProductionCalculatorService";
 import PassiveIncomeService from "../service/PassiveIncomeService";
-import LimitedFoodGatheringSourceService from "../service/LimitedFoodGatheringSourceService";
+import LimitedFoodGatheringSourceService from "../service/limited-food-gathering-source-service/LimitedFoodGatheringSourceService";
 import GatheringRatesService from "../service/GatheringRatesService";
 
 let gatheringRatesService = new GatheringRatesService();

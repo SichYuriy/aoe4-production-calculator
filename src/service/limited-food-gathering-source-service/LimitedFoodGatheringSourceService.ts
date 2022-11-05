@@ -1,13 +1,13 @@
-import {LimitedFoodGatheringSourceModifierState} from "../state/LimitedFoodGatheringSourceModifiersSlice";
-import GatheringRateModifier from "../model/GatheringRateModifier";
-import LimitedFoodGatheringSource from "../model/LimitedFoodGatheringSource";
-import LimitedFoodGatheringSourceModifier from "../model/LimitedFoodGatheringSourceModifier";
+import {LimitedFoodGatheringSourceModifierState} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
+import GatheringRateModifier from "../../model/GatheringRateModifier";
+import LimitedFoodGatheringSource from "../../model/LimitedFoodGatheringSource";
+import LimitedFoodGatheringSourceModifier from "../../model/LimitedFoodGatheringSourceModifier";
 import LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
-    from "../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
-import ResourcesAmount from "../model/ResourcesAmount";
-import {VillagersGathering} from "../model/VillagersGathering";
-import {Utils} from "../utils/Utils";
-import GatheringRatesService from "./GatheringRatesService";
+    from "../../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
+import ResourcesAmount from "../../model/ResourcesAmount";
+import {VillagersGathering} from "../../model/VillagersGathering";
+import {Utils} from "../../utils/Utils";
+import GatheringRatesService from "../GatheringRatesService";
 
 class LimitedFoodGatheringSourceService {
     private gatheringRatesService: GatheringRatesService;
@@ -39,7 +39,7 @@ class LimitedFoodGatheringSourceService {
             gatheringRate: new ResourcesAmount()
         }
         while (neededFood.food > 0 && currentSourceIndex < sortedSources.length) {
-            let source = sortedSources[0];
+            let source = sortedSources[currentSourceIndex];
             let takenVillagers = this.getTakenVillagers(source, neededFood);
             let resourcesGathered = source.effectiveGatheringRate * takenVillagers;
             result = {

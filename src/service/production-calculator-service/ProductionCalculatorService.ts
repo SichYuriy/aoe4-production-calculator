@@ -1,12 +1,12 @@
-import GatheringRates from "../model/GatheringRates";
-import ProductionSpeedModifier from "../model/ProductionSpeedModifier";
-import ProductionVillagerCost from "../model/ProductionVillagerCost";
-import Unit, {UnitCost} from "../model/Unit";
-import UnitCostModifier from "../model/UnitCostModifier";
-import UNITS from "../data/unit/Units";
-import ResourcesAmount from "../model/ResourcesAmount";
-import LimitedFoodGatheringSource from "../model/LimitedFoodGatheringSource";
-import LimitedFoodGatheringSourceService from "./LimitedFoodGatheringSourceService";
+import GatheringRates from "../../model/GatheringRates";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionVillagerCost from "../../model/ProductionVillagerCost";
+import Unit, {UnitCost} from "../../model/Unit";
+import UnitCostModifier from "../../model/UnitCostModifier";
+import UNITS from "../../data/unit/Units";
+import ResourcesAmount from "../../model/ResourcesAmount";
+import LimitedFoodGatheringSource from "../../model/LimitedFoodGatheringSource";
+import LimitedFoodGatheringSourceService from "../limited-food-gathering-source-service/LimitedFoodGatheringSourceService";
 
 class ProductionCalculatorService {
     private limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService;

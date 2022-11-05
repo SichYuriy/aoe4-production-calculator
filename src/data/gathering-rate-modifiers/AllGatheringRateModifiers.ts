@@ -71,7 +71,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
                 return ({...rates, food: rates.food * 1.1});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
-                return ({...rates, food: rates.food * 1.13});
+                return ({...rates, food: rates.food * 1.1304});
             } else {
                 return rates;
             }
