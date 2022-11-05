@@ -6,12 +6,18 @@ import {selectActiveGatheringRateModifiers} from "../../state/GatheringRateModif
 import ModifierDetails from "./modifier-details/ModifierDetails";
 import {selectActiveProductionSpeedModifiers} from "../../state/ProducationSpeedModifiersSlice";
 import {selectActiveCostModifiers} from "../../state/CostModifiersSlice";
+import PassiveIncomeDetails from "./passive-income-details/PassiveIncomeDetails";
+import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
+import LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
+    from "../../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
 
 function DataDetails() {
     const [seeDataDetails, setSeeDataDetails] = useState(false);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     const costModifiers = useAppSelector(selectActiveCostModifiers);
+    let limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers)
+        .map(state => LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS[state.id]);
 
     return (
         <div className={s.dataDetails}>
@@ -21,20 +27,26 @@ function DataDetails() {
                 You can report wong data writing <a href="mailto:aoe4production@gmail.com">aoe4production@gmail.com</a>
             </div>
             {seeDataDetails &&
-              <div className={s.detailsRow}>
-                <div className={s.unitsDetailsBlock}>
-                  <UnitsDataDetails/>
+                <div className={s.detailsRow}>
+                    <div className={s.unitsDetailsBlock}>
+                        <UnitsDataDetails/>
+                    </div>
+                    <div>
+                        <ModifierDetails modifiersLabel={'Gathering rates:'} items={gatheringRateModifiers}/>
+                    </div>
+                    <div>
+                        <ModifierDetails modifiersLabel={'Production time:'} items={productionSpeedModifiers}/>
+                    </div>
+                    <div>
+                        <ModifierDetails modifiersLabel={'Unit cost:'} items={costModifiers}/>
+                    </div>
+                    <div>
+                        <PassiveIncomeDetails/>
+                    </div>
+                    <div>
+                        <ModifierDetails modifiersLabel={'Unique food source:'} items={limitedFoodGatheringSourceModifiers}/>
+                    </div>
                 </div>
-                <div>
-                  <ModifierDetails modifiersLabel={'Gathering rates:'} items={gatheringRateModifiers}/>
-                </div>
-                <div>
-                  <ModifierDetails modifiersLabel={'Production time:'} items={productionSpeedModifiers}/>
-                </div>
-                <div>
-                  <ModifierDetails modifiersLabel={'Unit cost:'} items={costModifiers}/>
-                </div>
-              </div>
             }
         </div>
     );

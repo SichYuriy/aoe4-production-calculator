@@ -37,6 +37,7 @@ let twinMinaretMedrese: LimitedFoodGatheringSourceModifier = {
     id: LimitedFoodGatheringSourceModifierId.TWIN_MINARET_MEDRESE,
     gatheringRateLimit: ((BUSHES_COUNT - 1) * FOOD_AMOUNT_PER_BUSH) / (BUSH_RESTORE_TIME_IN_SECONDS / MINUTE_IN_SECONDS),
     foodSource: FoodSource.TWIN_MINARET_BERRY,
+    description: 'base gathering rate: 50'
 }
 
 const GATHERING_RATE_MODIFIERS = {

@@ -4,6 +4,8 @@ import {
     ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 import PASSIVE_INCOME_MODIFIERS from "../data/passive-income-modifiers/AllPassiveIncomeModifiers";
+import {RootState} from "../store";
+import PassiveIncomeModifier from "../model/PassiveIncomeModifier";
 
 export interface PassiveIncomeModifierState {
     id: string;
@@ -47,6 +49,12 @@ export const passiveIncomeModifiers = createSlice({
         })
     }
 });
+
+export let selectActivePassiveIncomeModifiers = (state: RootState): PassiveIncomeModifier[] => {
+    return Object.keys(state.passiveIncomeModifiers)
+        .filter(id => state.passiveIncomeModifiers[id].count > 0)
+        .map(id => PASSIVE_INCOME_MODIFIERS[id]);
+}
 
 export const {incrementPassiveIncome, decrementPassiveIncome} = passiveIncomeModifiers.actions;
 export default passiveIncomeModifiers.reducer;
