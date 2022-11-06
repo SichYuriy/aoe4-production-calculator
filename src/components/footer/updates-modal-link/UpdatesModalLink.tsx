@@ -20,6 +20,10 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[06 Nov 2022]</span> Temporary remove all ships except fishing</li>
+                        <li><span>[06 Nov 2022]</span> Update fishing boat cost 60 {'->'} 75</li>
+                        <li><span>[06 Nov 2022]</span> Update janissary production time 28s {'->'} 24s</li>
+                        <li><span>[06 Nov 2022]</span> Add ottomans features: Twin minaret medrese, anatolian hills, blacksmith influence, sultanhani trade network</li>
                         <li><span>[25 Oct 2022]</span> Fix units data: zhuge nu, fire lancer, imperial official</li>
                         <li><span>[13 Oct 2022]</span> Fix icons for Ottomans and Malians units</li>
                         <li><span>[02 Oct 2022]</span> English update: add ships discount, mma production speed, galley unit, hulk unit</li>
