@@ -1,0 +1,51 @@
+.ottomansBlacksmith {
+    display: flex;
+    gap: 5px;
+    color: #f3dc8d;
+    font-size: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blacksmithIcon {
+    height: 60px;
+}
+
+.ageIconDiv {
+    border-radius: 50%;
+    border: 2px solid #f3dc8d;
+    color: #f3dc8d;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 30px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+}
+
+.item img {
+    width: 52px;
+    height: 52px;
+}
+
+label {
+    padding: 2px;
+    cursor: pointer;
+}
+
+[type=radio]:checked + div {
+    outline: 2px solid white;
+}

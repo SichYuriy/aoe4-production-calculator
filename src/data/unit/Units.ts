@@ -24,11 +24,6 @@ import nestOfBeesIcon from '../../icons/nest-of-bees.png'
 import bombardIcon from '../../icons/bombard.png'
 import scoutIcon from '../../icons/scout.png'
 import fishingBoatIcon from '../../icons/fishing-boat.png'
-import tradeShipIcon from '../../icons/trade-ship.png'
-import dhowIcon from '../../icons/dhow.png'
-import baghlahIcon from '../../icons/baghlah.png'
-import galleyIcon from '../../icons/galley.png'
-import hulkIcon from '../../icons/hulk.png'
 import traderIcon from '../../icons/trader.png'
 import archerIcon from '../../icons/archer.png'
 import longbowmanIcon from '../../icons/longbowman.png'
@@ -288,7 +283,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'JANISSARY',
         icon: janissaryIcon,
         name: 'janissary',
-        productionTime: 28,
+        productionTime: 24,
         cost: new UnitCost(60, 100, 0, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
@@ -443,7 +438,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: fishingBoatIcon,
         name: 'fishing boat',
         productionTime: 25,
-        cost: new UnitCost(0, 0, 60, 0),
+        cost: new UnitCost(0, 0, 75, 0),
         types: [],
         building: Building.DOCK,
         civilizations: ALL_CIVILIZATIONS,
@@ -524,61 +519,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
-    },
-    TRADE_SHIP: {
-        id: 'TRADE_SHIP',
-        icon: tradeShipIcon,
-        name: 'trade ship',
-        productionTime: 60,
-        cost: new UnitCost(0, 100, 300, 0),
-        types: [UnitType.TRANSPORT],
-        building: Building.DOCK,
-        civilizations: ALL_CIVILIZATIONS,
-        common: true
-    },
-    DHOW: {
-        id: 'DHOW',
-        icon: dhowIcon,
-        name: 'dhow',
-        productionTime: 40,
-        cost: new UnitCost(0, 90, 180, 0),
-        types: [],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ABBASID],
-        common: false
-    },
-    BAGHLAH: {
-        id: 'BAGHLAH',
-        icon: baghlahIcon,
-        name: 'baghlah',
-        productionTime: 45,
-        cost: new UnitCost(0, 180, 240, 0),
-        types: [],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ABBASID],
-        common: false
-    },
-    GALLEY: {
-        id: 'GALLEY',
-        icon: galleyIcon,
-        name: 'galley',
-        productionTime: 40,
-        cost: new UnitCost(0, 180, 180, 0),
-        types: [],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE],
-        common: false
-    },
-    HULK: {
-        id: 'HULK',
-        icon: hulkIcon,
-        name: 'hulk',
-        productionTime: 45,
-        cost: new UnitCost(0, 240, 300, 0),
-        types: [],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE],
         common: false
     },
     IMPERIAL_OFFICIAL: {

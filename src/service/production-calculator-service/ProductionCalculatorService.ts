@@ -53,7 +53,7 @@ class ProductionCalculatorService {
         let effectiveProductionTime = productionSpeedModifiers
             .filter(modifier => modifier.canBeApplied(unit))
             .reduce(
-                (previousTime, modifier) => modifier.apply(previousTime),
+                (previousTime, modifier) => previousTime - (unit.productionTime - modifier.apply(unit.productionTime)),
                 unit.productionTime
             );
 

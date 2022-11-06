@@ -8,6 +8,9 @@ import LimitedFoodGatheringSourceModifier from "../../model/LimitedFoodGathering
 import LimitedFoodGatheringSourceModifierId
     from "../limited-food-gathering-source-modifiers/LimitedFoodGatheringSourceModifierId";
 import FoodSource from "../../model/FoodSource";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
+import {UnitType} from "../../model/Unit";
 
 let anatolianHills: GatheringRateModifier = {
     id: GatheringRateModifierId.ANATOLIAN_HILLS,
@@ -40,6 +43,34 @@ let twinMinaretMedrese: LimitedFoodGatheringSourceModifier = {
     description: 'base gathering rate: 50'
 }
 
+let age2Blacksmith: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
+    apply: (currentProductionTime: number) => currentProductionTime * 0.8,
+    description: 'militaryTime * 0.8'
+}
+
+let age3Blacksmith: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_3,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
+    apply: (currentProductionTime: number) => currentProductionTime * 0.75,
+    description: 'militaryTime * 0.75'
+}
+
+let age4Blacksmith: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_4,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
+    apply: (currentProductionTime: number) => currentProductionTime * 0.67,
+    description: 'militaryTime * 0.67'
+}
+
+let istanbulObservatory: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.ISTANBUL_OBSERVATORY,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
+    apply: (currentProductionTime: number) => currentProductionTime * 0.6,
+    description: 'militaryTime * 0.6'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.ANATOLIAN_HILLS]: anatolianHills
 }
@@ -52,11 +83,18 @@ const LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS = {
     [LimitedFoodGatheringSourceModifierId.TWIN_MINARET_MEDRESE]: twinMinaretMedrese
 }
 
+const PRODUCTION_SPEED_MODIFIERS = {
+    [ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2]: age2Blacksmith,
+    [ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_3]: age3Blacksmith,
+    [ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_4]: age4Blacksmith,
+    [ProductionSpeedModifierId.ISTANBUL_OBSERVATORY]: istanbulObservatory,
+}
+
 const OTTOMANS_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.OTTOMANS,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [],
-    allProductionSpeedModifiers: {},
+    allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
     defaultCostModifiers: [],
