@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[06 Nov 2022]</span> Add ram unit with production time 12s</li>
                         <li><span>[06 Nov 2022]</span> Temporary remove all ships except fishing</li>
                         <li><span>[06 Nov 2022]</span> Update fishing boat cost 60 {'->'} 75</li>
                         <li><span>[06 Nov 2022]</span> Update janissary production time 28s {'->'} 24s</li>
