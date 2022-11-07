@@ -21,9 +21,36 @@ let mansaQueryStone: PassiveIncomeModifier = {
     maxCount: 1
 };
 
+let pitMine: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.PIT_MINE,
+    food: 0,
+    gold: 30,
+    wood: 0,
+    stone: 0
+}
+
+let pitMineHouse: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.PIT_MINE_HOUSE,
+    food: 0,
+    gold: 7.5,
+    wood: 0,
+    stone: 0
+}
+
+let pitMineMiningCamp: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.PIT_MINE_MINING_CAMP,
+    food: 0,
+    gold: 7.5,
+    wood: 0,
+    stone: 0
+}
+
 const PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.MANSA_QUERY_GOLD]: mansaQueryGold,
-    [PassiveIncomeModifierId.MANSA_QUERY_STONE]: mansaQueryStone
+    [PassiveIncomeModifierId.MANSA_QUERY_STONE]: mansaQueryStone,
+    [PassiveIncomeModifierId.PIT_MINE]: pitMine,
+    [PassiveIncomeModifierId.PIT_MINE_HOUSE]: pitMineHouse,
+    [PassiveIncomeModifierId.PIT_MINE_MINING_CAMP]: pitMineMiningCamp
 }
 
 const MALIANS_MODIFIERS: CivilizationModifiers = {
