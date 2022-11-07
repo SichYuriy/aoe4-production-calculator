@@ -1,0 +1,12 @@
+.cattleRanch {
+    display: flex;
+    gap: 5px;
+    color: #f3dc8d;
+    font-size: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cattleRanchIcon {
+    height: 60px;
+}

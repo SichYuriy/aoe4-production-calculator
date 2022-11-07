@@ -27,7 +27,7 @@ let pitMine: PassiveIncomeModifier = {
     gold: 30,
     wood: 0,
     stone: 0
-}
+};
 
 let pitMineHouse: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.PIT_MINE_HOUSE,
@@ -35,12 +35,20 @@ let pitMineHouse: PassiveIncomeModifier = {
     gold: 7.5,
     wood: 0,
     stone: 0
-}
+};
 
 let pitMineMiningCamp: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.PIT_MINE_MINING_CAMP,
     food: 0,
     gold: 7.5,
+    wood: 0,
+    stone: 0
+};
+
+let cattleRanchCattle: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.CATTLE_RANCH_CATTLE,
+    food: 28,
+    gold: 0,
     wood: 0,
     stone: 0
 }
@@ -50,7 +58,8 @@ const PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.MANSA_QUERY_STONE]: mansaQueryStone,
     [PassiveIncomeModifierId.PIT_MINE]: pitMine,
     [PassiveIncomeModifierId.PIT_MINE_HOUSE]: pitMineHouse,
-    [PassiveIncomeModifierId.PIT_MINE_MINING_CAMP]: pitMineMiningCamp
+    [PassiveIncomeModifierId.PIT_MINE_MINING_CAMP]: pitMineMiningCamp,
+    [PassiveIncomeModifierId.CATTLE_RANCH_CATTLE]: cattleRanchCattle
 }
 
 const MALIANS_MODIFIERS: CivilizationModifiers = {
