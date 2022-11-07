@@ -1,0 +1,24 @@
+malians:
+
+- add unit cow (100 gold - 15 seconds)
+- pit passive gold mining (30 gold per minute)
+- influence houses increase gold generations from pit (house/mine - 7.5 gold per minute)
+- mansa query 75 gold or stone per minute
+- cows (1 cow - 28 food per minute)
+- grand fulani corral (20 food per cow)
+- farimba garrison (time affected by production speed modifiers)
+  - donso 360 gold 22s
+  - mus war 320 gold 22s
+  - archer 320 gold 22s
+  - jav thrower 480 gold 33s
+  - mus gun 960 gold 52s
+
+
+english:
+
+- enclosures
+- Wynguard palace
+
+all factions:
+
+- ships
