@@ -11,6 +11,7 @@ import DelhiFeatures from "./delhi-features/DelhiFeatures";
 import AbbasidFeatures from "./abbasid-features/AbbasidFeatures";
 import shared from '../../shared.module.css'
 import OttomansFeatures from "./ottomans-features/OttomansFeatures";
+import MaliansFeatures from "./malians-features/MaliansFeatures";
 
 function CivilizationSpecificFeatures() {
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -25,7 +26,7 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.MONGOLS, <MongolsFeatures/>],
         [CivilizationsEnum.RUS, <RusFeatures/>],
         [CivilizationsEnum.OTTOMANS, <OttomansFeatures/>],
-        [CivilizationsEnum.MALIANS, <div/>],
+        [CivilizationsEnum.MALIANS, <MaliansFeatures/>],
     ]);
     let components: any[] = [];
     civilizationSpecificComponents.forEach((component, civilization) => {

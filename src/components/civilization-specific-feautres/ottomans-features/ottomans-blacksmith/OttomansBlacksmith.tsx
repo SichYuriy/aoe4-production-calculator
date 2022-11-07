@@ -43,7 +43,7 @@ function OttomansBlacksmith() {
             <div className={s.items}>
                 <label>
                     <input type={'radio'} name={'ottomans-blacksmith'} onChange={unselectAll} checked={noneSelected}/>
-                    <div><img src={cancelIcon} alt={'golden-age'}/></div>
+                    <div><img src={cancelIcon} alt={'cancel'}/></div>
                 </label>
                 <label>
                     <input type={'radio'} name={'ottomans-blacksmith'} onChange={() => select(ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2)} checked={modifierState[ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2]}/>

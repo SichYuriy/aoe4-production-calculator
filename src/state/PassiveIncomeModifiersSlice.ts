@@ -25,6 +25,11 @@ export interface PassiveIncomeModifiersState {
     [key: string]: PassiveIncomeModifierState
 }
 
+export interface UnselectSelectPassiveIncomeModifiersPayload {
+    unselect: string[],
+    select: string[]
+}
+
 export const passiveIncomeModifiers = createSlice({
     name: 'passiveIncomeModifiers',
     initialState: initialState,
@@ -41,6 +46,10 @@ export const passiveIncomeModifiers = createSlice({
             if (state[id].count > 0) {
                 state[id].count--;
             }
+        },
+        unselectSelectPassiveIncome: (state, action: PayloadAction<UnselectSelectPassiveIncomeModifiersPayload>) => {
+            action.payload.unselect.forEach(id => state[id].count = 0);
+            action.payload.select.forEach(id => state[id].count = 1);
         }
     },
     extraReducers: builder => {
@@ -56,5 +65,5 @@ export let selectActivePassiveIncomeModifiers = (state: RootState): PassiveIncom
         .map(id => PASSIVE_INCOME_MODIFIERS[id]);
 }
 
-export const {incrementPassiveIncome, decrementPassiveIncome} = passiveIncomeModifiers.actions;
+export const {incrementPassiveIncome, decrementPassiveIncome, unselectSelectPassiveIncome} = passiveIncomeModifiers.actions;
 export default passiveIncomeModifiers.reducer;

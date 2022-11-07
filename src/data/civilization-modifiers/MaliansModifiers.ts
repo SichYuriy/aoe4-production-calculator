@@ -1,0 +1,41 @@
+import CivilizationModifiers from "../../model/CivilizationModifiers";
+import CivilizationsEnum from "../CivilizationsEnum";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+
+let mansaQueryGold: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MANSA_QUERY_GOLD,
+    food: 0,
+    gold: 75,
+    wood: 0,
+    stone: 0,
+    maxCount: 1
+};
+
+let mansaQueryStone: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MANSA_QUERY_STONE,
+    food: 0,
+    gold: 0,
+    wood: 0,
+    stone: 75,
+    maxCount: 1
+};
+
+const PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.MANSA_QUERY_GOLD]: mansaQueryGold,
+    [PassiveIncomeModifierId.MANSA_QUERY_STONE]: mansaQueryStone
+}
+
+const MALIANS_MODIFIERS: CivilizationModifiers = {
+    civilization: CivilizationsEnum.MALIANS,
+    allGatheringRateModifiers: {},
+    defaultGatheringRateModifiers: [],
+    allProductionSpeedModifiers: {},
+    defaultProductionSpeedModifiers: [],
+    allCostModifiers: {},
+    defaultCostModifiers: [],
+    allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
+    allLimitedFoodGatheringSourceModifiers: {}
+}
+
+export default MALIANS_MODIFIERS;

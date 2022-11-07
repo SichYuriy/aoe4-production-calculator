@@ -1,0 +1,37 @@
+.mansaQuery {
+    display: flex;
+    gap: 5px;
+    color: #f3dc8d;
+    font-size: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mansaQueryIcon {
+    height: 60px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 52px;
+}
+
+.item img {
+    height: 52px;
+}
+
+label {
+    padding: 2px;
+    cursor: pointer;
+}
+
+[type=radio]:checked + div {
+    outline: 2px solid white;
+}
