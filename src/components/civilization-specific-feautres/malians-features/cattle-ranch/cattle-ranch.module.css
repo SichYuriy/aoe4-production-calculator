@@ -10,3 +10,9 @@
 .cattleRanchIcon {
     height: 60px;
 }
+
+.copyButton {
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}

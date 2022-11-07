@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[07 Nov 2022]</span> Add Malians fulani corral</li>
                         <li><span>[07 Nov 2022]</span> Add Malians cattle ranch</li>
                         <li><span>[07 Nov 2022]</span> Add Malians pit mine influence</li>
                         <li><span>[07 Nov 2022]</span> Add Malians cattle unit</li>

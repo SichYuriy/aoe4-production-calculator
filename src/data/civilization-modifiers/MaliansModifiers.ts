@@ -53,13 +53,22 @@ let cattleRanchCattle: PassiveIncomeModifier = {
     stone: 0
 }
 
+let fulaniCarrolCattle: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.FULANI_CARROL_CATTLE,
+    food: 20,
+    gold: 0,
+    wood: 0,
+    stone: 0
+}
+
 const PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.MANSA_QUERY_GOLD]: mansaQueryGold,
     [PassiveIncomeModifierId.MANSA_QUERY_STONE]: mansaQueryStone,
     [PassiveIncomeModifierId.PIT_MINE]: pitMine,
     [PassiveIncomeModifierId.PIT_MINE_HOUSE]: pitMineHouse,
     [PassiveIncomeModifierId.PIT_MINE_MINING_CAMP]: pitMineMiningCamp,
-    [PassiveIncomeModifierId.CATTLE_RANCH_CATTLE]: cattleRanchCattle
+    [PassiveIncomeModifierId.CATTLE_RANCH_CATTLE]: cattleRanchCattle,
+    [PassiveIncomeModifierId.FULANI_CARROL_CATTLE]: fulaniCarrolCattle,
 }
 
 const MALIANS_MODIFIERS: CivilizationModifiers = {
