@@ -14,6 +14,7 @@ import janissaryIcon from '../../icons/janissary.png'
 import greatBombardIcon from '../../icons/great_bombard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
+import cattleIcon from '../../icons/cattle.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
 import mangudaiIcon from '../../icons/mangudai.png'
 import springaldIcon from '../../icons/springald.png'
@@ -59,6 +60,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: ALL_CIVILIZATIONS,
         common: true
+    },
+    CATTLE: {
+        id: 'CATTLE',
+        icon: cattleIcon,
+        name: 'cattle',
+        productionTime: 15,
+        cost: new UnitCost(0, 100, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
     },
     ARCHER: {
         id: 'ARCHER',

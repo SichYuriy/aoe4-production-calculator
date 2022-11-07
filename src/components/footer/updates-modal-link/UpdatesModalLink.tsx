@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[07 Nov 2022]</span> Add Malians cattle unit</li>
                         <li><span>[07 Nov 2022]</span> Add Malians mansa query</li>
                         <li><span>[06 Nov 2022]</span> Add ram unit with production time 12s</li>
                         <li><span>[06 Nov 2022]</span> Temporary remove all ships except fishing</li>
