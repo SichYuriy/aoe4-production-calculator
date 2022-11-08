@@ -19,7 +19,7 @@ function App() {
     return (
         <div className={s.app}>
             <div className={`${s.rowBlock} ${s.contentContainer}`}>
-                <UnitsRoster units={Array.from(UNITS.values())}/>
+                <UnitsRoster allUnits={Array.from(UNITS.values())}/>
             </div>
             <div className={s.rowBlock}>
                 <div className={`${s.columnBlock} ${s.contentContainer} ${s.unitsCountManagementBlock}`}>

@@ -6,7 +6,8 @@ import {useAppDispatch, useAppSelector} from "../../hooks";
 import CivilizationsEnum from "../../data/CivilizationsEnum";
 import shared from '../../shared.module.css';
 
-function UnitsRoster(props: { units: Unit[] }) {
+function UnitsRoster(props: { allUnits: Unit[] }) {
+    let units: Unit[] = props.allUnits.filter(unit => !unit.civilizationSpecificFeature);
     const dispatch = useAppDispatch();
     const selectedUnits: UnitsState = useAppSelector((rootState) => rootState.units);
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -24,7 +25,7 @@ function UnitsRoster(props: { units: Unit[] }) {
         <div>
             <div><h3>Units:</h3></div>
             <div className={s.unitsBlock}>
-                {props.units.map(unit =>
+                {units.map(unit =>
                     <div key={unit.id} className={`${s.unitsBlockItem} ${availableByCivilization(unit) ? '' : shared.hidden}`}>
                         <Item icon={unit.icon}
                               name={unit.name}

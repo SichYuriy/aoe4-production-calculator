@@ -555,7 +555,67 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.CHINESE],
         common: false
-    }
+    },
+    FARIMBA_GARRISON_DONSO: {
+        id: 'FARIMBA_GARRISON_DONSO',
+        icon: donsoIcon,
+        name: 'donso',
+        productionTime: 22,
+        cost: new UnitCost(0, 72, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    FARIMBA_GARRISON_MUSOFADI_WARRIOR: {
+        id: 'FARIMBA_GARRISON_MUSOFADI_WARRIOR',
+        icon: musofadiWarriorIcon,
+        name: 'musofadi warrior',
+        productionTime: 22,
+        cost: new UnitCost(0, 64, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    FARIMBA_GARRISON_ARCHER: {
+        id: 'FARIMBA_GARRISON_ARCHER',
+        icon: archerIcon,
+        name: 'archer',
+        productionTime: 22,
+        cost: new UnitCost(0, 64, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    FARIMBA_GARRISON_JAVELIN_THROWER: {
+        id: 'FARIMBA_GARRISON_JAVELIN_THROWER',
+        icon: javelinThrowerIcon,
+        name: 'javelin thrower',
+        productionTime: 33,
+        cost: new UnitCost(0, 96, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    FARIMBA_GARRISON_MUSOFADI_GUNNER: {
+        id: 'FARIMBA_GARRISON_MUSOFADI_GUNNER',
+        icon: musofadiGunnerIcon,
+        name: 'musofadi gunner',
+        productionTime: 52,
+        cost: new UnitCost(0, 192, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
 }));
 
 export default UNITS;

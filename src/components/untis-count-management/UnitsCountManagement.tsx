@@ -16,12 +16,14 @@ function UnitsCountManagement() {
             <div><h3>Production:</h3></div>
             <div className={s.countersBlock}>
                 {allUnits.map(unit =>
-                    <div key={unit.id} className={`${s.countersBlockItem} ${selectedUnits[unit.id] > 0 ? '' : shared.hidden}`}>
+                    <div key={unit.id}
+                         className={`${s.countersBlockItem} ${selectedUnits[unit.id] > 0 ? '' : shared.hidden}`}>
                         <ItemCounter name={unit.name}
                                      icon={unit.icon}
                                      count={selectedUnits[unit.id] || 0}
                                      onIncrement={() => dispatch(increment(unit.id))}
-                                     onDecrement={() => dispatch(decrement(unit.id))}/>
+                                     onDecrement={() => dispatch(decrement(unit.id))}
+                                     disabled={unit.civilizationSpecificFeature}/>
                     </div>
                 )}
             </div>

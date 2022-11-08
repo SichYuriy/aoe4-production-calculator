@@ -8,6 +8,7 @@
 
 .counterMinus {
     border: 2px solid #f3dc8d;
+    border-right: none;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     cursor: pointer;
@@ -19,6 +20,7 @@
 
 .counterPlus {
     border: 2px solid #f3dc8d;
+    border-left: none;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     cursor: pointer;
@@ -29,8 +31,7 @@
 }
 
 .counterCount {
-    border-top: 2px solid #f3dc8d;
-    border-bottom: 2px solid #f3dc8d;
+    border: 2px solid #f3dc8d;
 }
 
 .counterBlock {

@@ -7,6 +7,12 @@ export interface UnitsState {
     [key: string]: number
 }
 
+export interface UnselectSelectUnitsPayload {
+    unselect: string[],
+    select: string[],
+    selectCount?: number
+}
+
 export const unitsSlice = createSlice({
     name: 'units',
     initialState: {} as UnitsState,
@@ -35,6 +41,13 @@ export const unitsSlice = createSlice({
             } else {
                 state[unitId] = count - 1;
             }
+        },
+        unselectSelectUnits: (state, action: PayloadAction<UnselectSelectUnitsPayload>) => {
+            let selectCount = action.payload.selectCount || 1;
+            action.payload.unselect.forEach(unitId => delete state[unitId]);
+            action.payload.select.forEach(unitId => {
+                state[unitId] = selectCount;
+            });
         }
     },
     extraReducers: builder => {
@@ -51,5 +64,5 @@ export const unitsSlice = createSlice({
     }
 });
 
-export const {toggle, increment, decrement} = unitsSlice.actions;
+export const {toggle, increment, decrement, unselectSelectUnits} = unitsSlice.actions;
 export default unitsSlice.reducer;

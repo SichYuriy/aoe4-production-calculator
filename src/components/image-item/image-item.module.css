@@ -1,0 +1,17 @@
+.imageItem {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected {
+    border: 2px solid white;
+}
+
+.imageItem img {
+    height: 52px;
+}

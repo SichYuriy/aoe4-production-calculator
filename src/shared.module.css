@@ -1,3 +1,23 @@
 .hidden {
     display: none;
 }
+
+.civilizationSpecificFeature {
+    display: flex;
+    gap: 5px;
+    color: #f3dc8d;
+    font-size: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.civilizationSpecificFeatureIcon {
+    height: 60px;
+}
+
+.civilizationSpecificFeature .items {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

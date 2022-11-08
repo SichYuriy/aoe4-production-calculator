@@ -12,6 +12,7 @@ import {
 } from "../../../state/PassiveIncomeModifiersSlice";
 import PassiveIncomeModifierId from "../../../data/passive-income-modifiers/PassiveIncomeModifierId";
 import CattleRanch from "./cattle-ranch/CattleRanch";
+import FarimbaGarrison from "./farimba-garrison/FarimbaGarrison";
 
 function MaliansFeatures() {
     const dispatch = useAppDispatch();
@@ -39,6 +40,7 @@ function MaliansFeatures() {
                 {pitMineMiningCampItem}
             </div>
             <CattleRanch/>
+            <FarimbaGarrison/>
         </div>
     );
 }
