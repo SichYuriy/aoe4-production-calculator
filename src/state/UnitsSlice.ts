@@ -1,4 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import changeCivilization from "./actions/CivilizationChnagedAction";
+import UNITS from "../data/unit/Units";
+import CivilizationsEnum from "../data/CivilizationsEnum";
 
 export interface UnitsState {
     [key: string]: number
@@ -33,6 +36,18 @@ export const unitsSlice = createSlice({
                 state[unitId] = count - 1;
             }
         }
+    },
+    extraReducers: builder => {
+        builder.addCase(changeCivilization, (state, action) => {
+            Object.keys(state)
+                .forEach(unitId => {
+                    let unit = UNITS.get(unitId)!;
+                    if (!unit.civilizations.includes(action.payload)
+                        && !(action.payload === CivilizationsEnum.RANDOM && unit.common)) {
+                        delete state[unitId];
+                    }
+                });
+        });
     }
 });
 
