@@ -38,9 +38,6 @@ function FarimbaGarrison() {
             <div><img className={shared.civilizationSpecificFeatureIcon} src={farimbaGarrisonIcon}
                       alt={'farimba-garrison'}/></div>
             <div>:</div>
-            <div>
-
-            </div>
             <div className={shared.items}>
                 <ImageItem selected={noneSelected} icon={cancelIcon} onClick={unselectAll}/>
                 <UpgradeItem icon={donsoIcon} selected={units['FARIMBA_GARRISON_DONSO'] > 0} onClick={() => selectUnit('FARIMBA_GARRISON_DONSO')}/>

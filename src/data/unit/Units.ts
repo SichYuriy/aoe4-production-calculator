@@ -45,6 +45,9 @@ import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
 import towerWarElephantIcon from '../../icons/tower-war-elephant.png'
 import warElephantIcon from '../../icons/war-elephant.png'
+import wynguardArmyIcon from '../../icons/wynguard-army.webp'
+import wynguardRaidersIcon from '../../icons/wynguard-raiders.webp'
+import wynguardRangersIcon from '../../icons/wynguard-rangers.webp'
 import CivilizationsEnum from "../CivilizationsEnum";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS];
@@ -613,6 +616,42 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WYNGUARD_ARMY: {
+        id: 'WYNGUARD_ARMY',
+        icon: wynguardArmyIcon,
+        name: 'wynguard army',
+        productionTime: 75,
+        cost: new UnitCost(100, 200, 100, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WYNGUARD_RAIDERS: {
+        id: 'WYNGUARD_RAIDERS',
+        icon: wynguardRaidersIcon,
+        name: 'wynguard raiders',
+        productionTime: 75,
+        cost: new UnitCost(200, 100, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WYNGUARD_RANGERS: {
+        id: 'WYNGUARD_RANGERS',
+        icon: wynguardRangersIcon,
+        name: 'wynguard rangers',
+        productionTime: 75,
+        cost: new UnitCost(200, 100, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
         civilizationSpecificFeature: true
     },
