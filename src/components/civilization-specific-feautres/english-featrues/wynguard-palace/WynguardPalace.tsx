@@ -2,9 +2,9 @@ import shared from "../../../../shared.module.css";
 import wynguardPalaceIcon from "../../../../icons/wynguard-palace.png";
 import ImageItem from "../../../image-item/ImageItem";
 import cancelIcon from "../../../../icons/cancel.png";
-import wynguardArmyIcon from "../../../../icons/wynguard-army.webp";
-import wynguardRaidersIcon from "../../../../icons/wynguard-raiders.webp";
-import wynguardRangersIcon from "../../../../icons/wynguard-rangers.webp";
+import wynguardArmyIcon from "../../../../icons/wynguard-army.png";
+import wynguardRaidersIcon from "../../../../icons/wynguard-raiders.png";
+import wynguardRangersIcon from "../../../../icons/wynguard-rangers.png";
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
 import {UnitsState, unselectSelectUnits} from "../../../../state/UnitsSlice";
 

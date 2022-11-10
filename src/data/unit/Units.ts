@@ -45,9 +45,9 @@ import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
 import towerWarElephantIcon from '../../icons/tower-war-elephant.png'
 import warElephantIcon from '../../icons/war-elephant.png'
-import wynguardArmyIcon from '../../icons/wynguard-army.webp'
-import wynguardRaidersIcon from '../../icons/wynguard-raiders.webp'
-import wynguardRangersIcon from '../../icons/wynguard-rangers.webp'
+import wynguardArmyIcon from '../../icons/wynguard-army.png'
+import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
+import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
 import CivilizationsEnum from "../CivilizationsEnum";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS];
