@@ -117,7 +117,8 @@ const ABBASID_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ABBASID_TRADER_DISCOUNT],
     allPassiveIncomeModifiers: {},
-    allLimitedFoodGatheringSourceModifiers: {}
+    allLimitedFoodGatheringSourceModifiers: {},
+    allPassiveGoldFromFoodVillagerModifiers: {}
 }
 
 export default ABBASID_MODIFIERS;

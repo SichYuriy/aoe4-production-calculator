@@ -9,13 +9,20 @@ import ProductionSpeedModifierId from "../../data/production-speed-modifiers/Pro
 import COST_MODIFIERS from "../../data/cost-modifiers/AllCostModifiers";
 import CostModifierId from "../../data/cost-modifiers/CostModifierId";
 import LimitedFoodGatheringSource from "../../model/LimitedFoodGatheringSource";
+import PassiveIncomeService from "../PassiveIncomeService";
+import FoodSource from "../../model/FoodSource";
+import PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS
+    from "../../data/passive-gold-from-food-vilager-modifiers/AllPassiveGoldFromFoodVillagerModifiers";
+import PassiveGoldFromFoodVillagerModifierId
+    from "../../data/passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
 
 describe('ProductionCalculatorService', () => {
     let subject: ProductionCalculatorService;
 
     beforeEach(() => {
         let limitedFoodGatheringSourceService = new LimitedFoodGatheringSourceService(new GatheringRatesService());
-        subject = new ProductionCalculatorService(limitedFoodGatheringSourceService);
+        let passiveIncomeService = new PassiveIncomeService();
+        subject = new ProductionCalculatorService(limitedFoodGatheringSourceService, passiveIncomeService);
     });
 
     describe('modifiers', () => {
@@ -29,17 +36,17 @@ describe('ProductionCalculatorService', () => {
                 stone: 40
             };
             unitsSelected = {
-                ['VILLAGER']: 1,
-                ['ARCHER']: 1,
-                ['SPEARMAN']: 1,
-                ['KNIGHT']: 1,
+                'VILLAGER': 1,
+                'ARCHER': 1,
+                'SPEARMAN': 1,
+                'KNIGHT': 1,
             };
 
         });
 
         it('no modifiers', () => {
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
-                [], [], new ResourcesAmount(), []);
+                [], [], new ResourcesAmount(), [], [], FoodSource.FARM);
             expect(actual.foodVillagers).toBeCloseTo(18.75);
             expect(actual.woodVillagers).toBeCloseTo(7);
             expect(actual.goldVillagers).toBeCloseTo(4.2857);
@@ -48,7 +55,7 @@ describe('ProductionCalculatorService', () => {
 
         it('one productionSpeedModifier', () => {
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
-                [PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]], [], new ResourcesAmount(), [])
+                [PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]], [], new ResourcesAmount(), [], [], FoodSource.FARM)
             expect(actual.foodVillagers).toBeCloseTo(20.25);
             expect(actual.woodVillagers).toBeCloseTo(7);
             expect(actual.goldVillagers).toBeCloseTo(5.3571);
@@ -57,7 +64,7 @@ describe('ProductionCalculatorService', () => {
 
         it('one costModifier', () => {
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
-                [], [COST_MODIFIERS[CostModifierId.FRENCH_CASTLE]], new ResourcesAmount(), [])
+                [], [COST_MODIFIERS[CostModifierId.FRENCH_CASTLE]], new ResourcesAmount(), [], [], FoodSource.FARM)
             expect(actual.foodVillagers).toBeCloseTo(16.95);
             expect(actual.woodVillagers).toBeCloseTo(6);
             expect(actual.goldVillagers).toBeCloseTo(3.4285);
@@ -67,7 +74,7 @@ describe('ProductionCalculatorService', () => {
         it('one passiveIncomeModifier', () => {
             let passiveIncome = ResourcesAmount.of(0, 0, 100, 0);
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
-                [], [], passiveIncome, [])
+                [], [], passiveIncome, [], [], FoodSource.FARM)
             expect(actual.foodVillagers).toBeCloseTo(18.75);
             expect(actual.woodVillagers).toBeCloseTo(7);
             expect(actual.goldVillagers).toBeCloseTo(1.7857);
@@ -81,10 +88,25 @@ describe('ProductionCalculatorService', () => {
             };
 
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
-                [], [], new ResourcesAmount(), [limitedFoodGatheringSource]);
+                [], [], new ResourcesAmount(), [limitedFoodGatheringSource], [], FoodSource.FARM);
             expect(actual.foodVillagers).toBeCloseTo(17.5);
             expect(actual.woodVillagers).toBeCloseTo(7);
             expect(actual.goldVillagers).toBeCloseTo(4.2857);
+            expect(actual.stoneVillagers).toBeCloseTo(0);
+        });
+
+        it('one passiveFoldFromFoodVillager', () => {
+            unitsSelected = {
+                'VILLAGER': 1,
+                'KNIGHT': 1
+            }
+            let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
+                [], [], new ResourcesAmount(), [],
+                [PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS[PassiveGoldFromFoodVillagerModifierId.ENCLOSURES]], FoodSource.FARM);
+
+            expect(actual.foodVillagers).toBeCloseTo(9.75);
+            expect(actual.woodVillagers).toBeCloseTo(0);
+            expect(actual.goldVillagers).toBeCloseTo(0.2857);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
@@ -98,7 +120,8 @@ describe('ProductionCalculatorService', () => {
                 [PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]],
                 [COST_MODIFIERS[CostModifierId.FRENCH_CASTLE]],
                 passiveIncome,
-                [limitedFoodGatheringSource]);
+                [limitedFoodGatheringSource],
+                [], FoodSource.FARM);
             expect(actual.foodVillagers).toBeCloseTo(16.9);
             expect(actual.woodVillagers).toBeCloseTo(6);
             expect(actual.goldVillagers).toBeCloseTo(1.7857);

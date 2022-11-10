@@ -11,6 +11,7 @@ import {selectActiveProductionSpeedModifiers} from "../../state/ProducationSpeed
 import {selectActiveCostModifiers} from "../../state/CostModifiersSlice";
 import {useState} from "react";
 import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
+import {selectActivePassiveGoldFromFoodVillagerModifiers} from "../../state/PassiveGoldFromFoodVillagerModifiersSlice";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
@@ -28,10 +29,20 @@ function ProductionCalculator() {
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
     const limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers);
+    const passiveGoldFromFoodVillagerModifiers = useAppSelector(selectActivePassiveGoldFromFoodVillagerModifiers);
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers);
     let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers);
     let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers, gatheringRateModifiers);
-    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(gatheringRates, selectedUnits, productionSpeedModifiers, costModifiers, passiveIncome, limitedFoodGatheringSources);
+    let villagerCost = productionCalculatorService.calculateProductionVillagerCost(
+        gatheringRates,
+        selectedUnits,
+        productionSpeedModifiers,
+        costModifiers,
+        passiveIncome,
+        limitedFoodGatheringSources,
+        passiveGoldFromFoodVillagerModifiers,
+        foodSource
+    );
     if (!seePreciseNumbers) {
         villagerCost = {
             foodVillagers: roundVillagerCount(villagerCost.foodVillagers),

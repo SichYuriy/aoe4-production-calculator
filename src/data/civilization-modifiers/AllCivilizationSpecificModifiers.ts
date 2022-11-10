@@ -3,15 +3,18 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import allCivilizationModifiers from "./AllCivilizationModifiersRegistry";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveGoldFromFoodVillagerModifierId
+    from "../passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
 
-export const GATHERING_RATE_MODIFIERS_DEFAULT: {[key:string]: GatheringRateModifierId[]} = {};
+export const GATHERING_RATE_MODIFIERS_DEFAULT: { [key: string]: GatheringRateModifierId[] } = {};
 export const ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS: GatheringRateModifierId[] = [];
-export const PRODUCTION_SPEED_MODIFIERS_DEFAULT: {[key:string]: ProductionSpeedModifierId[]} = {};
+export const PRODUCTION_SPEED_MODIFIERS_DEFAULT: { [key: string]: ProductionSpeedModifierId[] } = {};
 export const ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS: ProductionSpeedModifierId[] = [];
-export const COST_MODIFIERS_DEFAULT: {[key:string]: CostModifierId[]} = {};
+export const COST_MODIFIERS_DEFAULT: { [key: string]: CostModifierId[] } = {};
 export const ALL_CIVILIZATIONS_COST_MODIFIERS: CostModifierId[] = [];
 export const ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS: PassiveIncomeModifierId[] = [];
 export const ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS: PassiveIncomeModifierId[] = [];
+export const ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS: PassiveGoldFromFoodVillagerModifierId[] = [];
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
     GATHERING_RATE_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultGatheringRateModifiers;
@@ -31,4 +34,7 @@ allCivilizationModifiers.forEach(civilizationModifiers => {
 
     // @ts-ignore
     ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS.push(...Object.keys(civilizationModifiers.allLimitedFoodGatheringSourceModifiers));
+
+    // @ts-ignore
+    ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveGoldFromFoodVillagerModifiers));
 })

@@ -80,7 +80,8 @@ const MALIANS_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
-    allLimitedFoodGatheringSourceModifiers: {}
+    allLimitedFoodGatheringSourceModifiers: {},
+    allPassiveGoldFromFoodVillagerModifiers: {}
 }
 
 export default MALIANS_MODIFIERS;

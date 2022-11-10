@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[10 Nov 2022]</span> Add English enclosures</li>
                         <li><span>[10 Nov 2022]</span> Add English Wynguard Palace</li>
                         <li><span>[09 Nov 2022]</span> Add Malians Farimba Garrison</li>
                         <li><span>[07 Nov 2022]</span> Add Malians Fulani Corral</li>

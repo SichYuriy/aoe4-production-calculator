@@ -6,7 +6,7 @@ import GatheringRatesService from "../service/GatheringRatesService";
 let gatheringRatesService = new GatheringRatesService();
 let passiveIncomeService = new PassiveIncomeService();
 let limitedFoodGatheringService = new LimitedFoodGatheringSourceService(gatheringRatesService);
-let productionCalculatorService = new ProductionCalculatorService(limitedFoodGatheringService);
+let productionCalculatorService = new ProductionCalculatorService(limitedFoodGatheringService, passiveIncomeService);
 
 const serviceLocator =  {
     GATHERING_RATES_SERVICE: gatheringRatesService,

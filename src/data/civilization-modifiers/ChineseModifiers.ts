@@ -88,7 +88,8 @@ const CHINESE_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     allPassiveIncomeModifiers: {},
-    allLimitedFoodGatheringSourceModifiers: {}
+    allLimitedFoodGatheringSourceModifiers: {},
+    allPassiveGoldFromFoodVillagerModifiers: {}
 }
 
 export default CHINESE_MODIFIERS;

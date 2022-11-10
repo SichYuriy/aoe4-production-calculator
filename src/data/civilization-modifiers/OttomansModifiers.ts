@@ -99,7 +99,8 @@ const OTTOMANS_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
-    allLimitedFoodGatheringSourceModifiers: LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
+    allLimitedFoodGatheringSourceModifiers: LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS,
+    allPassiveGoldFromFoodVillagerModifiers: {}
 }
 
 export default OTTOMANS_MODIFIERS;

@@ -8,6 +8,9 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import {Building} from "../../model/Unit";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
+import PassiveGoldFromFoodVillagerModifier from "../../model/PassiveGoldFromFoodVillagerModifier";
+import PassiveGoldFromFoodVillagerModifierId
+    from "../passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
 
 const englishDarkAge: GatheringRateModifier = {
     id: GatheringRateModifierId.ENGLISH_DARK_AGE,
@@ -60,6 +63,12 @@ const englishMma: ProductionSpeedModifier = {
     description: 'mmaTime * 0.5'
 }
 
+const enclosures: PassiveGoldFromFoodVillagerModifier = {
+    id: PassiveGoldFromFoodVillagerModifierId.ENCLOSURES,
+    gold: 16,
+    foodSources: [FoodSource.FARM]
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.ENGLISH_DARK_AGE]: englishDarkAge,
     [GatheringRateModifierId.ENGLISH_FEUDAL_AGE]: englishFeudalAge,
@@ -75,6 +84,10 @@ const COST_MODIFIERS = {
     [CostModifierId.ENGLISH_DOCKS]: englishDocks
 }
 
+const PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS = {
+    [PassiveGoldFromFoodVillagerModifierId.ENCLOSURES]: enclosures
+}
+
 const ENGLISH_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ENGLAND,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
@@ -84,7 +97,8 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS],
     allPassiveIncomeModifiers: {},
-    allLimitedFoodGatheringSourceModifiers: {}
+    allLimitedFoodGatheringSourceModifiers: {},
+    allPassiveGoldFromFoodVillagerModifiers: PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS
 }
 
 export default ENGLISH_MODIFIERS;

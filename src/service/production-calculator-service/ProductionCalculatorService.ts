@@ -6,13 +6,20 @@ import UnitCostModifier from "../../model/UnitCostModifier";
 import UNITS from "../../data/unit/Units";
 import ResourcesAmount from "../../model/ResourcesAmount";
 import LimitedFoodGatheringSource from "../../model/LimitedFoodGatheringSource";
-import LimitedFoodGatheringSourceService from "../limited-food-gathering-source-service/LimitedFoodGatheringSourceService";
+import LimitedFoodGatheringSourceService
+    from "../limited-food-gathering-source-service/LimitedFoodGatheringSourceService";
+import PassiveIncomeService from "../PassiveIncomeService";
+import FoodSource from "../../model/FoodSource";
+import PassiveGoldFromFoodVillagerModifier from "../../model/PassiveGoldFromFoodVillagerModifier";
 
 class ProductionCalculatorService {
     private limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService;
+    private passiveIncomeService: PassiveIncomeService;
 
-    constructor(limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService) {
+    constructor(limitedFoodGatheringSourceService: LimitedFoodGatheringSourceService,
+                passiveIncomeService: PassiveIncomeService) {
         this.limitedFoodGatheringSourceService = limitedFoodGatheringSourceService;
+        this.passiveIncomeService = passiveIncomeService;
     }
 
     calculateProductionVillagerCost(gatheringRates: GatheringRates,
@@ -20,7 +27,9 @@ class ProductionCalculatorService {
                                     productionSpeedModifiers: ProductionSpeedModifier[],
                                     costModifiers: UnitCostModifier[],
                                     passiveIncome: ResourcesAmount,
-                                    limitedFoodGatheringSources: LimitedFoodGatheringSource[]): ProductionVillagerCost {
+                                    limitedFoodGatheringSources: LimitedFoodGatheringSource[],
+                                    passiveGoldFromFoodVillagerModifiers: PassiveGoldFromFoodVillagerModifier[],
+                                    foodSource: FoodSource): ProductionVillagerCost {
         let resourcesNeeded = this.calculateResourcesNeededForUnitProduction(unitsSelected, productionSpeedModifiers, costModifiers);
 
         resourcesNeeded = resourcesNeeded.subtractToZero(passiveIncome);
@@ -29,6 +38,11 @@ class ProductionCalculatorService {
         resourcesNeeded = resourcesNeeded.subtractToZero(uniqueFoodSourceVillagers.gatheringRate);
 
         let villagersCost = resourcesNeeded.divideByGatheringRate(gatheringRates);
+
+        let passiveGoldFromFoodVillagers = this.passiveIncomeService.getPassiveGoldIncome(Math.ceil(villagersCost.foodVillagers), passiveGoldFromFoodVillagerModifiers, foodSource);
+        resourcesNeeded = resourcesNeeded.subtractToZero(ResourcesAmount.of(0 , 0, passiveGoldFromFoodVillagers, 0));
+        villagersCost = resourcesNeeded.divideByGatheringRate(gatheringRates);
+
         villagersCost.foodVillagers += uniqueFoodSourceVillagers.villagersCount;
 
         return villagersCost;
