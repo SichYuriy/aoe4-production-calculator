@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[14 Nov 2022]</span> Add relics and sacred sites</li>
                         <li><span>[11 Nov 2022]</span> Add English farmers count</li>
                         <li><span>[10 Nov 2022]</span> Add English enclosures</li>
                         <li><span>[10 Nov 2022]</span> Add English Wynguard Palace</li>
