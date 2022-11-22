@@ -14,17 +14,18 @@ import GatheringRateModifierId from "../../data/gathering-rate-modifiers/Gatheri
 import UpgradeItemCounter from "../upgrade-item-counter/UpgradeItemCounter";
 import relicIcon from "../../icons/relic.png";
 import sacredSiteIcon from "../../icons/sacred_site.png";
-import PassiveIncomeModifierId from "../../data/passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../../data/passive-income-modifiers/PassiveIncomeSource";
 import {
     decrementPassiveIncome,
-    incrementPassiveIncome, PassiveIncomeModifiersState,
-} from "../../state/PassiveIncomeModifiersSlice";
+    incrementPassiveIncome,
+    PassiveIncomeSourcesState
+} from "../../state/PassiveIncomeSourcesSlice";
 
 function CommonUpgrades() {
     const dispatch = useAppDispatch();
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
     const productionSpeedModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.productionSpeedModifiers);
-    const passiveIncomeModifiers: PassiveIncomeModifiersState = useAppSelector((rootState) => rootState.passiveIncomeModifiers);
+    const passiveIncomeSources: PassiveIncomeSourcesState = useAppSelector((rootState) => rootState.passiveIncomeSources);
     let wheelbarrowItem =  <UpgradeItem icon={wheelbarrowIcon}
                                         selected={gatheringRateModifiers[GatheringRateModifierId.WHEELBARROW]}
                                         onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WHEELBARROW))}/>
@@ -35,13 +36,13 @@ function CommonUpgrades() {
                                      selected={productionSpeedModifiers[ProductionSpeedModifierId.MILITARY_ACADEMY]}
                                      onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.MILITARY_ACADEMY))}/>
     let relicsItem = <UpgradeItemCounter icon={relicIcon}
-                                                    count={passiveIncomeModifiers[PassiveIncomeModifierId.RELICS].count}
-                                                    onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeModifierId.RELICS))}
-                                                    onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.RELICS))}/>
+                                                    count={passiveIncomeSources[PassiveIncomeSource.RELICS].count}
+                                                    onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeSource.RELICS))}
+                                                    onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.RELICS))}/>
     let sacredSitesItem = <UpgradeItemCounter icon={sacredSiteIcon}
-                                         count={passiveIncomeModifiers[PassiveIncomeModifierId.SACRED_SITES].count}
-                                         onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeModifierId.SACRED_SITES))}
-                                         onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.SACRED_SITES))}/>
+                                         count={passiveIncomeSources[PassiveIncomeSource.SACRED_SITES].count}
+                                         onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeSource.SACRED_SITES))}
+                                         onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.SACRED_SITES))}/>
     return (
         <div>
             <div><h3>Upgrades:</h3></div>

@@ -1,82 +1,57 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import changeCivilization from "./actions/CivilizationChnagedAction";
 import {
-    ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS
+    ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS, PASSIVE_INCOME_MODIFIERS_DEFAULT
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
-import PASSIVE_INCOME_MODIFIERS from "../data/passive-income-modifiers/AllPassiveIncomeModifiers";
+import PASSIVE_INCOME_MODIFIERS, {
+    DEFAULT_COMMON_PASSIVE_INCOME_MODIFIERS
+} from "../data/passive-income-modifiers/AllPassiveIncomeModifiers";
 import {RootState} from "../store";
 import PassiveIncomeModifier from "../model/PassiveIncomeModifier";
 
 export interface PassiveIncomeModifierState {
     id: string;
-    count: number;
+    selected: boolean;
+}
+
+export interface PassiveIncomeModifiersState {
+    [key: string]: PassiveIncomeModifierState
 }
 
 const initialState: PassiveIncomeModifiersState = Object.values(PASSIVE_INCOME_MODIFIERS)
     .reduce((state: PassiveIncomeModifiersState, modifier) => {
         state[modifier.id] = {
             id: modifier.id,
-            count: 0
+            // @ts-ignore
+            selected: DEFAULT_COMMON_PASSIVE_INCOME_MODIFIERS.includes(modifier.id)
         };
         return state;
-    }, {})
-
-export interface PassiveIncomeModifiersState {
-    [key: string]: PassiveIncomeModifierState
-}
-
-export interface UnselectSelectPassiveIncomeModifiersPayload {
-    unselect: string[],
-    select: string[]
-}
-
-export interface SetPassiveIncomeCountPayload {
-    id: string,
-    count: number
-}
+    }, {});
 
 export const passiveIncomeModifiers = createSlice({
     name: 'passiveIncomeModifiers',
     initialState: initialState,
     reducers: {
-        incrementPassiveIncome: (state, action: PayloadAction<string>) => {
+        togglePassiveIncomeModifier: (state, action: PayloadAction<string>) => {
             let id = action.payload;
-            let modifier = PASSIVE_INCOME_MODIFIERS[id];
-            if (!modifier.maxCount || state[id].count < modifier.maxCount) {
-                state[id].count++;
-            }
-        },
-        decrementPassiveIncome: (state, action: PayloadAction<string>) => {
-            let id = action.payload;
-            if (state[id].count > 0) {
-                state[id].count--;
-            }
-        },
-        unselectSelectPassiveIncome: (state, action: PayloadAction<UnselectSelectPassiveIncomeModifiersPayload>) => {
-            action.payload.unselect.forEach(id => state[id].count = 0);
-            action.payload.select.forEach(id => state[id].count = 1);
-        },
-        setPassiveIncomeCount: (state, action: PayloadAction<SetPassiveIncomeCountPayload>) => {
-            state[action.payload.id].count = action.payload.count;
+            state[id].selected = !state[id].selected;
         }
     },
     extraReducers: builder => {
-        builder.addCase(changeCivilization, state => {
-            ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS.forEach(id => state[id].count = 0);
-        })
+        builder.addCase(changeCivilization, (state, action) => {
+            ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS.forEach(id => state[id].selected = false);
+            (PASSIVE_INCOME_MODIFIERS_DEFAULT[action.payload] || []).forEach(id => state[id].selected = true);
+        });
     }
 });
 
 export let selectActivePassiveIncomeModifiers = (state: RootState): PassiveIncomeModifier[] => {
     return Object.keys(state.passiveIncomeModifiers)
-        .filter(id => state.passiveIncomeModifiers[id].count > 0)
+        .filter(id => state.passiveIncomeModifiers[id].selected)
         .map(id => PASSIVE_INCOME_MODIFIERS[id]);
 }
 
 export const {
-    incrementPassiveIncome,
-    decrementPassiveIncome,
-    unselectSelectPassiveIncome,
-    setPassiveIncomeCount
+    togglePassiveIncomeModifier
 } = passiveIncomeModifiers.actions;
 export default passiveIncomeModifiers.reducer;

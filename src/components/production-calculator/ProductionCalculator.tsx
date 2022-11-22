@@ -28,10 +28,11 @@ function ProductionCalculator() {
     const costModifiers = useAppSelector(selectActiveCostModifiers);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
+    const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
     const limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers);
     const passiveGoldFromFoodVillagerModifiers = useAppSelector(selectActivePassiveGoldFromFoodVillagerModifiers);
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers);
-    let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers);
+    let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers, passiveIncomeSources);
     let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers, gatheringRateModifiers);
     let minFoodVillagers: number = useAppSelector(rootState => rootState.minFoodWorkers.value);
     let villagerCost = productionCalculatorService.calculateProductionVillagerCost(

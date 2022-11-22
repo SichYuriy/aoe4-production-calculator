@@ -11,6 +11,7 @@ import FoodSource from "../../model/FoodSource";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 import {UnitType} from "../../model/Unit";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
 let anatolianHills: GatheringRateModifier = {
     id: GatheringRateModifierId.ANATOLIAN_HILLS,
@@ -28,7 +29,7 @@ let sultanhaniTradeNetwork: PassiveIncomeModifier = {
     gold: 28,
     wood: 0,
     stone: 0,
-    maxCount: 6
+    source: PassiveIncomeSource.SULTANHANI_TRADE_NETWORK
 }
 
 const BUSHES_COUNT = 4;
@@ -98,7 +99,9 @@ const OTTOMANS_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
     defaultCostModifiers: [],
+    passiveIncomeSources: [PassiveIncomeSource.SULTANHANI_TRADE_NETWORK],
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
+    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK],
     allLimitedFoodGatheringSourceModifiers: LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS,
     allPassiveGoldFromFoodVillagerModifiers: {}
 }

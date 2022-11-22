@@ -3,34 +3,36 @@ import cattleRanchIcon from "../../../../icons/cattle-ranch.png";
 import cattleIcon from "../../../../icons/cattle.png";
 import fulaniCorralIcon from "../../../../icons/fulani-corral.png";
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
-import {
-    decrementPassiveIncome,
-    incrementPassiveIncome,
-    PassiveIncomeModifiersState, setPassiveIncomeCount
-} from "../../../../state/PassiveIncomeModifiersSlice";
 import UpgradeItemCounter from "../../../upgrade-item-counter/UpgradeItemCounter";
 import PassiveIncomeModifierId from "../../../../data/passive-income-modifiers/PassiveIncomeModifierId";
 import {faPlay} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    decrementPassiveIncome,
+    incrementPassiveIncome,
+    PassiveIncomeSourcesState,
+    setPassiveIncomeCount
+} from "../../../../state/PassiveIncomeSourcesSlice";
+import PassiveIncomeSource from "../../../../data/passive-income-modifiers/PassiveIncomeSource";
 
 function CattleRanch() {
     const dispatch = useAppDispatch();
-    const passiveIncomeModifiers: PassiveIncomeModifiersState = useAppSelector((rootState) => rootState.passiveIncomeModifiers);
+    const passiveIncomeSources: PassiveIncomeSourcesState = useAppSelector((rootState) => rootState.passiveIncomeSources);
 
     let cattleRanchCattleItem = <UpgradeItemCounter icon={cattleIcon}
-                                                    count={passiveIncomeModifiers[PassiveIncomeModifierId.CATTLE_RANCH_CATTLE].count}
+                                                    count={passiveIncomeSources[PassiveIncomeSource.CATTLE_RANCH_CATTLE].count}
                                                     onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeModifierId.CATTLE_RANCH_CATTLE))}
                                                     onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.CATTLE_RANCH_CATTLE))}/>
 
     let fulaniCorralCattleItem = <UpgradeItemCounter icon={cattleIcon}
-                                                     count={passiveIncomeModifiers[PassiveIncomeModifierId.FULANI_CARROL_CATTLE].count}
+                                                     count={passiveIncomeSources[PassiveIncomeSource.FULANI_CARROL_CATTLE].count}
                                                      onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeModifierId.FULANI_CARROL_CATTLE))}
                                                      onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.FULANI_CARROL_CATTLE))}/>
 
     function copyFromRanchToFulaniCorral() {
         dispatch(setPassiveIncomeCount({
-            id: PassiveIncomeModifierId.FULANI_CARROL_CATTLE,
-            count: passiveIncomeModifiers[PassiveIncomeModifierId.CATTLE_RANCH_CATTLE].count
+            id: PassiveIncomeSource.FULANI_CARROL_CATTLE,
+            count: passiveIncomeSources[PassiveIncomeSource.CATTLE_RANCH_CATTLE].count
         }));
     }
 

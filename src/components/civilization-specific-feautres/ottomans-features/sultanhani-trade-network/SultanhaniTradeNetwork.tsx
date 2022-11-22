@@ -3,17 +3,17 @@ import sultanhaniTradeNetworkIcon from "../../../../icons/sultanhani-trade-netwo
 import traderIcon from "../../../../icons/trader.png";
 import UpgradeItemCounter from "../../../upgrade-item-counter/UpgradeItemCounter";
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
+import PassiveIncomeSource from "../../../../data/passive-income-modifiers/PassiveIncomeSource";
+import Tooltip from "../../../tooltip/Tooltip";
 import {
     decrementPassiveIncome,
     incrementPassiveIncome,
-    PassiveIncomeModifierState
-} from "../../../../state/PassiveIncomeModifiersSlice";
-import PassiveIncomeModifierId from "../../../../data/passive-income-modifiers/PassiveIncomeModifierId";
-import Tooltip from "../../../tooltip/Tooltip";
+    PassiveIncomeSourceState
+} from "../../../../state/PassiveIncomeSourcesSlice";
 
 function SultanhaniTradeNetwork() {
     const dispatch = useAppDispatch();
-    const modifierState: PassiveIncomeModifierState = useAppSelector((rootState) => rootState.passiveIncomeModifiers[PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK]);
+    const modifierState: PassiveIncomeSourceState = useAppSelector((rootState) => rootState.passiveIncomeSources[PassiveIncomeSource.SULTANHANI_TRADE_NETWORK]);
     return (
         <div className={s.sultanhaniTradeNetwork}>
             <Tooltip header={'Sultanhani Trade Network'} text={'Generates passive gold income depending on the traders count inside'}>
@@ -22,8 +22,8 @@ function SultanhaniTradeNetwork() {
             <div>:</div>
             <UpgradeItemCounter icon={traderIcon}
                                 count={modifierState.count}
-                                onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK))}
-                                onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK))}/>
+                                onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeSource.SULTANHANI_TRADE_NETWORK))}
+                                onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.SULTANHANI_TRADE_NETWORK))}/>
         </div>
     )
 }

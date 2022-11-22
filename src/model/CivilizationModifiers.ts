@@ -8,6 +8,8 @@ import GatheringRateModifierId from "../data/gathering-rate-modifiers/GatheringR
 import PassiveIncomeModifier from "./PassiveIncomeModifier";
 import LimitedFoodGatheringSourceModifier from "./LimitedFoodGatheringSourceModifier";
 import PassiveGoldFromFoodVillagerModifier from "./PassiveGoldFromFoodVillagerModifier";
+import PassiveIncomeModifierId from "../data/passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../data/passive-income-modifiers/PassiveIncomeSource";
 
 interface CivilizationModifiers {
     civilization: CivilizationsEnum,
@@ -17,7 +19,9 @@ interface CivilizationModifiers {
     defaultProductionSpeedModifiers: ProductionSpeedModifierId[],
     allCostModifiers: { [key: string]: UnitCostModifier }
     defaultCostModifiers: CostModifierId[],
+    passiveIncomeSources: PassiveIncomeSource[],
     allPassiveIncomeModifiers: { [key: string]: PassiveIncomeModifier },
+    defaultPassiveIncomeModifiers: PassiveIncomeModifierId[]
     allLimitedFoodGatheringSourceModifiers: { [key: string]: LimitedFoodGatheringSourceModifier },
     allPassiveGoldFromFoodVillagerModifiers: { [key: string]: PassiveGoldFromFoodVillagerModifier }
 }

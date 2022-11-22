@@ -96,7 +96,9 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.ENGLISH_MMA],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS],
+    passiveIncomeSources: [],
     allPassiveIncomeModifiers: {},
+    defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS
 }
