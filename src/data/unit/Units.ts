@@ -48,6 +48,7 @@ import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
 import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
+import monkIcon from '../../icons/monk.png'
 import CivilizationsEnum from "../CivilizationsEnum";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS];
@@ -151,6 +152,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.MONGOLS],
         common: true
+    },
+    SCHOLAR: {
+        id: 'SCHOLAR',
+        icon: monkIcon,
+        name: 'scholar',
+        productionTime: 30,
+        cost: new UnitCost(0, 150, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.DELHI],
+        common: false
     },
     KNIGHT: {
         id: 'KNIGHT',
