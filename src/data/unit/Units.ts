@@ -729,7 +729,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS],
         common: false
     },
     HULK: {
@@ -751,7 +751,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS],
         common: false
     },
     DEMOLITION_SHIP: {
@@ -773,7 +773,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS],
         common: false
     },
     CARRACK: {
@@ -795,7 +795,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 200, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS],
         common: false
     },
     GRAND_GALLEY: {
