@@ -490,8 +490,19 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 0, 75, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: ALL_CIVILIZATIONS,
+        civilizations: ALL_CIVILIZATIONS.filter(civilization => CivilizationsEnum.RUS !== civilization),
         common: true
+    },
+    RUS_FISHING_BOAT: {
+        id: 'RUS_FISHING_BOAT',
+        icon: fishingBoatIcon,
+        name: 'fishing boat',
+        productionTime: 38,
+        cost: new UnitCost(0, 0, 150, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.RUS],
+        common: false
     },
     RAM: {
         id: 'RAM',
@@ -718,7 +729,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE],
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
         common: false
     },
     JUNK: {
@@ -740,7 +751,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
         common: false
     },
     WAR_JUNK: {
@@ -762,7 +773,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
         common: false
     },
     EXPLOSIVE_JUNK: {
