@@ -56,6 +56,7 @@ import demolitionShipIcon from '../../icons/demolition_ship.png'
 import carrackIcon from '../../icons/carrack.png'
 import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
+import galleasIcon from '../../icons/galleass.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -717,7 +718,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND],
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH],
         common: false
     },
     JUNK: {
@@ -739,7 +740,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH],
         common: false
     },
     WAR_JUNK: {
@@ -761,7 +762,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH],
         common: false
     },
     EXPLOSIVE_JUNK: {
@@ -783,7 +784,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 200, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH],
         common: false
     },
     BAOCHUAN: {
@@ -828,6 +829,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
+    GALLEAS: {
+        id: 'GALLEAS',
+        icon: galleasIcon,
+        name: 'galleas',
+        productionTime: 50,
+        cost: new UnitCost(200, 300, 360, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.FRENCH],
         common: false
     },
 }));
