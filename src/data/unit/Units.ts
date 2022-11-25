@@ -164,6 +164,18 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.DELHI],
         common: false
     },
+    DOME_OF_FAIT_SCHOLAR: {
+        id: 'DOME_OF_FAIT_SCHOLAR',
+        icon: monkIcon,
+        name: 'scholar',
+        productionTime: 45,
+        cost: new UnitCost(0, 90, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.DELHI],
+        common: false,
+        civilizationSpecificFeature: true
+    },
     KNIGHT: {
         id: 'KNIGHT',
         icon: knightIcon,
