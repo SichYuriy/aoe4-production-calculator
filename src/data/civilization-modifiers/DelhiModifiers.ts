@@ -2,6 +2,22 @@ import CivilizationModifiers from "../../model/CivilizationModifiers";
 import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import {muslimBerries} from "./MuslimModifiers";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+
+let sanctity: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.SANCTITY,
+    food: 0,
+    gold: 50,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.SACRED_SITES
+};
+
+const PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.SANCTITY]: sanctity
+};
 
 const DELHI_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.DELHI,
@@ -14,7 +30,7 @@ const DELHI_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
+    allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {}

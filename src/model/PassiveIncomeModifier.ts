@@ -7,5 +7,4 @@ export default interface PassiveIncomeModifier {
     wood: number;
     stone: number;
     source: PassiveIncomeSource;
-    alwaysActive?: boolean;
 }
