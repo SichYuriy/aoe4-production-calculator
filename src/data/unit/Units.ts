@@ -49,6 +49,13 @@ import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
 import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
 import monkIcon from '../../icons/monk.png'
+import tradeShipIcon from '../../icons/trade-ship.png'
+import dhowIcon from '../../icons/dhow.png'
+import hulkIcon from '../../icons/hulk.png'
+import demolitionShipIcon from '../../icons/demolition_ship.png'
+import carrackIcon from '../../icons/carrack.png'
+import grandGalleyIcon from '../../icons/grand_galley.png'
+
 import CivilizationsEnum from "../CivilizationsEnum";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS];
@@ -679,6 +686,72 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         civilizationSpecificFeature: true
     },
+    TRADE_SHIP: {
+        id: 'TRADE_SHIP',
+        icon: tradeShipIcon,
+        name: 'trade ship',
+        productionTime: 30,
+        cost: new UnitCost(0, 100, 100, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: ALL_CIVILIZATIONS,
+        common: false
+    },
+    DHOW: {
+        id: 'DHOW',
+        icon: dhowIcon,
+        name: 'dhow',
+        productionTime: 25,
+        cost: new UnitCost(90, 0, 150, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    },
+    HULK: {
+        id: 'HULK',
+        icon: hulkIcon,
+        name: 'hulk',
+        productionTime: 30,
+        cost: new UnitCost(120, 30, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    },
+    DEMOLITION_SHIP: {
+        id: 'DEMOLITION_SHIP',
+        icon: demolitionShipIcon,
+        name: 'demolition ship',
+        productionTime: 15,
+        cost: new UnitCost(0, 80, 80, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    },
+    CARRACK: {
+        id: 'CARRACK',
+        icon: carrackIcon,
+        name: 'carrack',
+        productionTime: 45,
+        cost: new UnitCost(200, 200, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    },
+    GRAND_GALLEY: {
+        id: 'GRAND_GALLEY',
+        icon: grandGalleyIcon,
+        name: 'grand galley',
+        productionTime: 50,
+        cost: new UnitCost(150, 300, 360, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    }
 }));
 
 export default UNITS;
