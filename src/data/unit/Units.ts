@@ -57,6 +57,7 @@ import carrackIcon from '../../icons/carrack.png'
 import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
+import baghlahIcon from '../../icons/baghlah.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -718,7 +719,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
         common: false
     },
     GALLEY: {
@@ -754,6 +755,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
         common: false
     },
+    BAGHLAH: {
+        id: 'BAGHLAH',
+        icon: baghlahIcon,
+        name: 'baghlah',
+        productionTime: 30,
+        cost: new UnitCost(120, 30, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
+        common: false
+    },
     WAR_JUNK: {
         id: 'WAR_JUNK',
         icon: hulkIcon,
@@ -773,7 +785,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
         common: false
     },
     EXPLOSIVE_JUNK: {
@@ -795,7 +807,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 200, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
         common: false
     },
     BAOCHUAN: {
