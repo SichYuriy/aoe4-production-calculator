@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[26 Nov 2022]</span> Add ships</li>
                         <li><span>[25 Nov 2022]</span> Add Delhi scholar unit, sanctity, dome of faith</li>
                         <li><span>[25 Nov 2022]</span> Add tithe barn</li>
                         <li><span>[14 Nov 2022]</span> Add relics and sacred sites</li>
