@@ -727,7 +727,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS],
         common: false
     },
     CARRACK: {
@@ -751,7 +751,29 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS],
         common: false
-    }
+    },
+    HUNTING_CANOE: {
+        id: 'HUNTING_CANOE',
+        icon: dhowIcon,
+        name: 'hunting canoe',
+        productionTime: 25,
+        cost: new UnitCost(90, 0, 150, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
+    WAR_CANOE: {
+        id: 'WAR_CANOE',
+        icon: hulkIcon,
+        name: 'war canoe',
+        productionTime: 30,
+        cost: new UnitCost(120, 30, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
 }));
 
 export default UNITS;
