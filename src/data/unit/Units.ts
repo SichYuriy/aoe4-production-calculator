@@ -720,6 +720,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false
     },
+    JUNK: {
+        id: 'JUNK',
+        icon: galleyIcon,
+        name: 'junk',
+        productionTime: 25,
+        cost: new UnitCost(90, 0, 150, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.CHINESE],
+        common: false
+    },
     HULK: {
         id: 'HULK',
         icon: hulkIcon,
@@ -729,6 +740,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND],
+        common: false
+    },
+    WAR_JUNK: {
+        id: 'WAR_JUNK',
+        icon: hulkIcon,
+        name: 'war junk',
+        productionTime: 30,
+        cost: new UnitCost(120, 30, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.CHINESE],
         common: false
     },
     DEMOLITION_SHIP: {
@@ -742,6 +764,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND],
         common: false
     },
+    EXPLOSIVE_JUNK: {
+        id: 'EXPLOSIVE_JUNK',
+        icon: demolitionShipIcon,
+        name: 'explosive junk',
+        productionTime: 15,
+        cost: new UnitCost(0, 80, 80, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.CHINESE],
+        common: false
+    },
     CARRACK: {
         id: 'CARRACK',
         icon: carrackIcon,
@@ -751,6 +784,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND],
+        common: false
+    },
+    BAOCHUAN: {
+        id: 'BAOCHUAN',
+        icon: carrackIcon,
+        name: 'baochuan',
+        productionTime: 45,
+        cost: new UnitCost(200, 200, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.CHINESE],
         common: false
     },
     GRAND_GALLEY: {
