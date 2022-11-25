@@ -5,7 +5,9 @@ import {
 } from "../../../state/PassiveGoldFromFoodVillagerModifiersSlice";
 
 function PassiveIncomeDetails() {
-    const selectedModifiers = useAppSelector(selectActivePassiveIncomeModifiers);
+    const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
+    const selectedModifiers = useAppSelector(selectActivePassiveIncomeModifiers)
+        .filter(modifier => passiveIncomeSources[modifier.source].count > 0);
     const selectedPassiveGoldFromFoodVillagerModifiers = useAppSelector(selectActivePassiveGoldFromFoodVillagerModifiers)
 
     return (

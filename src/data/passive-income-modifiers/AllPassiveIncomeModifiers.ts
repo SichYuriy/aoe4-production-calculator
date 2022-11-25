@@ -21,9 +21,19 @@ let sacredSites: PassiveIncomeModifier = {
     source: PassiveIncomeSource.SACRED_SITES
 }
 
+let titheBarn: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.TITHE_BARN,
+    food: 30,
+    gold: 0,
+    wood: 30,
+    stone: 30,
+    source: PassiveIncomeSource.RELICS
+}
+
 const PASSIVE_INCOME_MODIFIERS: { [key: string]: PassiveIncomeModifier } = {
     [PassiveIncomeModifierId.RELICS]: relics,
     [PassiveIncomeModifierId.SACRED_SITES]: sacredSites,
+    [PassiveIncomeModifierId.TITHE_BARN]: titheBarn
 };
 
 allCivilizationModifiers.forEach(civilizationModifiers => {

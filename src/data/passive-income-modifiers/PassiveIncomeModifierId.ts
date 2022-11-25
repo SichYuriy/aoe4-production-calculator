@@ -8,7 +8,8 @@ enum PassiveIncomeModifierId {
     CATTLE_RANCH_CATTLE = 'CATTLE_RANCH_CATTLE',
     FULANI_CARROL_CATTLE = 'FULANI_CARROL_CATTLE',
     RELICS = 'RELICS',
-    SACRED_SITES = 'SACRED_SITES'
+    SACRED_SITES = 'SACRED_SITES',
+    TITHE_BARN = 'TITHE_BARN'
 }
 
 export default PassiveIncomeModifierId;
