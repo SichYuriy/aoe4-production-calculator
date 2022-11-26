@@ -38,3 +38,7 @@ h3 {
     position: absolute;
     right: 15px;
 }
+
+a {
+    text-decoration: none;
+}

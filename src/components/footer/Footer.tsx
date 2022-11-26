@@ -11,6 +11,8 @@ function Footer() {
             <UpdatesModalLink/>
             <div className={s.separator}/>
             <SocialMediaLinks/>
+            <div className={s.separator}/>
+            <a href='https://github.com/SichYuriy/aoe4-production-calculator' target='_blank' rel='noreferrer'><h3>GitHub</h3></a>
         </div>
     );
 }
