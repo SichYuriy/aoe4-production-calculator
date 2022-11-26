@@ -9,12 +9,12 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (26 Nov 2022)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
                     <div className={s.header}>
-                        <h3>Updates:</h3>
+                        <h3>Updates</h3>
                         <div onClick={() => setShow(false)} className={s.closeButton}><h3><FontAwesomeIcon icon={faClose}/></h3></div>
                     </div>
 
