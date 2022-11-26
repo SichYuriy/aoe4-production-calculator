@@ -6,3 +6,8 @@
     justify-items: center;
     align-items: center;
 }
+
+.separator {
+    border-right: 1px solid #f3dc8d;
+    height: 25px;
+}
