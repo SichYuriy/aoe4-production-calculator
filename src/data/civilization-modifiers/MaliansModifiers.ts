@@ -25,7 +25,7 @@ let mansaQueryStone: PassiveIncomeModifier = {
 let pitMine: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.PIT_MINE,
     food: 0,
-    gold: 30,
+    gold: 35,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.PIT_MINE,

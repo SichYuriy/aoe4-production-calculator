@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (26 Nov 2022)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (01 Dec 2022)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[01 Dec 2022] [Patch 5.1.148]</span> Cattle cost: 100 {`->`} 75 gold, pit mine gold generation: 30 {`->`} 35 gold/min</li>
                         <li><span>[26 Nov 2022]</span> Add ships</li>
                         <li><span>[25 Nov 2022]</span> Add Delhi scholar unit, sanctity, dome of faith</li>
                         <li><span>[25 Nov 2022]</span> Add tithe barn</li>

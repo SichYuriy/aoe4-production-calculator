@@ -80,7 +80,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: cattleIcon,
         name: 'cattle',
         productionTime: 15,
-        cost: new UnitCost(0, 100, 0, 0),
+        cost: new UnitCost(0, 75, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
