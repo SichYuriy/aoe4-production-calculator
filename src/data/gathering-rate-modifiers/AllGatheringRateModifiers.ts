@@ -10,8 +10,10 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             let foodMultiplier = 1;
             if ([FoodSource.BERRY, FoodSource.DEER].includes(foodSource)) {
                 foodMultiplier = 1.0952;
-            } else if ([FoodSource.FARM, FoodSource.SHEEP].includes(foodSource)) {
+            } else if ([FoodSource.SHEEP].includes(foodSource)) {
                 foodMultiplier = 1.01;
+            } else if ([FoodSource.FARM].includes(foodSource)) {
+                foodMultiplier = 1.036
             }
             return {
                 food: rates.food * foodMultiplier,
@@ -20,7 +22,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 stone: rates.stone * 1.07
             };
         },
-        description: '[berries, deer] * 1.0952, [farm, sheep] * 1.01, [wood, gold, stone] * 1.07'
+        description: '[berries, deer] * 1.0952, [sheep] * 1.01, [farm] * 1.036, [wood, gold, stone] * 1.07'
     },
     [GatheringRateModifierId.DOUBLE_BROADAX]: {
         id: GatheringRateModifierId.DOUBLE_BROADAX,
