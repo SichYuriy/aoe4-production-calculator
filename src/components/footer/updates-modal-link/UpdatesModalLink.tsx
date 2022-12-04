@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (03 Dec 2022)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (04 Dec 2022)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,7 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
-                        <li><span>[03 Dec 2022]</span> Food gathering rate fix: seep 38.3 {`->`} 37.05, farm 36.25 {`->`} 36.718. Wheelbarrow farms +1% {`->`} +3.6%</li>
+                        <li><span>[04 Dec 2022]</span> Food gathering rate fix: seep 38.3 {`->`} 37.05, farm 36.25 {`->`} 36.718. Wheelbarrow farms +3% {`->`} +3.2%</li>
                         <li><span>[01 Dec 2022] [Patch 5.1.148]</span> Cattle cost: 100 {`->`} 75 gold, pit mine gold generation: 30 {`->`} 35 gold/min</li>
                         <li><span>[26 Nov 2022]</span> Add ships</li>
                         <li><span>[25 Nov 2022]</span> Add Delhi scholar unit, sanctity, dome of faith</li>
