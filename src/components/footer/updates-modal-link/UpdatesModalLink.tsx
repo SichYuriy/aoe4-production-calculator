@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (04 Dec 2022)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (05 Dec 2022)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[05 Dec 2022]</span> Fix trader cost: 75 wood, 75 gold, 35 sec {`->`} 60 wood, 60 gold, 25 sec</li>
                         <li><span>[04 Dec 2022]</span> Food gathering rate fix: seep 38.3 {`->`} 37.05, farm 36.25 {`->`} 36.718. Wheelbarrow farms +1% {`->`} +3.2%. Wheelbarrow sheep +1% {`->`} +3%</li>
                         <li><span>[01 Dec 2022] [Patch 5.1.148]</span> Cattle cost: 100 {`->`} 75 gold, pit mine gold generation: 30 {`->`} 35 gold/min</li>
                         <li><span>[26 Nov 2022]</span> Add ships</li>
