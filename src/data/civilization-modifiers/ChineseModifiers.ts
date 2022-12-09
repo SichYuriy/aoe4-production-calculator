@@ -10,8 +10,8 @@ import FoodSource from "../../model/FoodSource";
 const songDynasty: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SONG_DYNASTY,
     canBeApplied: unit => unit.id === 'VILLAGER',
-    apply: currentProductionTime => currentProductionTime * 0.65,
-    description: 'villagerTime * 0.65'
+    apply: currentProductionTime => currentProductionTime * 0.75,
+    description: 'villagerTime * 0.75'
 }
 
 const chineseDocks: ProductionSpeedModifier = {
