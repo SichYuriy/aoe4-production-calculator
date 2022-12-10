@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (09 Dec 2022)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (10 Dec 2022)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[10 Dec 2022]</span> Fix camel rider production time: 22 sec {`->`} 35 sec</li>
                         <li><span>[09 Dec 2022] [Patch 5.1.148.1]</span> Song dynasty villager production time: -35% {`->`} -25%, cattle cost: 75 {`->`} 90 gold</li>
                         <li><span>[05 Dec 2022]</span> Fix trader cost: 75 wood, 75 gold, 35 sec {`->`} 60 wood, 60 gold, 25 sec</li>
                         <li><span>[04 Dec 2022]</span> Food gathering rate fix: seep 38.3 {`->`} 37.05, farm 36.25 {`->`} 36.718. Wheelbarrow farms +1% {`->`} +3.2%. Wheelbarrow sheep +1% {`->`} +3%</li>

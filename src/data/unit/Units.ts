@@ -399,7 +399,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'CAMEL_RIDER',
         icon: camelRiderIcon,
         name: 'camel rider',
-        productionTime: 22,
+        productionTime: 35,
         cost: new UnitCost(180, 60, 0, 0),
         types: [UnitType.CAVALRY],
         building: null,
