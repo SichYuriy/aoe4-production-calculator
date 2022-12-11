@@ -384,6 +384,18 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: ALL_CIVILIZATIONS,
         common: true
     },
+    SILVER_TREE_TRADER: {
+        id: 'SILVER_TREE_TRADER',
+        icon: traderIcon,
+        name: 'silver tree trader',
+        productionTime: 16,
+        cost: new UnitCost(0, 30, 60, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.MONGOLS],
+        common: false,
+        civilizationSpecificFeature: true
+    },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',
         icon: camelArcherIcon,
