@@ -59,8 +59,8 @@ const englishDocks: UnitCostModifier = {
 const englishMma: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.ENGLISH_MMA,
     canBeApplied: unit => unit.id === 'MAN_AT_ARMS',
-    apply: currentProductionTime => currentProductionTime * 0.5,
-    description: 'mmaTime * 0.5'
+    apply: currentProductionTime => currentProductionTime * 0.6818,
+    description: 'mmaTime * 0.68'
 }
 
 const enclosures: PassiveGoldFromFoodVillagerModifier = {
