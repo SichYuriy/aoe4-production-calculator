@@ -43,7 +43,7 @@ import imperialOfficialIcon from '../../icons/imperial-official.png'
 import zhugeNuIcon from '../../icons/zhuge-nu.png'
 import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
-import towerWarElephantIcon from '../../icons/tower-war-elephant.png'
+import towerElephantIcon from '../../icons/tower-war-elephant.png'
 import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
@@ -451,10 +451,10 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.CHINESE],
         common: false
     },
-    TOWER_WAR_ELEPHANT: {
-        id: 'TOWER_WAR_ELEPHANT',
-        icon: towerWarElephantIcon,
-        name: 'tower war elephant',
+    TOWER_ELEPHANT: {
+        id: 'TOWER_ELEPHANT',
+        icon: towerElephantIcon,
+        name: 'tower elephant',
         productionTime: 60,
         cost: new UnitCost(400, 600, 0, 0),
         types: [UnitType.CAVALRY],
