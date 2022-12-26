@@ -19,13 +19,16 @@ function AbbasidFeatures() {
 
     let freshFoodItem = <UpgradeItem icon={freshFoodIcon}
                                      selected={costModifiers[CostModifierId.FRESH_FOOD]}
-                                     onClick={() => dispatch(toggleCostModifier(CostModifierId.FRESH_FOOD))}/>
+                                     onClick={() => dispatch(toggleCostModifier(CostModifierId.FRESH_FOOD))}
+                                     tooltip={{header: 'Fresh food', text: 'Reduces villager cost'}}/>
     let agricultureItem = <UpgradeItem icon={agricultureIcon}
                                        selected={gatheringRateModifiers[GatheringRateModifierId.AGRICULTURE]}
-                                       onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.AGRICULTURE))}/>
+                                       onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.AGRICULTURE))}
+                                       tooltip={{header: 'Agriculture', text: 'Increases farm gathering rate'}}/>
     let improvedProcessingItem = <UpgradeItem icon={improvedProcessing}
-                                       selected={gatheringRateModifiers[GatheringRateModifierId.IMPROVED_PROCESSING]}
-                                       onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.IMPROVED_PROCESSING))}/>
+                                              selected={gatheringRateModifiers[GatheringRateModifierId.IMPROVED_PROCESSING]}
+                                              onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.IMPROVED_PROCESSING))}
+                                              tooltip={{header: 'Improved processing', text: ' Villagers will drop off 8% more resources'}}/>
 
     return (
         <div className={s.abbasidFeatures}>

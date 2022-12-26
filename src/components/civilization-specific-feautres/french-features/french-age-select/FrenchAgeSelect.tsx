@@ -3,6 +3,7 @@ import {useAppDispatch, useAppSelector} from "../../../../hooks";
 import ProductionSpeedModifierId from "../../../../data/production-speed-modifiers/ProductionSpeedModifierId";
 import AgeEnum from "../../age-selectror/AgeEnum";
 import {unselectSelectProductionSpeedModifiers} from "../../../../state/ProducationSpeedModifiersSlice";
+import Tooltip from "../../../tooltip/Tooltip";
 
 function FrenchAgeSelect() {
     const dispatch = useAppDispatch();
@@ -34,7 +35,9 @@ function FrenchAgeSelect() {
     }
 
     return (
-        <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+        <Tooltip header="Age" text="Reduces villager production time">
+            <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+        </Tooltip>
     )
 }
 

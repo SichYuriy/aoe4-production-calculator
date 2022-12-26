@@ -10,7 +10,9 @@ function EnglishFeatures() {
         <div className={s.englishFeatures}>
             <EnglishDocks/>
             <EnglishMma/>
-            <EnglishAgeSelect/>
+            <div className={s.row}>
+                <EnglishAgeSelect/>
+            </div>
             <WynguardPalace/>
             <Enclosures/>
         </div>

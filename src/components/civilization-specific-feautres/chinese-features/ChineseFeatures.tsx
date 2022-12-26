@@ -13,14 +13,17 @@ function ChineseFeatures() {
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
     let granaryUpgradeItem = <UpgradeItem icon={granaryIcon}
                                           selected={gatheringRateModifiers[GatheringRateModifierId.GRANARY]}
-                                          onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.GRANARY))}/>
+                                          onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.GRANARY))}
+                                          tooltip={{header: 'Granary', text: 'Increases farm gathering rate'}}/>
 
     return (
         <div className={s.chineseFeatures}>
             <ChineseDocks/>
             <SongDynasty/>
             <ImperialOfficials/>
-            {granaryUpgradeItem}
+            <div className={s.row}>
+                {granaryUpgradeItem}
+            </div>
         </div>
     )
 }

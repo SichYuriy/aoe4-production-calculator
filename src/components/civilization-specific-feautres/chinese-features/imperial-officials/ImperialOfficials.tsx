@@ -15,19 +15,24 @@ function ImperialOfficials() {
     let foodOfficial = <UpgradeItem icon={foodIcon}
                                     selected={gatheringRateModifiers[GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]}
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL))}
-                                    iconHeight={'auto'}/>
+                                    iconHeight={'auto'}
+                                    tooltip={{header: 'Imperial official', text: 'Villagers will drop off 20% more resources'}}/>
+
     let woodOfficial = <UpgradeItem icon={woodIcon}
                                     selected={gatheringRateModifiers[GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL]}
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL))}
-                                    iconHeight={'auto'}/>
+                                    iconHeight={'auto'}
+                                    tooltip={{header: 'Imperial official', text: 'Villagers will drop off 20% more resources'}}/>
     let goldOfficial = <UpgradeItem icon={goldIcon}
                                     selected={gatheringRateModifiers[GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL]}
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL))}
-                                    iconHeight={'auto'}/>
+                                    iconHeight={'auto'}
+                                    tooltip={{header: 'Imperial official', text: 'Villagers will drop off 20% more resources'}}/>
     let stoneOfficial = <UpgradeItem icon={stoneIcon}
                                     selected={gatheringRateModifiers[GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]}
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL))}
-                                    iconHeight={'auto'}/>
+                                    iconHeight={'auto'}
+                                    tooltip={{header: 'Imperial official', text: 'Villagers will drop off 20% more resources'}}/>
     return (
         <div className={s.imperialOfficials}>
             <div><img className={s.imperialOfficialIcon} src={imperialOfficialIcon} alt={'imperial-official'}/></div>

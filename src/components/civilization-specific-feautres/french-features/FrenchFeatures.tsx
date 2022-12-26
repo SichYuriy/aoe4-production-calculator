@@ -12,12 +12,19 @@ function FrenchFeatures() {
     const productionSpeedModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.productionSpeedModifiers);
     let schoolOfCavalryItem = <UpgradeItem icon={schoolOfCavalryIcon}
                                            selected={productionSpeedModifiers[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]}
-                                           onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.SCHOOL_OF_CAVALRY))}/>
+                                           onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.SCHOOL_OF_CAVALRY))}
+                                           tooltip={{header: 'School of cavalry', text: 'Reduces production time fro stables'}}/>
     return (
         <div className={s.frenchFeatures}>
-            <FrenchAgeSelect/>
-            {schoolOfCavalryItem}
-            <FrenchCastles/>
+            <div className={s.row}>
+                <FrenchAgeSelect/>
+            </div>
+            <div className={s.row}>
+                {schoolOfCavalryItem}
+            </div>
+            <div className={s.row}>
+                <FrenchCastles/>
+            </div>
         </div>
     )
 }

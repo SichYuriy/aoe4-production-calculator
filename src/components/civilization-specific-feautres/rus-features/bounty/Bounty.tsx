@@ -3,6 +3,7 @@ import s from './bounty.module.css';
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
 import GatheringRateModifierId from "../../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {unselectSelect} from "../../../../state/GatheringRateModifiersSlice";
+import Tooltip from "../../../tooltip/Tooltip";
 
 function Bounty() {
     const dispatch = useAppDispatch();
@@ -16,12 +17,14 @@ function Bounty() {
     }
 
     return (
-        <div className={s.bounty}>
-            <BountyItem label="0" selected={noneSelected} onClick={() => select([])}/>
-            <BountyItem label="100" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_100]} onClick={() => select([GatheringRateModifierId.BOUNTY_100])}/>
-            <BountyItem label="250" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_250]} onClick={() => select([GatheringRateModifierId.BOUNTY_250])}/>
-            <BountyItem label="500" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_500]} onClick={() => select([GatheringRateModifierId.BOUNTY_500])}/>
-        </div>
+        <Tooltip text={'Increases food gathering rate'} header={'Bounty'}>
+            <div className={s.bounty}>
+                <BountyItem label="0" selected={noneSelected} onClick={() => select([])}/>
+                <BountyItem label="100" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_100]} onClick={() => select([GatheringRateModifierId.BOUNTY_100])}/>
+                <BountyItem label="250" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_250]} onClick={() => select([GatheringRateModifierId.BOUNTY_250])}/>
+                <BountyItem label="500" selected={gatheringRateModifiers[GatheringRateModifierId.BOUNTY_500]} onClick={() => select([GatheringRateModifierId.BOUNTY_500])}/>
+            </div>
+        </Tooltip>
     );
 }
 

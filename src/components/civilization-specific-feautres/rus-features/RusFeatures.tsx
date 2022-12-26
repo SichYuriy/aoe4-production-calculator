@@ -9,13 +9,16 @@ import s from './rus-features.module.css'
 function RusFeatures() {
     const dispatch = useAppDispatch();
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
-    let woodenFortressItem =  <UpgradeItem icon={woodenFortressIcon}
-                                        selected={gatheringRateModifiers[GatheringRateModifierId.WOODEN_FORTRESS]}
-                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WOODEN_FORTRESS))}/>
+    let woodenFortressItem = <UpgradeItem icon={woodenFortressIcon}
+                                          selected={gatheringRateModifiers[GatheringRateModifierId.WOODEN_FORTRESS]}
+                                          onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WOODEN_FORTRESS))}
+                                          tooltip={{header: 'Wooden Fortress', text: 'Villagers will drop off 20% more wood'}}/>
     return (
         <div className={s.rusFeatures}>
             <Bounty/>
-            {woodenFortressItem}
+            <div className={s.row}>
+                {woodenFortressItem}
+            </div>
         </div>
     );
 }

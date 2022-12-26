@@ -38,18 +38,22 @@ function CommonUpgrades() {
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.FORESTRY))}/>
     let militaryAcademyItem = <UpgradeItem icon={militaryAcademyIcon}
                                            selected={productionSpeedModifiers[ProductionSpeedModifierId.MILITARY_ACADEMY]}
-                                           onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.MILITARY_ACADEMY))}/>
+                                           onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.MILITARY_ACADEMY))}
+                                           tooltip={{header: 'Military academy', text: 'Reduce military production time'}}/>
     let relicsItem = <UpgradeItemCounter icon={relicIcon}
                                          count={passiveIncomeSources[PassiveIncomeSource.RELICS].count}
                                          onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeSource.RELICS))}
-                                         onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.RELICS))}/>
+                                         onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.RELICS))}
+                                         tooltip={{header: 'Relics', text: 'Passive gold income'}}/>
     let sacredSitesItem = <UpgradeItemCounter icon={sacredSiteIcon}
                                               count={passiveIncomeSources[PassiveIncomeSource.SACRED_SITES].count}
                                               onIncrement={() => dispatch(incrementPassiveIncome(PassiveIncomeSource.SACRED_SITES))}
-                                              onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.SACRED_SITES))}/>
+                                              onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeSource.SACRED_SITES))}
+                                              tooltip={{header: 'Sacred sites', text: 'Passive gold income'}}/>
     let titheBarnItem = <UpgradeItem icon={titheBarnIcon}
                                      selected={passiveIncomeModifiers[PassiveIncomeModifierId.TITHE_BARN].selected}
-                                     onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.TITHE_BARN))}/>
+                                     onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.TITHE_BARN))}
+                                     tooltip={{header: 'Tithe barn', text: 'Passive wood, stone, food income from relics'}}/>
     return (
         <div>
             <div><h3>Upgrades:</h3></div>

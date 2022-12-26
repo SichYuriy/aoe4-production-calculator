@@ -3,6 +3,7 @@ import icon1 from "../../../../icons/keep.png";
 import icon2 from "../../../../icons/enlistment-incentives.png";
 import COST_MODIFIERS from "../../../../data/cost-modifiers/AllCostModifiers";
 import CostModifierId from "../../../../data/cost-modifiers/CostModifierId";
+import Tooltip from "../../../tooltip/Tooltip";
 
 function FrenchCastles() {
     let items: UpgradeGroupItem[] = [
@@ -16,7 +17,9 @@ function FrenchCastles() {
         }
     ]
     return (
-        <UpgradeGroup items={items} type={UpgradeType.COST}/>
+        <Tooltip header={'Keeps, Enlistment incentives'} text={'Reduces prices int stables, archeries'}>
+            <UpgradeGroup items={items} type={UpgradeType.COST}/>
+        </Tooltip>
     );
 }
 

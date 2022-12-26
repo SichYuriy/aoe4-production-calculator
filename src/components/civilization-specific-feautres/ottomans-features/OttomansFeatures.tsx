@@ -12,8 +12,9 @@ function OttomansFeatures() {
     const dispatch = useAppDispatch();
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
     let anatolianHillsUpgradeItem = <UpgradeItem icon={antolianHillsIcon}
-                                          selected={gatheringRateModifiers[GatheringRateModifierId.ANATOLIAN_HILLS]}
-                                          onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.ANATOLIAN_HILLS))}/>
+                                                 selected={gatheringRateModifiers[GatheringRateModifierId.ANATOLIAN_HILLS]}
+                                                 onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.ANATOLIAN_HILLS))}
+                                                 tooltip={{header: 'Anatolian Hills', text: 'Increases gold, stone gathering rate'}}/>
 
     return <div className={s.ottomanFeatures}>
         <div className={s.row}>

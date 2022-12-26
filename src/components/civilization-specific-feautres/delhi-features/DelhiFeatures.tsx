@@ -15,16 +15,22 @@ function DelhiFeatures() {
 
     let sanctityItem = <UpgradeItem icon={sanctityIcon}
                                     selected={passiveIncomeModifiers[PassiveIncomeModifierId.SANCTITY].selected}
-                                    onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.SANCTITY))}/>
+                                    onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.SANCTITY))}
+                                    tooltip={{header: 'Sanctity', text: 'Sacred sites generate more gold'}}/>
     let domeOfFaithItem = <UpgradeItem icon={domeOfFaithIcon}
                                        selected={units['DOME_OF_FAIT_SCHOLAR'] > 0}
-                                       onClick={units['DOME_OF_FAIT_SCHOLAR'] > 0 ? () => dispatch(decrement('DOME_OF_FAIT_SCHOLAR')) : () => dispatch(increment('DOME_OF_FAIT_SCHOLAR'))}/>
+                                       onClick={units['DOME_OF_FAIT_SCHOLAR'] > 0 ? () => dispatch(decrement('DOME_OF_FAIT_SCHOLAR')) : () => dispatch(increment('DOME_OF_FAIT_SCHOLAR'))}
+                                       tooltip={{header: 'Dome of faith', text: 'Produces cheaper scholar'}}/>
 
     return (
         <div className={s.delhiFeatures}>
             <MuslimBerries/>
-            {sanctityItem}
-            {domeOfFaithItem}
+            <div className={s.row}>
+                {sanctityItem}
+            </div>
+            <div className={s.row}>
+                {domeOfFaithItem}
+            </div>
         </div>
     );
 }

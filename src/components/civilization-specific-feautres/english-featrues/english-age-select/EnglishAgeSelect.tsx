@@ -3,6 +3,7 @@ import AgeEnum from "../../age-selectror/AgeEnum";
 import AgeSelector from "../../age-selectror/AgeSelector";
 import GatheringRateModifierId from "../../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {unselectSelect} from "../../../../state/GatheringRateModifiersSlice";
+import Tooltip from "../../../tooltip/Tooltip";
 
 function EnglishAgeSelect() {
     const dispatch = useAppDispatch();
@@ -34,7 +35,9 @@ function EnglishAgeSelect() {
     }
 
     return (
-        <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+        <Tooltip header="Age" text="Increases farm gathering rate">
+            <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+        </Tooltip>
     )
 }
 
