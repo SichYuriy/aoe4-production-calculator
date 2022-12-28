@@ -17,7 +17,7 @@ function FrenchCastles() {
         }
     ]
     return (
-        <Tooltip header={'Keeps, Enlistment incentives'} text={'Reduces prices int stables, archeries'}>
+        <Tooltip header={'Keeps, Enlistment incentives'} text={'Reduces unit prices in stables, archeries'}>
             <UpgradeGroup items={items} type={UpgradeType.COST}/>
         </Tooltip>
     );

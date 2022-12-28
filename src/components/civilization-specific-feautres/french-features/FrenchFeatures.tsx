@@ -13,7 +13,7 @@ function FrenchFeatures() {
     let schoolOfCavalryItem = <UpgradeItem icon={schoolOfCavalryIcon}
                                            selected={productionSpeedModifiers[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]}
                                            onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.SCHOOL_OF_CAVALRY))}
-                                           tooltip={{header: 'School of cavalry', text: 'Reduces production time fro stables'}}/>
+                                           tooltip={{header: 'School of cavalry', text: 'Reduces production time for stables'}}/>
     return (
         <div className={s.frenchFeatures}>
             <div className={s.row}>
