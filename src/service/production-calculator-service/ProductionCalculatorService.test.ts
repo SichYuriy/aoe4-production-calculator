@@ -95,7 +95,7 @@ describe('ProductionCalculatorService', () => {
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
-        it('one passiveFoldFromFoodVillager', () => {
+        it('one passiveGoldFromFoodVillager', () => {
             unitsSelected = {
                 'VILLAGER': 1,
                 'KNIGHT': 1
@@ -106,7 +106,7 @@ describe('ProductionCalculatorService', () => {
 
             expect(actual.foodVillagers).toBeCloseTo(9.75);
             expect(actual.woodVillagers).toBeCloseTo(0);
-            expect(actual.goldVillagers).toBeCloseTo(0.2857);
+            expect(actual.goldVillagers).toBeCloseTo(1.2857);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
