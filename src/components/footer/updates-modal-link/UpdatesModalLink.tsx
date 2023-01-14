@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (23 Jan 2023)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (DD MMM 2023)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,14 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Enclosures gold generation time increased from every 3.5 second to every 5 seconds</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Footmen costs 200 food, 500 gold, and takes 60 seconds to train</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> War Elephant cost reduced from 600f 400g to 400f 350g</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Fresh Foodstuffs villager cost bonus reduced from 50% to 35%</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Great Bombard (Ottoman) wood cost reduced from 600 to 450</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Bombard wood cost reduced from 400 to 300</li>
                         <li><span>[23 Jan 2023]</span> Add Cattle food source</li>
                         <li><span>[15 Dec 2022]</span> Fix Ottomans blacksmith influence production time age 4 -33% {`->`} -29%, Istanbul Observatory -40% {`->`} -37%</li>
                         <li><span>[12 Dec 2022]</span> Fix English mma production time -50% {`->`} -32%</li>

@@ -65,7 +65,7 @@ const englishMma: ProductionSpeedModifier = {
 
 const enclosures: PassiveGoldFromFoodVillagerModifier = {
     id: PassiveGoldFromFoodVillagerModifierId.ENCLOSURES,
-    gold: 16,
+    gold: 12,
     foodSources: [FoodSource.FARM]
 }
 

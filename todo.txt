@@ -1,21 +1,18 @@
 https://steamcommunity.com/app/1466860/discussions/8/3766731192696900108/
 
 *** siege
-- Bombard Wood cost reduced from 400 to 300
-- Great Bombard (Ottoman) Wood cost reduced from 600 to 450
-- Cannon Wood cost reduced from 400 to 300
-- Ribauldequin Wood cost reduced from 400 to 300
+- Bombard wood cost reduced from 400 to 300 +
+- Great Bombard (Ottoman) wood cost reduced from 600 to 450 +
 
 *** Abbasid
-- Fresh Foodstuffs villager cost bonus reduced from 50% to 35%.
+- Fresh Foodstuffs villager cost bonus reduced from 50% to 35%. +
 
 *** Delhi
-- War Elephant Cost reduced from 600f 400g to 400f 350g
+- War Elephant cost reduced from 600f 400g to 400f 350g +
 
 *** English
-- Wynguard Army Cost and train time unchanged at 100 food, 100 wood, 200 gold, and 75 seconds.
-- Wynguard Raiders Cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds.
-- Wynguard Rangers Cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds.
-- Wynguard Footmen Costs 200 food, 500 gold, and takes 60 seconds to train.
+- Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds. +
+- Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds. +
+- Wynguard Footmen costs 200 food, 500 gold, and takes 60 seconds to train. +
 
-- Enclosures gold generation time increased from every 3.5 second to every 5 seconds.
+- Enclosures gold generation time increased from every 3.5 second to every 5 seconds. +
