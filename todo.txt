@@ -1,24 +1,21 @@
-malians:
+https://steamcommunity.com/app/1466860/discussions/8/3766731192696900108/
 
-- add unit cow (100 gold - 15 seconds)
-- pit passive gold mining (30 gold per minute)
-- influence houses increase gold generations from pit (house/mine - 7.5 gold per minute)
-- mansa query 75 gold or stone per minute
-- cows (1 cow - 28 food per minute)
-- grand fulani corral (20 food per cow)
-- farimba garrison (time affected by production speed modifiers)
-  - donso 360 gold 22s
-  - mus war 320 gold 22s
-  - archer 320 gold 22s
-  - jav thrower 480 gold 33s
-  - mus gun 960 gold 52s
+*** siege
+- Bombard Wood cost reduced from 400 to 300
+- Great Bombard (Ottoman) Wood cost reduced from 600 to 450
+- Cannon Wood cost reduced from 400 to 300
+- Ribauldequin Wood cost reduced from 400 to 300
 
+*** Abbasid
+- Fresh Foodstuffs villager cost bonus reduced from 50% to 35%.
 
-english:
+*** Delhi
+- War Elephant Cost reduced from 600f 400g to 400f 350g
 
-- enclosures
-- Wynguard palace
+*** English
+- Wynguard Army Cost and train time unchanged at 100 food, 100 wood, 200 gold, and 75 seconds.
+- Wynguard Raiders Cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds.
+- Wynguard Rangers Cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds.
+- Wynguard Footmen Costs 200 food, 500 gold, and takes 60 seconds to train.
 
-all factions:
-
-- ships
+- Enclosures gold generation time increased from every 3.5 second to every 5 seconds.
