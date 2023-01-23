@@ -2,10 +2,12 @@ import sheepIcon from '../../icons/sheep.png';
 import berryIcon from '../../icons/berrybush.png';
 import deerIcon from '../../icons/deer.png';
 import farmIcon from '../../icons/farm.png';
+import cattleIcon from '../../icons/cattle.png';
 import s from './food-source-selector.module.css'
 import FoodSource from "../../model/FoodSource";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {changeFoodSource} from "../../state/GatheringRatesSlice";
+import Tooltip from "../tooltip/Tooltip";
 
 function FoodSourceSelector() {
     const dispatch = useAppDispatch();
@@ -34,6 +36,12 @@ function FoodSourceSelector() {
             <label>
                 <input type={'radio'} value={FoodSource.FARM} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.FARM}/>
                 <img src={farmIcon} className={s.foodSourceRadioIcon} alt={'farm'}/>
+            </label>
+            <label>
+                <Tooltip text={'Use only with Malians'} header={'Cattle'}>
+                    <input type={'radio'} value={FoodSource.CATTLE} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.CATTLE}/>
+                    <img src={cattleIcon} className={s.foodSourceRadioIcon} alt={'cattle'}/>
+                </Tooltip>
             </label>
         </div>
     )

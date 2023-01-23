@@ -1,7 +1,7 @@
 import GatheringRates from "../model/GatheringRates";
 import FoodSource from "../model/FoodSource";
 import {
-    BASE_BERRY_GATHERING_RATE,
+    BASE_BERRY_GATHERING_RATE, BASE_CATTLE_GATHERING_RATE,
     BASE_DEER_GATHERING_RATE,
     BASE_FARM_GATHERING_RATE,
     BASE_GOLD_GATHERING_RATE,
@@ -36,6 +36,8 @@ class GatheringRatesService {
     private getFoodGatheringRate(foodSource: FoodSource): number {
         if (foodSource === FoodSource.SHEEP) {
             return BASE_SHEEP_GATHERING_RATE;
+        } else if (foodSource === FoodSource.CATTLE) {
+            return BASE_CATTLE_GATHERING_RATE;
         } else if (foodSource === FoodSource.BERRY) {
             return BASE_BERRY_GATHERING_RATE;
         } else if (foodSource === FoodSource.DEER) {

@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (15 Dec 2022)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (23 Jan 2023)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,7 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[23 Jan 2023]</span> Add Cattle food source</li>
                         <li><span>[15 Dec 2022]</span> Fix Ottomans blacksmith influence production time age 4 -33% {`->`} -29%, Istanbul Observatory -40% {`->`} -37%</li>
                         <li><span>[12 Dec 2022]</span> Fix English mma production time -50% {`->`} -32%</li>
                         <li><span>[11 Dec 2022]</span> Fix Mongols Silver Tree. It does not affect other markets any more</li>
