@@ -714,8 +714,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     WYNGUARD_FOOTMAN: {
         id: 'WYNGUARD_FOOTMAN',
-        icon: wynguardRangersIcon,
-        name: 'wynguard footman',
+        icon: manAtArmsIcon,
+        name: 'wynguard footmen',
         productionTime: 50,
         cost: new UnitCost(200, 500, 0, 0),
         types: [UnitType.INFANTRY],
