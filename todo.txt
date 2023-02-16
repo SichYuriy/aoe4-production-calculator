@@ -1,18 +1,2 @@
-https://steamcommunity.com/app/1466860/discussions/8/3766731192696900108/
-
-*** siege
-- Bombard wood cost reduced from 400 to 300 +
-- Great Bombard (Ottoman) wood cost reduced from 600 to 450 +
-
-*** Abbasid
-- Fresh Foodstuffs villager cost bonus reduced from 50% to 35%. +
-
-*** Delhi
-- War Elephant cost reduced from 600f 400g to 400f 350g +
-
-*** English
-- Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds. +
-- Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds. +
-- Wynguard Footmen costs 200 food, 500 gold, and takes 60 seconds to train. +
-
-- Enclosures gold generation time increased from every 3.5 second to every 5 seconds. +
+- test song dynasty
+- test dome of faith scholar

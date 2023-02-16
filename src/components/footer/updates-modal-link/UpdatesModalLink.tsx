@@ -20,10 +20,12 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Scholar - Cost reduced from 150 to 130</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Farimba Garrison - Gold reduction bonus reduced from 20% to 10%</li>
                         <li><span>[DD MMM 2023] [Patch PUP]</span> Enclosures gold generation time increased from every 3.5 second to every 5 seconds</li>
-                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Footmen costs 200 food, 500 gold, and takes 60 seconds to train</li>
-                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 60 seconds</li>
-                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 20 seconds</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Footmen costs 200 food, 500 gold, and takes 50 seconds to train</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 50 seconds</li>
+                        <li><span>[DD MMM 2023] [Patch PUP]</span> Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 25 seconds</li>
                         <li><span>[DD MMM 2023] [Patch PUP]</span> War Elephant cost reduced from 600f 400g to 400f 350g</li>
                         <li><span>[DD MMM 2023] [Patch PUP]</span> Fresh Foodstuffs villager cost bonus reduced from 50% to 35%</li>
                         <li><span>[DD MMM 2023] [Patch PUP]</span> Great Bombard (Ottoman) wood cost reduced from 600 to 450</li>
