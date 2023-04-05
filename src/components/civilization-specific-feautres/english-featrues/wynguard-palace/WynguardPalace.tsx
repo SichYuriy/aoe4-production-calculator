@@ -4,7 +4,7 @@ import ImageItem from "../../../image-item/ImageItem";
 import cancelIcon from "../../../../icons/cancel.png";
 import wynguardArmyIcon from "../../../../icons/wynguard-army.png";
 import wynguardRaidersIcon from "../../../../icons/wynguard-raiders.png";
-import mmaIcon from "../../../../icons/man-at-arms.png";
+import wynguardFootmanIcon from "../../../../icons/wynguard_footman.png";
 import wynguardRangersIcon from "../../../../icons/wynguard-rangers.png";
 import {useAppDispatch, useAppSelector} from "../../../../hooks";
 import {UnitsState, unselectSelectUnits} from "../../../../state/UnitsSlice";
@@ -41,7 +41,7 @@ function WynguardPalace() {
                 <ImageItem selected={units['WYNGUARD_ARMY'] > 0} icon={wynguardArmyIcon} onClick={() => selectUnit('WYNGUARD_ARMY')}/>
                 <ImageItem selected={units['WYNGUARD_RAIDERS'] > 0} icon={wynguardRaidersIcon} onClick={() => selectUnit('WYNGUARD_RAIDERS')}/>
                 <ImageItem selected={units['WYNGUARD_RANGERS'] > 0} icon={wynguardRangersIcon} onClick={() => selectUnit('WYNGUARD_RANGERS')}/>
-                <ImageItem selected={units['WYNGUARD_FOOTMAN'] > 0} icon={mmaIcon} onClick={() => selectUnit('WYNGUARD_FOOTMAN')}/>
+                <ImageItem selected={units['WYNGUARD_FOOTMAN'] > 0} icon={wynguardFootmanIcon} onClick={() => selectUnit('WYNGUARD_FOOTMAN')}/>
             </div>
         </div>
     );

@@ -58,6 +58,7 @@ import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
+import wynguardFootmanIcon from '../../icons/wynguard_footman.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -714,7 +715,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     WYNGUARD_FOOTMAN: {
         id: 'WYNGUARD_FOOTMAN',
-        icon: manAtArmsIcon,
+        icon: wynguardFootmanIcon,
         name: 'wynguard footmen',
         productionTime: 50,
         cost: new UnitCost(200, 500, 0, 0),
