@@ -44,7 +44,7 @@ let twinMinaretMedrese: LimitedFoodGatheringSourceModifier = {
     description: 'base gathering rate: 50'
 }
 
-const BLACKSMITH_AGE_2 = 1 / 1.25;
+const BLACKSMITH_AGE_2 = 1 / 1.2;
 let age2Blacksmith: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
@@ -52,7 +52,7 @@ let age2Blacksmith: ProductionSpeedModifier = {
     description: 'militaryTime * ' + BLACKSMITH_AGE_2.toFixed(2)
 }
 
-const BLACKSMITH_AGE_3 = 1 / 1.33;
+const BLACKSMITH_AGE_3 = 1 / 1.3;
 let age3Blacksmith: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_3,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),

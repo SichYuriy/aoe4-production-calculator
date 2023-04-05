@@ -9,7 +9,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (16 Feb 2023)</h3>
+            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (05 Apr 2023)</h3>
 
             <Modal show={show} onHide={() => setShow(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
@@ -20,6 +20,11 @@ function UpdatesModalLink() {
 
                     <hr/>
                     <ul>
+                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Ottomans Blacksmith and University production influence bonus reduced from 25/33/40% to 20/30/40% </li>
+                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Sofa train time reduced from 30 to 26 seconds. </li>
+                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> French Town Center production rate bonus increased from 10/10/15/20% to 10/15/20/25%</li>
+                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Mongol Traction Trebuchet cost reduced from 400 wood 150 gold to 300 wood 100 gold, build time reduced from 35 seconds to 30 seconds</li>
+                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Counter-weight Trebuchet cost reduced from 500 wood 250 gold to 400 wood 150 gold, build time reduced from 35 seconds to 30 seconds</li>
                         <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Ram - 250 wood, 30 seconds</li>
                         <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Dome of Faith Scholar - Cost reduced from 90 to 65</li>
                         <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Scholar - Cost reduced from 150 to 130</li>

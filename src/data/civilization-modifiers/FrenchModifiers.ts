@@ -9,29 +9,29 @@ import CivilizationsEnum from "../CivilizationsEnum";
 const frenchDarkAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_DARK_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.9,
-    description: 'villagerTime * 0.9'
+    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.1),
+    description: 'villagerTime * (1 / 1.1)'
 }
 
 const frenchFeudalAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_FEUDAL_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.9,
-    description: 'villagerTime * 0.9'
+    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.15),
+    description: 'villagerTime * (1 / 1.15)'
 }
 
 const frenchCastleAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_CASTLE_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.85,
-    description: 'villagerTime * 0.85'
+    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.2),
+    description: 'villagerTime * (1 / 1.2)'
 }
 
 const frenchImperialAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_IMPERIAL_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    apply: (currentProductionTime: number) => currentProductionTime * 0.8,
-    description: 'villagerTime * 0.8'
+    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.25),
+    description: 'villagerTime * (1 / 1.25)'
 }
 
 const schoolOfCavalry: ProductionSpeedModifier = {
