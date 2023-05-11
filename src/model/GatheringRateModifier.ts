@@ -3,6 +3,6 @@ import FoodSource from "./FoodSource";
 
 export default interface GatheringRateModifier {
     id: string;
-    apply: (gatheringRates: GatheringRates, foodSource: FoodSource) => GatheringRates;
+    apply: (gatheringRates: GatheringRates, foodSource: FoodSource, allSelectedModifiers: string[]) => GatheringRates;
     description: string
 }

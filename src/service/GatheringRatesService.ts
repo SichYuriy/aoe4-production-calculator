@@ -28,7 +28,7 @@ class GatheringRatesService {
             stone: BASE_STONE_GATHERING_RATE
         };
         return modifiers.reduce(
-            (previousRates, modifier) => modifier.apply(previousRates, foodSource),
+            (previousRates, modifier) => modifier.apply(previousRates, foodSource, modifiers.map(modifier => modifier.id)),
             baseGatheringRates
         );
     }

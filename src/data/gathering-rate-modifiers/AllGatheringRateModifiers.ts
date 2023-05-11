@@ -1,6 +1,12 @@
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import FoodSource from "../../model/FoodSource";
-import GatheringRateModifierId from "./GatheringRateModifierId";
+import GatheringRateModifierId, {
+    ACID_DISTILLATION_MULTIPLIER,
+    CROSS_BREEDING_MULTIPLIER,
+    CROSSCUT_SAW_MULTIPLIER, CUPELLATION_MULTIPLIER,
+    DOUBLE_BROADAX_MULTIPLIER, FERTILIZATION_MULTIPLIER, HORTICULTURE_MULTIPLIER,
+    LUMBER_PRESERVATION_MULTIPLIER, SPECIALIZED_PICK_MULTIPLIER
+} from "./GatheringRateModifierId";
 import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationModifiersRegistry";
 
 const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
@@ -29,102 +35,102 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
         apply: rates => {
             return {
                 ...rates,
-                wood: rates.wood * 1.1
+                wood: rates.wood * DOUBLE_BROADAX_MULTIPLIER
             };
         },
-        description: 'wood * 1.1'
+        description: 'wood * ' + DOUBLE_BROADAX_MULTIPLIER.toFixed(2)
     },
     [GatheringRateModifierId.LUMBER_PRESERVATION]: {
         id: GatheringRateModifierId.LUMBER_PRESERVATION,
         apply: rates => {
             return {
                 ...rates,
-                wood: rates.wood * 1.09
+                wood: rates.wood * LUMBER_PRESERVATION_MULTIPLIER
             };
         },
-        description: 'wood * 1.09'
+        description: 'wood * ' + LUMBER_PRESERVATION_MULTIPLIER.toFixed(2)
     },
     [GatheringRateModifierId.CROSSCUT_SAW]: {
         id: GatheringRateModifierId.CROSSCUT_SAW,
         apply: rates => {
             return {
                 ...rates,
-                wood: rates.wood * 1.08
+                wood: rates.wood * CROSSCUT_SAW_MULTIPLIER
             };
         },
-        description: 'wood * 1.08'
+        description: 'wood * ' + CROSSCUT_SAW_MULTIPLIER.toFixed(2)
     },
     [GatheringRateModifierId.HORTICULTURE]: {
         id: GatheringRateModifierId.HORTICULTURE,
         apply: (rates, foodSource) => {
             if ([FoodSource.SHEEP, FoodSource.CATTLE, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
-                return ({...rates, food: rates.food * 1.12});
+                return ({...rates, food: rates.food * HORTICULTURE_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
                 return ({...rates, food: rates.food * 1.15});
             } else {
                 return rates;
             }
         },
-        description: '[sheep, berry, farm, cattle] * 1.12, [twin-minaret-berry] * 1.15'
+        description: `[sheep, berry, farm, cattle] * ${HORTICULTURE_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.15`
     },
     [GatheringRateModifierId.FERTILIZATION]: {
         id: GatheringRateModifierId.FERTILIZATION,
         apply: (rates, foodSource) => {
             if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM, FoodSource.CATTLE].includes(foodSource)) {
-                return ({...rates, food: rates.food * 1.1});
+                return ({...rates, food: rates.food * FERTILIZATION_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
                 return ({...rates, food: rates.food * 1.1304});
             } else {
                 return rates;
             }
         },
-        description: '[sheep, berry, farm, cattle] * 1.1, [twin-minaret-berry] * 1.13'
+        description: `[sheep, berry, farm, cattle] * ${FERTILIZATION_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.13`
     },
     [GatheringRateModifierId.CROSS_BREEDING]: {
         id: GatheringRateModifierId.CROSS_BREEDING,
         apply: (rates, foodSource) => {
             if ([FoodSource.SHEEP, FoodSource.CATTLE, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
-                return ({...rates, food: rates.food * 1.1});
+                return ({...rates, food: rates.food * CROSS_BREEDING_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
                 return ({...rates, food: rates.food * 1.1154});
             } else {
                 return rates;
             }
         },
-        description: '[sheep, berry, farm, cattle] * 1.1, [twin-minaret-berry] * 1.1154'
+        description: `[sheep, berry, farm, cattle] * ${CROSS_BREEDING_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.1154`
     },
     [GatheringRateModifierId.SPECIALIZED_PICK]: {
         id: GatheringRateModifierId.SPECIALIZED_PICK,
         apply: rates => {
             return {
                 ...rates,
-                gold: rates.gold * 1.12,
-                stone: rates.stone * 1.12,
+                gold: rates.gold * SPECIALIZED_PICK_MULTIPLIER,
+                stone: rates.stone * SPECIALIZED_PICK_MULTIPLIER,
             };
         },
-        description: '[gold, stone] * 1.11'
+        description: `[gold, stone] * ${SPECIALIZED_PICK_MULTIPLIER.toFixed(2)}`
     },
     [GatheringRateModifierId.ACID_DISTILLATION]: {
         id: GatheringRateModifierId.ACID_DISTILLATION,
         apply: rates => {
             return {
                 ...rates,
-                gold: rates.gold * 1.11,
-                stone: rates.stone * 1.11,
+                gold: rates.gold * ACID_DISTILLATION_MULTIPLIER,
+                stone: rates.stone * ACID_DISTILLATION_MULTIPLIER,
             };
         },
-        description: '[gold, stone] * 1.11'
+        description: `[gold, stone] * ${ACID_DISTILLATION_MULTIPLIER}`
     },
     [GatheringRateModifierId.CUPELLATION]: {
         id: GatheringRateModifierId.CUPELLATION,
         apply: rates => {
             return {
                 ...rates,
-                gold: rates.gold * 1.1,
-                stone: rates.stone * 1.1,
+                gold: rates.gold * CUPELLATION_MULTIPLIER,
+                stone: rates.stone * CUPELLATION_MULTIPLIER,
             };
         },
-        description: '[gold, stone] * 1.1'
+        description: `[gold, stone] * ${CUPELLATION_MULTIPLIER.toFixed(2)}`
     },
     [GatheringRateModifierId.FORESTRY]: {
         id: GatheringRateModifierId.FORESTRY,
