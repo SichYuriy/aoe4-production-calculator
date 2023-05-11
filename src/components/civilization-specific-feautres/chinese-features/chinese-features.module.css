@@ -1,11 +1,1 @@
-.chineseFeatures {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.row {
-    display: flex;
-    flex-flow: row;
-    gap: 10px;
-}

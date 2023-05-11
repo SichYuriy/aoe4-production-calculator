@@ -4,7 +4,7 @@ import woodenFortressIcon from "../../../icons/wooden-fortress.png";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
-import s from './rus-features.module.css'
+import shared from '../../../shared.module.css'
 
 function RusFeatures() {
     const dispatch = useAppDispatch();
@@ -14,9 +14,9 @@ function RusFeatures() {
                                           onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WOODEN_FORTRESS))}
                                           tooltip={{header: 'Wooden Fortress', text: 'Villagers will drop off 20% more wood'}}/>
     return (
-        <div className={s.rusFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <Bounty/>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {woodenFortressItem}
             </div>
         </div>

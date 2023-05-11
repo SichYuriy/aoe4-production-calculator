@@ -4,7 +4,7 @@ import sanctityIcon from "../../../icons/sanctity.png";
 import PassiveIncomeModifierId from "../../../data/passive-income-modifiers/PassiveIncomeModifierId";
 import {PassiveIncomeModifiersState, togglePassiveIncomeModifier} from "../../../state/PassiveIncomeModifiersSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
-import s from './delhi-features.module.css';
+import shared from '../../../shared.module.css';
 import domeOfFaithIcon from '../../../icons/dome-of-faith.png';
 import {decrement, increment, UnitsState} from "../../../state/UnitsSlice";
 
@@ -23,12 +23,12 @@ function DelhiFeatures() {
                                        tooltip={{header: 'Dome of faith', text: 'Produces cheaper scholar'}}/>
 
     return (
-        <div className={s.delhiFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <MuslimBerries/>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {sanctityItem}
             </div>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {domeOfFaithItem}
             </div>
         </div>

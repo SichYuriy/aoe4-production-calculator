@@ -4,7 +4,7 @@ import {useAppDispatch, useAppSelector} from "../../../hooks";
 import ProductionSpeedModifierId from "../../../data/production-speed-modifiers/ProductionSpeedModifierId";
 import {toggleProductionSpeedModifier} from "../../../state/ProducationSpeedModifiersSlice";
 import schoolOfCavalryIcon from '../../../icons/school-of-cavalry.png';
-import s from './french-features.module.css';
+import shared from '../../../shared.module.css';
 import FrenchCastles from "./french-castles/FrenchCastles";
 
 function FrenchFeatures() {
@@ -15,14 +15,14 @@ function FrenchFeatures() {
                                            onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.SCHOOL_OF_CAVALRY))}
                                            tooltip={{header: 'School of cavalry', text: 'Reduces production time for stables'}}/>
     return (
-        <div className={s.frenchFeatures}>
-            <div className={s.row}>
+        <div className={shared.civilizationSpecificFeatures}>
+            <div className={shared.upgradesRow}>
                 <FrenchAgeSelect/>
             </div>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {schoolOfCavalryItem}
             </div>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 <FrenchCastles/>
             </div>
         </div>

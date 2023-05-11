@@ -1,4 +1,4 @@
-import s from './malians-features.module.css'
+import shared from '../../../shared.module.css';
 import MansaQuery from "./mansa-query/MansaQuery";
 import UpgradeItemCounter from "../../upgrade-item-counter/UpgradeItemCounter";
 import pitMineIcon from '../../../icons/pit-mine.png';
@@ -33,9 +33,9 @@ function MaliansFeatures() {
                                           onDecrement={() => dispatch(decrementPassiveIncome(PassiveIncomeModifierId.PIT_MINE_MINING_CAMP))}/>
 
     return (
-        <div className={s.maliansFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <MansaQuery/>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {pitMineItem}
                 {pitMineHouseItem}
                 {pitMineMiningCampItem}

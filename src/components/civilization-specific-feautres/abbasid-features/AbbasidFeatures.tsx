@@ -1,7 +1,6 @@
 import MuslimBerries from "../shared-features/muslim-berries/MuslimBerries";
 import TradersDiscount from "./traders-discount/TradersDiscount";
 import GoldenAge from "./golden-age/GoldenAge";
-import s from './abbasid-features.module.css'
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import UpgradeItem from "../../upgrade-item/UpgradeItem";
 import freshFoodIcon from "../../../icons/fresh-foodstuffs.png";
@@ -11,6 +10,7 @@ import CostModifierId from "../../../data/cost-modifiers/CostModifierId";
 import {toggleCostModifier} from "../../../state/CostModifiersSlice";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
+import shared from "../../../shared.module.css";
 
 function AbbasidFeatures() {
     const dispatch = useAppDispatch();
@@ -31,11 +31,11 @@ function AbbasidFeatures() {
                                               tooltip={{header: 'Improved processing', text: ' Villagers will drop off 8% more resources'}}/>
 
     return (
-        <div className={s.abbasidFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <MuslimBerries/>
             <TradersDiscount/>
             <GoldenAge/>
-            <div className={s.upgradesRow}>
+            <div className={shared.upgradesRow}>
                 {freshFoodItem}
                 {agricultureItem}
                 {improvedProcessingItem}

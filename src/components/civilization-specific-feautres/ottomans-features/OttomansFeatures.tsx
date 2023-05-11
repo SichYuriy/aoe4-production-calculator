@@ -1,4 +1,4 @@
-import s from './ottomans-features.module.css';
+import shared from '../../../shared.module.css';
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import UpgradeItem from "../../upgrade-item/UpgradeItem";
 import antolianHillsIcon from "../../../icons/anatolian-hills.png";
@@ -16,8 +16,8 @@ function OttomansFeatures() {
                                                  onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.ANATOLIAN_HILLS))}
                                                  tooltip={{header: 'Anatolian Hills', text: 'Increases gold, stone gathering rate'}}/>
 
-    return <div className={s.ottomanFeatures}>
-        <div className={s.row}>
+    return <div className={shared.civilizationSpecificFeatures}>
+        <div className={shared.upgradesRow}>
             <TwinMinaretMedrese/>
             {anatolianHillsUpgradeItem}
         </div>

@@ -4,7 +4,8 @@ import steppeRedoubtIcon from "../../../icons/steppe-redoubt.png";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
-import s from './mongols-features.module.css';
+import shared from '../../../shared.module.css';
+import ImprovedEcoUpgrades from "./improved-eco-upgrades/ImprovedEcoUpgrades";
 
 function MongolsFeatures() {
     const dispatch = useAppDispatch();
@@ -13,16 +14,12 @@ function MongolsFeatures() {
                                          selected={gatheringRateModifiers[GatheringRateModifierId.STEPPE_REDOUBT]}
                                          onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.STEPPE_REDOUBT))}/>;
     return (
-        <div className={s.mongolsFeatures}>
-            <div>
-                Silver Tree:
+        <div className={shared.civilizationSpecificFeatures}>
+            <div className={shared.upgradesRow}>
                 <SilverTree/>
-            </div>
-            <div>
-                Steppe redoubt:
                 {steppeRedoubtItem}
             </div>
-
+            <ImprovedEcoUpgrades/>
         </div>
     )
 }

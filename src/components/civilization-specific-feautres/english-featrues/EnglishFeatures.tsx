@@ -1,16 +1,16 @@
 import EnglishAgeSelect from "./english-age-select/EnglishAgeSelect";
 import EnglishDocks from "./english-docks/EnglishDocks";
-import s from "./english-features.module.css"
+import shared from "../../../shared.module.css"
 import EnglishMma from "./english-mma/EnglishMma";
 import WynguardPalace from "./wynguard-palace/WynguardPalace";
 import Enclosures from "./enclosures/Enclosures";
 
 function EnglishFeatures() {
     return (
-        <div className={s.englishFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <EnglishDocks/>
             <EnglishMma/>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 <EnglishAgeSelect/>
             </div>
             <WynguardPalace/>

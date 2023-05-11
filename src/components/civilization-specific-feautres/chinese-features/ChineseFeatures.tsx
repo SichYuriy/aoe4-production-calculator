@@ -1,6 +1,6 @@
 import SongDynasty from "./song-dynasty/SongDynasty";
 import ChineseDocks from "./chinese-docks/ChineseDocks";
-import s from './chinese-features.module.css'
+import shared from '../../../shared.module.css';
 import ImperialOfficials from "./imperial-officials/ImperialOfficials";
 import UpgradeItem from "../../upgrade-item/UpgradeItem";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
@@ -17,11 +17,11 @@ function ChineseFeatures() {
                                           tooltip={{header: 'Granary', text: 'Increases farm gathering rate'}}/>
 
     return (
-        <div className={s.chineseFeatures}>
+        <div className={shared.civilizationSpecificFeatures}>
             <ChineseDocks/>
             <SongDynasty/>
             <ImperialOfficials/>
-            <div className={s.row}>
+            <div className={shared.upgradesRow}>
                 {granaryUpgradeItem}
             </div>
         </div>
