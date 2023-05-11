@@ -12,7 +12,8 @@ function MongolsFeatures() {
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
     let steppeRedoubtItem = <UpgradeItem icon={steppeRedoubtIcon}
                                          selected={gatheringRateModifiers[GatheringRateModifierId.STEPPE_REDOUBT]}
-                                         onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.STEPPE_REDOUBT))}/>;
+                                         onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.STEPPE_REDOUBT))}
+                                         tooltip={{header: 'Steppe Redoubt', text: 'Increases gold dropped'}}/>;
     return (
         <div className={shared.civilizationSpecificFeatures}>
             <div className={shared.upgradesRow}>
