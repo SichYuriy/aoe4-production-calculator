@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '58',
+        date: new Date(2023, 4, 14),
+        patch: '6.1.130',
+        description: 'Add Mongols improved eco upgrades'
+    },
+    {
         id: '57',
         date: new Date(2023, 3, 5),
         patch: '6.1.130',
@@ -249,7 +255,7 @@ function UpdatesModalLink() {
 
     const itemsCountToShow = showAll ? updates.length : Math.max(15, lastPatchItemsCount);
     let itemsToShow = updates.slice(0, itemsCountToShow)
-        .map(item => <li key={item.id}><span>[{item.date.toLocaleDateString()}] [Patch {item.patch}]</span> {item.description}</li>);
+        .map(item => <li key={item.id}><span>[{item.date.toLocaleDateString('sv')}] [Patch {item.patch}]</span> {item.description}</li>);
 
     function openModal() {
         setShowAllItems(false);
@@ -258,7 +264,7 @@ function UpdatesModalLink() {
 
     return (
         <>
-            <h3 onClick={openModal} className={s.modalLink}>Updates ({updates[0].date.toLocaleDateString()})</h3>
+            <h3 onClick={openModal} className={s.modalLink}>Updates ({updates[0].date.toLocaleDateString('sv')})</h3>
 
             <Modal show={show} onHide={() => setShowModal(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
