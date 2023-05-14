@@ -4,78 +4,273 @@ import s from './updates-modal-link.module.css'
 import {faClose} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+type UpdateItem = {
+    id: string;
+    date: Date;
+    patch: string;
+    description: string;
+}
+
+const updates: UpdateItem[] = [
+    {
+        id: '57',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: 'Ottomans Blacksmith and University production influence bonus reduced from 25/33/40% to 20/30/40%'
+    },
+    {
+        id: '56',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: ' Ottomans Blacksmith and University production influence bonus reduced from 25/33/40% to 20/30/40%'
+    },
+    {
+        id: '55',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: ' Sofa train time reduced from 30 to 26 seconds'
+    },
+    {
+        id: '54',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: 'French Town Center production rate bonus increased from 10/10/15/20% to 10/15/20/25%'
+    },
+    {
+        id: '53',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: 'Mongol Traction Trebuchet cost reduced from 400 wood 150 gold to 300 wood 100 gold, build time reduced from 35 seconds to 30 seconds'
+    },
+    {
+        id: '52',
+        date: new Date(2023, 3, 5),
+        patch: '6.1.130',
+        description: 'Counter-weight Trebuchet cost reduced from 500 wood 250 gold to 400 wood 150 gold, build time reduced from 35 seconds to 30 seconds'
+    },
+    {id: '51', date: new Date(2023, 1, 16), patch: '6.0.878', description: 'Ram - 250 wood, 30 seconds'},
+    {
+        id: '50',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Dome of Faith Scholar - Cost reduced from 90 to 65'
+    },
+    {id: '49', date: new Date(2023, 1, 16), patch: '6.0.878', description: 'Scholar - Cost reduced from 150 to 130'},
+    {
+        id: '48',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Farimba Garrison - Gold reduction bonus reduced from 20% to 10%'
+    },
+    {
+        id: '47',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Enclosures gold generation time increased from every 3.5 second to every 5 seconds'
+    },
+    {
+        id: '46',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Wynguard Footmen costs 200 food, 500 gold, and takes 50 seconds to train'
+    },
+    {
+        id: '45',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 50 seconds'
+    },
+    {
+        id: '44',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 25 seconds'
+    },
+    {
+        id: '43',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'War Elephant cost reduced from 600f 400g to 400f 350g'
+    },
+    {
+        id: '42',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Fresh Foodstuffs villager cost bonus reduced from 50% to 35%'
+    },
+    {
+        id: '41',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Great Bombard (Ottoman) wood cost reduced from 600 to 450'
+    },
+    {
+        id: '40',
+        date: new Date(2023, 1, 16),
+        patch: '6.0.878',
+        description: 'Bombard wood cost reduced from 400 to 300'
+    },
+    {id: '39', date: new Date(2023, 0, 23), patch: '5.1.148.1', description: 'Add Cattle food source'},
+    {
+        id: '38',
+        date: new Date(2022, 11, 15),
+        patch: '5.1.148.1',
+        description: 'Fix Ottomans blacksmith influence production time age 4 -33% -> -29%, Istanbul Observatory -40% -> -37%'
+    },
+    {
+        id: '37',
+        date: new Date(2022, 11, 12),
+        patch: '5.1.148.1',
+        description: 'Fix English mma production time -50% -> -32%'
+    },
+    {
+        id: '36',
+        date: new Date(2022, 11, 11),
+        patch: '5.1.148.1',
+        description: 'Fix Mongols Silver Tree. It does not affect other markets any more'
+    },
+    {
+        id: '35',
+        date: new Date(2022, 11, 10),
+        patch: '5.1.148.1',
+        description: 'Fix camel rider production time: 22 sec -> 35 sec'
+    },
+    {
+        id: '34',
+        date: new Date(2022, 11, 9),
+        patch: '5.1.148.1',
+        description: 'Song dynasty villager production time: -35% -> -25%, cattle cost: 75 -> 90 gold'
+    },
+    {
+        id: '33',
+        date: new Date(2022, 11, 5),
+        patch: '5.1.148',
+        description: 'Fix trader cost: 75 wood, 75 gold, 35 sec -> 60 wood, 60 gold, 25 sec'
+    },
+    {
+        id: '32',
+        date: new Date(2022, 11, 4),
+        patch: '5.1.148',
+        description: 'Food gathering rate fix: seep 38.3 -> 37.05, farm 36.25 -> 36.718. Wheelbarrow farms +1% -> +3.2%. Wheelbarrow sheep +1% -> +3%'
+    },
+    {
+        id: '31',
+        date: new Date(2022, 11, 1),
+        patch: '5.1.148',
+        description: 'Cattle cost: 100 -> 75 gold, pit mine gold generation: 30 -> 35 gold/min'
+    },
+    {id: '30', date: new Date('26 Nov 2022'), patch: ' ---', description: 'Add ships'},
+    {
+        id: '29',
+        date: new Date(2022, 10, 25),
+        patch: ' ---',
+        description: 'Add Delhi scholar unit, sanctity, dome of faith'
+    },
+    {id: '28', date: new Date(2022, 10, 25), patch: ' ---', description: 'Add tithe barn'},
+    {id: '27', date: new Date(2022, 10, 14), patch: ' ---', description: 'Add relics and sacred sites'},
+    {id: '26', date: new Date(2022, 10, 11), patch: ' ---', description: 'Add English farmers count'},
+    {id: '25', date: new Date(2022, 10, 10), patch: ' ---', description: 'Add English enclosures'},
+    {id: '24', date: new Date(2022, 10, 10), patch: ' ---', description: 'Add English Wynguard Palace'},
+    {id: '23', date: new Date(2022, 10, 9), patch: ' ---', description: 'Add Malians Farimba Garrison'},
+    {id: '22', date: new Date(2022, 10, 7), patch: ' ---', description: 'Add Malians Fulani Corral'},
+    {id: '21', date: new Date(2022, 10, 7), patch: ' ---', description: 'Add Malians cattle ranch'},
+    {id: '20', date: new Date(2022, 10, 7), patch: ' ---', description: 'Add Malians pit mine influence'},
+    {id: '19', date: new Date(2022, 10, 7), patch: ' ---', description: 'Add Malians cattle unit'},
+    {id: '18', date: new Date(2022, 10, 7), patch: ' ---', description: 'Add Malians mansa query'},
+    {id: '17', date: new Date(2022, 10, 6), patch: ' ---', description: 'Add ram unit with production time 12s'},
+    {id: '16', date: new Date(2022, 10, 6), patch: ' ---', description: 'Temporary remove all ships except fishing'},
+    {id: '15', date: new Date(2022, 10, 6), patch: ' ---', description: 'Update fishing boat cost 60 -> 75'},
+    {id: '14', date: new Date(2022, 10, 6), patch: ' ---', description: 'Update janissary production time 28s -> 24s'},
+    {
+        id: '13',
+        date: new Date(2022, 10, 6),
+        patch: ' ---',
+        description: 'Add ottomans features: Twin minaret medrese, anatolian hills, blacksmith influence, sultanhani trade network'
+    },
+    {
+        id: '12',
+        date: new Date(2022, 9, 25),
+        patch: ' ---',
+        description: 'Fix units data: zhuge nu, fire lancer, imperial official'
+    },
+    {id: '11', date: new Date('13 Oct 2022'), patch: ' ---', description: 'Fix icons for Ottomans and Malians units'},
+    {
+        id: '10',
+        date: new Date(2022, 9, 2),
+        patch: ' ---',
+        description: 'English update: add ships discount, mma production speed, galley unit, hulk unit'
+    },
+    {
+        id: '9',
+        date: new Date(2022, 8, 26),
+        patch: ' ---',
+        description: 'Add new civs beta - only units with wrong icons for now'
+    },
+    {
+        id: '8',
+        date: new Date(2022, 8, 26),
+        patch: ' ---',
+        description: 'Scout cost fix. Before - 60 food, after - 70 food'
+    },
+    {
+        id: '7',
+        date: new Date(2022, 8, 25),
+        patch: ' ---',
+        description: 'Show only common units without civilization selected'
+    },
+    {
+        id: '6',
+        date: new Date(2022, 8, 25),
+        patch: ' ---',
+        description: 'Fix: longbowman cost (40, 50) differs from archer cost (30, 50)'
+    },
+    {
+        id: '5',
+        date: new Date(2022, 8, 25),
+        patch: ' ---',
+        description: 'Added units: arbaletrier, knight, landsknecht, longbowman, royal knight, tower war elephant, war elephant, palace guard'
+    },
+    {id: '4', date: new Date(2022, 8, 24), patch: ' ---', description: 'Added streltsy unit'},
+    {id: '3', date: new Date(2022, 8, 24), patch: ' ---', description: 'Added unit filter by selected civilization'},
+    {
+        id: '2',
+        date: new Date(2022, 8, 24),
+        patch: ' ---',
+        description: 'Reduced civilizations dropdown size to contain more civs in the future'
+    },
+    {id: '1', date: new Date(2022, 8, 24), patch: ' ---', description: 'Added updates modal'},
+]
+
+const lastPatchItemsCount = updates.filter(updateItem => updateItem.date === updates[0].date).length;
+
 function UpdatesModalLink() {
-    const [show, setShow] = useState(false);
+    const [show, setShowModal] = useState(false);
+    const [showAll, setShowAllItems] = useState(false);
+
+    const itemsCountToShow = showAll ? updates.length : Math.max(15, lastPatchItemsCount);
+    let itemsToShow = updates.slice(0, itemsCountToShow)
+        .map(item => <li key={item.id}><span>[{item.date.toLocaleDateString()}] [Patch {item.patch}]</span> {item.description}</li>);
+
+    function openModal() {
+        setShowAllItems(false);
+        setShowModal(true);
+    }
 
     return (
         <>
-            <h3 onClick={() => setShow(true)} className={s.modalLink}>Updates (05 Apr 2023)</h3>
+            <h3 onClick={openModal} className={s.modalLink}>Updates ({updates[0].date.toLocaleDateString()})</h3>
 
-            <Modal show={show} onHide={() => setShow(false)} size="lg">
+            <Modal show={show} onHide={() => setShowModal(false)} size="lg">
                 <Modal.Body bsPrefix={s.modalBody}>
                     <div className={s.header}>
                         <h3>Updates</h3>
-                        <div onClick={() => setShow(false)} className={s.closeButton}><h3><FontAwesomeIcon icon={faClose}/></h3></div>
+                        <div onClick={() => setShowModal(false)} className={s.closeButton}><h3><FontAwesomeIcon icon={faClose}/></h3></div>
                     </div>
 
                     <hr/>
                     <ul>
-                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Ottomans Blacksmith and University production influence bonus reduced from 25/33/40% to 20/30/40% </li>
-                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Sofa train time reduced from 30 to 26 seconds. </li>
-                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> French Town Center production rate bonus increased from 10/10/15/20% to 10/15/20/25%</li>
-                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Mongol Traction Trebuchet cost reduced from 400 wood 150 gold to 300 wood 100 gold, build time reduced from 35 seconds to 30 seconds</li>
-                        <li><span>[05 Apr 2023] [Patch 6.1.130]</span> Counter-weight Trebuchet cost reduced from 500 wood 250 gold to 400 wood 150 gold, build time reduced from 35 seconds to 30 seconds</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Ram - 250 wood, 30 seconds</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Dome of Faith Scholar - Cost reduced from 90 to 65</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Scholar - Cost reduced from 150 to 130</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Farimba Garrison - Gold reduction bonus reduced from 20% to 10%</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Enclosures gold generation time increased from every 3.5 second to every 5 seconds</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Wynguard Footmen costs 200 food, 500 gold, and takes 50 seconds to train</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Wynguard Rangers cost and train time changed from 200 food, 100 gold, and 75 seconds to 250 gold, 450 wood, and 50 seconds</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Wynguard Raiders cost and train time changed from 200 food, 100 gold, and 75 seconds to 650 food, 200 gold, and 25 seconds</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> War Elephant cost reduced from 600f 400g to 400f 350g</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Fresh Foodstuffs villager cost bonus reduced from 50% to 35%</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Great Bombard (Ottoman) wood cost reduced from 600 to 450</li>
-                        <li><span>[16 Feb 2023] [Patch 6.0.878]</span> Bombard wood cost reduced from 400 to 300</li>
-                        <li><span>[23 Jan 2023]</span> Add Cattle food source</li>
-                        <li><span>[15 Dec 2022]</span> Fix Ottomans blacksmith influence production time age 4 -33% {`->`} -29%, Istanbul Observatory -40% {`->`} -37%</li>
-                        <li><span>[12 Dec 2022]</span> Fix English mma production time -50% {`->`} -32%</li>
-                        <li><span>[11 Dec 2022]</span> Fix Mongols Silver Tree. It does not affect other markets any more</li>
-                        <li><span>[10 Dec 2022]</span> Fix camel rider production time: 22 sec {`->`} 35 sec</li>
-                        <li><span>[09 Dec 2022] [Patch 5.1.148.1]</span> Song dynasty villager production time: -35% {`->`} -25%, cattle cost: 75 {`->`} 90 gold</li>
-                        <li><span>[05 Dec 2022]</span> Fix trader cost: 75 wood, 75 gold, 35 sec {`->`} 60 wood, 60 gold, 25 sec</li>
-                        <li><span>[04 Dec 2022]</span> Food gathering rate fix: seep 38.3 {`->`} 37.05, farm 36.25 {`->`} 36.718. Wheelbarrow farms +1% {`->`} +3.2%. Wheelbarrow sheep +1% {`->`} +3%</li>
-                        <li><span>[01 Dec 2022] [Patch 5.1.148]</span> Cattle cost: 100 {`->`} 75 gold, pit mine gold generation: 30 {`->`} 35 gold/min</li>
-                        <li><span>[26 Nov 2022]</span> Add ships</li>
-                        <li><span>[25 Nov 2022]</span> Add Delhi scholar unit, sanctity, dome of faith</li>
-                        <li><span>[25 Nov 2022]</span> Add tithe barn</li>
-                        <li><span>[14 Nov 2022]</span> Add relics and sacred sites</li>
-                        <li><span>[11 Nov 2022]</span> Add English farmers count</li>
-                        <li><span>[10 Nov 2022]</span> Add English enclosures</li>
-                        <li><span>[10 Nov 2022]</span> Add English Wynguard Palace</li>
-                        <li><span>[09 Nov 2022]</span> Add Malians Farimba Garrison</li>
-                        <li><span>[07 Nov 2022]</span> Add Malians Fulani Corral</li>
-                        <li><span>[07 Nov 2022]</span> Add Malians cattle ranch</li>
-                        <li><span>[07 Nov 2022]</span> Add Malians pit mine influence</li>
-                        <li><span>[07 Nov 2022]</span> Add Malians cattle unit</li>
-                        <li><span>[07 Nov 2022]</span> Add Malians mansa query</li>
-                        <li><span>[06 Nov 2022]</span> Add ram unit with production time 12s</li>
-                        <li><span>[06 Nov 2022]</span> Temporary remove all ships except fishing</li>
-                        <li><span>[06 Nov 2022]</span> Update fishing boat cost 60 {'->'} 75</li>
-                        <li><span>[06 Nov 2022]</span> Update janissary production time 28s {'->'} 24s</li>
-                        <li><span>[06 Nov 2022]</span> Add ottomans features: Twin minaret medrese, anatolian hills, blacksmith influence, sultanhani trade network</li>
-                        <li><span>[25 Oct 2022]</span> Fix units data: zhuge nu, fire lancer, imperial official</li>
-                        <li><span>[13 Oct 2022]</span> Fix icons for Ottomans and Malians units</li>
-                        <li><span>[02 Oct 2022]</span> English update: add ships discount, mma production speed, galley unit, hulk unit</li>
-                        <li><span>[26 Sept 2022]</span> Add new civs beta - only units with wrong icons for now</li>
-                        <li><span>[26 Sept 2022]</span> Scout cost fix. Before - 60 food, after - 70 food</li>
-                        <li><span>[25 Sept 2022]</span> Show only common units without civilization selected</li>
-                        <li><span>[25 Sept 2022]</span> Fix: longbowman cost (40, 50) differs from archer cost (30, 50)</li>
-                        <li><span>[25 Sept 2022]</span> Added units: arbaletrier, knight, landsknecht, longbowman, royal knight, tower war elephant, war elephant, palace guard</li>
-                        <li><span>[24 Sept 2022]</span> Added streltsy unit</li>
-                        <li><span>[24 Sept 2022]</span> Added unit filter by selected civilization</li>
-                        <li><span>[24 Sept 2022]</span> Reduced civilizations dropdown size to contain more civs in the future</li>
-                        <li><span>[24 Sept 2022]</span> Added updates modal</li>
+                        {itemsToShow}
+                        {!showAll? <span className={s.modalLink} onClick={() => setShowAllItems(true)}><u><i>Show All</i></u></span> : ''}
                     </ul>
                 </Modal.Body>
             </Modal>
