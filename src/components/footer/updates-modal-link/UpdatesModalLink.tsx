@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '66',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'French Hulk renamed to War Cog. Cost reduced from 120 food / 200 wood / 30 gold to 85 food / 200 wood / 30. gold'
+    },
+    {
         id: '65',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',

@@ -21,7 +21,7 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 
 -------------- FRENCH
 - Hulk renamed to War Cog
--- Cost reduced from 120 food / 200 wood / 30 gold to 85 food / 200 wood / 30. gold. !
+-- Cost reduced from 120 food / 200 wood / 30 gold to 85 food / 200 wood / 30. gold. +!
 
 -------------- MALIANS
 - Villager cattle gather rate reduced from 0.9 to 0.81 food per second. !

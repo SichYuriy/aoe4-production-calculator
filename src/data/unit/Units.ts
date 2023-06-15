@@ -54,6 +54,7 @@ import monkIcon from '../../icons/monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
 import dhowIcon from '../../icons/dhow.png'
 import hulkIcon from '../../icons/hulk.png'
+import warCogIcon from '../../icons/war-cog-2.png'
 import demolitionShipIcon from '../../icons/demolition_ship.png'
 import carrackIcon from '../../icons/carrack.png'
 import grandGalleyIcon from '../../icons/grand_galley.png'
@@ -801,7 +802,18 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
+        common: false
+    },
+    WAR_COG: {
+        id: 'WAR_COG',
+        icon: warCogIcon,
+        name: 'war cog',
+        productionTime: 30,
+        cost: new UnitCost(85, 30, 200, 0),
+        types: [],
+        building: Building.DOCK,
+        civilizations: [CivilizationsEnum.FRENCH],
         common: false
     },
     BAGHLAH: {
