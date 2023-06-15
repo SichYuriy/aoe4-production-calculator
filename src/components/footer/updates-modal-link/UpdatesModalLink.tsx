@@ -13,10 +13,16 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '61',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Camel Rider cost changed from 180 food / 60 gold to 160 food / 30 gold / 30 wood'
+    },
+    {
         id: '60',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
-        description: 'Man-at-Arm unit renamed to Ghulam. Cost increased from 100 food / 20 gold to 120 food / 30 gold. Train time increased from 22.5 seconds to 26 seconds'
+        description: 'Abbasid Man-at-Arm unit renamed to Ghulam. Cost increased from 100 food / 20 gold to 120 food / 30 gold. Train time increased from 22.5 seconds to 26 seconds'
     },
     {
         id: '59',
