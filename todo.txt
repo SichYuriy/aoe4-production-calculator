@@ -13,9 +13,9 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 - Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold. +
 
 -------------- DELHI
-- Horseman renamed Ghazi Raider
--- Cost increased from 100 food / 20 wood to 110 food / 30 wood.
--- Train time increased from 22.5 seconds to 25 seconds.
+- Horseman renamed Ghazi Raider +
+-- Cost increased from 100 food / 20 wood to 110 food / 30 wood. +
+-- Train time increased from 22.5 seconds to 25 seconds. +
 
 - Sanctity technology gold income bonus reduced from 50% to 25%.
 

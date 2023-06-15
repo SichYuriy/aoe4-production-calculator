@@ -139,7 +139,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(100, 0, 20, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS],
         common: true
     },
     SIPAHI: {
@@ -151,6 +151,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.OTTOMANS],
+        common: false
+    },
+    GAZI_RAIDER: {
+        id: 'GAZI_RAIDER',
+        icon: horsemanIcon,
+        name: 'gazi raider',
+        productionTime: 25,
+        cost: new UnitCost(110, 0, 30, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.DELHI],
         common: false
     },
     LANCER: {

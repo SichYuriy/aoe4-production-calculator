@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '64',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Delhi Horseman renamed Ghazi Raider. Cost increased from 100 food / 20 wood to 110 food / 30 wood. Train time increased from 22.5 seconds to 25 seconds'
+    },
+    {
         id: '63',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
