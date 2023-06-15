@@ -13,10 +13,16 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '71',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Sipahi Cost increased from 110 food/20 wood to 120 food/40 wood'
+    },
+    {
         id: '70',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
-        description: 'Discount and production speed bonus reduced from 50% to 40%'
+        description: ' Silver Tree Discount and production speed bonus reduced from 50% to 40%'
     },
     {
         id: '69',
