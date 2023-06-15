@@ -1,1 +1,46 @@
-mongols unique upgrades, all + 7.5%
+https://steamcommunity.com/app/1466860/discussions/9/3820784854043233762/
+https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
+
+-------------- ABBASID
+- Man-at-Arm unit renamed to Ghulam
+-- Cost increased from 100 food / 20 gold to 120 food / 30 gold.
+-- Train time increased from 22.5 seconds to 26 seconds.
+
+- Camel Rider cost changed from 180 food / 60 gold to 160 food / 30 gold / 30 wood.
+
+-------------- CHINA
+- Zhuge Nu cost adjusted from 20 food / 30 gold / 30 wood to 30 food / 20 gold / 30 wood.
+- Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold.
+
+-------------- DELHI
+- Horseman renamed Ghazi Raider
+-- Cost increased from 100 food / 20 wood to 110 food / 30 wood.
+-- Train time increased from 22.5 seconds to 25 seconds.
+
+- Sanctity technology gold income bonus reduced from 50% to 25%.
+
+-------------- FRENCH
+- Hulk renamed to War Cog
+-- Cost reduced from 120 food / 200 wood / 30 gold to 85 food / 200 wood / 30. gold. The total cost is effectively 10% less resources, but realized in food only.
+
+- Corrected the Keep’s help text value of French influence bonus from 25% to 20%.
+
+-------------- MALIANS
+- Villager cattle gather rate reduced from 0.9 to 0.81 food per second.
+- Food gathering technologies now apply to the passive income of cattle garrisoned in ranches.
+
+- Farimba Garrison Landmark train speed decreased by 10%:
+-- Archer, Donso, and Musofadi Warrior train time increased from 22 seconds to 24 seconds.
+-- Javelin Thrower train time increased from 33 seconds to 37 seconds.
+-- Musofadi Gunner train time increased from 52 seconds to 57 seconds.
+
+-------------- MONGOLS
+- Mongol Lancer renamed to Keshik
+-- Cost decreased from 140 food / 100 gold to 120 food / 80 gold
+-- Train time decreased from 35 seconds to 30 seconds.
+
+- Silver Tree Landmark
+-- Discount and production speed bonus reduced from 50% to 40%.
+
+-------------- Ottomans
+- Sipahi Cost increased from 110 food/20 wood to 120 food/40 wood.
