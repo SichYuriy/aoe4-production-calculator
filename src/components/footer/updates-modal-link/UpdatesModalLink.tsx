@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '67',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Malian Villager cattle gather rate reduced from 0.9 to 0.81 food per second'
+    },
+    {
         id: '66',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
