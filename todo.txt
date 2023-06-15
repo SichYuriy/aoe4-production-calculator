@@ -9,7 +9,7 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 - Camel Rider cost changed from 180 food / 60 gold to 160 food / 30 gold / 30 wood. +
 
 -------------- CHINA
-- Zhuge Nu cost adjusted from 20 food / 30 gold / 30 wood to 30 food / 20 gold / 30 wood.
+- Zhuge Nu cost adjusted from 20 food / 30 gold / 30 wood to 30 food / 20 gold / 30 wood. +
 - Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold.
 
 -------------- DELHI

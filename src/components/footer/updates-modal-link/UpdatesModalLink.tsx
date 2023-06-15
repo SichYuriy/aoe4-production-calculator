@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '62',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Zhuge Nu cost adjusted from 20 food / 30 gold / 30 wood to 30 food / 20 gold / 30 wood'
+    },
+    {
         id: '61',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
