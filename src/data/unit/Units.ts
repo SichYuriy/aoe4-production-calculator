@@ -38,6 +38,7 @@ import streltsyIcon from '../../icons/streltsy.png'
 import horsemanIcon from '../../icons/horseman.png'
 import ghaziRaiderIcon from '../../icons/ghazi-raider-2.png'
 import lancerIcon from '../../icons/lancer.png'
+import keshikIcon from '../../icons/keshik-2.png'
 import knightIcon from '../../icons/knight.png'
 import royalKnightIcon from '../../icons/royal-knight.png'
 import camelRiderIcon from '../../icons/camel-rider.png'
@@ -175,8 +176,19 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(140, 100, 0, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.MONGOLS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI],
         common: true
+    },
+    KESHIK: {
+        id: 'KESHIK',
+        icon: keshikIcon,
+        name: 'keshik',
+        productionTime: 30,
+        cost: new UnitCost(120, 80, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.MONGOLS],
+        common: false
     },
     SCHOLAR: {
         id: 'SCHOLAR',

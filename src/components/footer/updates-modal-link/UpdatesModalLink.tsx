@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '69',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Mongol Lancer renamed to Keshik. Cost decreased from 140 food / 100 gold to 120 food / 80 gold. Train time decreased from 35 seconds to 30 seconds'
+    },
+    {
         id: '68',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',

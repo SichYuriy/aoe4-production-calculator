@@ -29,15 +29,15 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 -- 28 food/min -> 32.2 food/min -> 36.4 food/min !
 -- 48 food/min -> 52.2 food/min !
 
-- Farimba Garrison Landmark train speed decreased by 10%: !
--- Archer, Donso, and Musofadi Warrior train time increased from 22 seconds to 24 seconds. !
--- Javelin Thrower train time increased from 33 seconds to 37 seconds. !
--- Musofadi Gunner train time increased from 52 seconds to 57 seconds. !
+- Farimba Garrison Landmark train speed decreased by 10%: +!
+-- Archer, Donso, and Musofadi Warrior train time increased from 22 seconds to 24 seconds. +!
+-- Javelin Thrower train time increased from 33 seconds to 37 seconds. +!
+-- Musofadi Gunner train time increased from 52 seconds to 57 seconds. +!
 
 -------------- MONGOLS
-- Mongol Lancer renamed to Keshik
--- Cost decreased from 140 food / 100 gold to 120 food / 80 gold !
--- Train time decreased from 35 seconds to 30 seconds. !
+- Mongol Lancer renamed to Keshik +!
+-- Cost decreased from 140 food / 100 gold to 120 food / 80 gold +!
+-- Train time decreased from 35 seconds to 30 seconds. +!
 
 - Silver Tree Landmark
 -- Discount and production speed bonus reduced from 50% to 40%. ! (60 wood, 36 gold, 17s)
