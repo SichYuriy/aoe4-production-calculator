@@ -2,6 +2,7 @@ import Unit, {Building, UnitCost, UnitType} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
 import donsoIcon from '../../icons/donso.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
+import ghulamIcon from '../../icons/ghulam-3.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
 import musofadiWarriorIcon from '../../icons/musofadi-warrior.png'
 import sofaIcon from '../../icons/sofa.png'
@@ -35,6 +36,7 @@ import arbaletrierIcon from '../../icons/arbaletrier.png'
 import handcannoneerIcon from '../../icons/handcannoneer.png'
 import streltsyIcon from '../../icons/streltsy.png'
 import horsemanIcon from '../../icons/horseman.png'
+import ghaziRaiderIcon from '../../icons/ghazi-raider-2.png'
 import lancerIcon from '../../icons/lancer.png'
 import knightIcon from '../../icons/knight.png'
 import royalKnightIcon from '../../icons/royal-knight.png'
@@ -153,10 +155,10 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS],
         common: false
     },
-    GAZI_RAIDER: {
-        id: 'GAZI_RAIDER',
-        icon: horsemanIcon,
-        name: 'gazi raider',
+    GHAZI_RAIDER: {
+        id: 'GHAZI_RAIDER',
+        icon: ghaziRaiderIcon,
+        name: 'ghazi raider',
         productionTime: 25,
         cost: new UnitCost(110, 0, 30, 0),
         types: [UnitType.CAVALRY],
@@ -255,7 +257,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
     GHULAM: {
         id: 'GHULAM',
-        icon: manAtArmsIcon,
+        icon: ghulamIcon,
         name: 'ghulam',
         productionTime: 26,
         cost: new UnitCost(120, 30, 0, 0),
