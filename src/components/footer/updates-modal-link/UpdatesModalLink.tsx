@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '65',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Delhi Sanctity technology gold income bonus reduced from 50% to 25%'
+    },
+    {
         id: '64',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',

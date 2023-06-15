@@ -9,7 +9,7 @@ import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeMo
 let sanctity: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.SANCTITY,
     food: 0,
-    gold: 50,
+    gold: 25,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.SACRED_SITES
