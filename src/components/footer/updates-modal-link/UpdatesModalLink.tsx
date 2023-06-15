@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '72',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Malian Food gathering technologies now apply to the passive income of cattle garrisoned in ranches'
+    },
+    {
         id: '71',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',

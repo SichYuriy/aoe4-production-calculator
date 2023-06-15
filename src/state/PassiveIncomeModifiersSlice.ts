@@ -18,6 +18,11 @@ export interface PassiveIncomeModifiersState {
     [key: string]: PassiveIncomeModifierState
 }
 
+export interface UnselectSelectPassiveIncomeModifiersState {
+    unselect: string[],
+    select: string[]
+}
+
 const initialState: PassiveIncomeModifiersState = Object.values(PASSIVE_INCOME_MODIFIERS)
     .reduce((state: PassiveIncomeModifiersState, modifier) => {
         state[modifier.id] = {
@@ -35,7 +40,11 @@ export const passiveIncomeModifiers = createSlice({
         togglePassiveIncomeModifier: (state, action: PayloadAction<string>) => {
             let id = action.payload;
             state[id].selected = !state[id].selected;
-        }
+        },
+        unselectSelectPassiveIncomeModifiers: (state, action: PayloadAction<UnselectSelectPassiveIncomeModifiersState>) => {
+            action.payload.unselect.forEach(id => state[id].selected = false);
+            action.payload.select.forEach(id => state[id].selected = true);
+        },
     },
     extraReducers: builder => {
         builder.addCase(changeCivilization, (state, action) => {
@@ -52,6 +61,7 @@ export let selectActivePassiveIncomeModifiers = (state: RootState): PassiveIncom
 }
 
 export const {
-    togglePassiveIncomeModifier
+    togglePassiveIncomeModifier,
+    unselectSelectPassiveIncomeModifiers
 } = passiveIncomeModifiers.actions;
 export default passiveIncomeModifiers.reducer;

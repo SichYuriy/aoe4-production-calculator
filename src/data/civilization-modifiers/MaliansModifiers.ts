@@ -67,6 +67,33 @@ let fulaniCarrolCattle: PassiveIncomeModifier = {
     source: PassiveIncomeSource.FULANI_CARROL_CATTLE,
 }
 
+let horticultureCattle: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.HORTICULTURE_CATTLE,
+    food: 4.2,
+    gold: 0,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.CATTLE_RANCH_CATTLE,
+}
+
+let fertilizationCattle: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.FERTILIZATION_CATTLE,
+    food: 4.2,
+    gold: 0,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.CATTLE_RANCH_CATTLE,
+}
+
+let crossBreedingCattle: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.CROSS_BREEDING_CATTLE,
+    food: 4.2,
+    gold: 0,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.CATTLE_RANCH_CATTLE,
+}
+
 let PASSIVE_INCOME_SOURCES = [
     PassiveIncomeSource.MANSA_QUERY_GOLD,
     PassiveIncomeSource.MANSA_QUERY_STONE,
@@ -85,6 +112,9 @@ const PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.PIT_MINE_MINING_CAMP]: pitMineMiningCamp,
     [PassiveIncomeModifierId.CATTLE_RANCH_CATTLE]: cattleRanchCattle,
     [PassiveIncomeModifierId.FULANI_CARROL_CATTLE]: fulaniCarrolCattle,
+    [PassiveIncomeModifierId.HORTICULTURE_CATTLE]: horticultureCattle,
+    [PassiveIncomeModifierId.FERTILIZATION_CATTLE]: fertilizationCattle,
+    [PassiveIncomeModifierId.CROSS_BREEDING_CATTLE]: crossBreedingCattle
 }
 
 const DEFAULT_PASSIVE_INCOME_MODIFIERS = [
