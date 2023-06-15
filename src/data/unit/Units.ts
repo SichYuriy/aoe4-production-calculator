@@ -224,22 +224,33 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'MAN_AT_ARMS',
         icon: manAtArmsIcon,
         name: 'man at arms',
-        productionTime: 22,
+        productionTime: 22.5,
         cost: new UnitCost(100, 20, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
         common: true
     },
     PALACE_GUARD: {
         id: 'PALACE_GUARD',
         icon: palaceGuardIcon,
         name: 'palace guard',
-        productionTime: 22,
+        productionTime: 22.5,
         cost: new UnitCost(100, 20, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE],
+        common: false
+    },
+    GHULAM: {
+        id: 'GHULAM',
+        icon: manAtArmsIcon,
+        name: 'ghulam',
+        productionTime: 26,
+        cost: new UnitCost(120, 30, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ABBASID],
         common: false
     },
     MUSOFADI_WARRIOR: {
