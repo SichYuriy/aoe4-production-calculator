@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '68',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Farimba Garrison Landmark train speed decreased by 10%. Archer, Donso, and Musofadi Warrior train time increased from 22 seconds to 24 seconds. Javelin Thrower train time increased from 33 seconds to 37 seconds. Musofadi Gunner train time increased from 52 seconds to 57 seconds'
+    },
+    {
         id: '67',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
