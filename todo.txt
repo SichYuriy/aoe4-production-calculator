@@ -40,7 +40,7 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 -- Train time decreased from 35 seconds to 30 seconds. +!
 
 - Silver Tree Landmark
--- Discount and production speed bonus reduced from 50% to 40%. ! (60 wood, 36 gold, 17s)
+-- Discount and production speed bonus reduced from 50% to 40%. ! (60 wood, 36 gold, 17s) +!
 
 -------------- Ottomans
 - Sipahi Cost increased from 110 food/20 wood to 120 food/40 wood. !

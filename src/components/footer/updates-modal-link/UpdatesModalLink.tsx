@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '70',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Discount and production speed bonus reduced from 50% to 40%'
+    },
+    {
         id: '69',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
