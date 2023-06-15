@@ -10,7 +10,7 @@ https://www.reddit.com/r/aoe4/comments/13jk1hz/pup_update_version_5822/
 
 -------------- CHINA
 - Zhuge Nu cost adjusted from 20 food / 30 gold / 30 wood to 30 food / 20 gold / 30 wood. +
-- Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold.
+- Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold. +
 
 -------------- DELHI
 - Horseman renamed Ghazi Raider

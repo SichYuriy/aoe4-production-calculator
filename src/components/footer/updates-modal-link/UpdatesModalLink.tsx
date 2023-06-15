@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '63',
+        date: new Date(2023, 5, 15),
+        patch: '7.0.5861',
+        description: 'Palace Guard cost increased from 100 food / 20 gold to 100 food / 25 gold'
+    },
+    {
         id: '62',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
