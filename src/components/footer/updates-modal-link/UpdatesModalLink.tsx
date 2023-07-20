@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '73',
+        date: new Date(2023, 6, 20),
+        patch: '7.1.113',
+        description: 'Dome of Faith Landmark, no longer has a 50% production speed penalty, gives a discount of -50 gold instead of –65 gold'
+    },
+    {
         id: '72',
         date: new Date(2023, 5, 15),
         patch: '7.0.5861',
