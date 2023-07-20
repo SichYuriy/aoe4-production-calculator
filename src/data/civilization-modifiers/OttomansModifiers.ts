@@ -17,10 +17,10 @@ let anatolianHills: GatheringRateModifier = {
     id: GatheringRateModifierId.ANATOLIAN_HILLS,
     apply: gatheringRates => ({
         ...gatheringRates,
-        gold: gatheringRates.gold * 1.067,
-        stone: gatheringRates.stone * 1.067,
+        gold: gatheringRates.gold * 1.1,
+        stone: gatheringRates.stone * 1.1,
     }),
-    description: '[gold, stone] * 1.067'
+    description: '[gold, stone] * 1.1'
 }
 
 let sultanhaniTradeNetwork: PassiveIncomeModifier = {

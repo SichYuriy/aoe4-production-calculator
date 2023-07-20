@@ -1,9 +1,0 @@
-1. Dome of Faith Landmark
-No longer has a 50% production speed penalty.
-Gives a discount of -50 gold instead of –65 gold.
-
-! 80 gold 30 seconds
-
-Ottomans
-2. Sipahi train speed increased from 24 to 28 seconds. !120 40 28
-3. Anatolian Hills Technology mining speed bonus increased from 10% to 15%. !15%

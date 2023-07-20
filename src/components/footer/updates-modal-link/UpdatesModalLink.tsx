@@ -16,6 +16,12 @@ const updates: UpdateItem[] = [
         id: '74',
         date: new Date(2023, 6, 20),
         patch: '7.1.113',
+        description: 'Anatolian Hills Technology mining speed bonus increased from 10% to 15%'
+    },
+    {
+        id: '74',
+        date: new Date(2023, 6, 20),
+        patch: '7.1.113',
         description: 'Sipahi train speed increased from 24 to 28 seconds'
     },
     {
