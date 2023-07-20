@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '74',
+        date: new Date(2023, 6, 20),
+        patch: '7.1.113',
+        description: 'Sipahi train speed increased from 24 to 28 seconds'
+    },
+    {
         id: '73',
         date: new Date(2023, 6, 20),
         patch: '7.1.113',
