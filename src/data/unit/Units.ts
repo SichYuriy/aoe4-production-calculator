@@ -638,7 +638,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: bombardIcon,
         name: 'bombard',
         productionTime: 45,
-        cost: new UnitCost(0, 600, 300, 0),
+        cost: new UnitCost(0, 500, 350, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.MALIANS],

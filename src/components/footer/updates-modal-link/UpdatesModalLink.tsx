@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '78',
+        date: new Date(2024, 8, 27),
+        patch: '8.2.218',
+        description: 'Bombard cost reduced from 600 Gold/300 Wood to 500 Gold/350 Wood'
+    },
+    {
         id: '77',
         date: new Date(2024, 8, 27),
         patch: '8.2.218',
