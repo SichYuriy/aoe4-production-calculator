@@ -16,6 +16,12 @@ const updates: UpdateItem[] = [
         id: '79',
         date: new Date(2024, 8, 27),
         patch: '8.2.218',
+        description: 'Sipahi train time increased from 28 to 30 seconds'
+    },
+    {
+        id: '79',
+        date: new Date(2024, 8, 27),
+        patch: '8.2.218',
         description: 'Istanbul Observatory Landmark production speed bonus increased from 60% to 100%'
     },
     {
