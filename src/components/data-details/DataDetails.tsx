@@ -24,7 +24,7 @@ function DataDetails() {
             <div>
                 <input type={'checkbox'} checked={seeDataDetails} onChange={e => setSeeDataDetails(e.target.checked)}/>See
                 data details.
-                You can report wong data writing <a href="mailto:aoe4production@gmail.com">aoe4production@gmail.com</a>
+                You can report wrong data writing <a href="mailto:aoe4production@gmail.com">aoe4production@gmail.com</a>
             </div>
             {seeDataDetails &&
                 <div className={s.detailsRow}>

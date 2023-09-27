@@ -13,7 +13,13 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
-        id: '74',
+        id: '76',
+        date: new Date(2023, 7, 27),
+        patch: '7.1.113',
+        description: 'Add warrior monk'
+    },
+    {
+        id: '75',
         date: new Date(2023, 6, 20),
         patch: '7.1.113',
         description: 'Anatolian Hills Technology mining speed bonus increased from 10% to 15%'

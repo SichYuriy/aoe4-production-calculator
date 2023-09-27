@@ -52,6 +52,7 @@ import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
 import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
 import monkIcon from '../../icons/monk.png'
+import warriorMonkIcon from '../../icons/warrior_monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
 import dhowIcon from '../../icons/dhow.png'
 import hulkIcon from '../../icons/hulk.png'
@@ -212,6 +213,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.DELHI],
         common: false,
         civilizationSpecificFeature: true
+    },
+    WARRIOR_MONK: {
+        id: 'WARRIOR_MONK',
+        icon: warriorMonkIcon,
+        name: 'warrior monk',
+        productionTime: 35,
+        cost: new UnitCost(40, 200, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.RUS],
+        common: false
     },
     KNIGHT: {
         id: 'KNIGHT',
