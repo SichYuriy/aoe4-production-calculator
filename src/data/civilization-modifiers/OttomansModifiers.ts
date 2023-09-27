@@ -68,7 +68,7 @@ let age4Blacksmith: ProductionSpeedModifier = {
     description: 'militaryTime * ' + BLACKSMITH_AGE_4.toFixed(2)
 }
 
-const ISTANBUL_OBSERVATORY = 1 / 1.6;
+const ISTANBUL_OBSERVATORY = 1 / 2;
 let istanbulObservatory: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.ISTANBUL_OBSERVATORY,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
