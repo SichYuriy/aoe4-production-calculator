@@ -571,7 +571,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'RAM',
         icon: ramIcon,
         name: 'ram',
-        productionTime: 30,
+        productionTime: 40,
         cost: new UnitCost(0, 0, 250, 0),
         types: [],
         building: null,
