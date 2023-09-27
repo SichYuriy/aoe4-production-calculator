@@ -8,6 +8,10 @@ import DELHI_MODIFIERS from "./DelhiModifiers";
 import ABBASID_MODIFIERS from "./AbbasidModifiers";
 import OTTOMANS_MODIFIERS from "./OttomansModifiers";
 import MALIANS_MODIFIERS from "./MaliansModifiers";
+import JEANNE_D_ARC_MODIFIERS from "./JeanneDArcModfiers";
+import DRAGON_ORDER_MODIFIERS from "./DragonOrderModifiers";
+import ZHU_XIS_LEGACY_MODIFIERS from "./ZhuXisLegacyModfiers";
+import AYYUBIDS_MODIFIERS from "./AyyubidsModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [
     FRENCH_MODIFIERS,
@@ -18,7 +22,11 @@ const allCivilizationModifiers: CivilizationModifiers[] = [
     DELHI_MODIFIERS,
     ABBASID_MODIFIERS,
     OTTOMANS_MODIFIERS,
-    MALIANS_MODIFIERS
+    MALIANS_MODIFIERS,
+    JEANNE_D_ARC_MODIFIERS,
+    DRAGON_ORDER_MODIFIERS,
+    ZHU_XIS_LEGACY_MODIFIERS,
+    AYYUBIDS_MODIFIERS
 ]
 
 export default allCivilizationModifiers;

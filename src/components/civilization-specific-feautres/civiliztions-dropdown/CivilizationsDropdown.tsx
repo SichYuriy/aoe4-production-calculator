@@ -32,7 +32,11 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.MONGOLS]: {id: CivilizationsEnum.MONGOLS, icon: mongolsFlagIcon, name: 'Mongols'},
         [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'},
         [CivilizationsEnum.OTTOMANS]: {id: CivilizationsEnum.OTTOMANS, icon: ottomansFlagIcon, name: 'Ottomans'},
-        [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians'}
+        [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians'},
+        [CivilizationsEnum.JEANNE_D_ARC]: {id: CivilizationsEnum.JEANNE_D_ARC, icon: randomFlagIcon, name: 'Jeanne d’Arc'},
+        [CivilizationsEnum.DRAGON_ORDER]: {id: CivilizationsEnum.DRAGON_ORDER, icon: randomFlagIcon, name: 'The Order of the Dragon'},
+        [CivilizationsEnum.ZHU_XIS_LEGACY]: {id: CivilizationsEnum.ZHU_XIS_LEGACY, icon: randomFlagIcon, name: 'Zhu Xi’s Legacy'},
+        [CivilizationsEnum.AYYUBIDS]: {id: CivilizationsEnum.AYYUBIDS, icon: randomFlagIcon, name: 'Ayyubids'}
     }
 
     return (
