@@ -24,7 +24,8 @@ export enum Building {
     STABLE,
     ARCHERY,
     DOCK,
-    SIEGE_WORKSHOP
+    SIEGE_WORKSHOP,
+    KEEP
 }
 
 export class UnitCost {

@@ -2,6 +2,8 @@ import Unit, {Building, UnitCost, UnitType} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
 import donsoIcon from '../../icons/donso.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
+import jeannesChampionIcon from '../../icons/jeannes-champion.png'
+import jeannesRiderIcon from '../../icons/jeannes-rider.png'
 import ghulamIcon from '../../icons/ghulam-3.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
 import musofadiWarriorIcon from '../../icons/musofadi-warrior.png'
@@ -104,7 +106,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(30, 0, 50, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     LONGBOWMAN: {
@@ -126,7 +128,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(60, 0, 20, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     DONSO: {
@@ -148,7 +150,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(100, 0, 20, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     SIPAHI: {
@@ -248,7 +250,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(140, 100, 0, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.FRENCH],
+        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     SOFA: {
@@ -262,6 +264,28 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MALIANS],
         common: false
     },
+    JEANNES_RIDER: {
+        id: 'JEANNES_RIDER',
+        icon: jeannesRiderIcon,
+        name: 'jeanne\'s rider',
+        productionTime: 15,
+        cost: new UnitCost(180, 20, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.KEEP,
+        civilizations: [CivilizationsEnum.JEANNE_D_ARC],
+        common: false
+    },
+    JEANNES_CHAMPION: {
+        id: 'JEANNES_CHAMPION',
+        icon: jeannesChampionIcon,
+        name: 'jeanne\'s champion',
+        productionTime: 15,
+        cost: new UnitCost(160, 40, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: Building.KEEP,
+        civilizations: [CivilizationsEnum.JEANNE_D_ARC],
+        common: false
+    },
     MAN_AT_ARMS: {
         id: 'MAN_AT_ARMS',
         icon: manAtArmsIcon,
@@ -270,7 +294,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(100, 20, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     PALACE_GUARD: {
@@ -347,7 +371,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(80, 40, 0, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.FRENCH],
+        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     JAVELIN_THROWER: {
@@ -369,7 +393,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 120, 0, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     STRELTSY: {
@@ -535,7 +559,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(70, 0, 0, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     WARRIOR_SCOUT: {
@@ -601,7 +625,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 200, 400, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     NEST_OF_BEES: {
@@ -623,7 +647,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 150, 400, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.CHINESE, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.CHINESE, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     TRACTION_TREBUCHET: {
@@ -645,7 +669,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 500, 350, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.MALIANS],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
     GREAT_BOMBARD: {
@@ -808,7 +832,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     JUNK: {
@@ -841,7 +865,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(85, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.FRENCH],
+        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     BAGHLAH: {
@@ -874,7 +898,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     EXPLOSIVE_JUNK: {
@@ -896,7 +920,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 200, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
     BAOCHUAN: {
@@ -951,7 +975,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 300, 360, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.FRENCH],
+        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
     },
 }));
