@@ -12,6 +12,8 @@ import JEANNE_D_ARC_MODIFIERS from "./JeanneDArcModfiers";
 import DRAGON_ORDER_MODIFIERS from "./DragonOrderModifiers";
 import ZHU_XIS_LEGACY_MODIFIERS from "./ZhuXisLegacyModfiers";
 import AYYUBIDS_MODIFIERS from "./AyyubidsModifiers";
+import JAPANESE_MODIFIERS from "./JapanseModifiers";
+import BYZANTINES_MODIFIERS from "./ByzantinesModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [
     FRENCH_MODIFIERS,
@@ -26,7 +28,9 @@ const allCivilizationModifiers: CivilizationModifiers[] = [
     JEANNE_D_ARC_MODIFIERS,
     DRAGON_ORDER_MODIFIERS,
     ZHU_XIS_LEGACY_MODIFIERS,
-    AYYUBIDS_MODIFIERS
+    AYYUBIDS_MODIFIERS,
+    JAPANESE_MODIFIERS,
+    BYZANTINES_MODIFIERS
 ]
 
 export default allCivilizationModifiers;

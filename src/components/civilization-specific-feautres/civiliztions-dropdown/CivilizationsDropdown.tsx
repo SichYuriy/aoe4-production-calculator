@@ -10,6 +10,12 @@ import mongolsFlagIcon from "../../../icons/flag_mongol.png";
 import rusFlagIcon from "../../../icons/flag_rus.png";
 import ottomansFlagIcon from "../../../icons/flag_ottomans.png";
 import maliansFlagIcon from "../../../icons/flag_malians.png";
+import ayyubidsFlagIcon from "../../../icons/flag_ayyubids.png";
+import byzantinesFlagIcon from "../../../icons/flag_byzantines.png";
+import japaneseFlagIcon from "../../../icons/flag_japanese.png";
+import jeanneFlagIcon from "../../../icons/flag_Jeanne_d_Arc.png";
+import orderOfTheDragonFlagIcon from "../../../icons/flag_order_of_the_dragon.png";
+import zhuXiLegacyFlagIcon from "../../../icons/flag_Zhu_Xi_Legacy.png";
 import CivilizationsEnum from "../../../data/CivilizationsEnum";
 import s from './civilizations-dropdown.module.css'
 import shared from '../../../shared.module.css'
@@ -33,10 +39,12 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.RUS]: {id: CivilizationsEnum.RUS, icon: rusFlagIcon, name: 'Rus'},
         [CivilizationsEnum.OTTOMANS]: {id: CivilizationsEnum.OTTOMANS, icon: ottomansFlagIcon, name: 'Ottomans'},
         [CivilizationsEnum.MALIANS]: {id: CivilizationsEnum.MALIANS, icon: maliansFlagIcon, name: 'Malians'},
-        [CivilizationsEnum.JEANNE_D_ARC]: {id: CivilizationsEnum.JEANNE_D_ARC, icon: randomFlagIcon, name: 'Jeanne d’Arc'},
-        [CivilizationsEnum.DRAGON_ORDER]: {id: CivilizationsEnum.DRAGON_ORDER, icon: randomFlagIcon, name: 'The Order of the Dragon'},
-        [CivilizationsEnum.ZHU_XIS_LEGACY]: {id: CivilizationsEnum.ZHU_XIS_LEGACY, icon: randomFlagIcon, name: 'Zhu Xi’s Legacy'},
-        [CivilizationsEnum.AYYUBIDS]: {id: CivilizationsEnum.AYYUBIDS, icon: randomFlagIcon, name: 'Ayyubids'}
+        [CivilizationsEnum.JEANNE_D_ARC]: {id: CivilizationsEnum.JEANNE_D_ARC, icon: jeanneFlagIcon, name: 'Jeanne d’Arc'},
+        [CivilizationsEnum.DRAGON_ORDER]: {id: CivilizationsEnum.DRAGON_ORDER, icon: orderOfTheDragonFlagIcon, name: 'The Order of the Dragon'},
+        [CivilizationsEnum.ZHU_XIS_LEGACY]: {id: CivilizationsEnum.ZHU_XIS_LEGACY, icon: zhuXiLegacyFlagIcon, name: 'Zhu Xi’s Legacy'},
+        [CivilizationsEnum.AYYUBIDS]: {id: CivilizationsEnum.AYYUBIDS, icon: ayyubidsFlagIcon, name: 'Ayyubids'},
+        [CivilizationsEnum.JAPANESE]: {id: CivilizationsEnum.JAPANESE, icon: japaneseFlagIcon, name: 'Japanese'},
+        [CivilizationsEnum.BYZANTINES]: {id: CivilizationsEnum.BYZANTINES, icon: byzantinesFlagIcon, name: 'Byzantines'}
     }
 
     return (

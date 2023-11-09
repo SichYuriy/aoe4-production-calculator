@@ -14,6 +14,8 @@ enum CivilizationsEnum {
     DRAGON_ORDER = 'DRAGON_ORDER',
     ZHU_XIS_LEGACY = 'ZHU_XIS_LEGACY',
     AYYUBIDS = 'AYYUBIDS',
+    JAPANESE = 'JAPANESE',
+    BYZANTINES = 'BYZANTINES'
 }
 
 export default CivilizationsEnum;

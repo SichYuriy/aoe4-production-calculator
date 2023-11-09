@@ -30,7 +30,9 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.JEANNE_D_ARC, <div/>],
         [CivilizationsEnum.DRAGON_ORDER, <div/>],
         [CivilizationsEnum.ZHU_XIS_LEGACY, <div/>],
-        [CivilizationsEnum.AYYUBIDS, <div/>]
+        [CivilizationsEnum.AYYUBIDS, <div/>],
+        [CivilizationsEnum.JAPANESE, <div/>],
+        [CivilizationsEnum.BYZANTINES, <div/>]
     ]);
     let components: any[] = [];
     civilizationSpecificComponents.forEach((component, civilization) => {
