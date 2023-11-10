@@ -66,6 +66,14 @@ import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
 import wynguardFootmanIcon from '../../icons/wynguard_footman.png'
+import gildedSpearmanIcon from '../../icons/gilded-spearman.png'
+import gildedManAtArmsIcon from '../../icons/gilded-man-at-arms.png'
+import gildedLandsknechtIcon from '../../icons/gilded-landsknecht.png'
+import gildedArcherIcon from '../../icons/gilded-archer.png'
+import gildedCrossbowmanIcon from '../../icons/gilded-crossbowman.png'
+import dragonHandcannoneerIcon from '../../icons/dragon-handcannoneer.png'
+import gildedHorsemanIcon from '../../icons/gilded-horseman.png'
+import gildedKnightIcon from '../../icons/gilded-knight.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -76,6 +84,17 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES];
 
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
+    DRAGON_ORDER_VILLAGER: {
+        id: 'DRAGON_ORDER_VILLAGER',
+        icon: villagerIcon,
+        name: 'dragon villager',
+        productionTime: 24,
+        cost: new UnitCost(60, 0, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: true
+    },
     VILLAGER: {
         id: 'VILLAGER',
         icon: villagerIcon,
@@ -84,7 +103,11 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(50, 0, 0, 0),
         types: [],
         building: null,
-        civilizations: ALL_CIVILIZATIONS,
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
+            CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
+            CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
+            CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
+            CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES],
         common: true
     },
     CATTLE: {
@@ -109,6 +132,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
+    GILDED_ARCHER: {
+        id: 'GILDED_ARCHER',
+        icon: gildedArcherIcon,
+        name: 'gilded archer',
+        productionTime: 18,
+        cost: new UnitCost(60, 0, 100, 0),
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
+    },
     LONGBOWMAN: {
         id: 'LONGBOWMAN',
         icon: longbowmanIcon,
@@ -131,6 +165,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
     },
+    GILDED_SPEARMAN: {
+        id: 'GILDED_SPEARMAN',
+        icon: gildedSpearmanIcon,
+        name: 'gilded spearman',
+        productionTime: 18,
+        cost: new UnitCost(120, 0, 40, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
+    },
     DONSO: {
         id: 'DONSO',
         icon: donsoIcon,
@@ -152,6 +197,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
+    },
+    GILDED_HORSEMAN: {
+        id: 'GILDED_HORSEMAN',
+        icon: gildedHorsemanIcon,
+        name: 'gilded horseman',
+        productionTime: 27,
+        cost: new UnitCost(200, 0, 40, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
     },
     SIPAHI: {
         id: 'SIPAHI',
@@ -242,6 +298,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
         common: true
     },
+    GILDED_KNIGHT: {
+        id: 'GILDED_KNIGHT',
+        icon: gildedKnightIcon,
+        name: 'gilded knight',
+        productionTime: 42,
+        cost: new UnitCost(280, 200, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
+        common: false
+    },
     ROYAL_KNIGHT: {
         id: 'ROYAL_KNIGHT',
         icon: royalKnightIcon,
@@ -296,6 +363,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
+    },
+    GILDED_MAN_AT_ARMS: {
+        id: 'GILDED_MAN_AT_ARMS',
+        icon: gildedManAtArmsIcon,
+        name: 'gilded man at arms',
+        productionTime: 27,
+        cost: new UnitCost(200, 40, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
     },
     PALACE_GUARD: {
         id: 'PALACE_GUARD',
@@ -352,6 +430,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HRE],
         common: false
     },
+    GILDED_LANDSKNECHT: {
+        id: 'GILDED_LANDSKNECHT',
+        icon: gildedLandsknechtIcon,
+        name: 'gilded landsknecht',
+        productionTime: 27,
+        cost: new UnitCost(120, 200, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
+    },
     CROSSBOWMAN: {
         id: 'CROSSBOWMAN',
         icon: crossbowmanIcon,
@@ -362,6 +451,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
         common: true
+    },
+    GILDED_CROSSBOWMAN: {
+        id: 'GILDED_CROSSBOWMAN',
+        icon: gildedCrossbowmanIcon,
+        name: 'gilded crossbowman',
+        productionTime: 27,
+        cost: new UnitCost(160, 80, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
     },
     ARBALETRIER: {
         id: 'ARBALETRIER',
@@ -395,6 +495,17 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.JEANNE_D_ARC],
         common: true
+    },
+    DRAGON_HANDCANNONEER: {
+        id: 'DRAGON_HANDCANNONEER',
+        icon: dragonHandcannoneerIcon,
+        name: 'dragon handcannoneer',
+        productionTime: 35,
+        cost: new UnitCost(240, 240, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false
     },
     STRELTSY: {
         id: 'STRELTSY',
@@ -559,7 +670,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(70, 0, 0, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: true
     },
     WARRIOR_SCOUT: {
@@ -625,7 +736,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 200, 400, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: true
     },
     NEST_OF_BEES: {
@@ -647,7 +758,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 150, 400, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.CHINESE, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.CHINESE, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: true
     },
     TRACTION_TREBUCHET: {
@@ -669,7 +780,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 500, 350, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: true
     },
     GREAT_BOMBARD: {
@@ -832,7 +943,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(90, 0, 150, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: false
     },
     JUNK: {
@@ -854,7 +965,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(120, 30, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE, CivilizationsEnum.RUS],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.DRAGON_ORDER],
         common: false
     },
     WAR_COG: {
@@ -898,7 +1009,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: false
     },
     EXPLOSIVE_JUNK: {
@@ -920,7 +1031,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(200, 200, 200, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC],
+        civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER],
         common: false
     },
     BAOCHUAN: {
