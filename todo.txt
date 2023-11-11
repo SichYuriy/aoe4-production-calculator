@@ -20,4 +20,3 @@ Ayyubids
  -- tier 3: 10% gathering rate, production speed +20%
  -- tier 4: siege units 20% discount
  -- tier 5: camel units attack faster
-
