@@ -13,32 +13,38 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '82',
+        date: new Date(2023, 10, 11),
+        patch: '---',
+        description: 'Add support resource button'
+    },
+    {
         id: '81',
-        date: new Date(2024, 8, 27),
+        date: new Date(2023, 8, 27),
         patch: '8.2.218',
         description: 'Great Bombard cost reduced from 900 Gold/450 Wood to 800 Gold/450 Wood'
     },
     {
         id: '80',
-        date: new Date(2024, 8, 27),
+        date: new Date(2023, 8, 27),
         patch: '8.2.218',
         description: 'Sipahi train time increased from 28 to 30 seconds'
     },
     {
         id: '79',
-        date: new Date(2024, 8, 27),
+        date: new Date(2023, 8, 27),
         patch: '8.2.218',
         description: 'Istanbul Observatory Landmark production speed bonus increased from 60% to 100%'
     },
     {
         id: '78',
-        date: new Date(2024, 8, 27),
+        date: new Date(2023, 8, 27),
         patch: '8.2.218',
         description: 'Bombard cost reduced from 600 Gold/300 Wood to 500 Gold/350 Wood'
     },
     {
         id: '77',
-        date: new Date(2024, 8, 27),
+        date: new Date(2023, 8, 27),
         patch: '8.2.218',
         description: 'Ram train time increased from 30 to 40 seconds'
     },
