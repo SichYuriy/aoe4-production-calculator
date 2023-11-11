@@ -1,12 +1,23 @@
 Jeanne's Dark
- - school of cavalry
+ - school of cavalry (french)
  - Consecrate
  - Ordinance Company
 
 Order of the Dragon
  - vils 40% carry, 25% gathering rate
  - vils unique unit
- - Regnitz Cathedral
+ - Regnitz Cathedral (HRE)
  - Burgrave Palace
- - Palace of Swabia
+ - Palace of Swabia (HRE)
+
+Ayyubids
+ - bazar, gold needed for constant production
+ - berry gathering rate (abbasid)
+ - traders -33% (abbasid)
+ - golden age
+ -- tier 1: 10% gathering rate
+ -- tier 2: 10% gathering rate
+ -- tier 3: 10% gathering rate, production speed +20%
+ -- tier 4: siege units 20% discount
+ -- tier 5: camel units attack faster
 
