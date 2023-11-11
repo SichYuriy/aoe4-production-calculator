@@ -20,3 +20,11 @@ Ayyubids
  -- tier 3: 10% gathering rate, production speed +20%
  -- tier 4: siege units 20% discount
  -- tier 5: camel units attack faster
+
+Zhu Xi's Legacy
+ - Docks work +20% faster (chinese)
+ - Imperial official resources (chinese)
+ - Imperial official production boost (+chinese)
+ - granary (chinese)
+ - age 2 passive income landmark
+ - Yuan: 10% discount on all units - unlocks construction of the Pagoda.
