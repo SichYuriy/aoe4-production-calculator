@@ -34,7 +34,7 @@ const frenchImperialAgeProductionSpeedModifier: ProductionSpeedModifier = {
     description: 'villagerTime * (1 / 1.25)'
 }
 
-const schoolOfCavalry: ProductionSpeedModifier = {
+export const schoolOfCavalry: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SCHOOL_OF_CAVALRY,
     canBeApplied: (unit: Unit) => unit.types.includes(UnitType.CAVALRY),
     apply: (currentProductionTime: number) => currentProductionTime * 0.8,
@@ -94,4 +94,3 @@ const FRENCH_MODIFIERS: CivilizationModifiers = {
 }
 
 export default FRENCH_MODIFIERS;
-
