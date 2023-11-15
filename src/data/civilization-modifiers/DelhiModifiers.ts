@@ -33,7 +33,8 @@ const DELHI_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveGoldFromFoodVillagerModifiers: {}
+    allPassiveGoldFromFoodVillagerModifiers: {},
+    allCostModifiersPerUnit: {}
 }
 
 export default DELHI_MODIFIERS;

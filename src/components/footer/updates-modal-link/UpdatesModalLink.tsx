@@ -202,7 +202,7 @@ const updates: UpdateItem[] = [
         id: '52',
         date: new Date(2023, 3, 5),
         patch: '6.1.130',
-        description: 'Counter-weight Trebuchet cost reduced from 500 wood 250 gold to 400 wood 150 gold, build time reduced from 35 seconds to 30 seconds'
+        description: 'ArrowCounter-weight Trebuchet cost reduced from 500 wood 250 gold to 400 wood 150 gold, build time reduced from 35 seconds to 30 seconds'
     },
     {id: '51', date: new Date(2023, 1, 16), patch: '6.0.878', description: 'Ram - 250 wood, 30 seconds'},
     {

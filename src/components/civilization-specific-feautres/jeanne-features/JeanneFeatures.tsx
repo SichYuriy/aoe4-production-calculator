@@ -4,6 +4,7 @@ import ProductionSpeedModifierId from "../../../data/production-speed-modifiers/
 import {toggleProductionSpeedModifier} from "../../../state/ProducationSpeedModifiersSlice";
 import schoolOfCavalryIcon from '../../../icons/school-of-cavalry.png';
 import shared from '../../../shared.module.css';
+import JeanneConsecrate from "./jeanne-consecrate/JeanneConsecrate";
 
 function JeanneFeatures() {
     const dispatch = useAppDispatch();
@@ -17,6 +18,7 @@ function JeanneFeatures() {
             <div className={shared.upgradesRow}>
                 {schoolOfCavalryItem}
             </div>
+            <JeanneConsecrate/>
         </div>
     )
 }

@@ -1,24 +1,24 @@
 Jeanne's Dark
- - school of cavalry (french)
- - Consecrate
+ - school of cavalry (french) +
+ - Consecrate (new ui components, new reducer)
  - Ordinance Company
 
 Order of the Dragon
- - vils 40% carry, 25% gathering rate
- - vils unique unit
- - Regnitz Cathedral (HRE)
- - Burgrave Palace
- - Palace of Swabia (HRE)
+ - vils 40% carry, 25% gathering rate (gathering rate modifier)
+ - vils unique unit +
+ - Regnitz Cathedral (HRE) (passive income modifier)
+ - Burgrave Palace (unique unit)
+ - Palace of Swabia (HRE) (unique unit)
 
 Ayyubids
- - bazar, gold needed for constant production
+ - bazar, gold needed for constant production (unique unit)
  - berry gathering rate (abbasid)
  - traders -33% (abbasid)
  - golden age
  -- tier 1: 10% gathering rate
  -- tier 2: 10% gathering rate
  -- tier 3: 10% gathering rate, production speed +20%
- -- tier 4: siege units 20% discount
+ -- tier 4: 10% gathering rate, production speed +20%, siege units 20% discount
  -- tier 5: camel units attack faster
 
 Zhu Xi's Legacy
@@ -33,3 +33,4 @@ Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
  - TC buildings provide bonuses to nearby Villagers working Farms by 25%, 50%, 75% ??
  - Place Yorishiro, Town Center: +25% Production speed, Farmhouse: +75 Food per minute, Lumber Camp: +75 Wood per minute, Forge: +75 Gold per minute
+

@@ -26,6 +26,7 @@ function ProductionCalculator() {
     const customGatheringRates = useAppSelector(rootState => rootState.gatheringRates.customGatheringRates);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
     const costModifiers = useAppSelector(selectActiveCostModifiers);
+    const costModifiersPerUnit = useAppSelector(rootState => rootState.costModifiersPerUnit);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
     const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
@@ -44,7 +45,8 @@ function ProductionCalculator() {
         limitedFoodGatheringSources,
         passiveGoldFromFoodVillagerModifiers,
         foodSource,
-        minFoodVillagers
+        minFoodVillagers,
+        costModifiersPerUnit
     );
     if (!seePreciseNumbers) {
         villagerCost = {

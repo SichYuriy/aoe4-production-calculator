@@ -1,0 +1,11 @@
+.costModifierBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.colons {
+    font-size: 30px;
+    color: #f3dc8d;
+}

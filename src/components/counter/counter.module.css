@@ -6,6 +6,10 @@
     font-size: 1rem;
 }
 
+.arrowCounter {
+    font-size: 0.7rem;
+}
+
 .counterMinus {
     border: 2px solid #f3dc8d;
     border-right: none;

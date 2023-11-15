@@ -1,0 +1,27 @@
+.item {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: #754e2f;
+    text-align: center;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+}
+
+.clickableItem:hover {
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+.selectedItem {
+    border: 2px solid white;
+    opacity: 1;
+}
+
+.itemIconBox {
+    margin: auto;
+    width: 55px;
+    height: 55px;
+}
+
