@@ -1,12 +1,12 @@
 import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationModifiersRegistry";
-import PassiveIncomeModifierId from "./PassiveIncomeModifierId";
+import PassiveIncomeModifierId, {RELIC_INCOME} from "./PassiveIncomeModifierId";
 import PassiveIncomeSource from "./PassiveIncomeSource";
 
 let relics: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.RELICS,
     food: 0,
-    gold: 80,
+    gold: RELIC_INCOME,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.RELICS

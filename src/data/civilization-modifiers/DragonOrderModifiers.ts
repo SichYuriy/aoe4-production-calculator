@@ -3,6 +3,9 @@ import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import FoodSource from "../../model/FoodSource";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeModifierId, {RELIC_INCOME} from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
 const dragonVillagers: GatheringRateModifier = {
     id: GatheringRateModifierId.DRAGON_VILLAGER,
@@ -24,6 +27,19 @@ const dragonVillagers: GatheringRateModifier = {
     description: '[berries, deer] * 1.245, [sheep, farm] * 1.215, [wood] * 1.205, [gold, stone] * 1.235'
 }
 
+const regnitzCathedral: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.REGNITZ_CATHEDRAL,
+    food: 0,
+    gold: RELIC_INCOME,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.RELICS,
+};
+
+const PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.REGNITZ_CATHEDRAL]: regnitzCathedral
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.DRAGON_VILLAGER]: dragonVillagers
 }
@@ -37,7 +53,7 @@ const DRAGON_ORDER_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
+    allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
