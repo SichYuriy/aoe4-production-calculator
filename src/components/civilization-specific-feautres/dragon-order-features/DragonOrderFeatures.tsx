@@ -16,7 +16,7 @@ function DragonOrderFeatures() {
 
     return (
         <div className={shared.civilizationSpecificFeatures}>
-            <div>Villagers carry +40% more resources, gather +25% faster, and construct buildings +20% faster</div>
+            <div>Villagers carry +40% more resources, gather +25% faster</div>
             <div className={shared.upgradesRow}>
                 {regnitzCathedralItem}
             </div>
