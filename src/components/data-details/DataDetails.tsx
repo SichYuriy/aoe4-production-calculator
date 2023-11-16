@@ -10,12 +10,14 @@ import PassiveIncomeDetails from "./passive-income-details/PassiveIncomeDetails"
 import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
 import LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
     from "../../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
+import {selectActiveCostModifiersPerUnit} from "../../state/CostModifiersPerUnitSlice";
 
 function DataDetails() {
     const [seeDataDetails, setSeeDataDetails] = useState(false);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
-    const costModifiers = useAppSelector(selectActiveCostModifiers);
+    const costModifiers: {id: string, description: string}[] = useAppSelector(selectActiveCostModifiers);
+    const costModifiersPerUnit = useAppSelector(selectActiveCostModifiersPerUnit);
     let limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers)
         .map(state => LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS[state.id]);
 
@@ -38,7 +40,7 @@ function DataDetails() {
                         <ModifierDetails modifiersLabel={'Production time:'} items={productionSpeedModifiers}/>
                     </div>
                     <div>
-                        <ModifierDetails modifiersLabel={'Unit cost:'} items={costModifiers}/>
+                        <ModifierDetails modifiersLabel={'Unit cost:'} items={costModifiers.concat(costModifiersPerUnit)}/>
                     </div>
                     <div>
                         <PassiveIncomeDetails/>

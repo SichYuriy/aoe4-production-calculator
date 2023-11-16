@@ -1,5 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import changeCivilization from "./actions/CivilizationChnagedAction";
+import {RootState} from "../store";
+import GatheringRateModifier from "../model/GatheringRateModifier";
+import ALL_COST_MODIFIERS_PER_UNIT from "../data/cost-modifiers-per-unit/AllCostModifiersPerUnit";
 
 export interface UnitsSelected {
     [key: string]: number
@@ -17,6 +20,11 @@ export interface CostModifierPerUnitsActionPayload {
 export interface CostModifierUnitsActionPayload {
     modifierId: string,
     unitsSelected: UnitsSelected
+}
+
+export interface SwitchCostModifierPerUnitActionPayload {
+    from: string,
+    to: string
 }
 
 export const costModifiersPerUnitSlice = createSlice({
@@ -48,6 +56,12 @@ export const costModifiersPerUnitSlice = createSlice({
         },
         clearUnitsForCostModifier: (state, action: PayloadAction<string>) => {
             delete state[action.payload];
+        },
+        switchCostModifierPerUnit: (state, action: PayloadAction<SwitchCostModifierPerUnitActionPayload>) => {
+            if (state[action.payload.from]) {
+                state[action.payload.to] = state[action.payload.from];
+                delete state[action.payload.from];
+            }
         }
     },
     extraReducers: builder => {
@@ -60,5 +74,11 @@ export const costModifiersPerUnitSlice = createSlice({
     }
 });
 
-export const {incrementUnitForCostModifier, decrementUnitForCostModifier, setUnitsForCostModifier, clearUnitsForCostModifier} = costModifiersPerUnitSlice.actions;
+export let selectActiveCostModifiersPerUnit = (state: RootState): GatheringRateModifier[] => {
+    return Object.keys(state.costModifiersPerUnit)
+        .filter(id => state.costModifiersPerUnit[id])
+        .map(id => ALL_COST_MODIFIERS_PER_UNIT[id]);
+}
+
+export const {incrementUnitForCostModifier, decrementUnitForCostModifier, setUnitsForCostModifier, clearUnitsForCostModifier, switchCostModifierPerUnit} = costModifiersPerUnitSlice.actions;
 export default costModifiersPerUnitSlice.reducer;

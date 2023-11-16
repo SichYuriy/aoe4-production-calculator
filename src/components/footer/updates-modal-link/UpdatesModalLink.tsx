@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '84',
+        date: new Date(2023, 10, 16),
+        patch: '9.1.109',
+        description: "Add Jeanne d'Arc features: (school of cavalry, consecrate, ordinance company)"
+    },
+    {
         id: '83',
         date: new Date(2023, 10, 13),
         patch: '9.1.109',

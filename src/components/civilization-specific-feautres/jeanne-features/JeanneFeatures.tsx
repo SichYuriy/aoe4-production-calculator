@@ -5,6 +5,7 @@ import {toggleProductionSpeedModifier} from "../../../state/ProducationSpeedModi
 import schoolOfCavalryIcon from '../../../icons/school-of-cavalry.png';
 import shared from '../../../shared.module.css';
 import JeanneConsecrate from "./jeanne-consecrate/JeanneConsecrate";
+import OrdinanceCompany from "./ordinance-company/OrdinanceCompany";
 
 function JeanneFeatures() {
     const dispatch = useAppDispatch();
@@ -17,6 +18,7 @@ function JeanneFeatures() {
         <div className={shared.civilizationSpecificFeatures}>
             <div className={shared.upgradesRow}>
                 {schoolOfCavalryItem}
+                <OrdinanceCompany/>
             </div>
             <JeanneConsecrate/>
         </div>
