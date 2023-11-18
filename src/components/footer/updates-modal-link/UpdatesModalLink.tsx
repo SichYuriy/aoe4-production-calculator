@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '85',
+        date: new Date(2023, 10, 18),
+        patch: '9.1.109',
+        description: "Add Order of the Dragon features: (dragon villagers, Regnitz Cathedral, Palace of Swabia, Burgrave Palace)"
+    },
+    {
         id: '84',
         date: new Date(2023, 10, 16),
         patch: '9.1.109',
