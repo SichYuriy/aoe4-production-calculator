@@ -105,17 +105,33 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
     CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES];
 
+const DRAGON_VILLAGER_COST = 60;
+const DRAGON_VILLAGER_PRODUCTION_TIME = 24;
+
+
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     DRAGON_ORDER_VILLAGER: {
         id: 'DRAGON_ORDER_VILLAGER',
         icon: villagerIcon,
         name: 'dragon villager',
-        productionTime: 24,
-        cost: new UnitCost(60, 0, 0, 0),
+        productionTime: DRAGON_VILLAGER_PRODUCTION_TIME,
+        cost: new UnitCost(DRAGON_VILLAGER_COST, 0, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
         common: false
+    },
+    PALACE_OF_SWABIA_DRAGON_VILLAGER: {
+        id: 'PALACE_OF_SWABIA_DRAGON_VILLAGER',
+        icon: villagerIcon,
+        name: 'dragon villager',
+        productionTime: DRAGON_VILLAGER_PRODUCTION_TIME  / 3,
+        cost: new UnitCost(DRAGON_VILLAGER_COST / 3, 0, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.DRAGON_ORDER],
+        common: false,
+        civilizationSpecificFeature: true
     },
     VILLAGER: {
         id: 'VILLAGER',

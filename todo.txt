@@ -1,14 +1,14 @@
 Jeanne's Dark
  - school of cavalry (french) +
- - Consecrate (new ui components, new reducer)
- - Ordinance Company
+ - Consecrate (new ui components, new reducer) +
+ - Ordinance Company +
 
 Order of the Dragon
- - vils 40% carry, 25% gathering rate (gathering rate modifier)
+ - vils 40% carry, 25% gathering rate (gathering rate modifier) +
  - vils unique unit +
- - Regnitz Cathedral (HRE) (passive income modifier)
+ - Regnitz Cathedral (HRE) (passive income modifier) +
  - Burgrave Palace (unique unit)
- - Palace of Swabia (HRE) (unique unit)
+ - Palace of Swabia (HRE) (unique unit) +
 
 Ayyubids
  - bazar, gold needed for constant production (unique unit)
