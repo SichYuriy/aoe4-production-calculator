@@ -6,6 +6,7 @@ import {PassiveIncomeModifiersState, togglePassiveIncomeModifier} from "../../..
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import icon from "../../../icons/palace-of-swabia.png";
 import {decrement, increment, UnitsState} from "../../../state/UnitsSlice";
+import BurgravePalace from "./burgrave-palace/BurgravePalace";
 
 function DragonOrderFeatures() {
     const dispatch = useAppDispatch();
@@ -29,6 +30,7 @@ function DragonOrderFeatures() {
                 {regnitzCathedralItem}
                 {palaceOfSwabia}
             </div>
+            <BurgravePalace/>
         </div>
     );
 }
