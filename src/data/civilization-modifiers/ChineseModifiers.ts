@@ -14,7 +14,7 @@ const songDynasty: ProductionSpeedModifier = {
     description: 'villagerTime * 0.75'
 }
 
-const chineseDocks: ProductionSpeedModifier = {
+export const chineseDocks: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CHINESE_DOCKS,
     canBeApplied: unit => unit.building === Building.DOCK,
     apply: currentProductionTime => currentProductionTime * 0.8,

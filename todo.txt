@@ -22,12 +22,13 @@ Ayyubids
  -- tier 5: camel units attack faster
 
 Zhu Xi's Legacy
- - Docks work +20% faster (chinese)
+ - Docks work +20% faster (chinese) +
  - Imperial official resources (chinese)
- - Imperial official production boost (+chinese)
+ - Imperial official production boost (+chinese) ?
  - granary (chinese)
  - age 2 passive income landmark
  - Yuan: 10% discount on all units - unlocks construction of the Pagoda.
+ - Pagoda
 
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
