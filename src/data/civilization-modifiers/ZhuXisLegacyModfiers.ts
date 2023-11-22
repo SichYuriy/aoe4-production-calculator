@@ -1,17 +1,31 @@
 import CivilizationModifiers from "../../model/CivilizationModifiers";
 import CivilizationsEnum from "../CivilizationsEnum";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
-import {chineseDocks} from "./ChineseModifiers";
+import {
+    chineseDocks,
+    foodImperialOfficial,
+    goldImperialOfficial,
+    stoneImperialOfficial,
+    woodImperialOfficial
+} from "./ChineseModifiers";
+import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 
-const CHINESE_PRODUCTION_SPEED_MODIFIERS = {
+const ZHU_XI_GATHERING_RATE_MODIFIERS = {
+    [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
+    [GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
+    [GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
+    [GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial
+}
+
+const ZHU_XI_PRODUCTION_SPEED_MODIFIERS = {
     [ProductionSpeedModifierId.CHINESE_DOCKS]: chineseDocks
 }
 
 const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ZHU_XIS_LEGACY,
-    allGatheringRateModifiers: {},
+    allGatheringRateModifiers: ZHU_XI_GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [],
-    allProductionSpeedModifiers: CHINESE_PRODUCTION_SPEED_MODIFIERS,
+    allProductionSpeedModifiers: ZHU_XI_PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.CHINESE_DOCKS],
     allCostModifiers: {},
     defaultCostModifiers: [],

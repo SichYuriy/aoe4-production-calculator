@@ -21,7 +21,7 @@ export const chineseDocks: ProductionSpeedModifier = {
     description: 'shipTime * 0.8'
 }
 
-const foodImperialOfficial: GatheringRateModifier = {
+export const foodImperialOfficial: GatheringRateModifier = {
     id: GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL,
     apply: gatheringRates => ({
         ...gatheringRates,
@@ -30,7 +30,7 @@ const foodImperialOfficial: GatheringRateModifier = {
     description: 'food * 1.2'
 }
 
-const woodImperialOfficial: GatheringRateModifier = {
+export const woodImperialOfficial: GatheringRateModifier = {
     id: GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL,
     apply: gatheringRates => ({
         ...gatheringRates,
@@ -39,7 +39,7 @@ const woodImperialOfficial: GatheringRateModifier = {
     description: 'wood * 1.2'
 }
 
-const goldImperialOfficial: GatheringRateModifier = {
+export const goldImperialOfficial: GatheringRateModifier = {
     id: GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL,
     apply: gatheringRates => ({
         ...gatheringRates,
@@ -48,7 +48,7 @@ const goldImperialOfficial: GatheringRateModifier = {
     description: 'gold * 1.2'
 }
 
-const stoneImperialOfficial: GatheringRateModifier = {
+export const stoneImperialOfficial: GatheringRateModifier = {
     id: GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL,
     apply: gatheringRates => ({
         ...gatheringRates,
