@@ -7,6 +7,7 @@ import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/Gath
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import ZhuXisLegacyYuanDynasty from "./zhu-xis-legacy-yuan-dynasty/ZhuXisLegacyYuanDynasty";
+import Pagoda from "../chinese-features/pagoda/Pagoda";
 
 function ZhuXisLegacyFeatures() {
     const dispatch = useAppDispatch();
@@ -23,6 +24,7 @@ function ZhuXisLegacyFeatures() {
             <div className={shared.upgradesRow}>
                 {granaryUpgradeItem}
                 <ZhuXisLegacyYuanDynasty/>
+                <Pagoda/>
             </div>
         </div>
     );

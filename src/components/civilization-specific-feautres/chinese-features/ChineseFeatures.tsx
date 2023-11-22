@@ -7,6 +7,7 @@ import {useAppDispatch, useAppSelector} from "../../../hooks";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import granaryIcon from '../../../icons/granary.png'
+import Pagoda from "./pagoda/Pagoda";
 
 function ChineseFeatures() {
     const dispatch = useAppDispatch();
@@ -23,6 +24,7 @@ function ChineseFeatures() {
             <ImperialOfficials/>
             <div className={shared.upgradesRow}>
                 {granaryUpgradeItem}
+                <Pagoda/>
             </div>
         </div>
     )

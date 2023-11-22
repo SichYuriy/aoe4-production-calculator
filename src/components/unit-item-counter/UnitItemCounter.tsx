@@ -16,7 +16,7 @@ type Props = {
     tooltip?: TooltipProps
 }
 
-function UpgradeItemCounter(props: Props) {
+function UnitItemCounter(props: Props) {
     let unitItem = <UnitItem unitId={props.unitId} selected={false} disabled={true}/>;
     unitItem = props.tooltip
         ? <Tooltip header={props.tooltip.header} text={props.tooltip.text}>{unitItem}</Tooltip>
@@ -30,4 +30,4 @@ function UpgradeItemCounter(props: Props) {
     );
 }
 
-export default UpgradeItemCounter;
+export default UnitItemCounter;

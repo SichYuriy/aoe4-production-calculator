@@ -9,6 +9,7 @@ enum PassiveIncomeSource {
     FULANI_CARROL_CATTLE = 'FULANI_CARROL_CATTLE',
     RELICS = 'RELICS',
     SACRED_SITES = 'SACRED_SITES',
+    PAGODA = 'PAGODA'
 }
 
 export default PassiveIncomeSource;

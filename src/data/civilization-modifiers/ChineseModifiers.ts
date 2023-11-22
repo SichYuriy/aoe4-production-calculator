@@ -6,6 +6,9 @@ import {Building} from "../../model/Unit";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import FoodSource from "../../model/FoodSource";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 
 const songDynasty: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SONG_DYNASTY,
@@ -65,6 +68,14 @@ export const granary: GatheringRateModifier = {
     description: 'farm * 1.12'
 }
 
+export const pagoda: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.PAGODA,
+    food: 50,
+    gold: 100,
+    wood: 50,
+    stone: 50,
+    source: PassiveIncomeSource.PAGODA
+}
 
 const CHINESE_GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
@@ -79,6 +90,10 @@ const CHINESE_PRODUCTION_SPEED_MODIFIERS = {
     [ProductionSpeedModifierId.CHINESE_DOCKS]: chineseDocks
 }
 
+const CHINESE_PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.PAGODA]: pagoda
+}
+
 const CHINESE_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.CHINESE,
     allGatheringRateModifiers: CHINESE_GATHERING_RATE_MODIFIERS,
@@ -87,9 +102,9 @@ const CHINESE_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.CHINESE_DOCKS],
     allCostModifiers: {},
     defaultCostModifiers: [],
-    passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
-    defaultPassiveIncomeModifiers: [],
+    passiveIncomeSources: [PassiveIncomeSource.PAGODA],
+    allPassiveIncomeModifiers: CHINESE_PASSIVE_INCOME_MODIFIERS,
+    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.PAGODA],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {}

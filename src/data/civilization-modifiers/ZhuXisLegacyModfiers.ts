@@ -5,13 +5,15 @@ import {
     chineseDocks,
     foodImperialOfficial,
     goldImperialOfficial,
-    granary,
+    granary, pagoda,
     stoneImperialOfficial,
     woodImperialOfficial
 } from "./ChineseModifiers";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import UnitCostModifier from "../../model/UnitCostModifier";
 import CostModifierId from "../cost-modifiers/CostModifierId";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
 const zhuXisLegacyYuanDynasty: UnitCostModifier = {
     id: CostModifierId.ZHU_XIS_LEGACY_YUAN_DYNASTY,
@@ -41,6 +43,10 @@ const ZHU_XI_COST_MODIFIERS = {
     [CostModifierId.ZHU_XIS_LEGACY_YUAN_DYNASTY]: zhuXisLegacyYuanDynasty
 }
 
+const ZHU_XI_PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.PAGODA]: pagoda
+}
+
 const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ZHU_XIS_LEGACY,
     allGatheringRateModifiers: ZHU_XI_GATHERING_RATE_MODIFIERS,
@@ -49,9 +55,9 @@ const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.CHINESE_DOCKS],
     allCostModifiers: ZHU_XI_COST_MODIFIERS,
     defaultCostModifiers: [],
-    passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
-    defaultPassiveIncomeModifiers: [],
+    passiveIncomeSources: [PassiveIncomeSource.PAGODA],
+    allPassiveIncomeModifiers: ZHU_XI_PASSIVE_INCOME_MODIFIERS,
+    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.PAGODA],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {}
