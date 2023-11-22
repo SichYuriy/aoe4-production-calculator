@@ -27,7 +27,7 @@ Zhu Xi's Legacy
  - Imperial official production boost (+chinese) ?
  - granary (chinese) +
  - age 2 passive income landmark
- - Yuan: 10% discount on all units - unlocks construction of the Pagoda.
+ - Yuan: 10% discount on all units - unlocks construction of the Pagoda. +
  - Pagoda
 
 Japanese:

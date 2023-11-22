@@ -1,0 +1,23 @@
+.yuanDynasty {
+    color: #f3dc8d;
+    font-size: 20px;
+    border: 2px solid #f3dc8d;
+    background-color: #393e49;
+    padding: 10px;
+    box-sizing: border-box;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.yuanDynasty:hover {
+    border: 2px solid white;
+    box-sizing: border-box;
+    opacity: 0.9;
+}
+
+.selectedDynasty {
+    color: white;
+    border-color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}

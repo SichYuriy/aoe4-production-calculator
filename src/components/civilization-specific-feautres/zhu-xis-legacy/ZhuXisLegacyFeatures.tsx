@@ -6,6 +6,7 @@ import granaryIcon from "../../../icons/granary.png";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
+import ZhuXisLegacyYuanDynasty from "./zhu-xis-legacy-yuan-dynasty/ZhuXisLegacyYuanDynasty";
 
 function ZhuXisLegacyFeatures() {
     const dispatch = useAppDispatch();
@@ -19,7 +20,10 @@ function ZhuXisLegacyFeatures() {
         <div className={shared.civilizationSpecificFeatures}>
             <ChineseDocks/>
             <ImperialOfficials/>
-            <div className={shared.upgradesRow}>{granaryUpgradeItem}</div>
+            <div className={shared.upgradesRow}>
+                {granaryUpgradeItem}
+                <ZhuXisLegacyYuanDynasty/>
+            </div>
         </div>
     );
 }

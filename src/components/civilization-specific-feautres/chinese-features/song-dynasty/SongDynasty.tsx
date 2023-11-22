@@ -12,7 +12,7 @@ function SongDynasty() {
              onClick={() => dispatch(toggleProductionSpeedModifier(ProductionSpeedModifierId.SONG_DYNASTY))}>
             Song Dynasty
         </div>
-    )
+    );
 }
 
 export default SongDynasty;
