@@ -57,7 +57,7 @@ export const stoneImperialOfficial: GatheringRateModifier = {
     description: 'stone * 1.2'
 }
 
-const granary: GatheringRateModifier = {
+export const granary: GatheringRateModifier = {
     id: GatheringRateModifierId.GRANARY,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {...gatheringRates, food: gatheringRates.food * 1.12}

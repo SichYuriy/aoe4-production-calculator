@@ -4,7 +4,7 @@ import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionS
 import {
     chineseDocks,
     foodImperialOfficial,
-    goldImperialOfficial,
+    goldImperialOfficial, granary,
     stoneImperialOfficial,
     woodImperialOfficial
 } from "./ChineseModifiers";
@@ -14,7 +14,8 @@ const ZHU_XI_GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
     [GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
     [GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
-    [GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial
+    [GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial,
+    [GatheringRateModifierId.GRANARY]: granary
 }
 
 const ZHU_XI_PRODUCTION_SPEED_MODIFIERS = {
