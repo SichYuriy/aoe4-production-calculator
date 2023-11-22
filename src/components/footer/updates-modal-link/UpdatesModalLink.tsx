@@ -13,10 +13,16 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '86',
+        date: new Date(2023, 10, 22),
+        patch: '9.1.109',
+        description: "Add Zhu Xi's Legacy features: Chinese docks, imperial official on resources, granary, Yuan Dynasty, Pagoda"
+    },
+    {
         id: '85',
         date: new Date(2023, 10, 18),
         patch: '9.1.109',
-        description: "Add Order of the Dragon features: (dragon villagers, Regnitz Cathedral, Palace of Swabia, Burgrave Palace)"
+        description: "Add Order of the Dragon features: dragon villagers, Regnitz Cathedral, Palace of Swabia, Burgrave Palace"
     },
     {
         id: '84',
