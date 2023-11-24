@@ -32,6 +32,7 @@ Zhu Xi's Legacy
 
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
- - TC buildings provide bonuses to nearby Villagers working Farms by 25%, 50%, 75% ??
+ - TC buildings provide bonuses to nearby Villagers working Farms by 25%, 50%, 75%
+ - fishing ships discount
  - Place Yorishiro, Town Center: +25% Production speed, Farmhouse: +75 Food per minute, Lumber Camp: +75 Wood per minute, Forge: +75 Gold per minute
 

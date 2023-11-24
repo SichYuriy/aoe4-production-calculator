@@ -15,6 +15,7 @@ import MaliansFeatures from "./malians-features/MaliansFeatures";
 import JeanneFeatures from "./jeanne-features/JeanneFeatures";
 import DragonOrderFeatures from "./dragon-order-features/DragonOrderFeatures";
 import ZhuXisLegacyFeatures from "./zhu-xis-legacy/ZhuXisLegacyFeatures";
+import AyyubidsFeatures from "./ayyubids-features/AyyubidsFeatures";
 
 function CivilizationSpecificFeatures() {
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -33,7 +34,7 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.JEANNE_D_ARC, <JeanneFeatures/>],
         [CivilizationsEnum.DRAGON_ORDER, <DragonOrderFeatures/>],
         [CivilizationsEnum.ZHU_XIS_LEGACY, <ZhuXisLegacyFeatures/>],
-        [CivilizationsEnum.AYYUBIDS, <div/>],
+        [CivilizationsEnum.AYYUBIDS, <AyyubidsFeatures/>],
         [CivilizationsEnum.JAPANESE, <div/>],
         [CivilizationsEnum.BYZANTINES, <div/>]
     ]);

@@ -9,7 +9,7 @@ import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 import FoodSource from "../../model/FoodSource";
 
-const tradersDiscount: UnitCostModifier = {
+export const tradersDiscount: UnitCostModifier = {
     id: CostModifierId.ABBASID_TRADER_DISCOUNT,
     canBeApplied: unit => unit.id === 'TRADER',
     apply: currentCost => ({
