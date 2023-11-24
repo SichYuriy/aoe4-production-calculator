@@ -9,6 +9,7 @@ import GatheringRateModifierId from "../../../../data/gathering-rate-modifiers/G
 import ProductionSpeedModifierId from "../../../../data/production-speed-modifiers/ProductionSpeedModifierId";
 import {unselectSelect} from "../../../../state/GatheringRateModifiersSlice";
 import {unselectSelectProductionSpeedModifiers} from "../../../../state/ProducationSpeedModifiersSlice";
+import Tooltip from "../../../tooltip/Tooltip";
 
 const ALL_GATHERING_RATES = [GatheringRateModifierId.GOLDEN_AGE_1, GatheringRateModifierId.GOLDEN_AGE_2, GatheringRateModifierId.GOLDEN_AGE_3];
 const ALL_PRODUCTION = [ProductionSpeedModifierId.GOLDEN_AGE_3];
@@ -40,12 +41,14 @@ function GoldenAge() {
     }
 
     return (
-        <div className={s.goldenAge}>
-            <GoldenAgeItem icon={cancelIcon} selected={noneActive} onClick={unselectAll}/>
-            <GoldenAgeItem icon={goldenAge1Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_1]} onClick={selectAge1}/>
-            <GoldenAgeItem icon={goldenAge2Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_2]} onClick={selectAge2}/>
-            <GoldenAgeItem icon={goldenAge3Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_3]} onClick={selectAge3}/>
-        </div>
+        <Tooltip header="Golden Age" text={'Increases gathering rate. Level 3 also reduces unit production time.'}>
+            <div className={s.goldenAge}>
+                <GoldenAgeItem icon={cancelIcon} selected={noneActive} onClick={unselectAll}/>
+                <GoldenAgeItem icon={goldenAge1Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_1]} onClick={selectAge1}/>
+                <GoldenAgeItem icon={goldenAge2Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_2]} onClick={selectAge2}/>
+                <GoldenAgeItem icon={goldenAge3Icon} selected={gatheringRateModifiers[GatheringRateModifierId.GOLDEN_AGE_3]} onClick={selectAge3}/>
+            </div>
+        </Tooltip>
     );
 }
 

@@ -12,8 +12,8 @@ Order of the Dragon
 
 Ayyubids
  - bazar, gold needed for constant production (unique unit)
- - berry gathering rate (abbasid)
- - traders -33% (abbasid)
+ - berry gathering rate (abbasid)+
+ - traders -33% (abbasid) +
  - golden age
  -- tier 1: 10% gathering rate
  -- tier 2: 10% gathering rate
