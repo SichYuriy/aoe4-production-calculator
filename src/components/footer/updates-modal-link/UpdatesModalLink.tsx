@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '88',
+        date: new Date(2023, 10, 25),
+        patch: '9.1.109',
+        description: "Add Ayyubids features: golden age, bazaar"
+    },
+    {
         id: '87',
         date: new Date(2023, 10, 24),
         patch: '9.1.109',
