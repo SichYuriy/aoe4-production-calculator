@@ -10,7 +10,8 @@ export default interface Unit {
     building: Building | null,
     civilizations: CivilizationsEnum[],
     common: boolean,
-    civilizationSpecificFeature?: boolean
+    civilizationSpecificFeature?: boolean,
+    notAffectedByModifiers?: boolean
 }
 
 export enum UnitType {

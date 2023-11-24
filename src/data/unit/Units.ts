@@ -96,6 +96,7 @@ import varangianGuardIcon from '../../icons/varangian-guard.png'
 import cataphractIcon from '../../icons/cataphract.png'
 import cheirosiphonIcon from '../../icons/cheirosiphon.png'
 import dromonIcon from '../../icons/dromon.png'
+import bazaarIcon from '../../icons/trade-wing-bazaar.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -856,6 +857,45 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MONGOLS],
         common: false,
         civilizationSpecificFeature: true
+    },
+    FEUDAL_BAZAAR: {
+        id: 'FEUDAL_BAZAAR',
+        icon: bazaarIcon,
+        name: 'feudal bazaar',
+        productionTime: 60 * 3,
+        cost: new UnitCost(0, 125 * 4, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.AYYUBIDS],
+        common: false,
+        civilizationSpecificFeature: true,
+        notAffectedByModifiers: true
+    },
+    CASTLE_BAZAAR: {
+        id: 'CASTLE_BAZAAR',
+        icon: bazaarIcon,
+        name: 'castle bazaar',
+        productionTime: 60 * 3,
+        cost: new UnitCost(0, 325 * 4, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.AYYUBIDS],
+        common: false,
+        civilizationSpecificFeature: true,
+        notAffectedByModifiers: true
+    },
+    IMPERIAL_BAZAAR: {
+        id: 'IMPERIAL_BAZAAR',
+        icon: bazaarIcon,
+        name: 'imperial bazaar',
+        productionTime: 60 * 3,
+        cost: new UnitCost(0, 400 * 4, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.AYYUBIDS],
+        common: false,
+        civilizationSpecificFeature: true,
+        notAffectedByModifiers: true
     },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',

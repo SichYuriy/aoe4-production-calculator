@@ -65,13 +65,13 @@ class ProductionCalculatorService {
 
     private calculateUnitCostPerMinute(unit: Unit, count: number, productionSpeedModifiers: ProductionSpeedModifier[], costModifiers: UnitCostModifier[], costModifiersPerUnit: CostModifiersPerUnitState): UnitCost {
         let effectiveCost = costModifiers
-            .filter(modifier => modifier.canBeApplied(unit))
+            .filter(modifier => modifier.canBeApplied(unit) && !unit.notAffectedByModifiers)
             .reduce(
                 (previousCost, modifier) => modifier.apply(previousCost),
                 unit.cost
             );
         let effectiveProductionTime = productionSpeedModifiers
-            .filter(modifier => modifier.canBeApplied(unit))
+            .filter(modifier => modifier.canBeApplied(unit) && !unit.notAffectedByModifiers)
             .reduce(
                 (previousTime, modifier) => previousTime - (unit.productionTime - modifier.apply(unit.productionTime)),
                 unit.productionTime
