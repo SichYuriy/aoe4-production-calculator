@@ -49,9 +49,10 @@ let pitMineMiningCamp: PassiveIncomeModifier = {
     source: PassiveIncomeSource.PIT_MINE_MINING_CAMP,
 };
 
+const CATTLE_RANCH_GOLD_INCOME = 25;
 let cattleRanchCattle: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.CATTLE_RANCH_CATTLE,
-    food: 28,
+    food: CATTLE_RANCH_GOLD_INCOME,
     gold: 0,
     wood: 0,
     stone: 0,
@@ -69,7 +70,7 @@ let fulaniCarrolCattle: PassiveIncomeModifier = {
 
 let horticultureCattle: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.HORTICULTURE_CATTLE,
-    food: 4.2,
+    food: CATTLE_RANCH_GOLD_INCOME * 0.15,
     gold: 0,
     wood: 0,
     stone: 0,
@@ -78,7 +79,7 @@ let horticultureCattle: PassiveIncomeModifier = {
 
 let fertilizationCattle: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.FERTILIZATION_CATTLE,
-    food: 4.2,
+    food: CATTLE_RANCH_GOLD_INCOME * 0.15,
     gold: 0,
     wood: 0,
     stone: 0,
@@ -87,7 +88,7 @@ let fertilizationCattle: PassiveIncomeModifier = {
 
 let crossBreedingCattle: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.CROSS_BREEDING_CATTLE,
-    food: 4.2,
+    food: CATTLE_RANCH_GOLD_INCOME * 0.15,
     gold: 0,
     wood: 0,
     stone: 0,

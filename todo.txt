@@ -1,34 +1,17 @@
-Jeanne's Dark
- - school of cavalry (french) +
- - Consecrate (new ui components, new reducer) +
- - Ordinance Company +
+# Patch 9.1.370
 
-Order of the Dragon
- - vils 40% carry, 25% gathering rate (gathering rate modifier) +
- - vils unique unit +
- - Regnitz Cathedral (HRE) (passive income modifier) +
- - Burgrave Palace (unique unit)
- - Palace of Swabia (HRE) (unique unit) +
+- Trader production time increased from 25 seconds to 30 seconds. (mongol traders, abbasid traders) +
+- Malian Cattle food per minute generation in Ranches reduced from 28 to 25. (check food upgrades) +
 
-Ayyubids
- - bazar, gold needed for constant production (unique unit)
- - berry gathering rate (abbasid)+
- - traders -33% (abbasid) +
- - golden age
- -- tier 1: 10% gathering rate
- -- tier 2: 10% gathering rate
- -- tier 3: 10% gathering rate, production speed +20%
- -- tier 4: 10% gathering rate, production speed +20%, siege units 20% discount
- -- tier 5: camel units attack faster
+Gold cost of each trade increased
+ Feudal: from 125 to 150. +
+ Castle: from 325 to 350. +
+ Imperial: from 400 to 425. +
+
+- Tower of the Sultan build time reduced from 240 seconds to 200 seconds. +
 
 Zhu Xi's Legacy
- - Docks work +20% faster (chinese) +
- - Imperial official resources (chinese) +
- - Imperial official production boost (+chinese) ?
- - granary (chinese) +
  - age 2 passive income landmark ?
- - Yuan: 10% discount on all units - unlocks construction of the Pagoda. +
- - Pagoda +
 
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??

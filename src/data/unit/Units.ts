@@ -108,7 +108,8 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
 
 const DRAGON_VILLAGER_COST = 60;
 const DRAGON_VILLAGER_PRODUCTION_TIME = 24;
-
+const TRADER_PRODUCTION_TIME = 30;
+const TRADER_GOLD_COST = 60;
 
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     DRAGON_ORDER_VILLAGER: {
@@ -839,7 +840,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'TRADER',
         icon: traderIcon,
         name: 'trader',
-        productionTime: 25,
+        productionTime: TRADER_PRODUCTION_TIME,
         cost: new UnitCost(0, 60, 60, 0),
         types: [],
         building: null,
@@ -850,8 +851,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'SILVER_TREE_TRADER',
         icon: traderIcon,
         name: 'silver tree trader',
-        productionTime: 17,
-        cost: new UnitCost(0, 36, 60, 0),
+        productionTime: TRADER_PRODUCTION_TIME * (1 / 1.4),
+        cost: new UnitCost(0, TRADER_GOLD_COST * 0.6, 60, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.MONGOLS],
@@ -863,7 +864,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: bazaarIcon,
         name: 'feudal bazaar',
         productionTime: 60 * 3,
-        cost: new UnitCost(0, 125 * 4, 0, 0),
+        cost: new UnitCost(0, 150 * 4, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.AYYUBIDS],
@@ -876,7 +877,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: bazaarIcon,
         name: 'castle bazaar',
         productionTime: 60 * 3,
-        cost: new UnitCost(0, 325 * 4, 0, 0),
+        cost: new UnitCost(0, 350 * 4, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.AYYUBIDS],
@@ -889,7 +890,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: bazaarIcon,
         name: 'imperial bazaar',
         productionTime: 60 * 3,
-        cost: new UnitCost(0, 400 * 4, 0, 0),
+        cost: new UnitCost(0, 425 * 4, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.AYYUBIDS],
@@ -1114,7 +1115,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'TOWER_OF_SULTAN',
         icon: towerOfTheSultanIcon,
         name: 'tower of sultan',
-        productionTime: 240,
+        productionTime: 200,
         cost: new UnitCost(0, 350, 650, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,

@@ -13,6 +13,30 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '92',
+        date: new Date(2023, 11, 6),
+        patch: '9.1.370',
+        description: "Tower of the Sultan build time reduced from 240 seconds to 200 seconds"
+    },
+    {
+        id: '91',
+        date: new Date(2023, 11, 6),
+        patch: '9.1.370',
+        description: "Gold cost of each trade increased. Feudal: from 125 to 150. Castle: from 325 to 350. Imperial: from 400 to 425."
+    },
+    {
+        id: '90',
+        date: new Date(2023, 11, 6),
+        patch: '9.1.370',
+        description: "Malian Cattle food per minute generation in Ranches reduced from 28 to 25"
+    },
+    {
+        id: '89',
+        date: new Date(2023, 11, 6),
+        patch: '9.1.370',
+        description: "Trader production time increased from 25 seconds to 30 seconds"
+    },
+    {
         id: '88',
         date: new Date(2023, 10, 25),
         patch: '9.1.109',
