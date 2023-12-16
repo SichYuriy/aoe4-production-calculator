@@ -12,11 +12,12 @@ type Props = {
     count: number,
     onIncrement: () => any,
     onDecrement: () => any,
-    tooltip?: TooltipProps
+    tooltip?: TooltipProps,
+    iconHeight?: string
 }
 
 function UpgradeItemCounter(props: Props) {
-     let upgradeItem = <UpgradeItem icon={props.icon} selected={props.count > 0} disabled={true}/>;
+     let upgradeItem = <UpgradeItem icon={props.icon} selected={props.count > 0} disabled={true} iconHeight={props.iconHeight}/>;
      upgradeItem = props.tooltip
          ? <Tooltip header={props.tooltip.header} text={props.tooltip.text}>{upgradeItem}</Tooltip>
          : upgradeItem;

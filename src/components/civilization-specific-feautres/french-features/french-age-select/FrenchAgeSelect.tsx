@@ -36,7 +36,7 @@ function FrenchAgeSelect() {
 
     return (
         <Tooltip header="Age" text="Reduces villager production time">
-            <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+            <AgeSelector inputName={'frenchAge'} onSelect={selectAge} selected={selectedAge}/>
         </Tooltip>
     )
 }

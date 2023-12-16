@@ -53,7 +53,7 @@ function Bazaar() {
                     <img className={shared.civilizationSpecificFeatureIcon} src={bazaarIcon} alt={'bazaar'}/>
                 </div>
                 <div>:</div>
-                <AgeSelector selected={currentAge} onSelect={selectBazaarAge}/>
+                <AgeSelector inputName={'bazaar'} selected={currentAge} onSelect={selectBazaarAge}/>
             </div>
         </Tooltip>
     );

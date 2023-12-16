@@ -36,7 +36,7 @@ function EnglishAgeSelect() {
 
     return (
         <Tooltip header="Age" text="Increases farm gathering rate">
-            <AgeSelector onSelect={selectAge} selected={selectedAge}/>
+            <AgeSelector inputName={'englishAge'} onSelect={selectAge} selected={selectedAge}/>
         </Tooltip>
     )
 }

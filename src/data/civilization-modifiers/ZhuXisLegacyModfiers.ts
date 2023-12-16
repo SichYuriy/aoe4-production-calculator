@@ -5,7 +5,8 @@ import {
     chineseDocks,
     foodImperialOfficial,
     goldImperialOfficial,
-    granary, pagoda,
+    granary,
+    pagoda,
     stoneImperialOfficial,
     woodImperialOfficial
 } from "./ChineseModifiers";
@@ -14,6 +15,7 @@ import UnitCostModifier from "../../model/UnitCostModifier";
 import CostModifierId from "../cost-modifiers/CostModifierId";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 
 const zhuXisLegacyYuanDynasty: UnitCostModifier = {
     id: CostModifierId.ZHU_XIS_LEGACY_YUAN_DYNASTY,
@@ -25,7 +27,43 @@ const zhuXisLegacyYuanDynasty: UnitCostModifier = {
         stone: currentCost.stone * 0.9,
     }),
     description: 'unitCost * 0.9'
-}
+};
+
+const meditationGardenBush: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MEDITATION_GARDEN_BUSH,
+    food: 8,
+    gold: 0,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.MEDITATION_GARDEN_BUSH
+};
+
+const meditationGardenGold: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MEDITATION_GARDEN_GOLD,
+    food: 0,
+    gold: 30,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.MEDITATION_GARDEN_GOLD
+};
+
+const meditationGardenStone: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MEDITATION_GARDEN_STONE,
+    food: 0,
+    gold: 0,
+    wood: 0,
+    stone: 30,
+    source: PassiveIncomeSource.MEDITATION_GARDEN_STONE
+};
+
+const meditationGardenTree: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MEDITATION_GARDEN_TREE,
+    food: 0,
+    gold: 0,
+    wood: 1,
+    stone: 0,
+    source: PassiveIncomeSource.MEDITATION_GARDEN_TREE
+};
 
 const ZHU_XI_GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
@@ -37,15 +75,35 @@ const ZHU_XI_GATHERING_RATE_MODIFIERS = {
 
 const ZHU_XI_PRODUCTION_SPEED_MODIFIERS = {
     [ProductionSpeedModifierId.CHINESE_DOCKS]: chineseDocks
-}
+};
 
 const ZHU_XI_COST_MODIFIERS = {
     [CostModifierId.ZHU_XIS_LEGACY_YUAN_DYNASTY]: zhuXisLegacyYuanDynasty
-}
+};
 
 const ZHU_XI_PASSIVE_INCOME_MODIFIERS = {
-    [PassiveIncomeModifierId.PAGODA]: pagoda
-}
+    [PassiveIncomeModifierId.PAGODA]: pagoda,
+    [PassiveIncomeModifierId.MEDITATION_GARDEN_BUSH]: meditationGardenBush,
+    [PassiveIncomeModifierId.MEDITATION_GARDEN_GOLD]: meditationGardenGold,
+    [PassiveIncomeModifierId.MEDITATION_GARDEN_STONE]: meditationGardenStone,
+    [PassiveIncomeModifierId.MEDITATION_GARDEN_TREE]: meditationGardenTree
+};
+
+const ZHU_XI_PASSIVE_INCOME_SOURCES = [
+    PassiveIncomeSource.PAGODA,
+    PassiveIncomeSource.MEDITATION_GARDEN_BUSH,
+    PassiveIncomeSource.MEDITATION_GARDEN_GOLD,
+    PassiveIncomeSource.MEDITATION_GARDEN_STONE,
+    PassiveIncomeSource.MEDITATION_GARDEN_TREE
+];
+
+const DEFAULT_PASSIVE_INCOME_MODIFIERS = [
+    PassiveIncomeModifierId.PAGODA,
+    PassiveIncomeModifierId.MEDITATION_GARDEN_BUSH,
+    PassiveIncomeModifierId.MEDITATION_GARDEN_GOLD,
+    PassiveIncomeModifierId.MEDITATION_GARDEN_STONE,
+    PassiveIncomeModifierId.MEDITATION_GARDEN_TREE
+];
 
 const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ZHU_XIS_LEGACY,
@@ -55,9 +113,9 @@ const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.CHINESE_DOCKS],
     allCostModifiers: ZHU_XI_COST_MODIFIERS,
     defaultCostModifiers: [],
-    passiveIncomeSources: [PassiveIncomeSource.PAGODA],
+    passiveIncomeSources: ZHU_XI_PASSIVE_INCOME_SOURCES,
     allPassiveIncomeModifiers: ZHU_XI_PASSIVE_INCOME_MODIFIERS,
-    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.PAGODA],
+    defaultPassiveIncomeModifiers: DEFAULT_PASSIVE_INCOME_MODIFIERS,
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {}

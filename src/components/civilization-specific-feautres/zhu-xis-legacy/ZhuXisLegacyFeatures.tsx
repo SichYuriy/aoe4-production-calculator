@@ -8,6 +8,7 @@ import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiers
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import ZhuXisLegacyYuanDynasty from "./zhu-xis-legacy-yuan-dynasty/ZhuXisLegacyYuanDynasty";
 import Pagoda from "../chinese-features/pagoda/Pagoda";
+import MeditationGarden from "./meditaiton-gardern/MeditationGarden";
 
 function ZhuXisLegacyFeatures() {
     const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ function ZhuXisLegacyFeatures() {
                 <ZhuXisLegacyYuanDynasty/>
                 <Pagoda/>
             </div>
+            <MeditationGarden/>
         </div>
     );
 }
