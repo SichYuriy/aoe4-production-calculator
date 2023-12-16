@@ -1,18 +1,3 @@
-# Patch 9.1.370
-
-- Trader production time increased from 25 seconds to 30 seconds. (mongol traders, abbasid traders) +
-- Malian Cattle food per minute generation in Ranches reduced from 28 to 25. (check food upgrades) +
-
-Gold cost of each trade increased
- Feudal: from 125 to 150. +
- Castle: from 325 to 350. +
- Imperial: from 400 to 425. +
-
-- Tower of the Sultan build time reduced from 240 seconds to 200 seconds. +
-
-Zhu Xi's Legacy
- - age 2 passive income landmark ?
-
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
  - TC buildings provide bonuses to nearby Villagers working Farms by 25%, 50%, 75%
