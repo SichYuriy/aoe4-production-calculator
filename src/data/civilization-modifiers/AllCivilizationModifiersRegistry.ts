@@ -12,7 +12,7 @@ import JEANNE_D_ARC_MODIFIERS from "./JeanneDArcModfiers";
 import DRAGON_ORDER_MODIFIERS from "./DragonOrderModifiers";
 import ZHU_XIS_LEGACY_MODIFIERS from "./ZhuXisLegacyModfiers";
 import AYYUBIDS_MODIFIERS from "./AyyubidsModifiers";
-import JAPANESE_MODIFIERS from "./JapanseModifiers";
+import JAPANESE_MODIFIERS from "./JapaneseModifiers";
 import BYZANTINES_MODIFIERS from "./ByzantinesModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [

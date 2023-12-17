@@ -5,6 +5,9 @@ import UnitCostModifier from "../../model/UnitCostModifier";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import FoodSource from "../../model/FoodSource";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
 const japaneseFishingBoats: UnitCostModifier = {
     id: CostModifierId.JAPANESE_FISHING_BOATS,
@@ -51,6 +54,33 @@ const shogunateCastle: GatheringRateModifier = {
     description: 'farm * 1.6'
 };
 
+const yorishiroFarmhouse: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.YORISHIRO_FARM_HOUSE,
+    food: 75,
+    gold: 0,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.YORISHIRO_FARM_HOUSE
+};
+
+const yorishiroLumberCamp: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.YORISHIRO_LUMBER_CAMP,
+    food: 0,
+    gold: 0,
+    wood: 75,
+    stone: 0,
+    source: PassiveIncomeSource.YORISHIRO_LUMBER_CAMP
+};
+
+const yorishiroForge: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.YORISHIRO_FORGE,
+    food: 0,
+    gold: 75,
+    wood: 0,
+    stone: 0,
+    source: PassiveIncomeSource.YORISHIRO_FORGE
+};
+
 const JAPANESE_GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.DAIMYO_MANOR]: daimyoManor,
     [GatheringRateModifierId.DAIMYO_PALACE]: daimyoPalace,
@@ -61,6 +91,24 @@ const JAPANESE_COST_MODIFIERS = {
     [CostModifierId.JAPANESE_FISHING_BOATS]: japaneseFishingBoats
 };
 
+const JAPANESE_PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.YORISHIRO_FARM_HOUSE]: yorishiroFarmhouse,
+    [PassiveIncomeModifierId.YORISHIRO_LUMBER_CAMP]: yorishiroLumberCamp,
+    [PassiveIncomeModifierId.YORISHIRO_FORGE]: yorishiroForge
+}
+
+const JAPANESE_PASSIVE_INCOME_SOURCES = [
+    PassiveIncomeSource.YORISHIRO_FARM_HOUSE,
+    PassiveIncomeSource.YORISHIRO_LUMBER_CAMP,
+    PassiveIncomeSource.YORISHIRO_FORGE,
+];
+
+const JAPANESE_DEFAULT_PASSIVE_INCOME_MODIFIERS = [
+    PassiveIncomeModifierId.YORISHIRO_FARM_HOUSE,
+    PassiveIncomeModifierId.YORISHIRO_LUMBER_CAMP,
+    PassiveIncomeModifierId.YORISHIRO_FORGE,
+]
+
 const JAPANESE_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.JAPANESE,
     allGatheringRateModifiers: JAPANESE_GATHERING_RATE_MODIFIERS,
@@ -69,9 +117,9 @@ const JAPANESE_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [],
     allCostModifiers: JAPANESE_COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.JAPANESE_FISHING_BOATS],
-    passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
-    defaultPassiveIncomeModifiers: [],
+    passiveIncomeSources: JAPANESE_PASSIVE_INCOME_SOURCES,
+    allPassiveIncomeModifiers: JAPANESE_PASSIVE_INCOME_MODIFIERS,
+    defaultPassiveIncomeModifiers:JAPANESE_DEFAULT_PASSIVE_INCOME_MODIFIERS,
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {}
