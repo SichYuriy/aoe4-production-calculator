@@ -17,6 +17,7 @@ import DragonOrderFeatures from "./dragon-order-features/DragonOrderFeatures";
 import ZhuXisLegacyFeatures from "./zhu-xis-legacy/ZhuXisLegacyFeatures";
 import AyyubidsFeatures from "./ayyubids-features/AyyubidsFeatures";
 import JapaneseFeatures from "./japanese-features/JapaneseFeatures";
+import ByzantinesFeatures from "./byzantines-features/ByzantinesFeatures";
 
 function CivilizationSpecificFeatures() {
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -37,7 +38,7 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.ZHU_XIS_LEGACY, <ZhuXisLegacyFeatures/>],
         [CivilizationsEnum.AYYUBIDS, <AyyubidsFeatures/>],
         [CivilizationsEnum.JAPANESE, <JapaneseFeatures/>],
-        [CivilizationsEnum.BYZANTINES, <div/>]
+        [CivilizationsEnum.BYZANTINES, <ByzantinesFeatures/>]
     ]);
     let components: any[] = [];
     civilizationSpecificComponents.forEach((component, civilization) => {

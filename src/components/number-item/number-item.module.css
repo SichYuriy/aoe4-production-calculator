@@ -1,0 +1,21 @@
+.iconDiv {
+    border-radius: 50%;
+    border: 2px solid #f3dc8d;
+    color: #f3dc8d;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.wrapperDiv {
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+.selectedIconDiv {
+    border: 2px solid white;
+}
