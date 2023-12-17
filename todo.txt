@@ -1,6 +1,2 @@
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
-
-Byzantines:
-- cisterns gathering rate bonus: 5%,10%,15%,20%,25%
-- cisterns production speed: 20%,40%,60%,80%,100%

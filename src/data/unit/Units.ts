@@ -1053,7 +1053,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'cheirosiphon',
         productionTime: 30,
         cost: new UnitCost(0, 100, 250, 0),
-        types: [],
+        types: [UnitType.SIEGE],
         building: null,
         civilizations: [CivilizationsEnum.BYZANTINES],
         common: false
