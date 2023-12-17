@@ -31,7 +31,7 @@ function JapaneseTownCenters() {
         <div className={shared.civilizationSpecificFeature}>
             <Tooltip header={'Town Centers'} text={'Provide bonuses to nearby Villagers working Farms by 25%, 50%, 75%'}>
                 <div>
-                    <img className={shared.civilizationSpecificFeatureIcon} src={townCenterIcon} alt={'bazaar'}/>
+                    <img className={shared.civilizationSpecificFeatureIcon} src={townCenterIcon} alt={'TC'}/>
                 </div>
             </Tooltip>
             <div>:</div>

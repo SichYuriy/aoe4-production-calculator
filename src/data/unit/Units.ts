@@ -110,6 +110,7 @@ const DRAGON_VILLAGER_COST = 60;
 const DRAGON_VILLAGER_PRODUCTION_TIME = 24;
 const TRADER_PRODUCTION_TIME = 30;
 const TRADER_GOLD_COST = 60;
+const VILLAGER_PRODUCTION_TIME = 20;
 
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     DRAGON_ORDER_VILLAGER: {
@@ -139,7 +140,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'VILLAGER',
         icon: villagerIcon,
         name: 'villager',
-        productionTime: 20,
+        productionTime: VILLAGER_PRODUCTION_TIME,
         cost: new UnitCost(50, 0, 0, 0),
         types: [],
         building: null,
@@ -149,6 +150,18 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES],
         common: true
+    },
+    FLOATING_GATE_VILLAGER: {
+        id: 'FLOATING_GATE_VILLAGER',
+        icon: villagerIcon,
+        name: 'Yorishiro TC villager',
+        productionTime: VILLAGER_PRODUCTION_TIME * (1 / 1.25),
+        cost: new UnitCost(50, 0, 0, 0),
+        types: [],
+        building: null,
+        civilizations: [CivilizationsEnum.JAPANESE],
+        common: false,
+        civilizationSpecificFeature: true
     },
     CATTLE: {
         id: 'CATTLE',
