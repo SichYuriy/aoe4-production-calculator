@@ -13,8 +13,14 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '94',
+        date: new Date(2023, 11, 17),
+        patch: '9.1.370',
+        description: "Add Japanese features: fishing boats, town centers, Floating Gate"
+    },
+    {
         id: '93',
-        date: new Date(2023, 11, 16),
+        date: new Date(2023, 11, 17),
         patch: '9.1.370',
         description: "Add Meditation Gardens"
     },
