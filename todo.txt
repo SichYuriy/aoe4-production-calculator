@@ -1,6 +1,6 @@
 Japanese:
  - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
- - TC buildings provide bonuses to nearby Villagers working Farms by 25%, 50%, 75% (1.2, 1.4, 1.6)
- - fishing ships 30% discount +
- - Place Yorishiro, Town Center: +25% Production speed, Farmhouse: +75 Food per minute, Lumber Camp: +75 Wood per minute, Forge: +75 Gold per minute
 
+Byzantines:
+- cisterns gathering rate bonus: 5%,10%,15%,20%,25%
+- cisterns production speed: 20%,40%,60%,80%,100%
