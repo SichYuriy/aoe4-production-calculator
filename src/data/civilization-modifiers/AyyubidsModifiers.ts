@@ -24,8 +24,7 @@ const ayyubidsGoldenAgeTier1: GatheringRateModifier = {
 const ayyubidsGoldenAgeTier3: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.AYYUBIDS_GOLDEN_AGE_3,
     canBeApplied: () => true,
-    apply: currentProductionTime => currentProductionTime * (1 / 1.2),
-    description: 'time * (1 / 1.2)'
+    productionSpeedBonus: 0.2
 }
 
 const ayyubidsGoldenAgeTier4: UnitCostModifier = {

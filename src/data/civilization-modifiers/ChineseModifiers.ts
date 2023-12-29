@@ -13,15 +13,13 @@ import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 const songDynasty: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SONG_DYNASTY,
     canBeApplied: unit => unit.id === 'VILLAGER',
-    apply: currentProductionTime => currentProductionTime * 0.75,
-    description: 'villagerTime * 0.75'
+    productionSpeedBonus: 0.33
 }
 
 export const chineseDocks: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CHINESE_DOCKS,
     canBeApplied: unit => unit.building === Building.DOCK,
-    apply: currentProductionTime => currentProductionTime * 0.8,
-    description: 'shipTime * 0.8'
+    productionSpeedBonus: 0.2
 }
 
 export const foodImperialOfficial: GatheringRateModifier = {

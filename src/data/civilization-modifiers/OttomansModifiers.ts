@@ -44,36 +44,28 @@ let twinMinaretMedrese: LimitedFoodGatheringSourceModifier = {
     description: 'base gathering rate: 50'
 }
 
-const BLACKSMITH_AGE_2 = 1 / 1.2;
 let age2Blacksmith: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_2,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * BLACKSMITH_AGE_2,
-    description: 'militaryTime * ' + BLACKSMITH_AGE_2.toFixed(2)
+    productionSpeedBonus: 0.2
 }
 
-const BLACKSMITH_AGE_3 = 1 / 1.3;
 let age3Blacksmith: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_3,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * BLACKSMITH_AGE_3,
-    description: 'militaryTime * ' + BLACKSMITH_AGE_3.toFixed(2)
+    productionSpeedBonus: 0.3
 }
 
-const BLACKSMITH_AGE_4 = 1 / 1.4;
 let age4Blacksmith: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.OTTOMANS_BLACKSMITH_AGE_4,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * BLACKSMITH_AGE_4,
-    description: 'militaryTime * ' + BLACKSMITH_AGE_4.toFixed(2)
+    productionSpeedBonus: 0.4
 }
 
-const ISTANBUL_OBSERVATORY = 1 / 2;
 let istanbulObservatory: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.ISTANBUL_OBSERVATORY,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * ISTANBUL_OBSERVATORY,
-    description: 'militaryTime * ' + ISTANBUL_OBSERVATORY.toFixed(2)
+    productionSpeedBonus: 1
 }
 
 const GATHERING_RATE_MODIFIERS = {

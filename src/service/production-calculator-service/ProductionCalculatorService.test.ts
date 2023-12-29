@@ -56,9 +56,9 @@ describe('ProductionCalculatorService', () => {
         it('one productionSpeedModifier', () => {
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
                 [PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.SCHOOL_OF_CAVALRY]], [], new ResourcesAmount(), [], [], FoodSource.FARM, 0, {})
-            expect(actual.foodVillagers).toBeCloseTo(20.25);
+            expect(actual.foodVillagers).toBeCloseTo(19.95);
             expect(actual.woodVillagers).toBeCloseTo(7);
-            expect(actual.goldVillagers).toBeCloseTo(5.3571);
+            expect(actual.goldVillagers).toBeCloseTo(5.1428);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
@@ -122,9 +122,9 @@ describe('ProductionCalculatorService', () => {
                 passiveIncome,
                 [limitedFoodGatheringSource],
                 [], FoodSource.FARM, 0, {});
-            expect(actual.foodVillagers).toBeCloseTo(16.9);
+            expect(actual.foodVillagers).toBeCloseTo(16.66);
             expect(actual.woodVillagers).toBeCloseTo(6);
-            expect(actual.goldVillagers).toBeCloseTo(1.7857);
+            expect(actual.goldVillagers).toBeCloseTo(1.61161);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
     });

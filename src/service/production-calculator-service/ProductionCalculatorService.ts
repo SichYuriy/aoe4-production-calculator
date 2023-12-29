@@ -70,12 +70,13 @@ class ProductionCalculatorService {
                 (previousCost, modifier) => modifier.apply(previousCost),
                 unit.cost
             );
-        let effectiveProductionTime = productionSpeedModifiers
+        let totalProductionSpeedBonus = productionSpeedModifiers
             .filter(modifier => modifier.canBeApplied(unit) && !unit.notAffectedByModifiers)
             .reduce(
-                (previousTime, modifier) => previousTime - (unit.productionTime - modifier.apply(unit.productionTime)),
-                unit.productionTime
+                (total, modifier) => total + modifier.productionSpeedBonus,
+                0
             );
+        let effectiveProductionTime = unit.productionTime  / (1 + totalProductionSpeedBonus);
 
         let totalCost = new ResourcesAmount();
         for (let i = 0; i < count; i++) {

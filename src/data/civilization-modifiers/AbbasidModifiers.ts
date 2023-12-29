@@ -57,8 +57,7 @@ const goldenAgeTier3GatheringRate: GatheringRateModifier = {
 const goldenAgeTier3ProductionSpeed: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.GOLDEN_AGE_3,
     canBeApplied: () => true,
-    apply: currentProductionTime => currentProductionTime * 0.8,
-    description: 'time * 0.8'
+    productionSpeedBonus: 0.2
 };
 
 const freshFood: UnitCostModifier = {

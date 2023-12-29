@@ -64,36 +64,31 @@ const cisternGatheringRateLevel5: GatheringRateModifier = {
 const conscriptioLevel1: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CONSCRIPTIO_1,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.2),
-    description: 'militaryTime * ' + (1 / 1.2).toFixed(2)
+    productionSpeedBonus: 0.2
 }
 
 const conscriptioLevel2: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CONSCRIPTIO_2,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.4),
-    description: 'militaryTime * ' + (1 / 1.4).toFixed(2)
+    productionSpeedBonus: 0.4
 }
 
 const conscriptioLevel3: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CONSCRIPTIO_3,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.6),
-    description: 'militaryTime * ' + (1 / 1.6).toFixed(2)
+    productionSpeedBonus: 0.6
 }
 
 const conscriptioLevel4: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CONSCRIPTIO_4,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * (1 / 1.8),
-    description: 'militaryTime * ' + (1 / 1.8).toFixed(2)
+    productionSpeedBonus: 0.8
 }
 
 const conscriptioLevel5: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CONSCRIPTIO_5,
     canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
-    apply: (currentProductionTime: number) => currentProductionTime * (1 / 2),
-    description: 'militaryTime * ' + (1 / 2).toFixed(2)
+    productionSpeedBonus: 1
 }
 
 const BYZANTINES_GATHERING_RATE_MODIFIERS = {
