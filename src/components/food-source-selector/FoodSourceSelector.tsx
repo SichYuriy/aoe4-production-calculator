@@ -7,11 +7,13 @@ import s from './food-source-selector.module.css'
 import FoodSource from "../../model/FoodSource";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {changeFoodSource} from "../../state/GatheringRatesSlice";
-import Tooltip from "../tooltip/Tooltip";
+import CivilizationsEnum from '../../data/CivilizationsEnum';
+import shared from '../../shared.module.css';
 
 function FoodSourceSelector() {
     const dispatch = useAppDispatch();
     const foodSource: FoodSource = useAppSelector((rootState) => rootState.gatheringRates.foodSource);
+    const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
 
     function dispatchChange(event:any) {
         dispatch(changeFoodSource(event.target.value));
@@ -37,11 +39,9 @@ function FoodSourceSelector() {
                 <input type={'radio'} value={FoodSource.FARM} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.FARM}/>
                 <img src={farmIcon} className={s.foodSourceRadioIcon} alt={'farm'}/>
             </label>
-            <label>
-                <Tooltip text={'Use only with Malians'} header={'Cattle'}>
-                    <input type={'radio'} value={FoodSource.CATTLE} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.CATTLE}/>
-                    <img src={cattleIcon} className={s.foodSourceRadioIcon} alt={'cattle'}/>
-                </Tooltip>
+            <label className={selectedCivilization == CivilizationsEnum.MALIANS ? '' : shared.hidden}>
+                <input type={'radio'} value={FoodSource.CATTLE} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.CATTLE}/>
+                <img src={cattleIcon} className={s.foodSourceRadioIcon} alt={'cattle'}/>
             </label>
         </div>
     )
