@@ -14,7 +14,7 @@ Cistern
 - Dragon Villager gather rate bonus increased from +25% to +28% +
 
 ### Ottomans
-- Sultanhani Trade Network: Reduced income of each Trader from 28 to 24 Gold per minute, Increased Trader garrison slots from 6 to 10.
+- Sultanhani Trade Network: Reduced income of each Trader from 28 to 24 Gold per minute, Increased Trader garrison slots from 6 to 10.+
 
 ### Zhu Xi
 

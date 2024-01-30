@@ -26,7 +26,7 @@ let anatolianHills: GatheringRateModifier = {
 let sultanhaniTradeNetwork: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK,
     food: 0,
-    gold: 28,
+    gold: 24,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.SULTANHANI_TRADE_NETWORK
