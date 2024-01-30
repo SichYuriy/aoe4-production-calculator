@@ -9,17 +9,6 @@ import {UnitType} from "../../model/Unit";
 const cisternGatheringRateLevel1: GatheringRateModifier = {
     id: GatheringRateModifierId.CISTERN_LEVEL_1,
     apply: gatheringRates => ({
-        food: gatheringRates.food * 1.034,
-        wood: gatheringRates.wood * 1.034,
-        gold: gatheringRates.gold * 1.034,
-        stone: gatheringRates.stone * 1.034,
-    }),
-    description: 'gatheringRate * 1.034'
-}
-
-const cisternGatheringRateLevel2: GatheringRateModifier = {
-    id: GatheringRateModifierId.CISTERN_LEVEL_2,
-    apply: gatheringRates => ({
         food: gatheringRates.food * 1.067,
         wood: gatheringRates.wood * 1.067,
         gold: gatheringRates.gold * 1.067,
@@ -28,37 +17,48 @@ const cisternGatheringRateLevel2: GatheringRateModifier = {
     description: 'gatheringRate * 1.067'
 }
 
+const cisternGatheringRateLevel2: GatheringRateModifier = {
+    id: GatheringRateModifierId.CISTERN_LEVEL_2,
+    apply: gatheringRates => ({
+        food: gatheringRates.food * 1.093,
+        wood: gatheringRates.wood * 1.093,
+        gold: gatheringRates.gold * 1.093,
+        stone: gatheringRates.stone * 1.093,
+    }),
+    description: 'gatheringRate * 1.093'
+}
+
 const cisternGatheringRateLevel3: GatheringRateModifier = {
     id: GatheringRateModifierId.CISTERN_LEVEL_3,
     apply: gatheringRates => ({
-        food: gatheringRates.food * 1.1,
-        wood: gatheringRates.wood * 1.1,
-        gold: gatheringRates.gold * 1.1,
-        stone: gatheringRates.stone * 1.1,
+        food: gatheringRates.food * 1.12,
+        wood: gatheringRates.wood * 1.12,
+        gold: gatheringRates.gold * 1.12,
+        stone: gatheringRates.stone * 1.12,
     }),
-    description: 'gatheringRate * 1.1'
+    description: 'gatheringRate * 1.12'
 }
 
 const cisternGatheringRateLevel4: GatheringRateModifier = {
     id: GatheringRateModifierId.CISTERN_LEVEL_4,
     apply: gatheringRates => ({
-        food: gatheringRates.food * 1.134,
-        wood: gatheringRates.wood * 1.134,
-        gold: gatheringRates.gold * 1.134,
-        stone: gatheringRates.stone * 1.134,
+        food: gatheringRates.food * 1.146,
+        wood: gatheringRates.wood * 1.146,
+        gold: gatheringRates.gold * 1.146,
+        stone: gatheringRates.stone * 1.146,
     }),
-    description: 'gatheringRate * 1.134'
+    description: 'gatheringRate * 1.146'
 }
 
 const cisternGatheringRateLevel5: GatheringRateModifier = {
     id: GatheringRateModifierId.CISTERN_LEVEL_5,
     apply: gatheringRates => ({
-        food: gatheringRates.food * 1.167,
-        wood: gatheringRates.wood * 1.167,
-        gold: gatheringRates.gold * 1.167,
-        stone: gatheringRates.stone * 1.167,
+        food: gatheringRates.food * 1.173,
+        wood: gatheringRates.wood * 1.173,
+        gold: gatheringRates.gold * 1.173,
+        stone: gatheringRates.stone * 1.173,
     }),
-    description: 'gatheringRate * 1.167'
+    description: 'gatheringRate * 1.173'
 }
 
 const conscriptioLevel1: ProductionSpeedModifier = {
