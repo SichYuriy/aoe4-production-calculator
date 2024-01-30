@@ -13,6 +13,43 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '102',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Meditation Gardens: Berry food per minute reduced from 8 to 6. Stone mine resources per" +
+            " minute reduced from 30 to 25. Gold mine resources per minute reduced from 30 to 25."
+    },
+    {
+        id: '101',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Sultanhani Trade Network: Reduced income of each Trader from 28 to 24 Gold per minute"
+    },
+    {
+        id: '100',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Dragon Villager gather rate bonus increased from +25% to +28%"
+    },
+    {
+        id: '99',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Chinese Dock: Decreased work rate bonus from 20% to 10%"
+    },
+    {
+        id: '98',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Cisterns gather bonus increased from 5/10/15/20/25% to 10/14/18/22/26% based"
+    },
+    {
+        id: '97',
+        date: new Date(2024, 0, 30),
+        patch: '9.2.628',
+        description: "Tithe Barns income reduced from 30 Food, 30 Wood, 30 Stone to 40 Food, 40 Wood, 10 Stone"
+    },
+    {
         id: '96',
         date: new Date(2023, 11, 17),
         patch: '9.1.370',
