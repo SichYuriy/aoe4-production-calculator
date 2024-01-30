@@ -26,7 +26,7 @@ function CisternGatheringRate() {
 
     return (
         <div className={shared.civilizationSpecificFeature}>
-            <Tooltip header={'Cistern gathering rates'} text={'Improves the gather rate of nearby villagers by +5/10/15/20/25%'}>
+            <Tooltip header={'Cistern gathering rates'} text={'Improves the gather rate of nearby villagers by +10/14/18/22/26%'}>
                 <div>
                     <img className={shared.civilizationSpecificFeatureIcon} src={cisternIcon} alt={'cistern'}/>
                 </div>
