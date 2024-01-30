@@ -19,7 +19,7 @@ const songDynasty: ProductionSpeedModifier = {
 export const chineseDocks: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.CHINESE_DOCKS,
     canBeApplied: unit => unit.building === Building.DOCK,
-    productionSpeedBonus: 0.2
+    productionSpeedBonus: 0.1
 }
 
 export const foodImperialOfficial: GatheringRateModifier = {

@@ -1,2 +1,26 @@
-Japanese:
- - When Villagers deposit Gold, 20% extra Stone is also produced and vice versa. ??
+- Tithe Barns income reduced from 30 Food, 30 Wood, 30 Stone to 40 Food, 40 Wood, 10 Stone. +
+- Crosscut Saw now also provides +5 Wood carry capacity in addition to +15% gather rate.
+- Cupellation no longer increases gather rate, instead Villagers drop off 15% more Gold.
+- Corrected an issue where the first Golden Age Tier was giving +15% bonus to Gold, Stone, and Wood instead of 10%. +
+
+Cistern
+- Gather bonus increased from 5/10/15/20/25% to 10/14/18/22/26% based +
+- Cistern Dialectius: Research speeds decreased from 50/100/150/200/250% to 30/60/90/120/150% +
+### Chinese:
+- Dock: Decreased work rate bonus from 20% to 10%.
+### Japanese:
+- Zen: Buddhist Monks generate +25 gold every 60 seconds.
+### OOTD
+- Dragon Villager gather rate bonus increased from +25% to +28%
+
+### Ottomans
+- Sultanhani Trade Network: Reduced income of each Trader from 28 to 24 Gold per minute, Increased Trader garrison slots from 6 to 10.
+
+### Zhu Xi
+
+- Meditation Gardens: Resource generation reduced as follows:
+  Berry food per minute reduced from 8 to 6.
+  Stone mine resources per minute reduced from 30 to 25.
+  Gold mine resources per minute reduced from 30 to 25.
+
+- Dock work rate bonus decreased from 20% to 10%.
