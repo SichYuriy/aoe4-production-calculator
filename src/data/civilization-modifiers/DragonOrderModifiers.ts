@@ -18,13 +18,13 @@ const dragonVillagers: GatheringRateModifier = {
         }
 
         return {
-            food: rates.food * (foodMultiplier + 0.2),
-            wood: rates.wood * (1.035 + 0.17),
-            gold: rates.gold * (1.035 + 0.2),
-            stone: rates.stone * (1.035 + 0.2)
+            food: rates.food * (foodMultiplier + 0.21),
+            wood: rates.wood * (1.035 + 0.18),
+            gold: rates.gold * (1.035 + 0.21),
+            stone: rates.stone * (1.035 + 0.21)
         };
     },
-    description: '[berries, deer] * 1.245, [sheep, farm] * 1.215, [wood] * 1.205, [gold, stone] * 1.235'
+    description: '[berries, deer] * 1.255, [sheep, farm] * 1.225, [wood] * 1.215, [gold, stone] * 1.245'
 }
 
 const regnitzCathedral: PassiveIncomeModifier = {
