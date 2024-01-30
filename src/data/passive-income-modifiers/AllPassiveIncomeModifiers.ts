@@ -23,10 +23,10 @@ let sacredSites: PassiveIncomeModifier = {
 
 let titheBarn: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.TITHE_BARN,
-    food: 30,
+    food: 40,
     gold: 0,
-    wood: 30,
-    stone: 30,
+    wood: 40,
+    stone: 10,
     source: PassiveIncomeSource.RELICS
 }
 
