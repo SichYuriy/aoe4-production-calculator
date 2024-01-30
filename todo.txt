@@ -19,8 +19,8 @@ Cistern
 ### Zhu Xi
 
 - Meditation Gardens: Resource generation reduced as follows:
-  Berry food per minute reduced from 8 to 6.
-  Stone mine resources per minute reduced from 30 to 25.
+  Berry food per minute reduced from 8 to 6. +
+  Stone mine resources per minute reduced from 30 to 25. +
   Gold mine resources per minute reduced from 30 to 25.
 
-- Dock work rate bonus decreased from 20% to 10%.
+- Dock work rate bonus decreased from 20% to 10%. +

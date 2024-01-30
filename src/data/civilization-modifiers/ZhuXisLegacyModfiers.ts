@@ -31,7 +31,7 @@ const zhuXisLegacyYuanDynasty: UnitCostModifier = {
 
 const meditationGardenBush: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.MEDITATION_GARDEN_BUSH,
-    food: 8,
+    food: 6,
     gold: 0,
     wood: 0,
     stone: 0,
@@ -41,7 +41,7 @@ const meditationGardenBush: PassiveIncomeModifier = {
 const meditationGardenGold: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.MEDITATION_GARDEN_GOLD,
     food: 0,
-    gold: 30,
+    gold: 25,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.MEDITATION_GARDEN_GOLD
@@ -52,7 +52,7 @@ const meditationGardenStone: PassiveIncomeModifier = {
     food: 0,
     gold: 0,
     wood: 0,
-    stone: 30,
+    stone: 25,
     source: PassiveIncomeSource.MEDITATION_GARDEN_STONE
 };
 

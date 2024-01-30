@@ -20,7 +20,7 @@ function MeditationGarden() {
 
     return (
         <div className={shared.civilizationSpecificFeature}>
-            <Tooltip header={'Meditation Garden'} text={'8 food/min per Berry Bush, 1 wood/min per tree, 30 gold/min per Gold Mine, 30 stone/min per Stone Outcropping'}>
+            <Tooltip header={'Meditation Garden'} text={'6 food/min per Berry Bush, 1 wood/min per tree, 25 gold/min per Gold Mine, 25 stone/min per Stone Outcropping'}>
                 <div>
                     <img className={shared.civilizationSpecificFeatureIcon} src={meditationGardenIcon} alt={'meditation garden'}/>
                 </div>
