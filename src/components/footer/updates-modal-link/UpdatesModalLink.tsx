@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '106',
+        date: new Date(2024, 2, 19),
+        patch: '10.0.576',
+        description: "Tower of the Sultan build time reduced from 200 to 140 seconds"
+    },
+    {
         id: '105',
         date: new Date(2024, 2, 19),
         patch: '10.0.576',

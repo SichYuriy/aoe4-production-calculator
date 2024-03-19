@@ -1128,7 +1128,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'TOWER_OF_SULTAN',
         icon: towerOfTheSultanIcon,
         name: 'tower of sultan',
-        productionTime: 200,
+        productionTime: 140,
         cost: new UnitCost(0, 350, 650, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
