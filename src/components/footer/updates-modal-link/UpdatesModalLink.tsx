@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '105',
+        date: new Date(2024, 2, 19),
+        patch: '10.0.576',
+        description: "Camel Archer cost reduced from 180 Food to 170 Food"
+    },
+    {
         id: '104',
         date: new Date(2024, 2, 19),
         patch: '10.0.576',
