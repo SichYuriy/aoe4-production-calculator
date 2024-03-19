@@ -18,7 +18,7 @@ Camel Archer cost reduced from 180 Food to 170 Food. +
 Tower of the Sultan build time reduced from 200 to 140 seconds +
 
 Byzantines:
-Chierosiphon cost reduced from 200 Wood 100 Gold to 200 Wood 60 Gold.
+Chierosiphon cost reduced from 200 Wood 100 Gold to 200 Wood 60 Gold. +
 
 
 Order of the Dragon

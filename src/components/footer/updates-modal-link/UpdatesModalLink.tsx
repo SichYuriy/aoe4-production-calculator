@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '107',
+        date: new Date(2024, 2, 19),
+        patch: '10.0.576',
+        description: "Chierosiphon cost reduced from 200 Wood 100 Gold to 200 Wood 60 Gold"
+    },
+    {
         id: '106',
         date: new Date(2024, 2, 19),
         patch: '10.0.576',
