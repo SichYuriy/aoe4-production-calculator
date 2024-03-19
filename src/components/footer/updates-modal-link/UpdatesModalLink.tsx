@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '103',
+        date: new Date(2024, 2, 19),
+        patch: '10.0.576',
+        description: "Workshop Ram train time reduced from 40 to 35 seconds"
+    },
+    {
         id: '102',
         date: new Date(2024, 0, 30),
         patch: '9.2.628',

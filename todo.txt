@@ -1,26 +1,26 @@
-- Tithe Barns income reduced from 30 Food, 30 Wood, 30 Stone to 40 Food, 40 Wood, 10 Stone. +
 - Crosscut Saw now also provides +5 Wood carry capacity in addition to +15% gather rate.
 - Cupellation no longer increases gather rate, instead Villagers drop off 15% more Gold.
-- Corrected an issue where the first Golden Age Tier was giving +15% bonus to Gold, Stone, and Wood instead of 10%. +
 
-Cistern
-- Gather bonus increased from 5/10/15/20/25% to 10/14/18/22/26% based +
-- Cistern Dialectius: Research speeds decreased from 50/100/150/200/250% to 30/60/90/120/150% +
-### Chinese:
-- Dock: Decreased work rate bonus from 20% to 10%. +
 ### Japanese:
 - Zen: Buddhist Monks generate +25 gold every 60 seconds.
-### OOTD
-- Dragon Villager gather rate bonus increased from +25% to +28% +
 
-### Ottomans
-- Sultanhani Trade Network: Reduced income of each Trader from 28 to 24 Gold per minute, Increased Trader garrison slots from 6 to 10.+
 
-### Zhu Xi
+next patch:
 
-- Meditation Gardens: Resource generation reduced as follows:
-  Berry food per minute reduced from 8 to 6. +
-  Stone mine resources per minute reduced from 30 to 25. +
-  Gold mine resources per minute reduced from 30 to 25.
+Workshop Ram train time reduced from 40 to 35 seconds +
 
-- Dock work rate bonus decreased from 20% to 10%. +
+Stone earned from Relics in Pagoda’s reduced by 50% and Food/Wood has been increased in its place.
+ - Now generates 100 Gold, 62 Food, 62 Wood, 25 Stone
+
+Abbasid:
+Camel Archer cost reduced from 180 Food to 170 Food.
+
+Tower of the Sultan build time reduced from 200 to 140 seconds
+
+Byzantines:
+Chierosiphon cost reduced from 200 Wood 100 Gold to 200 Wood 60 Gold.
+
+
+Order of the Dragon
+Aachen Chapel bonus increased from 10% to 15%.
+
