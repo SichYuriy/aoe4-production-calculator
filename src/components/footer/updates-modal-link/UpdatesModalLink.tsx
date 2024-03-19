@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '104',
+        date: new Date(2024, 2, 19),
+        patch: '10.0.576',
+        description: "Pagoda now generates 100 Gold, 62 Food, 62 Wood, 25 Stone"
+    },
+    {
         id: '103',
         date: new Date(2024, 2, 19),
         patch: '10.0.576',

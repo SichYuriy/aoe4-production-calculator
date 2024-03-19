@@ -10,7 +10,7 @@ next patch:
 Workshop Ram train time reduced from 40 to 35 seconds +
 
 Stone earned from Relics in Pagoda’s reduced by 50% and Food/Wood has been increased in its place.
- - Now generates 100 Gold, 62 Food, 62 Wood, 25 Stone
+ - Now generates 100 Gold, 62 Food, 62 Wood, 25 Stone +
 
 Abbasid:
 Camel Archer cost reduced from 180 Food to 170 Food.

@@ -68,10 +68,10 @@ export const granary: GatheringRateModifier = {
 
 export const pagoda: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.PAGODA,
-    food: 50,
+    food: 62,
     gold: 100,
-    wood: 50,
-    stone: 50,
+    wood: 62,
+    stone: 25,
     source: PassiveIncomeSource.PAGODA
 }
 
