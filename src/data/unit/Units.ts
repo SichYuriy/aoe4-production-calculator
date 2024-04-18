@@ -1269,7 +1269,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: wynguardFootmanIcon,
         name: 'wynguard footmen',
         productionTime: 50,
-        cost: new UnitCost(200, 500, 0, 0),
+        cost: new UnitCost(300, 400, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],

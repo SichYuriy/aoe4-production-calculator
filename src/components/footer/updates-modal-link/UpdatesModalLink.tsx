@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '111',
+        date: new Date(2024, 3, 18),
+        patch: '10.1.48',
+        description: "Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold"
+    },
+    {
         id: '110',
         date: new Date(2024, 3, 18),
         patch: '10.1.48',

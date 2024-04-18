@@ -19,7 +19,7 @@ Byzantines:
 - Dromon Food cost reduced from 110 to 100 +
 
 English:
-- Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold
+- Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold +
 - Ranger and Footman train time reduced from 50 to 45 seconds
 
 French:
