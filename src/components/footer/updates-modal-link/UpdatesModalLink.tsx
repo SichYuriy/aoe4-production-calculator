@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '112',
+        date: new Date(2024, 3, 18),
+        patch: '10.1.48',
+        description: "Ranger and Footman train time reduced from 50 to 45 seconds"
+    },
+    {
         id: '111',
         date: new Date(2024, 3, 18),
         patch: '10.1.48',

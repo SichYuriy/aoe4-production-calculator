@@ -20,7 +20,7 @@ Byzantines:
 
 English:
 - Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold +
-- Ranger and Footman train time reduced from 50 to 45 seconds
+- Ranger and Footman train time reduced from 50 to 45 seconds +
 
 French:
 - War Cog Food cost reduced from 85 to 75
