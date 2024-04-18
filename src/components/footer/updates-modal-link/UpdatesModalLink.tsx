@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '113',
+        date: new Date(2024, 3, 18),
+        patch: '10.1.48',
+        description: "War Cog Food cost reduced from 85 to 75"
+    },
+    {
         id: '112',
         date: new Date(2024, 3, 18),
         patch: '10.1.48',

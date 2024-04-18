@@ -23,7 +23,7 @@ English:
 - Ranger and Footman train time reduced from 50 to 45 seconds +
 
 French:
-- War Cog Food cost reduced from 85 to 75
+- War Cog Food cost reduced from 85 to 75 +
 
 Ottomans:
 - Grand Galley Food cost reduced from 150 to 135
