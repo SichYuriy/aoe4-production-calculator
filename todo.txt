@@ -16,7 +16,7 @@ All Civilizations:
 - Springald ship Food cost reduced from 120 to 110 +
 
 Byzantines:
-- Dromon Food cost reduced from 110 to 100
+- Dromon Food cost reduced from 110 to 100 +
 
 English:
 - Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold

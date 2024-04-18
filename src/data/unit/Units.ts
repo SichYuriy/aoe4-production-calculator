@@ -1336,7 +1336,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: dromonIcon,
         name: 'dromon',
         productionTime: 30,
-        cost: new UnitCost(110, 60, 200, 0),
+        cost: new UnitCost(100, 60, 200, 0),
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.BYZANTINES],
