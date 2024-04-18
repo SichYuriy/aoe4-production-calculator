@@ -5,22 +5,26 @@
 - Zen: Buddhist Monks generate +25 gold every 60 seconds.
 
 
-next patch:
-
-Workshop Ram train time reduced from 40 to 35 seconds +
-
-Stone earned from Relics in Pagoda’s reduced by 50% and Food/Wood has been increased in its place.
- - Now generates 100 Gold, 62 Food, 62 Wood, 25 Stone +
-
-Abbasid:
-Camel Archer cost reduced from 180 Food to 170 Food. +
-
-Tower of the Sultan build time reduced from 200 to 140 seconds +
-
-Byzantines:
-Chierosiphon cost reduced from 200 Wood 100 Gold to 200 Wood 60 Gold. +
-
+### season 7 patch:
 
 Order of the Dragon
-Aachen Chapel bonus increased from 10% to 15%.
+- Aachen Chapel bonus increased from 10% to 15%.
+
+### Patch 10.1.48:
+All Civilizations:
+- Arrow ships Food cost reduced from 90 to 80
+- Springald ship Food cost reduced from 120 to 110
+
+Byzantines:
+- Dromon Food cost reduced from 110 to 100
+
+English:
+- Wynguard Footman cost changed from 200 Food, 500 Gold to 300 Food, 400 Gold
+- Ranger and Footman train time reduced from 50 to 45 seconds
+
+French:
+- War Cog Food cost reduced from 85 to 75
+
+Ottomans:
+- Grand Galley Food cost reduced from 150 to 135
 
