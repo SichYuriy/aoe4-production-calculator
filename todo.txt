@@ -12,8 +12,8 @@ Order of the Dragon
 
 ### Patch 10.1.48:
 All Civilizations:
-- Arrow ships Food cost reduced from 90 to 80
-- Springald ship Food cost reduced from 120 to 110
+- Arrow ships Food cost reduced from 90 to 80 +
+- Springald ship Food cost reduced from 120 to 110 +
 
 Byzantines:
 - Dromon Food cost reduced from 110 to 100

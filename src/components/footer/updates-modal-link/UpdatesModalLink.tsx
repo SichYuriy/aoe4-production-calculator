@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '109',
+        date: new Date(2024, 3, 18),
+        patch: '10.1.48',
+        description: "Springald ship Food cost reduced from 120 to 110"
+    },
+    {
         id: '108',
         date: new Date(2024, 3, 18),
         patch: '10.1.48',
