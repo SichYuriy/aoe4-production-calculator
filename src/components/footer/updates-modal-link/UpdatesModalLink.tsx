@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '114',
+        date: new Date(2024, 3, 18),
+        patch: '10.1.48',
+        description: "Grand Galley Food cost reduced from 150 to 135"
+    },
+    {
         id: '113',
         date: new Date(2024, 3, 18),
         patch: '10.1.48',
