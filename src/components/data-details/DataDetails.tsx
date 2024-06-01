@@ -11,6 +11,7 @@ import LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS
     from "../../data/limited-food-gathering-source-modifiers/AllLimitedFoodGatheringSourceModifiers";
 import {selectActiveCostModifiersPerUnit} from "../../state/CostModifiersPerUnitSlice";
 import ProductionSpeedDetails from "./production-speed-details/ProductionSpeedDetails";
+import ResourceDropOffDetails from "./resource-drop-off-details/ResourceDropOffDetails";
 
 function DataDetails() {
     const [seeDataDetails, setSeeDataDetails] = useState(false);
@@ -46,6 +47,9 @@ function DataDetails() {
                     </div>
                     <div>
                         <ModifierDetails modifiersLabel={'Unique food source:'} items={limitedFoodGatheringSourceModifiers}/>
+                    </div>
+                    <div>
+                        <ResourceDropOffDetails/>
                     </div>
                 </div>
             }

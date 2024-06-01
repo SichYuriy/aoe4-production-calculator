@@ -4,6 +4,8 @@ import changeCivilization from "./actions/CivilizationChnagedAction";
 import {
     ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
+import {RootState} from "../store";
+import ResourceDropOffModifier from "../model/ResourceDropOffModifier";
 
 export interface ResourceDropOffModifiersState {
     [key: string]: boolean
@@ -38,7 +40,13 @@ export const resourceDropOffModifiers = createSlice({
             ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS.forEach(id => state[id] = false);
         })
     }
-})
+});
+
+export let selectActiveResourceDropOffModifiers = (state: RootState): ResourceDropOffModifier[] => {
+    return Object.keys(state.resourceDropOffModifiers)
+        .filter(id => state.resourceDropOffModifiers[id])
+        .map(id => RESOURCE_DROP_OFF_MODIFIERS[id]);
+}
 
 export const {toggleResourceDropOffModifier, unselectSelectResourceDropOff} = resourceDropOffModifiers.actions;
 export default resourceDropOffModifiers.reducer;
