@@ -1,5 +1,6 @@
 enum ResourceDropOffModifierId {
-    ID = 'ID',
+    CUPELLATION = 'CUPELLATION',
+    IMPROVED_CUPELLATION = 'IMPROVED_CUPELLATION',
 }
 
 export default ResourceDropOffModifierId;

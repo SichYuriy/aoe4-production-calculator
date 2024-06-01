@@ -10,6 +10,8 @@ import {
     DOUBLE_BROADAX_MULTIPLIER, FERTILIZATION_MULTIPLIER, HORTICULTURE_MULTIPLIER,
     LUMBER_PRESERVATION_MULTIPLIER, SPECIALIZED_PICK_MULTIPLIER
 } from "../gathering-rate-modifiers/GatheringRateModifierId";
+import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
 
 const steppeRedoubt: GatheringRateModifier = {
     id: GatheringRateModifierId.STEPPE_REDOUBT,
@@ -28,7 +30,6 @@ export const IMPROVED_FERTILIZATION_MULTIPLIER = (CROSS_BREEDING_MULTIPLIER - 1)
 export const IMPROVED_CROSS_BREEDING_MULTIPLIER = (IMPROVED_FERTILIZATION_MULTIPLIER - 1) * 0.9 + 1;
 export const IMPROVED_SPECIALIZED_PICK_MULTIPLIER = (ACID_DISTILLATION_MULTIPLIER - 1) / 2 * 0.9 + 1;
 export const IMPROVED_ACID_DISTILLATION_MULTIPLIER = (CUPELLATION_MULTIPLIER - 1) / 2 * 0.9 + 1;
-export const IMPROVED_CUPELLATION_MULTIPLIER = (IMPROVED_ACID_DISTILLATION_MULTIPLIER - 1) * 0.9 + 1;
 
 const improvedDoubleBroadax: GatheringRateModifier = {
     id: GatheringRateModifierId.IMPROVED_DOUBLE_BROADAX,
@@ -147,19 +148,19 @@ const improvedAcidDistillation: GatheringRateModifier = {
     description: `[gold, stone] * ${IMPROVED_ACID_DISTILLATION_MULTIPLIER.toFixed(2)}/${(IMPROVED_ACID_DISTILLATION_MULTIPLIER * ACID_DISTILLATION_MULTIPLIER).toFixed(2)}`
 };
 
-const improvedCupellation: GatheringRateModifier = {
-    id: GatheringRateModifierId.IMPROVED_CUPELLATION,
-    apply: (rates, foodSource, allSelectedModifiers) => {
-        const multiplier = allSelectedModifiers.includes(GatheringRateModifierId.CUPELLATION)
-            ? IMPROVED_CUPELLATION_MULTIPLIER
-            : CUPELLATION_MULTIPLIER * IMPROVED_CUPELLATION_MULTIPLIER;
+const improvedCupellation: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.IMPROVED_CUPELLATION,
+    getDropOffPercentage: allSelectedModifiers => {
+        const dropOff = allSelectedModifiers.includes(ResourceDropOffModifierId.CUPELLATION)
+            ? 7.5
+            : 22.5;
         return {
-            ...rates,
-            gold: rates.gold * multiplier,
-            stone: rates.stone * multiplier,
+            food: 0,
+            gold: dropOff,
+            wood: 0,
+            stone: 0
         };
-    },
-    description: `[gold, stone] * ${IMPROVED_CUPELLATION_MULTIPLIER.toFixed(2)}/${(IMPROVED_CUPELLATION_MULTIPLIER * CUPELLATION_MULTIPLIER).toFixed(2)}`
+    }
 }
 
 const GATHERING_RATE_MODIFIERS = {
@@ -172,7 +173,10 @@ const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.IMPROVED_CROSS_BREEDING]: improvedCrossBreeding,
     [GatheringRateModifierId.IMPROVED_SPECIALIZED_PICK]: improvedSpecializedPick,
     [GatheringRateModifierId.IMPROVED_ACID_DISTILLATION]: improvedAcidDistillation,
-    [GatheringRateModifierId.IMPROVED_CUPELLATION]: improvedCupellation
+}
+
+const RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.IMPROVED_CUPELLATION]: improvedCupellation
 }
 
 const MONGOLS_MODIFIERS: CivilizationModifiers = {
@@ -189,7 +193,7 @@ const MONGOLS_MODIFIERS: CivilizationModifiers = {
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
-    allResourceDropOffModifiers: {}
+    allResourceDropOffModifiers: RESOURCE_DROP_OFF_MODIFIERS
 }
 
 export default MONGOLS_MODIFIERS;

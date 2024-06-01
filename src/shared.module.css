@@ -33,3 +33,9 @@
     flex-direction: column;
     color: white;
 }
+
+.upgradeGroup {
+    padding: 1px;
+    display: flex;
+    column-gap: 2px;
+}

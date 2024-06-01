@@ -3,7 +3,7 @@ import FoodSource from "../../model/FoodSource";
 import GatheringRateModifierId, {
     ACID_DISTILLATION_MULTIPLIER,
     CROSS_BREEDING_MULTIPLIER,
-    CROSSCUT_SAW_MULTIPLIER, CUPELLATION_MULTIPLIER,
+    CROSSCUT_SAW_MULTIPLIER,
     DOUBLE_BROADAX_MULTIPLIER, FERTILIZATION_MULTIPLIER, HORTICULTURE_MULTIPLIER,
     LUMBER_PRESERVATION_MULTIPLIER, SPECIALIZED_PICK_MULTIPLIER
 } from "./GatheringRateModifierId";
@@ -120,17 +120,6 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             };
         },
         description: `[gold, stone] * ${ACID_DISTILLATION_MULTIPLIER}`
-    },
-    [GatheringRateModifierId.CUPELLATION]: {
-        id: GatheringRateModifierId.CUPELLATION,
-        apply: rates => {
-            return {
-                ...rates,
-                gold: rates.gold * CUPELLATION_MULTIPLIER,
-                stone: rates.stone * CUPELLATION_MULTIPLIER,
-            };
-        },
-        description: `[gold, stone] * ${CUPELLATION_MULTIPLIER.toFixed(2)}`
     },
     [GatheringRateModifierId.FORESTRY]: {
         id: GatheringRateModifierId.FORESTRY,
