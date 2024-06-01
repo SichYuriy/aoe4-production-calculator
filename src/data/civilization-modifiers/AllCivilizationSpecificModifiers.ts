@@ -6,6 +6,7 @@ import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeMo
 import PassiveGoldFromFoodVillagerModifierId
     from "../passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
 
 export const GATHERING_RATE_MODIFIERS_DEFAULT: { [key: string]: GatheringRateModifierId[] } = {};
 export const ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS: GatheringRateModifierId[] = [];
@@ -18,6 +19,7 @@ export const ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS: PassiveIncomeModifierId
 export const PASSIVE_INCOME_MODIFIERS_DEFAULT: { [key: string]: PassiveIncomeModifierId[]} = {};
 export const ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS: PassiveIncomeModifierId[] = [];
 export const ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS: PassiveGoldFromFoodVillagerModifierId[] = [];
+export const ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS: ResourceDropOffModifierId[] = [];
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
     GATHERING_RATE_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultGatheringRateModifiers;
@@ -43,4 +45,7 @@ allCivilizationModifiers.forEach(civilizationModifiers => {
 
     // @ts-ignore
     ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveGoldFromFoodVillagerModifiers));
+
+    // @ts-ignore
+    ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS.push(...Object.keys(civilizationModifiers.allResourceDropOffModifiers));
 })

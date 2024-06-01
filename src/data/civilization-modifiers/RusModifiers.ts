@@ -59,7 +59,8 @@ const RUS_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default RUS_MODIFIERS;

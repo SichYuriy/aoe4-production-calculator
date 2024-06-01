@@ -57,7 +57,8 @@ const DRAGON_ORDER_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default DRAGON_ORDER_MODIFIERS;

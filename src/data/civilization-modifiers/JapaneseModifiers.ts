@@ -122,7 +122,8 @@ const JAPANESE_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers:JAPANESE_DEFAULT_PASSIVE_INCOME_MODIFIERS,
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 };
 
 export default JAPANESE_MODIFIERS;

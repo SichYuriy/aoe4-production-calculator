@@ -100,7 +100,8 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS,
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default ENGLISH_MODIFIERS;

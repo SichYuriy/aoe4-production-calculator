@@ -188,7 +188,8 @@ const MONGOLS_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default MONGOLS_MODIFIERS;

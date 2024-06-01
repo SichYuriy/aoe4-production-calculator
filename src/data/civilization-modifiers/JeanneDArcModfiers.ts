@@ -48,7 +48,8 @@ const JEANNE_D_ARC_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: COST_MODIFIERS_PER_UNIT
+    allCostModifiersPerUnit: COST_MODIFIERS_PER_UNIT,
+    allResourceDropOffModifiers: {}
 }
 
 export default JEANNE_D_ARC_MODIFIERS;

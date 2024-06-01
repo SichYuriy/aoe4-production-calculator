@@ -12,6 +12,7 @@ import passiveGoldFromFoodVillagerModifiers from "./state/PassiveGoldFromFoodVil
 import minFoodWorkers from "./state/MinFoodWorkersSlice";
 import costModifiersPerUnit from "./state/CostModifiersPerUnitSlice";
 import featureFlags from "./state/FeatureFlagsSlice";
+import resourceDropOffModifiers from "./state/ResourceDropOffModifiersSlice";
 
 export const store = configureStore({
     reducer: {
@@ -27,7 +28,8 @@ export const store = configureStore({
         civilization: civilizationReducer,
         minFoodWorkers: minFoodWorkers,
         costModifiersPerUnit: costModifiersPerUnit,
-        featureFlags: featureFlags
+        featureFlags: featureFlags,
+        resourceDropOffModifiers: resourceDropOffModifiers
     }
 })
 

@@ -100,7 +100,8 @@ const OTTOMANS_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.SULTANHANI_TRADE_NETWORK],
     allLimitedFoodGatheringSourceModifiers: LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS,
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default OTTOMANS_MODIFIERS;

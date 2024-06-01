@@ -118,7 +118,8 @@ const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     defaultPassiveIncomeModifiers: DEFAULT_PASSIVE_INCOME_MODIFIERS,
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
-    allCostModifiersPerUnit: {}
+    allCostModifiersPerUnit: {},
+    allResourceDropOffModifiers: {}
 }
 
 export default ZHU_XIS_LEGACY_MODIFIERS;
