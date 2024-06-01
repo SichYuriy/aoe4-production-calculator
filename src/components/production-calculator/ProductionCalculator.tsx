@@ -12,6 +12,7 @@ import {selectActiveCostModifiers} from "../../state/CostModifiersSlice";
 import {useState} from "react";
 import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
 import {selectActivePassiveGoldFromFoodVillagerModifiers} from "../../state/PassiveGoldFromFoodVillagerModifiersSlice";
+import {selectActiveResourceDropOffModifiers} from "../../state/ResourceDropOffModifiersSlice";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
@@ -32,9 +33,10 @@ function ProductionCalculator() {
     const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
     const limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers);
     const passiveGoldFromFoodVillagerModifiers = useAppSelector(selectActivePassiveGoldFromFoodVillagerModifiers);
-    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers);
+    const resourceDropOffModifiers = useAppSelector(selectActiveResourceDropOffModifiers);
+    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers, resourceDropOffModifiers);
     let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers, passiveIncomeSources);
-    let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers, gatheringRateModifiers);
+    let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers, gatheringRateModifiers, resourceDropOffModifiers);
     let minFoodVillagers: number = useAppSelector(rootState => rootState.minFoodWorkers.value);
     let villagerCost = productionCalculatorService.calculateProductionVillagerCost(
         gatheringRates,

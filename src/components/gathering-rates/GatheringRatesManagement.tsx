@@ -13,6 +13,7 @@ import {
 } from "../../state/GatheringRatesSlice";
 import GatheringRates from "../../model/GatheringRates";
 import {selectActiveGatheringRateModifiers} from "../../state/GatheringRateModifiersSlice";
+import {selectActiveResourceDropOffModifiers} from "../../state/ResourceDropOffModifiersSlice";
 
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
 
@@ -22,7 +23,8 @@ function GatheringRatesManagement() {
     const useCustomGatheringRates: boolean = useAppSelector((rootState) => rootState.gatheringRates.useCustomGatheringRates);
     let customGatheringRates: GatheringRates = useAppSelector((rootState) => rootState.gatheringRates.customGatheringRates);
     const gatheringRateModifiers = useAppSelector(selectActiveGatheringRateModifiers);
-    let calculatedGatheringRates = gatheringRatesService.getCalculatedGatheringRates(foodSource, gatheringRateModifiers);
+    const resourceDropOffModifiers = useAppSelector(selectActiveResourceDropOffModifiers);
+    let calculatedGatheringRates = gatheringRatesService.getCalculatedGatheringRates(foodSource, gatheringRateModifiers, resourceDropOffModifiers);
     return (
         <div>
             <table>

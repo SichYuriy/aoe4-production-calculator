@@ -28,7 +28,7 @@ describe('LimitedFoodGatheringSourceService', () => {
         });
 
         it('no upgrades', () => {
-            let actual = subject.getAvailableGatheringSources(selectedSources, []);
+            let actual = subject.getAvailableGatheringSources(selectedSources, [], []);
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(5);
@@ -38,7 +38,7 @@ describe('LimitedFoodGatheringSourceService', () => {
         it('tier 1 upgrade', () => {
             let actual = subject.getAvailableGatheringSources(selectedSources, [
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.HORTICULTURE]
-            ]);
+            ], []);
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(4);
@@ -49,7 +49,7 @@ describe('LimitedFoodGatheringSourceService', () => {
             let actual = subject.getAvailableGatheringSources(selectedSources, [
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.HORTICULTURE],
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.FERTILIZATION]
-            ]);
+            ], []);
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(4);
@@ -61,7 +61,7 @@ describe('LimitedFoodGatheringSourceService', () => {
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.HORTICULTURE],
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.FERTILIZATION],
                 GATHERING_RATES_MODIFIERS[GatheringRateModifierId.CROSS_BREEDING]
-            ]);
+            ], []);
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(3);
@@ -75,7 +75,7 @@ describe('LimitedFoodGatheringSourceService', () => {
              sources = subject.getAvailableGatheringSources([{
                  id: LimitedFoodGatheringSourceModifierId.TWIN_MINARET_MEDRESE,
                  selected: true
-             }], []);
+             }], [], []);
         });
 
         it('when limited source is not enough to cover needs', () => {

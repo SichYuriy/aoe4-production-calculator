@@ -8,6 +8,7 @@ import ResourcesAmount from "../../model/ResourcesAmount";
 import {VillagersGathering} from "../../model/VillagersGathering";
 import {Utils} from "../../utils/Utils";
 import GatheringRatesService from "../GatheringRatesService";
+import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
 
 class LimitedFoodGatheringSourceService {
     private gatheringRatesService: GatheringRatesService;
@@ -17,11 +18,12 @@ class LimitedFoodGatheringSourceService {
     }
 
     public getAvailableGatheringSources(sourcesState: LimitedFoodGatheringSourceModifierState[],
-                                        gatheringRateModifiers: GatheringRateModifier[]): LimitedFoodGatheringSource[] {
+                                        gatheringRateModifiers: GatheringRateModifier[],
+                                        resourceDropOffModifiers: ResourceDropOffModifier[]): LimitedFoodGatheringSource[] {
         return sourcesState
             .map(sourceState => LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS[sourceState.id])
             .map(modifier => {
-                let effectiveGatheringRate = this.calculateGatheringRate(modifier, gatheringRateModifiers);
+                let effectiveGatheringRate = this.calculateGatheringRate(modifier, gatheringRateModifiers, resourceDropOffModifiers);
                 return {
                     effectiveGatheringRate: effectiveGatheringRate,
                     maxVillagers: Math.floor(modifier.gatheringRateLimit / effectiveGatheringRate)
@@ -58,8 +60,9 @@ class LimitedFoodGatheringSourceService {
     }
 
     private calculateGatheringRate(source: LimitedFoodGatheringSourceModifier,
-                                   gatheringRateModifiers: GatheringRateModifier[]): number {
-        return this.gatheringRatesService.getCalculatedGatheringRates(source.foodSource, gatheringRateModifiers).food;
+                                   gatheringRateModifiers: GatheringRateModifier[],
+                                   resourceDropOffModifiers: ResourceDropOffModifier[]): number {
+        return this.gatheringRatesService.getCalculatedGatheringRates(source.foodSource, gatheringRateModifiers, resourceDropOffModifiers).food;
     }
 }
 

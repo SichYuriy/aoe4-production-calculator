@@ -29,13 +29,40 @@ export default class ResourcesAmount {
         );
     }
 
-    public multiply(val: number) {
+    public multiply(other: ResourcesAmount): ResourcesAmount {
+        return ResourcesAmount.of(
+            this.food * other.food,
+            this.wood * other.wood,
+            this.gold * other.gold,
+            this.stone * other.stone,
+        );
+    }
+
+    public addNumber(val: number) {
+        return ResourcesAmount.of(
+            this.food + val,
+            this.wood + val,
+            this.gold + val,
+            this.stone + val,
+        );
+    }
+
+    public multiplyByNumber(val: number) {
         return ResourcesAmount.of(
             this.food * val,
             this.wood * val,
             this.gold * val,
             this.stone * val,
         );
+    }
+
+    public divideByNumber(val: number) {
+        return ResourcesAmount.of(
+            this.food / val,
+            this.wood / val,
+            this.gold / val,
+            this.stone / val,
+        )
     }
 
     public subtractToZero(other: ResourcesAmount) {

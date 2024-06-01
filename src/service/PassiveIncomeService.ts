@@ -14,7 +14,7 @@ export default class PassiveIncomeService {
         return Object.values(incomeModifiers)
             .filter(modifierState => modifierState.selected)
             .filter(modifierState => getSourceCount(modifierState) > 0)
-            .map(modifierState => ResourcesAmount.ofObj(PASSIVE_INCOME_MODIFIERS[modifierState.id]).multiply(getSourceCount(modifierState)))
+            .map(modifierState => ResourcesAmount.ofObj(PASSIVE_INCOME_MODIFIERS[modifierState.id]).multiplyByNumber(getSourceCount(modifierState)))
             .reduce((total, current) => total.add(current), new ResourcesAmount());
     }
 

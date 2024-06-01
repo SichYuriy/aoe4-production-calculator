@@ -11,26 +11,42 @@ import {
 } from "../data/BaseGatheringRates";
 import GatheringRateModifier from "../model/GatheringRateModifier";
 import {TWIN_MINARET_BASE_GATHERING_RATE} from "../data/civilization-modifiers/OttomansModifiers";
+import ResourceDropOffModifier from "../model/ResourceDropOffModifier";
+import ResourcesAmount from "../model/ResourcesAmount";
 
 class GatheringRatesService {
-    getGatheringRates(foodSource: FoodSource, useCustomGatheringRates: boolean, customGatheringRates: GatheringRates, modifiers: GatheringRateModifier[]): GatheringRates {
+    getGatheringRates(foodSource: FoodSource,
+                      useCustomGatheringRates: boolean,
+                      customGatheringRates: GatheringRates,
+                      modifiers: GatheringRateModifier[],
+                      resourceDropOffModifiers: ResourceDropOffModifier[]): GatheringRates {
         if (useCustomGatheringRates) {
             return customGatheringRates;
         }
-        return this.getCalculatedGatheringRates(foodSource, modifiers);
+        return this.getCalculatedGatheringRates(foodSource, modifiers, resourceDropOffModifiers);
     }
 
-    getCalculatedGatheringRates(foodSource: FoodSource, modifiers: GatheringRateModifier[]) {
+    getCalculatedGatheringRates(foodSource: FoodSource,
+                                modifiers: GatheringRateModifier[],
+                                resourceDropOffModifiers: ResourceDropOffModifier[]): GatheringRates {
         let baseGatheringRates = {
             food: this.getFoodGatheringRate(foodSource),
             gold: BASE_GOLD_GATHERING_RATE,
             wood: BASE_WOOD_GATHERING_RATE,
             stone: BASE_STONE_GATHERING_RATE
         };
-        return modifiers.reduce(
+        let modifiedGatheringRates = modifiers.reduce(
             (previousRates, modifier) => modifier.apply(previousRates, foodSource, modifiers.map(modifier => modifier.id)),
             baseGatheringRates
         );
+        let resourceDropOffPercentageBonus = resourceDropOffModifiers
+            .map(modifier => modifier.getDropOffPercentage(resourceDropOffModifiers.map(modifier => modifier.id)))
+            .map(ResourcesAmount.ofObj)
+            .reduce((prevValue, currentValue) => prevValue.add(currentValue),
+                new ResourcesAmount());
+
+        let dropOffMultiplier = resourceDropOffPercentageBonus.divideByNumber(100).addNumber(1);
+        return ResourcesAmount.ofObj(modifiedGatheringRates).multiply(dropOffMultiplier);
     }
 
     private getFoodGatheringRate(foodSource: FoodSource): number {
