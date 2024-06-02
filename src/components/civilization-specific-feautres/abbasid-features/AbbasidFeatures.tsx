@@ -11,11 +11,14 @@ import {toggleCostModifier} from "../../../state/CostModifiersSlice";
 import GatheringRateModifierId from "../../../data/gathering-rate-modifiers/GatheringRateModifierId";
 import {toggleGatheringRateModifier} from "../../../state/GatheringRateModifiersSlice";
 import shared from "../../../shared.module.css";
+import ResourceDropOffModifierId from "../../../data/resource-drop-off-modifiers/ResourceDropOffModifierId";
+import {toggleResourceDropOffModifier} from "../../../state/ResourceDropOffModifiersSlice";
 
 function AbbasidFeatures() {
     const dispatch = useAppDispatch();
     const costModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.costModifiers);
     const gatheringRateModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.gatheringRateModifiers);
+    const resourceDropOffModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.resourceDropOffModifiers);
 
     let freshFoodItem = <UpgradeItem icon={freshFoodIcon}
                                      selected={costModifiers[CostModifierId.FRESH_FOOD]}
@@ -26,8 +29,8 @@ function AbbasidFeatures() {
                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.AGRICULTURE))}
                                        tooltip={{header: 'Agriculture', text: 'Increases farm gathering rate'}}/>
     let improvedProcessingItem = <UpgradeItem icon={improvedProcessing}
-                                              selected={gatheringRateModifiers[GatheringRateModifierId.IMPROVED_PROCESSING]}
-                                              onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.IMPROVED_PROCESSING))}
+                                              selected={resourceDropOffModifiers[ResourceDropOffModifierId.IMPROVED_PROCESSING]}
+                                              onClick={() => dispatch(toggleResourceDropOffModifier(ResourceDropOffModifierId.IMPROVED_PROCESSING))}
                                               tooltip={{header: 'Improved processing', text: ' Villagers will drop off 8% more resources'}}/>
 
     return (

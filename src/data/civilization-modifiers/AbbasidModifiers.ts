@@ -8,6 +8,9 @@ import GatheringRateModifier from "../../model/GatheringRateModifier";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 import FoodSource from "../../model/FoodSource";
+import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
 export const tradersDiscount: UnitCostModifier = {
     id: CostModifierId.ABBASID_TRADER_DISCOUNT,
@@ -78,15 +81,9 @@ const agriculture: GatheringRateModifier = {
     description: 'farm * 1.1'
 }
 
-const improvedProcessing: GatheringRateModifier = {
-    id: GatheringRateModifierId.IMPROVED_PROCESSING,
-    apply: gatheringRates => ({
-        food: gatheringRates.food * 1.08,
-        wood: gatheringRates.wood * 1.08,
-        gold: gatheringRates.gold * 1.08,
-        stone: gatheringRates.stone * 1.08,
-    }),
-    description: 'gatheringRate * 1.08'
+const improvedProcessing: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.IMPROVED_PROCESSING,
+    getDropOffPercentage: () => ResourcesAmount.of(8, 8, 8, 8)
 }
 
 const GATHERING_RATE_MODIFIERS = {
@@ -95,7 +92,6 @@ const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.GOLDEN_AGE_2]: goldenAgeTier2,
     [GatheringRateModifierId.GOLDEN_AGE_3]: goldenAgeTier3GatheringRate,
     [GatheringRateModifierId.AGRICULTURE]: agriculture,
-    [GatheringRateModifierId.IMPROVED_PROCESSING]: improvedProcessing
 }
 
 const PRODUCTION_SPEED_MODIFIERS = {
@@ -105,6 +101,10 @@ const PRODUCTION_SPEED_MODIFIERS = {
 const COST_MODIFIERS = {
     [CostModifierId.ABBASID_TRADER_DISCOUNT]: tradersDiscount,
     [CostModifierId.FRESH_FOOD]: freshFood
+}
+
+const RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.IMPROVED_PROCESSING]: improvedProcessing
 }
 
 const ABBASID_MODIFIERS: CivilizationModifiers = {
@@ -121,7 +121,7 @@ const ABBASID_MODIFIERS: CivilizationModifiers = {
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
-    allResourceDropOffModifiers: {}
+    allResourceDropOffModifiers: RESOURCE_DROP_OFF_MODIFIERS
 }
 
 export default ABBASID_MODIFIERS;
