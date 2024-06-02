@@ -12,14 +12,11 @@ import {
 } from "../gathering-rate-modifiers/GatheringRateModifierId";
 import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
 import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
-const steppeRedoubt: GatheringRateModifier = {
-    id: GatheringRateModifierId.STEPPE_REDOUBT,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        gold: gatheringRates.gold * 1.5
-    }),
-    description: 'gold * 1.5'
+const steppeRedoubt: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.STEPPE_REDOUBT,
+    getDropOffPercentage: () => ResourcesAmount.of(0, 0, 50, 0)
 };
 
 export const IMPROVED_DOUBLE_BROADAX_MULTIPLIER = (LUMBER_PRESERVATION_MULTIPLIER - 1) / 2 * 0.9 + 1;
@@ -164,7 +161,6 @@ const improvedCupellation: ResourceDropOffModifier = {
 }
 
 const GATHERING_RATE_MODIFIERS = {
-    [GatheringRateModifierId.STEPPE_REDOUBT]: steppeRedoubt,
     [GatheringRateModifierId.IMPROVED_DOUBLE_BROADAX]: improvedDoubleBroadax,
     [GatheringRateModifierId.IMPROVED_LUMBER_PRESERVATION]: improvedLumberPreservation,
     [GatheringRateModifierId.IMPROVED_CROSSCUT_SAW]: improvedCrosscutSaw,
@@ -176,6 +172,7 @@ const GATHERING_RATE_MODIFIERS = {
 }
 
 const RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.STEPPE_REDOUBT]: steppeRedoubt,
     [ResourceDropOffModifierId.IMPROVED_CUPELLATION]: improvedCupellation
 }
 
