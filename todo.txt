@@ -1,12 +1,10 @@
-- Crosscut Saw now also provides +5 Wood carry capacity in addition to +15% gather rate.
-- Cupellation no longer increases gather rate, instead Villagers drop off 15% more Gold.
+- Crosscut Saw now also provides +5 Wood carry capacity in addition to +15% gather rate. (no math for +5 Wood carry)
 
 ### Japanese:
-- Zen: Buddhist Monks generate +25 gold every 60 seconds.
-
+- Zen: Buddhist Monks generate +25 gold every 60 seconds. (easy to add)
 
 ### season 7 patch:
 
 Order of the Dragon
-- Aachen Chapel bonus increased from 10% to 15%.
+- Aachen Chapel bonus increased from 10% to 15%. (Aachen Chapel not implemented)
 
