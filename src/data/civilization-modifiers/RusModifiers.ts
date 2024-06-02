@@ -2,6 +2,9 @@ import CivilizationModifiers from "../../model/CivilizationModifiers";
 import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
+import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
 const bounty100: GatheringRateModifier = {
     id: GatheringRateModifierId.BOUNTY_100,
@@ -30,20 +33,20 @@ const bounty500: GatheringRateModifier = {
     description: 'food * 1.11'
 }
 
-const woodenFortress: GatheringRateModifier = {
-    id: GatheringRateModifierId.WOODEN_FORTRESS,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        wood: gatheringRates.wood * 1.2
-    }),
-    description: 'wood * 1.2'
+const woodenFortress: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.WOODEN_FORTRESS,
+    getDropOffPercentage: () => ResourcesAmount.of(0, 20, 0, 0)
 }
 
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.BOUNTY_100]: bounty100,
     [GatheringRateModifierId.BOUNTY_250]: bounty250,
     [GatheringRateModifierId.BOUNTY_500]: bounty500,
-    [GatheringRateModifierId.WOODEN_FORTRESS]: woodenFortress
+
+}
+
+const RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.WOODEN_FORTRESS]: woodenFortress
 }
 
 const RUS_MODIFIERS: CivilizationModifiers = {
@@ -60,7 +63,7 @@ const RUS_MODIFIERS: CivilizationModifiers = {
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
-    allResourceDropOffModifiers: {}
+    allResourceDropOffModifiers: RESOURCE_DROP_OFF_MODIFIERS
 }
 
 export default RUS_MODIFIERS;
