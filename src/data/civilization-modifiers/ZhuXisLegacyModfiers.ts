@@ -16,6 +16,7 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
 
 const zhuXisLegacyYuanDynasty: UnitCostModifier = {
     id: CostModifierId.ZHU_XIS_LEGACY_YUAN_DYNASTY,
@@ -66,10 +67,6 @@ const meditationGardenTree: PassiveIncomeModifier = {
 };
 
 const ZHU_XI_GATHERING_RATE_MODIFIERS = {
-    [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
-    [GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
-    [GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
-    [GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial,
     [GatheringRateModifierId.GRANARY]: granary
 }
 
@@ -105,6 +102,13 @@ const DEFAULT_PASSIVE_INCOME_MODIFIERS = [
     PassiveIncomeModifierId.MEDITATION_GARDEN_TREE
 ];
 
+const ZHU_XI_RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
+    [ResourceDropOffModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
+    [ResourceDropOffModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
+    [ResourceDropOffModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial,
+}
+
 const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.ZHU_XIS_LEGACY,
     allGatheringRateModifiers: ZHU_XI_GATHERING_RATE_MODIFIERS,
@@ -119,7 +123,7 @@ const ZHU_XIS_LEGACY_MODIFIERS: CivilizationModifiers = {
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
-    allResourceDropOffModifiers: {}
+    allResourceDropOffModifiers: ZHU_XI_RESOURCE_DROP_OFF_MODIFIERS
 }
 
 export default ZHU_XIS_LEGACY_MODIFIERS;

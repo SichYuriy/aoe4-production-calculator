@@ -9,6 +9,9 @@ import FoodSource from "../../model/FoodSource";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
 import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import ResourceDropOffModifier from "../../model/ResourceDropOffModifier";
+import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
 const songDynasty: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.SONG_DYNASTY,
@@ -22,40 +25,25 @@ export const chineseDocks: ProductionSpeedModifier = {
     productionSpeedBonus: 0.1
 }
 
-export const foodImperialOfficial: GatheringRateModifier = {
-    id: GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        food: gatheringRates.food * 1.2
-    }),
-    description: 'food * 1.2'
+export const foodImperialOfficial: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.FOOD_IMPERIAL_OFFICIAL,
+    getDropOffPercentage: () => ResourcesAmount.of(20, 0, 0, 0)
 }
 
-export const woodImperialOfficial: GatheringRateModifier = {
-    id: GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        wood: gatheringRates.wood * 1.2
-    }),
-    description: 'wood * 1.2'
+export const woodImperialOfficial: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.WOOD_IMPERIAL_OFFICIAL,
+    getDropOffPercentage: () => ResourcesAmount.of(0, 20, 0, 0)
 }
 
-export const goldImperialOfficial: GatheringRateModifier = {
-    id: GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        gold: gatheringRates.gold * 1.2
-    }),
-    description: 'gold * 1.2'
+export const goldImperialOfficial: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.GOLD_IMPERIAL_OFFICIAL,
+    getDropOffPercentage: () => ResourcesAmount.of(0, 0, 20, 0)
 }
 
-export const stoneImperialOfficial: GatheringRateModifier = {
-    id: GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL,
-    apply: gatheringRates => ({
-        ...gatheringRates,
-        stone: gatheringRates.stone * 1.2
-    }),
-    description: 'stone * 1.2'
+export const stoneImperialOfficial: ResourceDropOffModifier = {
+    id: ResourceDropOffModifierId.STONE_IMPERIAL_OFFICIAL,
+    getDropOffPercentage: () => ResourcesAmount.of(0, 0, 0, 20)
+
 }
 
 export const granary: GatheringRateModifier = {
@@ -76,10 +64,6 @@ export const pagoda: PassiveIncomeModifier = {
 }
 
 const CHINESE_GATHERING_RATE_MODIFIERS = {
-    [GatheringRateModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
-    [GatheringRateModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
-    [GatheringRateModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
-    [GatheringRateModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial,
     [GatheringRateModifierId.GRANARY]: granary
 }
 
@@ -90,6 +74,13 @@ const CHINESE_PRODUCTION_SPEED_MODIFIERS = {
 
 const CHINESE_PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.PAGODA]: pagoda
+}
+
+const CHINESE_RESOURCE_DROP_OFF_MODIFIERS = {
+    [ResourceDropOffModifierId.FOOD_IMPERIAL_OFFICIAL]: foodImperialOfficial,
+    [ResourceDropOffModifierId.WOOD_IMPERIAL_OFFICIAL]: woodImperialOfficial,
+    [ResourceDropOffModifierId.GOLD_IMPERIAL_OFFICIAL]: goldImperialOfficial,
+    [ResourceDropOffModifierId.STONE_IMPERIAL_OFFICIAL]: stoneImperialOfficial,
 }
 
 const CHINESE_MODIFIERS: CivilizationModifiers = {
@@ -106,7 +97,7 @@ const CHINESE_MODIFIERS: CivilizationModifiers = {
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
-    allResourceDropOffModifiers: {}
+    allResourceDropOffModifiers: CHINESE_RESOURCE_DROP_OFF_MODIFIERS
 }
 
 export default CHINESE_MODIFIERS;
