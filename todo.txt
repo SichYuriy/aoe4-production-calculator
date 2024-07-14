@@ -8,3 +8,24 @@
 Order of the Dragon
 - Aachen Chapel bonus increased from 10% to 15%. (Aachen Chapel not implemented)
 
+### season 8 patch:
+
+All
+- Fishing boat trainn time increased from 25 to 30 seconds.
+
+English
+- White Tower production speed reduced from 100% to 75%.
+
+French
+- Town Centers work 10/15/20/25% faster per Age changed to 15/15/20/25%
+
+Japanese
+- Atakebune rocket damage increased from 30 to 40
+
+Mongols
+- Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold
+- Mangudai train time improved from 30 seconds to 28 seconds
+
+Rus
+- Lodya fishing boat train time increased to 46 seconds
+
