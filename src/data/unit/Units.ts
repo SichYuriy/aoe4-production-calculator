@@ -1025,7 +1025,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'RUS_FISHING_BOAT',
         icon: fishingBoatIcon,
         name: 'fishing boat',
-        productionTime: 38,
+        productionTime: 46,
         cost: new UnitCost(0, 0, 150, 0),
         types: [],
         building: Building.DOCK,

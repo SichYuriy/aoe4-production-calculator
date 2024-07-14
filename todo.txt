@@ -27,5 +27,5 @@ Mongols
 - Mangudai train time improved from 30 seconds to 28 seconds +
 
 Rus
-- Lodya fishing boat train time increased to 46 seconds
+- Lodya fishing boat train time increased to 46 seconds +
 
