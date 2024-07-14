@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '116',
+        date: new Date(2024, 6, 14),
+        patch: '11.0.782',
+        description: "French Town Centers work 10/15/20/25% faster per Age changed to 15/15/20/25%"
+    },
+    {
         id: '115',
         date: new Date(2024, 6, 14),
         patch: '11.0.782',

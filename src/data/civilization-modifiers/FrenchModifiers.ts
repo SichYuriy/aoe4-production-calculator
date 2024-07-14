@@ -9,7 +9,7 @@ import CivilizationsEnum from "../CivilizationsEnum";
 const frenchDarkAgeProductionSpeedModifier: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.FRENCH_DARK_AGE,
     canBeApplied: (unit: Unit) => unit.id === 'VILLAGER',
-    productionSpeedBonus: 0.1
+    productionSpeedBonus: 0.15
 }
 
 const frenchFeudalAgeProductionSpeedModifier: ProductionSpeedModifier = {
