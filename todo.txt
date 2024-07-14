@@ -11,7 +11,7 @@ Order of the Dragon
 ### season 8 patch:
 
 All
-- Fishing boat trainn time increased from 25 to 30 seconds.
+- Fishing boat train time increased from 25 to 30 seconds. +
 
 English
 - White Tower production speed reduced from 100% to 75%.
