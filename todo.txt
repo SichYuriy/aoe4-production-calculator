@@ -20,7 +20,7 @@ French
 - Town Centers work 10/15/20/25% faster per Age changed to 15/15/20/25% +
 
 Japanese
-- Atakebune rocket damage increased from 30 to 40
+- Atakebune cost reduced from 170 Food 220 Wood 220 Gold to 100 Food 220 Wood 220 Gold +
 
 Mongols
 - Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold

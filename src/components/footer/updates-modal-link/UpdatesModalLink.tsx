@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '117',
+        date: new Date(2024, 6, 14),
+        patch: '11.0.782',
+        description: "Atakebune cost reduced from 170 Food 220 Wood 220 Gold to 100 Food 220 Wood 220 Gold"
+    },
+    {
         id: '116',
         date: new Date(2024, 6, 14),
         patch: '11.0.782',
