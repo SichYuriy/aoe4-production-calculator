@@ -23,8 +23,8 @@ Japanese
 - Atakebune cost reduced from 170 Food 220 Wood 220 Gold to 100 Food 220 Wood 220 Gold +
 
 Mongols
-- Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold
-- Mangudai train time improved from 30 seconds to 28 seconds
+- Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold +
+- Mangudai train time improved from 30 seconds to 28 seconds +
 
 Rus
 - Lodya fishing boat train time increased to 46 seconds

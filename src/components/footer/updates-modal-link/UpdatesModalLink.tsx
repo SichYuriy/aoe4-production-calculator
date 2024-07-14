@@ -13,6 +13,18 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '119',
+        date: new Date(2024, 6, 14),
+        patch: '11.0.782',
+        description: "Mangudai train time improved from 30 seconds to 28 seconds"
+    },
+    {
+        id: '118',
+        date: new Date(2024, 6, 14),
+        patch: '11.0.782',
+        description: "Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold"
+    },
+    {
         id: '117',
         date: new Date(2024, 6, 14),
         patch: '11.0.782',
