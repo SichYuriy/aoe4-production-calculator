@@ -14,37 +14,37 @@ type UpdateItem = {
 const updates: UpdateItem[] = [
     {
         id: '120',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "Lodya fishing boat train time increased to 46 seconds"
     },
     {
         id: '119',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "Mangudai train time improved from 30 seconds to 28 seconds"
     },
     {
         id: '118',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "Mangudai cost reduced from 120 Food 40 Gold to 90 Food 60 Gold"
     },
     {
         id: '117',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "Atakebune cost reduced from 170 Food 220 Wood 220 Gold to 100 Food 220 Wood 220 Gold"
     },
     {
         id: '116',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "French Town Centers work 10/15/20/25% faster per Age changed to 15/15/20/25%"
     },
     {
         id: '115',
-        date: new Date(2024, 6, 14),
+        date: new Date(2024, 6, 18),
         patch: '11.0.782',
         description: "Fishing boat train time increased from 25 to 30 seconds"
     },
