@@ -112,6 +112,24 @@ const TRADER_PRODUCTION_TIME = 30;
 const TRADER_GOLD_COST = 60;
 const VILLAGER_PRODUCTION_TIME = 20;
 
+const KNIGHT_UNIT_COST = new UnitCost(140, 100, 0, 0);
+const KNIGHT_PRODUCTION_TIME = 35;
+
+const MAN_AT_ARMS_UNIT_COST = new UnitCost(100, 20, 0, 0);
+const MAN_AT_ARMS_PRODUCTION_TIME = 22.5;
+
+const CROSSBOWMAN_UNIT_COST = new UnitCost(80, 40, 0, 0);
+const CROSSBOWMAN_PRODUCTION_TIME = 22.5;
+
+const LONGBOWMAN_UNIT_COST = new UnitCost(40, 0, 50, 0);
+const LONGBOWMAN_PRODUCTION_TIME = 15;
+
+const SPEARMAN_UNIT_COST = new UnitCost(60, 0, 20, 0);
+const SPEARMAN_PRODUCTION_TIME = 15;
+
+const HORSEMAN_UNIT_COST = new UnitCost(100, 0, 20, 0);
+const HORSEMAN_PRODUCTION_TIME = 22.5;
+
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     DRAGON_ORDER_VILLAGER: {
         id: 'DRAGON_ORDER_VILLAGER',
@@ -211,8 +229,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'LONGBOWMAN',
         icon: longbowmanIcon,
         name: 'longbowman',
-        productionTime: 15,
-        cost: new UnitCost(40, 0, 50, 0),
+        productionTime: LONGBOWMAN_PRODUCTION_TIME,
+        cost: LONGBOWMAN_UNIT_COST,
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ENGLAND],
@@ -222,8 +240,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'SPEARMAN',
         icon: spearmanIcon,
         name: 'spearman',
-        productionTime: 15,
-        cost: new UnitCost(60, 0, 20, 0),
+        productionTime: SPEARMAN_PRODUCTION_TIME,
+        cost: SPEARMAN_UNIT_COST,
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
@@ -300,8 +318,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'HORSEMAN',
         icon: horsemanIcon,
         name: 'horseman',
-        productionTime: 22.5,
-        cost: new UnitCost(100, 0, 20, 0),
+        productionTime: HORSEMAN_PRODUCTION_TIME,
+        cost: HORSEMAN_UNIT_COST,
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES],
@@ -366,8 +384,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'LANCER',
         icon: lancerIcon,
         name: 'lancer',
-        productionTime: 35,
-        cost: new UnitCost(140, 100, 0, 0),
+        productionTime: KNIGHT_PRODUCTION_TIME,
+        cost: KNIGHT_UNIT_COST,
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.ZHU_XIS_LEGACY],
@@ -477,8 +495,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'KNIGHT',
         icon: knightIcon,
         name: 'knight',
-        productionTime: 35,
-        cost: new UnitCost(140, 100, 0, 0),
+        productionTime: KNIGHT_PRODUCTION_TIME,
+        cost: KNIGHT_UNIT_COST,
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS],
@@ -521,8 +539,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'ROYAL_KNIGHT',
         icon: royalKnightIcon,
         name: 'royal knight',
-        productionTime: 35,
-        cost: new UnitCost(140, 100, 0, 0),
+        productionTime: KNIGHT_PRODUCTION_TIME,
+        cost: KNIGHT_UNIT_COST,
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
@@ -576,8 +594,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'MAN_AT_ARMS',
         icon: manAtArmsIcon,
         name: 'man at arms',
-        productionTime: 22.5,
-        cost: new UnitCost(100, 20, 0, 0),
+        productionTime: MAN_AT_ARMS_PRODUCTION_TIME,
+        cost: MAN_AT_ARMS_UNIT_COST,
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC],
@@ -710,8 +728,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'CROSSBOWMAN',
         icon: crossbowmanIcon,
         name: 'crossbowman',
-        productionTime: 22.5,
-        cost: new UnitCost(80, 40, 0, 0),
+        productionTime: CROSSBOWMAN_PRODUCTION_TIME,
+        cost: CROSSBOWMAN_UNIT_COST,
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.BYZANTINES],
@@ -743,8 +761,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'ARBALETRIER',
         icon: arbaletrierIcon,
         name: 'arbaletrier',
-        productionTime: 22,
-        cost: new UnitCost(80, 40, 0, 0),
+        productionTime: CROSSBOWMAN_PRODUCTION_TIME,
+        cost: CROSSBOWMAN_UNIT_COST,
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
@@ -1473,6 +1491,78 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
+    },
+    WHITE_TOWER_KNIGHT: {
+        id: 'WHITE_TOWER_KNIGHT',
+        icon: knightIcon,
+        name: 'knight',
+        productionTime: KNIGHT_PRODUCTION_TIME,
+        cost: KNIGHT_UNIT_COST,
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WHITE_TOWER_MAN_AT_ARMS: {
+        id: 'WHITE_TOWER_MAN_AT_ARMS',
+        icon: manAtArmsIcon,
+        name: 'man at arms',
+        productionTime: MAN_AT_ARMS_PRODUCTION_TIME,
+        cost: MAN_AT_ARMS_UNIT_COST,
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WHITE_TOWER_CROSSBOWMAN: {
+        id: 'WHITE_TOWER_CROSSBOWMAN',
+        icon: crossbowmanIcon,
+        name: 'crossbowman',
+        productionTime: CROSSBOWMAN_PRODUCTION_TIME,
+        cost: CROSSBOWMAN_UNIT_COST,
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WHITE_TOWER_LONGBOWMAN: {
+        id: 'WHITE_TOWER_LONGBOWMAN',
+        icon: longbowmanIcon,
+        name: 'longbowman',
+        productionTime: LONGBOWMAN_PRODUCTION_TIME,
+        cost: LONGBOWMAN_UNIT_COST,
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WHITE_TOWER_SPEARMAN: {
+        id: 'WHITE_TOWER_SPEARMAN',
+        icon: spearmanIcon,
+        name: 'spearman',
+        productionTime: SPEARMAN_PRODUCTION_TIME,
+        cost: SPEARMAN_UNIT_COST,
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    WHITE_TOWER_HORSEMAN: {
+        id: 'WHITE_TOWER_HORSEMAN',
+        icon: horsemanIcon,
+        name: 'horseman',
+        productionTime: HORSEMAN_PRODUCTION_TIME,
+        cost: HORSEMAN_UNIT_COST,
+        types: [UnitType.CAVALRY],
+        building: Building.STABLE,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
     },
 }));
 

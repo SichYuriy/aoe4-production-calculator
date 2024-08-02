@@ -18,7 +18,8 @@ enum ProductionSpeedModifierId {
     CONSCRIPTIO_2 = 'CONSCRIPTIO_2',
     CONSCRIPTIO_3 = 'CONSCRIPTIO_3',
     CONSCRIPTIO_4 = 'CONSCRIPTIO_4',
-    CONSCRIPTIO_5 = 'CONSCRIPTIO_5'
+    CONSCRIPTIO_5 = 'CONSCRIPTIO_5',
+    WHITE_TOWER = 'WHITE_TOWER'
 }
 
 export default ProductionSpeedModifierId;

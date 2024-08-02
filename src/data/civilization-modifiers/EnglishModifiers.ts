@@ -58,7 +58,7 @@ const englishDocks: UnitCostModifier = {
 
 const englishMma: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.ENGLISH_MMA,
-    canBeApplied: unit => unit.id === 'MAN_AT_ARMS',
+    canBeApplied: unit => unit.id === 'MAN_AT_ARMS' || unit.id === 'WHITE_TOWER_MAN_AT_ARMS',
     productionSpeedBonus: 0.5
 }
 
@@ -66,6 +66,12 @@ const enclosures: PassiveGoldFromFoodVillagerModifier = {
     id: PassiveGoldFromFoodVillagerModifierId.ENCLOSURES,
     gold: 12,
     foodSources: [FoodSource.FARM]
+}
+
+const whiteTower: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.WHITE_TOWER,
+    canBeApplied: unit => ['WHITE_TOWER_KNIGHT', 'WHITE_TOWER_MAN_AT_ARMS', 'WHITE_TOWER_CROSSBOWMAN', 'WHITE_TOWER_LONGBOWMAN', 'WHITE_TOWER_SPEARMAN', 'WHITE_TOWER_HORSEMAN'].includes(unit.id),
+    productionSpeedBonus: 0.75
 }
 
 const GATHERING_RATE_MODIFIERS = {
@@ -76,7 +82,8 @@ const GATHERING_RATE_MODIFIERS = {
 }
 
 const PRODUCTION_SPEED_MODIFIERS = {
-    [ProductionSpeedModifierId.ENGLISH_MMA]: englishMma
+    [ProductionSpeedModifierId.ENGLISH_MMA]: englishMma,
+    [ProductionSpeedModifierId.WHITE_TOWER]: whiteTower
 }
 
 const COST_MODIFIERS = {
@@ -92,7 +99,7 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [GatheringRateModifierId.ENGLISH_DARK_AGE],
     allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
-    defaultProductionSpeedModifiers: [ProductionSpeedModifierId.ENGLISH_MMA],
+    defaultProductionSpeedModifiers: [ProductionSpeedModifierId.ENGLISH_MMA, ProductionSpeedModifierId.WHITE_TOWER],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS],
     passiveIncomeSources: [],

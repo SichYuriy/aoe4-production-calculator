@@ -14,7 +14,7 @@ All
 - Fishing boat train time increased from 25 to 30 seconds. +
 
 English
-- White Tower production speed reduced from 100% to 75%. (white tower not implemented)
+- White Tower production speed reduced from 100% to 75%. +
 
 French
 - Town Centers work 10/15/20/25% faster per Age changed to 15/15/20/25% +

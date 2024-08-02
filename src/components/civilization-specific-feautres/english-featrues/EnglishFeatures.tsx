@@ -4,6 +4,7 @@ import shared from "../../../shared.module.css"
 import EnglishMma from "./english-mma/EnglishMma";
 import WynguardPalace from "./wynguard-palace/WynguardPalace";
 import Enclosures from "./enclosures/Enclosures";
+import WhiteTower from "./white-tower/WhiteTower";
 
 function EnglishFeatures() {
     return (
@@ -13,6 +14,7 @@ function EnglishFeatures() {
             <div className={shared.upgradesRow}>
                 <EnglishAgeSelect/>
             </div>
+            <WhiteTower/>
             <WynguardPalace/>
             <Enclosures/>
         </div>

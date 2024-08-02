@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '122',
+        date: new Date(2024, 7, 1),
+        patch: '11.0.782',
+        description: "White Tower production speed reduced from 100% to 75%"
+    },
+    {
         id: '121',
         date: new Date(2024, 7, 1),
         patch: '11.0.782',
