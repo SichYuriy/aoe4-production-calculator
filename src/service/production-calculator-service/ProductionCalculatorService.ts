@@ -76,7 +76,7 @@ class ProductionCalculatorService {
                 (total, modifier) => total * (1 + modifier.productionSpeedBonus),
                 1
             );
-        let effectiveProductionTime = unit.productionTime  / (1 + totalProductionSpeedBonus);
+        let effectiveProductionTime = unit.productionTime  / totalProductionSpeedBonus;
 
         let totalCost = new ResourcesAmount();
         for (let i = 0; i < count; i++) {
