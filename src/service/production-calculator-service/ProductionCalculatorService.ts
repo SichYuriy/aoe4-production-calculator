@@ -73,8 +73,8 @@ class ProductionCalculatorService {
         let totalProductionSpeedBonus = productionSpeedModifiers
             .filter(modifier => modifier.canBeApplied(unit) && !unit.notAffectedByModifiers)
             .reduce(
-                (total, modifier) => total + modifier.productionSpeedBonus,
-                0
+                (total, modifier) => total * (1 + modifier.productionSpeedBonus),
+                1
             );
         let effectiveProductionTime = unit.productionTime  / (1 + totalProductionSpeedBonus);
 

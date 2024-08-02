@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '121',
+        date: new Date(2024, 7, 1),
+        patch: '11.0.782',
+        description: "Fix production speed bonus stacking. Make production speed bonus multiplicative instead off additive"
+    },
+    {
         id: '120',
         date: new Date(2024, 6, 18),
         patch: '11.0.782',
