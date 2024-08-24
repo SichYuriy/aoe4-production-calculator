@@ -429,7 +429,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: monkIcon,
         name: 'scholar',
         productionTime: 30,
-        cost: new UnitCost(0, 80, 0, 0),
+        cost: new UnitCost(0, 65, 0, 0),
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.DELHI],

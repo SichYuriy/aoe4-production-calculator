@@ -15,7 +15,7 @@ Order of the Dragon
 - Camel Rider Cost adjusted from 160f/30w/30g to 130f/45w/45g +
 
 ## Delhi Sultanate
-- Dome of the Faith: Scholar discount improved from 50 (39%) to 65 (50%)
+- Dome of the Faith: Scholar discount improved from 50 (39%) to 65 (50%) +
 
 ## Japanese
 

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '124',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Dome of the Faith: Scholar discount improved from 50 (39%) to 65 (50%)"
+    },
+    {
         id: '123',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',
