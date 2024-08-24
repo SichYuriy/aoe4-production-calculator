@@ -130,6 +130,9 @@ const SPEARMAN_PRODUCTION_TIME = 15;
 const HORSEMAN_UNIT_COST = new UnitCost(100, 0, 20, 0);
 const HORSEMAN_PRODUCTION_TIME = 22.5;
 
+const DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS = 0.35;
+const DRAGON_ORDER_BURGRAVE_COST_DISCOUNT = 0.35;
+
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     DRAGON_ORDER_VILLAGER: {
         id: 'DRAGON_ORDER_VILLAGER',
@@ -262,8 +265,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'BURGRAVE_PALACE_GILDED_SPEARMAN',
         icon: gildedSpearmanIcon,
         name: 'gilded spearman',
-        productionTime: 18 * (1 / 1.3),
-        cost: new UnitCost(120 * 0.7, 0, 40 * 0.7, 0),
+        productionTime: 18 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
+        cost: new UnitCost(120 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 40 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
@@ -638,8 +641,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'BURGRAVE_PALACE_GILDED_MAN_AT_ARMS',
         icon: gildedManAtArmsIcon,
         name: 'gilded man at arms',
-        productionTime: 27 * (1 / 1.3),
-        cost: new UnitCost(200 * 0.7, 40 * 0.7, 0, 0),
+        productionTime: 27 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
+        cost: new UnitCost(200 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 40 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
@@ -716,8 +719,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'BURGRAVE_PALACE_GILDED_LANDSKNECHT',
         icon: gildedLandsknechtIcon,
         name: 'gilded landsknecht',
-        productionTime: 27 * (1 / 1.3),
-        cost: new UnitCost(120 * 0.7, 200 * 0.7, 0, 0),
+        productionTime: 27 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
+        cost: new UnitCost(120 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 200 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],

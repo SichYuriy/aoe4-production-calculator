@@ -35,4 +35,4 @@ Order of the Dragon
 ## OOTD
 
 - Villager train time reduced from 24s to 23s +
-- Burgrave: Discount, research speed, and production speed increased from 30 to 35%
+- Burgrave: Discount, research speed, and production speed increased from 30 to 35% +

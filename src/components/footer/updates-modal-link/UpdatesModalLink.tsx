@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '131',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Burgrave: Discount, research speed, and production speed increased from 30 to 35%"
+    },
+    {
         id: '130',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',
