@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '130',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "OOTD Villager train time reduced from 24s to 23s"
+    },
+    {
         id: '129',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',
