@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '127',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Yorishiro gold income from 75gpm to 60gpm"
+    },
+    {
         id: '126',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',

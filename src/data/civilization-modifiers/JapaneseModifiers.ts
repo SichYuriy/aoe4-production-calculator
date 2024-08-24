@@ -75,7 +75,7 @@ const yorishiroLumberCamp: PassiveIncomeModifier = {
 const yorishiroForge: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.YORISHIRO_FORGE,
     food: 0,
-    gold: 75,
+    gold: 60,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.YORISHIRO_FORGE
