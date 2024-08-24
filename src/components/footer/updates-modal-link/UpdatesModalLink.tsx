@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '125',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Shinobi cost reduced from 60f/60g & 22.5 seconds to 50f/50g & 20 seconds"
+    },
+    {
         id: '124',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',

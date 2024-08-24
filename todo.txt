@@ -19,7 +19,7 @@ Order of the Dragon
 
 ## Japanese
 
-- Koka Township: Shinobi cost reduced from 60f/60g & 22.5 seconds to 50f/50g & 20 seconds
+- Koka Township: Shinobi cost reduced from 60f/60g & 22.5 seconds to 50f/50g & 20 seconds +
 - Buddhist Monks cost reduced from 100 to 80 gold
 - Yorishiro production speed from 200% to 150%
 - Yorishiro gold income from 75gpm to 60gpm
