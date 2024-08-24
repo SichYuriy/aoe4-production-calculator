@@ -28,7 +28,9 @@ Order of the Dragon
 ## Rus
 
 - Abbey of Trinity Now reduces the cost of Warrior Monks by 50% at all Monasteries (not implemented)
-- Dervish cost increased from 60f/120g to 60f/140g
+
+## Ayyubids
+- Dervish cost increased from 60f/120g to 60f/140g +
 
 ## OOTD
 

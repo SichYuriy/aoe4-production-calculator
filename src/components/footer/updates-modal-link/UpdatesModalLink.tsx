@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '129',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Dervish cost increased from 60f/120g to 60f/140g"
+    },
+    {
         id: '128',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',
