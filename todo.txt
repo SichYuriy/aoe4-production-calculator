@@ -12,7 +12,7 @@ Order of the Dragon
 ### mid-season 8 Patch 11.1.1201:
 
 ## Abbasid
-- Camel Rider Cost adjusted from 160f/30w/30g to 130f/45w/45g
+- Camel Rider Cost adjusted from 160f/30w/30g to 130f/45w/45g +
 
 ## Delhi Sultanate
 - Dome of the Faith: Scholar discount improved from 50 (39%) to 65 (50%)

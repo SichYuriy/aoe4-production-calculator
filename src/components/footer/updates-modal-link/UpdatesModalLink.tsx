@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '123',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Camel Rider Cost adjusted from 160f/30w/30g to 130f/45w/45g"
+    },
+    {
         id: '122',
         date: new Date(2024, 7, 1),
         patch: '11.0.782',
