@@ -173,7 +173,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'FLOATING_GATE_VILLAGER',
         icon: villagerIcon,
         name: 'Yorishiro TC villager',
-        productionTime: VILLAGER_PRODUCTION_TIME * (1 / 1.25),
+        productionTime: VILLAGER_PRODUCTION_TIME * (1 / 1.30),
         cost: new UnitCost(50, 0, 0, 0),
         types: [],
         building: null,

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '128',
+        date: new Date(2024, 7, 24),
+        patch: '11.1.1201',
+        description: "Yorishiro production on TCs from 25% to 30%"
+    },
+    {
         id: '127',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',

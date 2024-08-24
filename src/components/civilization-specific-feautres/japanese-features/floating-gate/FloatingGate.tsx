@@ -20,7 +20,7 @@ function FloatingGate() {
 
     return (
         <div className={shared.civilizationSpecificFeature}>
-            <Tooltip header={'Floating Gate'} text={'Place Yorishiro. Town Center: +25% Production speed, Farmhouse: +75 Food per minute, Lumber Camp: +75 Wood per minute, Forge: +75 Gold per minute'}>
+            <Tooltip header={'Floating Gate'} text={'Place Yorishiro. Town Center: +30% Production speed, Farmhouse: +75 Food per minute, Lumber Camp: +75 Wood per minute, Forge: +60 Gold per minute'}>
                 <div>
                     <img className={shared.civilizationSpecificFeatureIcon} src={floatingGateIcon} alt={'floating gate'}/>
                 </div>

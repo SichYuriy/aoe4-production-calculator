@@ -22,12 +22,12 @@ Order of the Dragon
 - Koka Township: Shinobi cost reduced from 60f/60g & 22.5 seconds to 50f/50g & 20 seconds +
 - Buddhist Monks cost reduced from 100 to 80 gold +
 - Yorishiro production speed from 200% to 150% (yorishiro production speed not implemented)
-- Yorishiro gold income from 75gpm to 60gpm
-- Yorishiro production on TCs from 25% to 30%
+- Yorishiro gold income from 75gpm to 60gpm +
+- Yorishiro production on TCs from 25% to 30% +
 
 ## Rus
 
-- Abbey of Trinity Now reduces the cost of Warrior Monks by 50% at all Monasteries
+- Abbey of Trinity Now reduces the cost of Warrior Monks by 50% at all Monasteries (not implemented)
 - Dervish cost increased from 60f/120g to 60f/140g
 
 ## OOTD
