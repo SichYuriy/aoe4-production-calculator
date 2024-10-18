@@ -26,15 +26,15 @@ Order of the Dragon
 - Mongol improved food upgrades benefit reduced from 7.5% → 5% +
 - Berry gather rate increased from 0.66 → 0.69 +
 - Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%. +
-- All tier 2 and 3 economic upgrades get new icons.
-- Acid Distillation has been renamed to Shaft Mining.
+- All tier 2 and 3 economic upgrades get new icons. (not important)
+- Acid Distillation has been renamed to Shaft Mining. (not important)
 
 ## Culverin
-- Cost reduced from 400 wood 600 gold → 325 wood 550 gold.
-- Now fully replace Bombards for Holy Roman Empire, Order of the Dragon, Abbasid Dynasty and Ayyubids.
+- Cost reduced from 400 wood 600 gold → 325 wood 550 gold. (no Culverin added)
+- Now fully replace Bombards for Holy Roman Empire, Order of the Dragon, Abbasid Dynasty and Ayyubids. (no Culverin added)
 
 ## Springald
-- Cost reduced from 250 wood 250 gold → 150 wood 100 gold.
+- Cost reduced from 250 wood 250 gold → 150 wood 100 gold. +
 
 ## English
 - Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold.
