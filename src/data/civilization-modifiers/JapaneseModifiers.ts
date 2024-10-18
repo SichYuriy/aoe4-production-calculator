@@ -26,10 +26,10 @@ const daimyoManor: GatheringRateModifier = {
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {
             ...gatheringRates,
-            food: gatheringRates.food * 1.2
+            food: gatheringRates.food * 1.16
         }
         : gatheringRates,
-    description: 'farm * 1.2'
+    description: 'farm * 1.16'
 };
 
 const daimyoPalace: GatheringRateModifier = {
@@ -37,10 +37,10 @@ const daimyoPalace: GatheringRateModifier = {
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {
             ...gatheringRates,
-            food: gatheringRates.food * 1.4
+            food: gatheringRates.food * 1.32
         }
         : gatheringRates,
-    description: 'farm * 1.4'
+    description: 'farm * 1.32'
 };
 
 const shogunateCastle: GatheringRateModifier = {
@@ -48,10 +48,10 @@ const shogunateCastle: GatheringRateModifier = {
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {
             ...gatheringRates,
-            food: gatheringRates.food * 1.6
+            food: gatheringRates.food * 1.48
         }
         : gatheringRates,
-    description: 'farm * 1.6'
+    description: 'farm * 1.48'
 };
 
 const yorishiroFarmhouse: PassiveIncomeModifier = {

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '139',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%"
+    },
+    {
         id: '137',
         date: new Date(2024, 9, 22),
         patch: '12.0.1974',

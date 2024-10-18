@@ -40,7 +40,7 @@ Order of the Dragon
 - Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold. +
 
 ## Japanese
-- Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%.
+- Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%. +
 
 ## Malians
 - Farimba Garrison
