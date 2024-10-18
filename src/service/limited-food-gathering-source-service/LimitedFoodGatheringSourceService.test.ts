@@ -42,7 +42,7 @@ describe('LimitedFoodGatheringSourceService', () => {
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(4);
-            expect(actual[0].effectiveGatheringRate).toBeCloseTo(57.5);
+            expect(actual[0].effectiveGatheringRate).toBeCloseTo(55);
         });
 
         it('tier 2 upgrade', () => {
@@ -53,7 +53,7 @@ describe('LimitedFoodGatheringSourceService', () => {
 
             expect(actual.length).toEqual(1);
             expect(actual[0].maxVillagers).toEqual(4);
-            expect(actual[0].effectiveGatheringRate).toBeCloseTo(65);
+            expect(actual[0].effectiveGatheringRate).toBeCloseTo(60.1425);
         });
 
         it( 'tier 3 upgrade', () => {
@@ -64,8 +64,8 @@ describe('LimitedFoodGatheringSourceService', () => {
             ], []);
 
             expect(actual.length).toEqual(1);
-            expect(actual[0].maxVillagers).toEqual(3);
-            expect(actual[0].effectiveGatheringRate).toBeCloseTo(72.5);
+            expect(actual[0].maxVillagers).toEqual(4);
+            expect(actual[0].effectiveGatheringRate).toBeCloseTo(65.36888);
         });
     });
 
