@@ -66,7 +66,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             if ([FoodSource.SHEEP, FoodSource.CATTLE, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
                 return ({...rates, food: rates.food * HORTICULTURE_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
-                return ({...rates, food: rates.food * 1.15});
+                return ({...rates, food: rates.food * 1.10});
             } else {
                 return rates;
             }
@@ -79,12 +79,12 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             if ([FoodSource.SHEEP, FoodSource.BERRY, FoodSource.FARM, FoodSource.CATTLE].includes(foodSource)) {
                 return ({...rates, food: rates.food * FERTILIZATION_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
-                return ({...rates, food: rates.food * 1.1304});
+                return ({...rates, food: rates.food * 1.0935});
             } else {
                 return rates;
             }
         },
-        description: `[sheep, berry, farm, cattle] * ${FERTILIZATION_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.13`
+        description: `[sheep, berry, farm, cattle] * ${FERTILIZATION_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.0935`
     },
     [GatheringRateModifierId.CROSS_BREEDING]: {
         id: GatheringRateModifierId.CROSS_BREEDING,
@@ -92,12 +92,12 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             if ([FoodSource.SHEEP, FoodSource.CATTLE, FoodSource.BERRY, FoodSource.FARM].includes(foodSource)) {
                 return ({...rates, food: rates.food * CROSS_BREEDING_MULTIPLIER});
             } else if (FoodSource.TWIN_MINARET_BERRY === foodSource) {
-                return ({...rates, food: rates.food * 1.1154});
+                return ({...rates, food: rates.food * 1.0869});
             } else {
                 return rates;
             }
         },
-        description: `[sheep, berry, farm, cattle] * ${CROSS_BREEDING_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.1154`
+        description: `[sheep, berry, farm, cattle] * ${CROSS_BREEDING_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.0869`
     },
     [GatheringRateModifierId.SPECIALIZED_PICK]: {
         id: GatheringRateModifierId.SPECIALIZED_PICK,

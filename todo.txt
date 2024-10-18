@@ -11,28 +11,37 @@ Order of the Dragon
 
 ### mid-season 8 Patch 11.1.1201:
 
-## Abbasid
-- Camel Rider Cost adjusted from 160f/30w/30g to 130f/45w/45g +
-
-## Delhi Sultanate
-- Dome of the Faith: Scholar discount improved from 50 (39%) to 65 (50%) +
-
 ## Japanese
 
-- Koka Township: Shinobi cost reduced from 60f/60g & 22.5 seconds to 50f/50g & 20 seconds +
-- Buddhist Monks cost reduced from 100 to 80 gold +
 - Yorishiro production speed from 200% to 150% (yorishiro production speed not implemented)
-- Yorishiro gold income from 75gpm to 60gpm +
-- Yorishiro production on TCs from 25% to 30% +
 
 ## Rus
 
 - Abbey of Trinity Now reduces the cost of Warrior Monks by 50% at all Monasteries (not implemented)
 
-## Ayyubids
-- Dervish cost increased from 60f/120g to 60f/140g +
+### season 9 Patch 12.0.1974
 
-## OOTD
+## General
+- Horticulture, Fertilization, and Precision Cross-Breeding upgrades effect reduced from 15% → 10% faster food gathering. +
+- Mongol improved food upgrades benefit reduced from 7.5% → 5% +
+- Berry gather rate increased from 0.66 → 0.69
+- Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%.
+- All tier 2 and 3 economic upgrades get new icons.
+- Acid Distillation has been renamed to Shaft Mining.
 
-- Villager train time reduced from 24s to 23s +
-- Burgrave: Discount, research speed, and production speed increased from 30 to 35% +
+## Culverin
+- Cost reduced from 400 wood 600 gold → 325 wood 550 gold.
+- Now fully replace Bombards for Holy Roman Empire, Order of the Dragon, Abbasid Dynasty and Ayyubids.
+
+## Springald
+- Cost reduced from 250 wood 250 gold → 150 wood 100 gold.
+
+## English
+- Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold.
+
+## Japanese
+- Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%.
+
+## Malians
+- Farimba Garrison
+- Aging up with the Farimba now gives you the choice to enlist one of three new units: the Mansa Musofadi, Mansa Javelineer, and the Mansa Freeborn

@@ -13,6 +13,18 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '133',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Mongol improved food upgrades benefit reduced from 7.5% → 5%"
+    },
+    {
+        id: '132',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Horticulture, Fertilization, and Precision Cross-Breeding upgrades effect reduced from 15% → 10% faster food gathering"
+    },
+    {
         id: '131',
         date: new Date(2024, 7, 24),
         patch: '11.1.1201',
