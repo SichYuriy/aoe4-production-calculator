@@ -37,7 +37,7 @@ Order of the Dragon
 - Cost reduced from 250 wood 250 gold → 150 wood 100 gold. +
 
 ## English
-- Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold.
+- Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold. +
 
 ## Japanese
 - Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%.

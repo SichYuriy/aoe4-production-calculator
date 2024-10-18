@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '137',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold"
+    },
+    {
         id: '136',
         date: new Date(2024, 9, 22),
         patch: '12.0.1974',
