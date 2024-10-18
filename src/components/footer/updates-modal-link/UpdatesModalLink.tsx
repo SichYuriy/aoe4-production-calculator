@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '134',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Berry gather rate increased from 0.66 → 0.69"
+    },
+    {
         id: '133',
         date: new Date(2024, 9, 22),
         patch: '12.0.1974',
