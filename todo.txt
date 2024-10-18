@@ -25,7 +25,7 @@ Order of the Dragon
 - Horticulture, Fertilization, and Precision Cross-Breeding upgrades effect reduced from 15% → 10% faster food gathering. +
 - Mongol improved food upgrades benefit reduced from 7.5% → 5% +
 - Berry gather rate increased from 0.66 → 0.69 +
-- Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%.
+- Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%. +
 - All tier 2 and 3 economic upgrades get new icons.
 - Acid Distillation has been renamed to Shaft Mining.
 

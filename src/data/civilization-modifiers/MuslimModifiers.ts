@@ -5,7 +5,7 @@ import FoodSource from "../../model/FoodSource";
 export const muslimBerries: GatheringRateModifier = {
     id: GatheringRateModifierId.MUSLIM_BERRIES,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.BERRY
-        ? {...gatheringRates, food: gatheringRates.food * 1.292}
+        ? {...gatheringRates, food: gatheringRates.food * 1.212}
         : gatheringRates,
-    description: 'berries * 1.292'
+    description: 'berries * 1.212'
 }

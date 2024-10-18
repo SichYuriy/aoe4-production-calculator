@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '135',
+        date: new Date(2024, 9, 22),
+        patch: '12.0.1974',
+        description: "Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%"
+    },
+    {
         id: '134',
         date: new Date(2024, 9, 22),
         patch: '12.0.1974',
