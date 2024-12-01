@@ -22,10 +22,6 @@ Order of the Dragon
 ### season 9 Patch 12.0.1974
 
 ## General
-- Horticulture, Fertilization, and Precision Cross-Breeding upgrades effect reduced from 15% → 10% faster food gathering. +
-- Mongol improved food upgrades benefit reduced from 7.5% → 5% +
-- Berry gather rate increased from 0.66 → 0.69 +
-- Delhi Sultanate, Ayyubids, and Abbasid Dynasty berry bonus reduced from 35% → 25%. +
 - All tier 2 and 3 economic upgrades get new icons. (not important)
 - Acid Distillation has been renamed to Shaft Mining. (not important)
 
@@ -33,15 +29,7 @@ Order of the Dragon
 - Cost reduced from 400 wood 600 gold → 325 wood 550 gold. (no Culverin added)
 - Now fully replace Bombards for Holy Roman Empire, Order of the Dragon, Abbasid Dynasty and Ayyubids. (no Culverin added)
 
-## Springald
-- Cost reduced from 250 wood 250 gold → 150 wood 100 gold. +
+### Patch 12.1.2454 +
 
 ## English
-- Wynguard Ranger battalion cost increased from 450 wood 250 gold → 450 wood 300 gold. +
-
-## Japanese
-- Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%. +
-
-## Malians
-- Farimba Garrison
-- Aging up with the Farimba now gives you the choice to enlist one of three new units: the Mansa Musofadi, Mansa Javelineer, and the Mansa Freeborn
+- Enclosures gold income reduced from 1 every 5 seconds → 1 every 6 seconds +

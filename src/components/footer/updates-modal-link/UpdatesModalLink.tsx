@@ -14,6 +14,12 @@ type UpdateItem = {
 const updates: UpdateItem[] = [
     {
         id: '139',
+        date: new Date(2024, 11, 1),
+        patch: '12.1.2454',
+        description: "Enclosures gold income reduced from 1 every 5 seconds → 1 every 6 seconds"
+    },
+    {
+        id: '138',
         date: new Date(2024, 9, 22),
         patch: '12.0.1974',
         description: "Each tier of the Daimyo Manor’s farm gather rate aura reduced from 25% → 20%"
