@@ -14,6 +14,8 @@ import ZHU_XIS_LEGACY_MODIFIERS from "./ZhuXisLegacyModfiers";
 import AYYUBIDS_MODIFIERS from "./AyyubidsModifiers";
 import JAPANESE_MODIFIERS from "./JapaneseModifiers";
 import BYZANTINES_MODIFIERS from "./ByzantinesModifiers";
+import KNIGHTS_TEMPLAR_MODIFIERS from "./KnightsTemplarModifiers";
+import HOUSE_OF_LANCASTER_MODIFIERS from "./HouseOfLancasterModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [
     FRENCH_MODIFIERS,
@@ -30,7 +32,9 @@ const allCivilizationModifiers: CivilizationModifiers[] = [
     ZHU_XIS_LEGACY_MODIFIERS,
     AYYUBIDS_MODIFIERS,
     JAPANESE_MODIFIERS,
-    BYZANTINES_MODIFIERS
+    BYZANTINES_MODIFIERS,
+    KNIGHTS_TEMPLAR_MODIFIERS,
+    HOUSE_OF_LANCASTER_MODIFIERS
 ]
 
 export default allCivilizationModifiers;

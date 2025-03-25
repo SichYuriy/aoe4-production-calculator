@@ -104,7 +104,8 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
     CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
     CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
-    CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES];
+    CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
+    CivilizationsEnum.HOUSE_OF_LANCASTER];
 
 const DRAGON_VILLAGER_COST = 60;
 const DRAGON_VILLAGER_PRODUCTION_TIME = 23;

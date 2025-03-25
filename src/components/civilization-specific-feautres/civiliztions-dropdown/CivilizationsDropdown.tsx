@@ -44,7 +44,9 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.ZHU_XIS_LEGACY]: {id: CivilizationsEnum.ZHU_XIS_LEGACY, icon: zhuXiLegacyFlagIcon, name: 'Zhu Xi’s Legacy'},
         [CivilizationsEnum.AYYUBIDS]: {id: CivilizationsEnum.AYYUBIDS, icon: ayyubidsFlagIcon, name: 'Ayyubids'},
         [CivilizationsEnum.JAPANESE]: {id: CivilizationsEnum.JAPANESE, icon: japaneseFlagIcon, name: 'Japanese'},
-        [CivilizationsEnum.BYZANTINES]: {id: CivilizationsEnum.BYZANTINES, icon: byzantinesFlagIcon, name: 'Byzantines'}
+        [CivilizationsEnum.BYZANTINES]: {id: CivilizationsEnum.BYZANTINES, icon: byzantinesFlagIcon, name: 'Byzantines'},
+        [CivilizationsEnum.KNIGHTS_TEMPLAR]: {id: CivilizationsEnum.KNIGHTS_TEMPLAR, icon: randomFlagIcon, name: 'Knights Templar'},
+        [CivilizationsEnum.HOUSE_OF_LANCASTER]: {id: CivilizationsEnum.HOUSE_OF_LANCASTER, icon: randomFlagIcon, name: 'House of Lancaster'},
     }
 
     return (
