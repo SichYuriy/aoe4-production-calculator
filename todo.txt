@@ -29,7 +29,6 @@ Order of the Dragon
 - Cost reduced from 400 wood 600 gold → 325 wood 550 gold. (no Culverin added)
 - Now fully replace Bombards for Holy Roman Empire, Order of the Dragon, Abbasid Dynasty and Ayyubids. (no Culverin added)
 
-### Patch 12.1.2454 +
+### Patch 12.2.3327
 
-## English
-- Enclosures gold income reduced from 1 every 5 seconds → 1 every 6 seconds +
+- Yorishiro Dock and Military Building Production speed reduced from 150% → 125% - Not implemented!

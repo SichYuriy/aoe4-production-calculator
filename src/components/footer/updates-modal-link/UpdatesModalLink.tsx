@@ -13,6 +13,66 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '149',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Scout cost reduced from 70 → 65 food"
+    },
+    {
+        id: '148',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Scout train time reduced from 25 → 23 seconds"
+    },
+    {
+        id: '147',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Malian Scout train time reduced from 15 → 14 seconds"
+    },
+    {
+        id: '146',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Dome of Faith discount reduced; scholars now train for 75 gold"
+    },
+    {
+        id: '145',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Fishing Village changed from 40% → 25% wood discount on fishing ships"
+    },
+    {
+        id: '144',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Samurai train speed reduced from 23 → 20 seconds"
+    },
+    {
+        id: '143',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Yorishiro Farmhouse/Lumbercamp/Forge RPM reduced from 75f/w → 70 f/w, 60g → 50g"
+    },
+    {
+        id: '142',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Pit Mine generation 35 → 36 gold per minute"
+    },
+    {
+        id: '141',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Akinji cost reduced from 100 food 80 wood → 90 food 80 wood"
+    },
+    {
+        id: '140',
+        date: new Date(2025, 1, 13),
+        patch: '12.2.3327',
+        description: "Akinji production time reduced from 27 seconds → 25 seconds"
+    },
+    {
         id: '139',
         date: new Date(2024, 11, 1),
         patch: '12.1.2454',

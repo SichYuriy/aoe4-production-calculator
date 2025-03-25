@@ -106,7 +106,7 @@ describe('ProductionCalculatorService', () => {
 
             expect(actual.foodVillagers).toBeCloseTo(9.75);
             expect(actual.woodVillagers).toBeCloseTo(0);
-            expect(actual.goldVillagers).toBeCloseTo(1.2857);
+            expect(actual.goldVillagers).toBeCloseTo(1.7857);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 

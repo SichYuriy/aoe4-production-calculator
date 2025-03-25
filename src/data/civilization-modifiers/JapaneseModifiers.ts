@@ -13,12 +13,12 @@ const japaneseFishingBoats: UnitCostModifier = {
     id: CostModifierId.JAPANESE_FISHING_BOATS,
     canBeApplied: unit => unit.id === 'FISHING_BOAT',
     apply: currentCost => ({
-        food: currentCost.food * 0.7,
-        wood: currentCost.wood * 0.7,
-        gold: currentCost.gold * 0.7,
-        stone: currentCost.stone * 0.7
+        food: currentCost.food * 0.75,
+        wood: currentCost.wood * 0.75,
+        gold: currentCost.gold * 0.75,
+        stone: currentCost.stone * 0.75
     }),
-    description: 'fishingBoatCost * 0.7'
+    description: 'fishingBoatCost * 0.75'
 };
 
 const daimyoManor: GatheringRateModifier = {
@@ -56,7 +56,7 @@ const shogunateCastle: GatheringRateModifier = {
 
 const yorishiroFarmhouse: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.YORISHIRO_FARM_HOUSE,
-    food: 75,
+    food: 70,
     gold: 0,
     wood: 0,
     stone: 0,
@@ -67,7 +67,7 @@ const yorishiroLumberCamp: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.YORISHIRO_LUMBER_CAMP,
     food: 0,
     gold: 0,
-    wood: 75,
+    wood: 70,
     stone: 0,
     source: PassiveIncomeSource.YORISHIRO_LUMBER_CAMP
 };
@@ -75,7 +75,7 @@ const yorishiroLumberCamp: PassiveIncomeModifier = {
 const yorishiroForge: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.YORISHIRO_FORGE,
     food: 0,
-    gold: 60,
+    gold: 50,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.YORISHIRO_FORGE
