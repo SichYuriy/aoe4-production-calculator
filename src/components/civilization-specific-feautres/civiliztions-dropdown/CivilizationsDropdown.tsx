@@ -1,5 +1,6 @@
 import {Dropdown} from "react-bootstrap";
 import randomFlagIcon from "../../../icons/flag_random.jpg";
+import knightsTemplarIcon from "../../../icons/flag_knights_templar.png";
 import abbasidFlagIcon from "../../../icons/flag_abbasid.png";
 import chineseFlagIcon from "../../../icons/flag_chinese.png";
 import hreFlagIcon from "../../../icons/flag_hre.png";
@@ -45,7 +46,7 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.AYYUBIDS]: {id: CivilizationsEnum.AYYUBIDS, icon: ayyubidsFlagIcon, name: 'Ayyubids'},
         [CivilizationsEnum.JAPANESE]: {id: CivilizationsEnum.JAPANESE, icon: japaneseFlagIcon, name: 'Japanese'},
         [CivilizationsEnum.BYZANTINES]: {id: CivilizationsEnum.BYZANTINES, icon: byzantinesFlagIcon, name: 'Byzantines'},
-        [CivilizationsEnum.KNIGHTS_TEMPLAR]: {id: CivilizationsEnum.KNIGHTS_TEMPLAR, icon: randomFlagIcon, name: 'Knights Templar'},
+        [CivilizationsEnum.KNIGHTS_TEMPLAR]: {id: CivilizationsEnum.KNIGHTS_TEMPLAR, icon: knightsTemplarIcon, name: 'Knights Templar'},
         [CivilizationsEnum.HOUSE_OF_LANCASTER]: {id: CivilizationsEnum.HOUSE_OF_LANCASTER, icon: randomFlagIcon, name: 'House of Lancaster'},
     }
 
