@@ -1,3 +1,5 @@
+https://github.com/aoe4world/data/tree/main/images
+
 - Crosscut Saw now also provides +5 Wood carry capacity in addition to +15% gather rate. (no math for +5 Wood carry)
 
 ### Japanese:
@@ -32,3 +34,17 @@ Order of the Dragon
 ### Patch 12.2.3327
 
 - Yorishiro Dock and Military Building Production speed reduced from 150% → 125% - Not implemented!
+
+### Patch 13.0.4343
+
+## House of Lancaster
+- Civilization Trait – Wool Industries additional gather rate from sheep decreased from 25% → 20%.
+- Manor income decreased from 70 food and 45 wood → 60 food and 45 wood.
+
+Wynguard Palace:
+- Earl’s Retinue train time increased from 45 → 50 seconds
+- Gunpowder Contingent cost increased from 800 wood and 850 gold → 850 wood and 1050 gold.
+- Garrison Command train time increased from 25 → 30 seconds.
+
+## Knights Templar
+Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. +

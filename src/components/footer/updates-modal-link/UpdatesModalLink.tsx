@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '150',
+        date: new Date(2025, 3, 13),
+        patch: '13.0.4343',
+        description: "Add new civilizations, units only"
+    },
+    {
         id: '149',
         date: new Date(2025, 1, 13),
         patch: '12.2.3327',
