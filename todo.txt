@@ -38,8 +38,12 @@ Order of the Dragon
 ### Patch 13.0.4343
 
 ## House of Lancaster
-- Civilization Trait – Wool Industries additional gather rate from sheep decreased from 25% → 20%.
+- Villagers gather from sheep +20% faster. (Wool Industries additional gather rate from sheep decreased from 25% → 20%.)
 - Manor income decreased from 70 food and 45 wood → 60 food and 45 wood.
+- Scutage, Manors additionally generate 40 gold per minute
+- Ships -10% cheaper to produce
+- Burgundian imports, handcannoneer cost -25%
+- Lancaster Wynguard Palace
 
 Wynguard Palace:
 - Earl’s Retinue train time increased from 45 → 50 seconds
@@ -47,4 +51,10 @@ Wynguard Palace:
 - Garrison Command train time increased from 25 → 30 seconds.
 
 ## Knights Templar
-Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. +
+ - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. +
+ - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute
+ - Republic of genoa: Pilgrims generate + 30% gold
+ - No lumber camp upgrades, Lumberjacks deposit wood automatically and gather faster with each Age. (Wood is gathered +15% faster in each Age and 20% of the wood gathered is produced as additional food)
+ - siege units -25% wood?
+ - Kingdom of france: all units +15% produced faster, and -5% gold cost
+
