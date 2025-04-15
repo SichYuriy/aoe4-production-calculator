@@ -43,7 +43,7 @@ Order of the Dragon
 - Scutage, Manors additionally generate 40 gold per minute +
 - Ships -10% cheaper to produce +
 - Burgundian imports, handcannoneer cost -25% +
-- Lancaster Wynguard Palace
+- Lancaster Wynguard Palace +
 
 Wynguard Palace:
 - Earl’s Retinue train time increased from 45 → 50 seconds

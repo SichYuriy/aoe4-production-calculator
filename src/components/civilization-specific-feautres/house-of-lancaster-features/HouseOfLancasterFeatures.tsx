@@ -12,6 +12,7 @@ import {PassiveIncomeModifiersState, togglePassiveIncomeModifier} from "../../..
 import EnglishDocks from "../english-featrues/english-docks/EnglishDocks";
 import CostModifierId from "../../../data/cost-modifiers/CostModifierId";
 import {CostModifierState, toggleCostModifier} from "../../../state/CostModifiersSlice";
+import {LancasterWynguardPalace} from "./wynguard-palace/LancasterWynguardPalace";
 
 function HouseOfLancasterFeatures() {
     const dispatch = useAppDispatch();
@@ -41,6 +42,7 @@ function HouseOfLancasterFeatures() {
                 {scutage}
                 {burgundianImports}
             </div>
+            <LancasterWynguardPalace/>
         </div>
     );
 }

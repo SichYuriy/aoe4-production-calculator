@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '151',
+        date: new Date(2025, 3, 14),
+        patch: '13.0.4343',
+        description: "Add House of Lancaster features"
+    },
+    {
         id: '150',
         date: new Date(2025, 3, 13),
         patch: '13.0.4343',

@@ -53,6 +53,9 @@ import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
 import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
+import earlsRetinueIcon from '../../icons/earls-retinue-1.png'
+import garrisonCommandIcon from '../../icons/garrison-command-1.png'
+import gunpowderContingentIcon from '../../icons/gunpowder-contingent-1.png'
 import monkIcon from '../../icons/monk.png'
 import warriorMonkIcon from '../../icons/warrior_monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
@@ -1458,11 +1461,11 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'WYNGUARD_ARMY',
         icon: wynguardArmyIcon,
         name: 'wynguard army',
-        productionTime: 75,
+        productionTime: 55,
         cost: new UnitCost(100, 200, 100, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
+        civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
         civilizationSpecificFeature: true
     },
@@ -1499,6 +1502,42 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    EARLS_RETINUE: {
+        id: 'EARLS_RETINUE',
+        icon: earlsRetinueIcon,
+        name: 'earls retinue',
+        productionTime: 50,
+        cost: new UnitCost(650, 200, 0, 0),
+        types: [UnitType.CAVALRY],
+        building: null,
+        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    GARRISON_COMMAND: {
+        id: 'GARRISON_COMMAND',
+        icon: garrisonCommandIcon,
+        name: 'garrison command',
+        productionTime: 30,
+        cost: new UnitCost(300, 0, 150, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
+        common: false,
+        civilizationSpecificFeature: true
+    },
+    GUNPOWDER_CONTINGENT: {
+        id: 'GUNPOWDER_CONTINGENT',
+        icon: gunpowderContingentIcon,
+        name: 'gunpowder contingent',
+        productionTime: 65,
+        cost: new UnitCost(0, 1050, 850, 0),
+        types: [UnitType.SIEGE],
+        building: null,
+        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
         civilizationSpecificFeature: true
     },
