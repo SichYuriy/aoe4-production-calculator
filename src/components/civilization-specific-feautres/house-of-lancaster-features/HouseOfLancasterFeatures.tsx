@@ -3,7 +3,7 @@ import shared from "../../../shared.module.css";
 function HouseOfLancasterFeatures() {
     return (
         <div className={shared.civilizationSpecificFeatures}>
-            <div>House of Lancaster features not implemented yet</div>
+            <div>Villagers gather from sheep +20% faster</div>
         </div>
     );
 }

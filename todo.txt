@@ -38,7 +38,7 @@ Order of the Dragon
 ### Patch 13.0.4343
 
 ## House of Lancaster
-- Villagers gather from sheep +20% faster. (Wool Industries additional gather rate from sheep decreased from 25% → 20%.)
+- Villagers gather from sheep +20% faster. (Wool Industries additional gather rate from sheep decreased from 25% → 20%.) (44.75 food/min) +
 - Manor income decreased from 70 food and 45 wood → 60 food and 45 wood.
 - Scutage, Manors additionally generate 40 gold per minute
 - Ships -10% cheaper to produce
