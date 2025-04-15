@@ -44,7 +44,7 @@ const englishImperialAge: GatheringRateModifier = {
     description: 'farm * 1.24'
 }
 
-const englishDocks: UnitCostModifier = {
+export const englishDocks: UnitCostModifier = {
     id: CostModifierId.ENGLISH_DOCKS,
     canBeApplied: unit => unit.building === Building.DOCK,
     apply: cost => ({
