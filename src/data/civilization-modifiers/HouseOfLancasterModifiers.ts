@@ -8,6 +8,9 @@ import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 import CostModifierId from "../cost-modifiers/CostModifierId";
 import {englishDocks} from "./EnglishModifiers";
+import UnitCostModifier from "../../model/UnitCostModifier";
+import Unit, {UnitCost} from "../../model/Unit";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
 const sheepGatheringRateBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.HOUSE_OF_LANCASTER_SHEEP,
@@ -35,6 +38,13 @@ const scutage: PassiveIncomeModifier = {
     source: PassiveIncomeSource.MANOR
 }
 
+const burgundiansImports: UnitCostModifier = {
+    id: CostModifierId.BURGUNDIANS_IMPORTS,
+    canBeApplied: (unit: Unit) => unit.id === 'HANDCANNONEER',
+    apply: (currentCost: UnitCost) => ResourcesAmount.ofObj(currentCost).multiplyByNumber(0.75),
+    description: 'handcannoneerCost * 0.75'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.HOUSE_OF_LANCASTER_SHEEP]: sheepGatheringRateBonus,
 }
@@ -45,7 +55,8 @@ const PASSIVE_INCOME_MODIFIERS = {
 }
 
 const COST_MODIFIERS = {
-    [CostModifierId.ENGLISH_DOCKS]: englishDocks
+    [CostModifierId.ENGLISH_DOCKS]: englishDocks,
+    [CostModifierId.BURGUNDIANS_IMPORTS]: burgundiansImports
 }
 
 const HOUSE_OF_LANCASTER_MODIFIERS: CivilizationModifiers = {

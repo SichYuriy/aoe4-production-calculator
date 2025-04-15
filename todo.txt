@@ -41,8 +41,8 @@ Order of the Dragon
 - Villagers gather from sheep +20% faster. (Wool Industries additional gather rate from sheep decreased from 25% → 20%.) (44.75 food/min) +
 - Manor income decreased from 70 food and 45 wood → 60 food and 45 wood. +
 - Scutage, Manors additionally generate 40 gold per minute +
-- Ships -10% cheaper to produce
-- Burgundian imports, handcannoneer cost -25%
+- Ships -10% cheaper to produce +
+- Burgundian imports, handcannoneer cost -25% +
 - Lancaster Wynguard Palace
 
 Wynguard Palace:
