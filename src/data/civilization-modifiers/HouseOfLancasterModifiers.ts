@@ -3,6 +3,9 @@ import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import FoodSource from "../../model/FoodSource";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
 const sheepGatheringRateBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.HOUSE_OF_LANCASTER_SHEEP,
@@ -12,8 +15,21 @@ const sheepGatheringRateBonus: GatheringRateModifier = {
     description: 'sheep * 1.2'
 };
 
+const manor: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MANOR,
+    food: 60,
+    gold: 0,
+    wood: 45,
+    stone: 0,
+    source: PassiveIncomeSource.MANOR
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.HOUSE_OF_LANCASTER_SHEEP]: sheepGatheringRateBonus,
+}
+
+const PASSIVE_INCOME_MODIFIERS = {
+    [PassiveIncomeModifierId.MANOR]: manor
 }
 
 const HOUSE_OF_LANCASTER_MODIFIERS: CivilizationModifiers = {
@@ -25,8 +41,8 @@ const HOUSE_OF_LANCASTER_MODIFIERS: CivilizationModifiers = {
     allCostModifiers: {},
     defaultCostModifiers: [],
     passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
-    defaultPassiveIncomeModifiers: [],
+    allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
+    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.MANOR],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveGoldFromFoodVillagerModifiers: {},
     allCostModifiersPerUnit: {},
