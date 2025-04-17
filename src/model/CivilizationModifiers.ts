@@ -17,6 +17,7 @@ interface CivilizationModifiers {
     civilization: CivilizationsEnum,
     allGatheringRateModifiers: { [key: string]: GatheringRateModifier },
     defaultGatheringRateModifiers: GatheringRateModifierId[],
+    disabledGatheringRateModifiers?: GatheringRateModifierId[],
     allProductionSpeedModifiers: { [key: string]: ProductionSpeedModifier },
     defaultProductionSpeedModifiers: ProductionSpeedModifierId[],
     allCostModifiers: { [key: string]: UnitCostModifier }

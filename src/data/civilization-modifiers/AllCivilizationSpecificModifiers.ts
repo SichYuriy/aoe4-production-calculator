@@ -9,6 +9,7 @@ import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource
 import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
 
 export const GATHERING_RATE_MODIFIERS_DEFAULT: { [key: string]: GatheringRateModifierId[] } = {};
+export const DISABLED_GATHERING_RATE_MODIFIERS: { [key: string]: GatheringRateModifierId[] } = {};
 export const ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS: GatheringRateModifierId[] = [];
 export const PRODUCTION_SPEED_MODIFIERS_DEFAULT: { [key: string]: ProductionSpeedModifierId[] } = {};
 export const ALL_CIVILIZATIONS_PRODUCTION_SPEED_MODIFIERS: ProductionSpeedModifierId[] = [];
@@ -23,6 +24,7 @@ export const ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS: ResourceDropOffModif
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
     GATHERING_RATE_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultGatheringRateModifiers;
+    DISABLED_GATHERING_RATE_MODIFIERS[civilizationModifiers.civilization] = civilizationModifiers.disabledGatheringRateModifiers || [];
     // @ts-ignore
     ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS.push(...Object.keys(civilizationModifiers.allGatheringRateModifiers));
 

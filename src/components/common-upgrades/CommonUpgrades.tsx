@@ -16,13 +16,10 @@ import relicIcon from "../../icons/relic.png";
 import sacredSiteIcon from "../../icons/sacred_site.png";
 import titheBarnIcon from "../../icons/tithe_barn.png";
 import PassiveIncomeSource from "../../data/passive-income-modifiers/PassiveIncomeSource";
-import {
-    decrementPassiveIncome,
-    incrementPassiveIncome,
-    PassiveIncomeSourcesState
-} from "../../state/PassiveIncomeSourcesSlice";
+import {decrementPassiveIncome, incrementPassiveIncome, PassiveIncomeSourcesState} from "../../state/PassiveIncomeSourcesSlice";
 import {PassiveIncomeModifiersState, togglePassiveIncomeModifier} from "../../state/PassiveIncomeModifiersSlice";
 import PassiveIncomeModifierId from "../../data/passive-income-modifiers/PassiveIncomeModifierId";
+import CivilizationsEnum from "../../data/CivilizationsEnum";
 
 function CommonUpgrades() {
     const dispatch = useAppDispatch();
@@ -30,6 +27,7 @@ function CommonUpgrades() {
     const productionSpeedModifiers: { [key: string]: boolean } = useAppSelector((rootState) => rootState.productionSpeedModifiers);
     const passiveIncomeSources: PassiveIncomeSourcesState = useAppSelector((rootState) => rootState.passiveIncomeSources);
     const passiveIncomeModifiers: PassiveIncomeModifiersState = useAppSelector((rootState) => rootState.passiveIncomeModifiers);
+    const civilization: CivilizationsEnum = useAppSelector(rootState => rootState.civilization.selected)
     let wheelbarrowItem = <UpgradeItem icon={wheelbarrowIcon}
                                        selected={gatheringRateModifiers[GatheringRateModifierId.WHEELBARROW]}
                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WHEELBARROW))}/>
@@ -54,6 +52,9 @@ function CommonUpgrades() {
                                      selected={passiveIncomeModifiers[PassiveIncomeModifierId.TITHE_BARN].selected}
                                      onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.TITHE_BARN))}
                                      tooltip={{header: 'Tithe barn', text: 'Passive wood, stone, food income from relics'}}/>
+
+    const showWoodUpgrades = civilization !== CivilizationsEnum.KNIGHTS_TEMPLAR;
+
     return (
         <div>
             <div><h3>Upgrades:</h3></div>
@@ -61,10 +62,10 @@ function CommonUpgrades() {
                 <div className={s.upgradesColumn}>
                     <div className={s.upgradesRow}>
                         <div className={s.singleUpgrade}>{wheelbarrowItem}</div>
-                        <div className={s.singleUpgrade}>{forestryItem}</div>
+                        {showWoodUpgrades ? <div className={s.singleUpgrade}>{forestryItem}</div> : ''}
                         <div className={s.singleUpgrade}>{militaryAcademyItem}</div>
                     </div>
-                    <WoodUpgrades/>
+                    {showWoodUpgrades ? <WoodUpgrades/> : ''}
                     <FoodUpgrades/>
                     <GoldUpgrades/>
                     <div className={s.upgradesRow}>

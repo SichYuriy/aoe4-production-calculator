@@ -4,7 +4,7 @@ import {RootState} from "../store";
 import GatheringRateModifier from "../model/GatheringRateModifier";
 import changeCivilization from "./actions/CivilizationChnagedAction";
 import {
-    ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS,
+    ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS, DISABLED_GATHERING_RATE_MODIFIERS,
     GATHERING_RATE_MODIFIERS_DEFAULT
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 
@@ -41,6 +41,7 @@ export const gatheringRateModifiers = createSlice({
         builder.addCase(changeCivilization, (state, action) => {
             ALL_CIVILIZATIONS_GATHERING_RATE_MODIFIERS.forEach(id => state[id] = false);
             (GATHERING_RATE_MODIFIERS_DEFAULT[action.payload] || []).forEach(id => state[id] = true);
+            (DISABLED_GATHERING_RATE_MODIFIERS[action.payload] || []).forEach(id => state[id] = false);
         })
     }
 });

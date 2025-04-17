@@ -12,7 +12,7 @@ import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationM
 const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
     [GatheringRateModifierId.WHEELBARROW]: {
         id: GatheringRateModifierId.WHEELBARROW,
-        apply: (rates, foodSource) => {
+        apply: (rates, foodSource, allSelectedModifiers) => {
             let foodMultiplier = 1;
             if ([FoodSource.BERRY, FoodSource.DEER].includes(foodSource)) {
                 foodMultiplier = 1.0952;
@@ -21,9 +21,10 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
             } else if ([FoodSource.FARM].includes(foodSource)) {
                 foodMultiplier = 1.032
             }
+            let woodMultiplier = allSelectedModifiers.includes(GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE) ? 1 : 1.07;
             return {
                 food: rates.food * foodMultiplier,
-                wood: rates.wood * 1.07,
+                wood: rates.wood * woodMultiplier,
                 gold: rates.gold * 1.07,
                 stone: rates.stone * 1.07
             };
