@@ -11,10 +11,10 @@ import CostModifierId from "../../data/cost-modifiers/CostModifierId";
 import LimitedFoodGatheringSource from "../../model/LimitedFoodGatheringSource";
 import PassiveIncomeService from "../PassiveIncomeService";
 import FoodSource from "../../model/FoodSource";
-import PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS
-    from "../../data/passive-gold-from-food-vilager-modifiers/AllPassiveGoldFromFoodVillagerModifiers";
-import PassiveGoldFromFoodVillagerModifierId
-    from "../../data/passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
+import PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS
+    from "../../data/passive-income-from-gathering-vilager-modifiers/AllPassiveIncomeFromGatheringVillagerModifiers";
+import PassiveIncomeFromGatheringVillagerModifierId
+    from "../../data/passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
 
 describe('ProductionCalculatorService', () => {
     let subject: ProductionCalculatorService;
@@ -95,14 +95,14 @@ describe('ProductionCalculatorService', () => {
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
-        it('one passiveGoldFromFoodVillager', () => {
+        it('one passiveIncomeFromGatheringVillager', () => {
             unitsSelected = {
                 'VILLAGER': 1,
                 'KNIGHT': 1
             }
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
                 [], [], new ResourcesAmount(), [],
-                [PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS[PassiveGoldFromFoodVillagerModifierId.ENCLOSURES]], FoodSource.FARM, 0, {});
+                [PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS[PassiveIncomeFromGatheringVillagerModifierId.ENCLOSURES]], FoodSource.FARM, 0, {});
 
             expect(actual.foodVillagers).toBeCloseTo(9.75);
             expect(actual.woodVillagers).toBeCloseTo(0);

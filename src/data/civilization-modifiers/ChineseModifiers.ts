@@ -95,7 +95,7 @@ const CHINESE_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: CHINESE_PASSIVE_INCOME_MODIFIERS,
     defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.PAGODA],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveGoldFromFoodVillagerModifiers: {},
+    allPassiveIncomeFromGatheringVillagerModifiers: {},
     allCostModifiersPerUnit: {},
     allResourceDropOffModifiers: CHINESE_RESOURCE_DROP_OFF_MODIFIERS
 }

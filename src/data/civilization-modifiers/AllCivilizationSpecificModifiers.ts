@@ -3,8 +3,8 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import allCivilizationModifiers from "./AllCivilizationModifiersRegistry";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
-import PassiveGoldFromFoodVillagerModifierId
-    from "../passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
+import PassiveIncomeFromGatheringVillagerModifierId
+    from "../passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 import ResourceDropOffModifierId from "../resource-drop-off-modifiers/ResourceDropOffModifierId";
 
@@ -19,7 +19,7 @@ export const ALL_CIVILIZATIONS_PASSIVE_INCOME_SOURCES: PassiveIncomeSource[] = [
 export const ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS: PassiveIncomeModifierId[] = [];
 export const PASSIVE_INCOME_MODIFIERS_DEFAULT: { [key: string]: PassiveIncomeModifierId[]} = {};
 export const ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS: PassiveIncomeModifierId[] = [];
-export const ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS: PassiveGoldFromFoodVillagerModifierId[] = [];
+export const ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS: PassiveIncomeFromGatheringVillagerModifierId[] = [];
 export const ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS: ResourceDropOffModifierId[] = [];
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
@@ -46,7 +46,7 @@ allCivilizationModifiers.forEach(civilizationModifiers => {
     ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS.push(...Object.keys(civilizationModifiers.allLimitedFoodGatheringSourceModifiers));
 
     // @ts-ignore
-    ALL_CIVILIZATIONS_PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveGoldFromFoodVillagerModifiers));
+    ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveIncomeFromGatheringVillagerModifiers));
 
     // @ts-ignore
     ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS.push(...Object.keys(civilizationModifiers.allResourceDropOffModifiers));

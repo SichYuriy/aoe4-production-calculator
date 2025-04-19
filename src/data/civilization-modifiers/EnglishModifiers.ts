@@ -8,9 +8,10 @@ import CostModifierId from "../cost-modifiers/CostModifierId";
 import {Building} from "../../model/Unit";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
-import PassiveGoldFromFoodVillagerModifier from "../../model/PassiveGoldFromFoodVillagerModifier";
-import PassiveGoldFromFoodVillagerModifierId
-    from "../passive-gold-from-food-vilager-modifiers/PassiveGoldFromFoodVillagerModifierId";
+import PassiveIncomeFromGatheringVillagerModifier from "../../model/PassiveIncomeFromGatheringVillagerModifier";
+import PassiveIncomeFromGatheringVillagerModifierId from "../passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
+import ResourcesAmount from "../../model/ResourcesAmount";
+import {ResourceType} from "../../model/ResourceType";
 
 const englishDarkAge: GatheringRateModifier = {
     id: GatheringRateModifierId.ENGLISH_DARK_AGE,
@@ -62,9 +63,10 @@ const englishMma: ProductionSpeedModifier = {
     productionSpeedBonus: 0.5
 }
 
-const enclosures: PassiveGoldFromFoodVillagerModifier = {
-    id: PassiveGoldFromFoodVillagerModifierId.ENCLOSURES,
-    gold: 10,
+const enclosures: PassiveIncomeFromGatheringVillagerModifier = {
+    id: PassiveIncomeFromGatheringVillagerModifierId.ENCLOSURES,
+    gatheringResource: ResourceType.FOOD,
+    incomeAmount: ResourcesAmount.ofGold(10),
     foodSources: [FoodSource.FARM]
 }
 
@@ -90,8 +92,8 @@ const COST_MODIFIERS = {
     [CostModifierId.ENGLISH_DOCKS]: englishDocks
 }
 
-const PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS = {
-    [PassiveGoldFromFoodVillagerModifierId.ENCLOSURES]: enclosures
+const PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS = {
+    [PassiveIncomeFromGatheringVillagerModifierId.ENCLOSURES]: enclosures
 }
 
 const ENGLISH_MODIFIERS: CivilizationModifiers = {
@@ -106,7 +108,7 @@ const ENGLISH_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: {},
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveGoldFromFoodVillagerModifiers: PASSIVE_GOLD_FROM_FOOD_VILLAGER_MODIFIERS,
+    allPassiveIncomeFromGatheringVillagerModifiers: PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS,
     allCostModifiersPerUnit: {},
     allResourceDropOffModifiers: {}
 }

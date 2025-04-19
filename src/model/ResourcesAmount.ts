@@ -16,6 +16,26 @@ export default class ResourcesAmount {
         return amount;
     }
 
+    static ofZero(): ResourcesAmount {
+        return ResourcesAmount.of(0, 0, 0, 0);
+    }
+
+    static ofFood(food: number): ResourcesAmount {
+        return ResourcesAmount.of(food, 0, 0, 0);
+    }
+
+    static ofWood(wood: number): ResourcesAmount {
+        return ResourcesAmount.of(0, wood, 0, 0);
+    }
+
+    static ofGold(gold: number): ResourcesAmount {
+        return ResourcesAmount.of(0, 0, gold, 0);
+    }
+
+    static ofStone(stone: number): ResourcesAmount {
+        return ResourcesAmount.of(0, 0, 0, stone);
+    }
+
     static ofObj(obj: { food: number, wood: number, gold: number, stone: number }): ResourcesAmount {
         return ResourcesAmount.of(obj.food, obj.wood, obj.gold, obj.stone);
     }

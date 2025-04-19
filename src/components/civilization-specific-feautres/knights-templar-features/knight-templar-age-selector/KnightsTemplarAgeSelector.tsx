@@ -27,7 +27,7 @@ export function KnightsTemplarAgeSelector() {
 
     return (
         <Tooltip header="Age" text="Increases wood gathering rate">
-            <AgeSelector inputName={'englishAge'} onSelect={selectAge} selected={selectedAge}/>
+            <AgeSelector inputName={'knightsTemplarAge'} onSelect={selectAge} selected={selectedAge}/>
         </Tooltip>
     );
 }

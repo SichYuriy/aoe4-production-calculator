@@ -85,7 +85,7 @@ const FRENCH_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: {},
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveGoldFromFoodVillagerModifiers: {},
+    allPassiveIncomeFromGatheringVillagerModifiers: {},
     allCostModifiersPerUnit: {},
     allResourceDropOffModifiers: {}
 }

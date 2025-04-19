@@ -10,7 +10,7 @@ import LimitedFoodGatheringSourceService
     from "../limited-food-gathering-source-service/LimitedFoodGatheringSourceService";
 import PassiveIncomeService from "../PassiveIncomeService";
 import FoodSource from "../../model/FoodSource";
-import PassiveGoldFromFoodVillagerModifier from "../../model/PassiveGoldFromFoodVillagerModifier";
+import PassiveIncomeFromGatheringVillagerModifier from "../../model/PassiveIncomeFromGatheringVillagerModifier";
 import {CostModifiersPerUnitState} from "../../state/CostModifiersPerUnitSlice";
 import ALL_COST_MODIFIERS_PER_UNIT from "../../data/cost-modifiers-per-unit/AllCostModifiersPerUnit";
 
@@ -30,7 +30,7 @@ class ProductionCalculatorService {
                                     costModifiers: UnitCostModifier[],
                                     passiveIncome: ResourcesAmount,
                                     limitedFoodGatheringSources: LimitedFoodGatheringSource[],
-                                    passiveGoldFromFoodVillagerModifiers: PassiveGoldFromFoodVillagerModifier[],
+                                    passiveIncomeFromGatheringVillagerModifiers: PassiveIncomeFromGatheringVillagerModifier[],
                                     foodSource: FoodSource,
                                     minFoodVillagers: number,
                                     costModifiersPerUnit: CostModifiersPerUnitState): ProductionVillagerCost {
@@ -44,8 +44,10 @@ class ProductionCalculatorService {
         let villagersCost = resourcesNeeded.divideByGatheringRate(gatheringRates);
         villagersCost.foodVillagers = Math.max(villagersCost.foodVillagers, minFoodVillagers);
 
-        let passiveGoldFromFoodVillagers = this.passiveIncomeService.getPassiveGoldIncome(Math.ceil(villagersCost.foodVillagers), passiveGoldFromFoodVillagerModifiers, foodSource);
-        resourcesNeeded = resourcesNeeded.subtractToZero(ResourcesAmount.of(0 , 0, passiveGoldFromFoodVillagers, 0));
+
+        let passiveIncomeFromGatheringVillagers: ResourcesAmount = this.passiveIncomeService
+            .getPassiveIncomeFromGatheringVillagers(villagersCost, passiveIncomeFromGatheringVillagerModifiers, foodSource);
+        resourcesNeeded = resourcesNeeded.subtractToZero(passiveIncomeFromGatheringVillagers);
         villagersCost = resourcesNeeded.divideByGatheringRate(gatheringRates);
         villagersCost.foodVillagers = Math.max(villagersCost.foodVillagers, minFoodVillagers);
 

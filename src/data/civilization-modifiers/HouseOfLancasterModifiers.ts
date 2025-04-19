@@ -71,7 +71,7 @@ const HOUSE_OF_LANCASTER_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
     defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.MANOR],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveGoldFromFoodVillagerModifiers: {},
+    allPassiveIncomeFromGatheringVillagerModifiers: {},
     allCostModifiersPerUnit: {},
     allResourceDropOffModifiers: {}
 }

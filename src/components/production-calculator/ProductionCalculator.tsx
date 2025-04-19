@@ -11,7 +11,7 @@ import {selectActiveProductionSpeedModifiers} from "../../state/ProducationSpeed
 import {selectActiveCostModifiers} from "../../state/CostModifiersSlice";
 import {useState} from "react";
 import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
-import {selectActivePassiveGoldFromFoodVillagerModifiers} from "../../state/PassiveGoldFromFoodVillagerModifiersSlice";
+import {selectActivePassiveIncomeFromGatheringVillagerModifiers} from "../../state/PassiveIncomeFromGatheringVillagerModifiersSlice";
 import {selectActiveResourceDropOffModifiers} from "../../state/ResourceDropOffModifiersSlice";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
@@ -32,11 +32,13 @@ function ProductionCalculator() {
     const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
     const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
     const limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers);
-    const passiveGoldFromFoodVillagerModifiers = useAppSelector(selectActivePassiveGoldFromFoodVillagerModifiers);
+    const passiveIncomeFromGatheringVillagerModifiers = useAppSelector(selectActivePassiveIncomeFromGatheringVillagerModifiers);
     const resourceDropOffModifiers = useAppSelector(selectActiveResourceDropOffModifiers);
-    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates, gatheringRateModifiers, resourceDropOffModifiers);
+    let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates,
+        gatheringRateModifiers, resourceDropOffModifiers);
     let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers, passiveIncomeSources);
-    let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers, gatheringRateModifiers, resourceDropOffModifiers);
+    let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers,
+        gatheringRateModifiers, resourceDropOffModifiers);
     let minFoodVillagers: number = useAppSelector(rootState => rootState.minFoodWorkers.value);
     let villagerCost = productionCalculatorService.calculateProductionVillagerCost(
         gatheringRates,
@@ -45,7 +47,7 @@ function ProductionCalculator() {
         costModifiers,
         passiveIncome,
         limitedFoodGatheringSources,
-        passiveGoldFromFoodVillagerModifiers,
+        passiveIncomeFromGatheringVillagerModifiers,
         foodSource,
         minFoodVillagers,
         costModifiersPerUnit
