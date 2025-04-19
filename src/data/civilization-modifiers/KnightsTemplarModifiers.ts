@@ -10,6 +10,8 @@ import PassiveIncomeFromGatheringVillagerModifierId
 import UnitCostModifier from "../../model/UnitCostModifier";
 import {UnitCost, UnitType} from "../../model/Unit";
 import CostModifierId from "../cost-modifiers/CostModifierId";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
 
 const darkAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE,
@@ -73,6 +75,22 @@ const siegeDiscount: UnitCostModifier = {
     description: 'siegeCost.wood * 0.75'
 }
 
+const kingdomOfFranceProductionSpeed: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.KINGDOM_OF_FRANCE,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT, UnitType.MILITARY_SHIP].includes(unitType)),
+    productionSpeedBonus: 0.15
+}
+
+const kingdomOfFranceUnitCost: UnitCostModifier = {
+    id: CostModifierId.KINGDOM_OF_FRANCE,
+    canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT, UnitType.MILITARY_SHIP].includes(unitType)),
+    apply: currentCost => ({
+        ...currentCost,
+        gold: currentCost.gold * 0.95
+    }),
+    description: 'militaryUnit.gold * 0.95'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE]: darkAgeWoodBonus,
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_FEUDAL_AGE]: feudalAgeWoodBonus,
@@ -88,7 +106,12 @@ const PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS = {
 }
 
 const COST_MODIFIERS = {
-    [CostModifierId.KNIGHTS_TEMPLAR_SIEGE]: siegeDiscount
+    [CostModifierId.KNIGHTS_TEMPLAR_SIEGE]: siegeDiscount,
+    [CostModifierId.KINGDOM_OF_FRANCE]: kingdomOfFranceUnitCost
+}
+
+const PRODUCTION_SPEED_MODIFIERS = {
+    [ProductionSpeedModifierId.KINGDOM_OF_FRANCE]: kingdomOfFranceProductionSpeed
 }
 
 const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
@@ -97,7 +120,7 @@ const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     defaultGatheringRateModifiers: [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE],
     disabledGatheringRateModifiers: [GatheringRateModifierId.DOUBLE_BROADAX, GatheringRateModifierId.LUMBER_PRESERVATION,
         GatheringRateModifierId.CROSSCUT_SAW, GatheringRateModifierId.FORESTRY],
-    allProductionSpeedModifiers: {},
+    allProductionSpeedModifiers: PRODUCTION_SPEED_MODIFIERS,
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.KNIGHTS_TEMPLAR_SIEGE],

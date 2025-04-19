@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '152',
+        date: new Date(2025, 3, 19),
+        patch: '13.0.4343',
+        description: "Add Knights Templar features (except pilgrims)"
+    },
+    {
         id: '151',
         date: new Date(2025, 3, 14),
         patch: '13.0.4343',
