@@ -7,6 +7,9 @@ import {ResourceType} from "../../model/ResourceType";
 import ResourcesAmount from "../../model/ResourcesAmount";
 import PassiveIncomeFromGatheringVillagerModifierId
     from "../passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
+import UnitCostModifier from "../../model/UnitCostModifier";
+import {UnitCost, UnitType} from "../../model/Unit";
+import CostModifierId from "../cost-modifiers/CostModifierId";
 
 const darkAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE,
@@ -60,6 +63,16 @@ const foodFromWoodImperialAge: PassiveIncomeFromGatheringVillagerModifier = {
     foodSources:[]
 }
 
+const siegeDiscount: UnitCostModifier = {
+    id: CostModifierId.KNIGHTS_TEMPLAR_SIEGE,
+    canBeApplied: unit => unit.types.some(unitType => unitType === UnitType.SIEGE),
+    apply: (currentCost: UnitCost) => ({
+        ...currentCost,
+        wood: currentCost.wood * 0.75
+    }),
+    description: 'siegeCost.wood * 0.75'
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE]: darkAgeWoodBonus,
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_FEUDAL_AGE]: feudalAgeWoodBonus,
@@ -74,6 +87,10 @@ const PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS = {
     [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_IMPERIAL_AGE]: foodFromWoodImperialAge,
 }
 
+const COST_MODIFIERS = {
+    [CostModifierId.KNIGHTS_TEMPLAR_SIEGE]: siegeDiscount
+}
+
 const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.KNIGHTS_TEMPLAR,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
@@ -82,8 +99,8 @@ const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
         GatheringRateModifierId.CROSSCUT_SAW, GatheringRateModifierId.FORESTRY],
     allProductionSpeedModifiers: {},
     defaultProductionSpeedModifiers: [],
-    allCostModifiers: {},
-    defaultCostModifiers: [],
+    allCostModifiers: COST_MODIFIERS,
+    defaultCostModifiers: [CostModifierId.KNIGHTS_TEMPLAR_SIEGE],
     passiveIncomeSources: [],
     allPassiveIncomeModifiers: {},
     defaultPassiveIncomeModifiers: [],

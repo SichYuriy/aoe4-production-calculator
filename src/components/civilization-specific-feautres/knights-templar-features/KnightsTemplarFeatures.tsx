@@ -4,6 +4,7 @@ import {KnightsTemplarAgeSelector} from "./knight-templar-age-selector/KnightsTe
 function KnightsTemplarFeatures() {
     return (
         <div className={shared.civilizationSpecificFeatures}>
+            <div>Siege Engines cost -25% less wood</div>
             <div>Wood gathered is produced as additional food</div>
             <KnightsTemplarAgeSelector/>
         </div>

@@ -55,6 +55,6 @@ Wynguard Palace:
  - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute
  - Republic of genoa: Pilgrims generate + 30% gold
  - No lumber camp upgrades, Lumberjacks deposit wood automatically and gather faster with each Age. (Wood is gathered +15% faster in each Age and 20% of the wood gathered is produced as additional food) +
- - siege units -25% wood
+ - siege units -25% wood +
  - Kingdom of france: Military units: 1) +15% produced faster 2) -5% gold cost
 
