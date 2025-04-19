@@ -2,6 +2,11 @@ import CivilizationModifiers from "../../model/CivilizationModifiers";
 import CivilizationsEnum from "../CivilizationsEnum";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
+import PassiveIncomeFromGatheringVillagerModifier from "../../model/PassiveIncomeFromGatheringVillagerModifier";
+import {ResourceType} from "../../model/ResourceType";
+import ResourcesAmount from "../../model/ResourcesAmount";
+import PassiveIncomeFromGatheringVillagerModifierId
+    from "../passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
 
 const darkAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE,
@@ -27,6 +32,34 @@ const imperialAgeWoodBonus: GatheringRateModifier = {
     description: 'wood * 1.1'
 }
 
+const foodFromWoodDarkAge: PassiveIncomeFromGatheringVillagerModifier = {
+    id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_DARK_AGE,
+    gatheringResource: ResourceType.WOOD,
+    incomeAmount: ResourcesAmount.ofFood(7),
+    foodSources:[]
+}
+
+const foodFromWoodFeudalAge: PassiveIncomeFromGatheringVillagerModifier = {
+    id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_FEUDAL_AGE,
+    gatheringResource: ResourceType.WOOD,
+    incomeAmount: ResourcesAmount.ofFood(9),
+    foodSources:[]
+}
+
+const foodFromWoodCastleAge: PassiveIncomeFromGatheringVillagerModifier = {
+    id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_CASTLE_AGE,
+    gatheringResource: ResourceType.WOOD,
+    incomeAmount: ResourcesAmount.ofFood(10),
+    foodSources:[]
+}
+
+const foodFromWoodImperialAge: PassiveIncomeFromGatheringVillagerModifier = {
+    id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_IMPERIAL_AGE,
+    gatheringResource: ResourceType.WOOD,
+    incomeAmount: ResourcesAmount.ofFood(11),
+    foodSources:[]
+}
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE]: darkAgeWoodBonus,
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_FEUDAL_AGE]: feudalAgeWoodBonus,
@@ -34,13 +67,19 @@ const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_IMPERIAL_AGE]: imperialAgeWoodBonus,
 }
 
+const PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS = {
+    [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_DARK_AGE]: foodFromWoodDarkAge,
+    [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_FEUDAL_AGE]: foodFromWoodFeudalAge,
+    [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_CASTLE_AGE]: foodFromWoodCastleAge,
+    [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_IMPERIAL_AGE]: foodFromWoodImperialAge,
+}
+
 const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.KNIGHTS_TEMPLAR,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
     defaultGatheringRateModifiers: [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE],
     disabledGatheringRateModifiers: [GatheringRateModifierId.DOUBLE_BROADAX, GatheringRateModifierId.LUMBER_PRESERVATION,
-        GatheringRateModifierId.CROSSCUT_SAW, GatheringRateModifierId.FORESTRY
-    ],
+        GatheringRateModifierId.CROSSCUT_SAW, GatheringRateModifierId.FORESTRY],
     allProductionSpeedModifiers: {},
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
@@ -49,7 +88,8 @@ const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     allPassiveIncomeModifiers: {},
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
-    allPassiveIncomeFromGatheringVillagerModifiers: {},
+    allPassiveIncomeFromGatheringVillagerModifiers: PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS,
+    defaultPassiveIncomeFromGatheringVillagerModifiers: [PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_DARK_AGE],
     allCostModifiersPerUnit: {},
     allResourceDropOffModifiers: {}
 }

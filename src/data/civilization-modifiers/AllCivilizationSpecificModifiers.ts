@@ -20,6 +20,7 @@ export const ALL_CIVILIZATIONS_PASSIVE_INCOME_MODIFIERS: PassiveIncomeModifierId
 export const PASSIVE_INCOME_MODIFIERS_DEFAULT: { [key: string]: PassiveIncomeModifierId[]} = {};
 export const ALL_CIVILIZATIONS_LIMITED_FOOD_GATHERING_SOURCE_MODIFIERS: PassiveIncomeModifierId[] = [];
 export const ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS: PassiveIncomeFromGatheringVillagerModifierId[] = [];
+export const PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS_DEFAULT: { [key: string]: PassiveIncomeFromGatheringVillagerModifierId[] } = {};
 export const ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS: ResourceDropOffModifierId[] = [];
 
 allCivilizationModifiers.forEach(civilizationModifiers => {
@@ -47,6 +48,8 @@ allCivilizationModifiers.forEach(civilizationModifiers => {
 
     // @ts-ignore
     ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS.push(...Object.keys(civilizationModifiers.allPassiveIncomeFromGatheringVillagerModifiers));
+
+    PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS_DEFAULT[civilizationModifiers.civilization] = civilizationModifiers.defaultPassiveIncomeFromGatheringVillagerModifiers || [];
 
     // @ts-ignore
     ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS.push(...Object.keys(civilizationModifiers.allResourceDropOffModifiers));

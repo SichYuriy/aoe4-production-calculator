@@ -12,6 +12,8 @@ import PassiveIncomeModifierId from "../data/passive-income-modifiers/PassiveInc
 import PassiveIncomeSource from "../data/passive-income-modifiers/PassiveIncomeSource";
 import CostModifierPerUnit from "./CostModifierPerUnit";
 import ResourceDropOffModifier from "./ResourceDropOffModifier";
+import PassiveIncomeFromGatheringVillagerModifierId
+    from "../data/passive-income-from-gathering-vilager-modifiers/PassiveIncomeFromGatheringVillagerModifierId";
 
 interface CivilizationModifiers {
     civilization: CivilizationsEnum,
@@ -27,6 +29,7 @@ interface CivilizationModifiers {
     defaultPassiveIncomeModifiers: PassiveIncomeModifierId[]
     allLimitedFoodGatheringSourceModifiers: { [key: string]: LimitedFoodGatheringSourceModifier },
     allPassiveIncomeFromGatheringVillagerModifiers: { [key: string]: PassiveIncomeFromGatheringVillagerModifier },
+    defaultPassiveIncomeFromGatheringVillagerModifiers?: PassiveIncomeFromGatheringVillagerModifierId[],
     allCostModifiersPerUnit: { [key: string]: CostModifierPerUnit},
     allResourceDropOffModifiers: { [key: string]: ResourceDropOffModifier}
 }

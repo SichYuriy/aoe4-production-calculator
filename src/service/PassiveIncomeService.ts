@@ -6,6 +6,7 @@ import FoodSource from "../model/FoodSource";
 import {PassiveIncomeSourcesState} from "../state/PassiveIncomeSourcesSlice";
 import ProductionVillagerCost from "../model/ProductionVillagerCost";
 import {ResourceType} from "../model/ResourceType";
+import {CalculationUtil} from "./production-calculator-service/CalculationUtil";
 
 export default class PassiveIncomeService {
     getPassiveIncome(incomeModifiers: PassiveIncomeModifiersState, sources: PassiveIncomeSourcesState): ResourcesAmount {
@@ -35,13 +36,13 @@ function getVillagersCount(villagersCost: ProductionVillagerCost,
                            modifier: PassiveIncomeFromGatheringVillagerModifier,
                            foodSource: FoodSource) {
     if (modifier.gatheringResource === ResourceType.FOOD && modifier.foodSources.includes(foodSource)) {
-        return Math.ceil(villagersCost.foodVillagers);
+        return CalculationUtil.roundVillagerCost(villagersCost.foodVillagers);
     } else if (modifier.gatheringResource === ResourceType.WOOD) {
-        return Math.ceil(villagersCost.woodVillagers);
+        return CalculationUtil.roundVillagerCost(villagersCost.woodVillagers);
     } else if (modifier.gatheringResource === ResourceType.GOLD) {
-        return Math.ceil(villagersCost.goldVillagers);
+        return CalculationUtil.roundVillagerCost(villagersCost.goldVillagers);
     } else if (modifier.gatheringResource === ResourceType.STONE) {
-        return Math.ceil(villagersCost.stoneVillagers);
+        return CalculationUtil.roundVillagerCost(villagersCost.stoneVillagers);
     }
     return 0;
 }

@@ -13,6 +13,7 @@ import {useState} from "react";
 import {selectActiveLimitedFoodGatheringSourceModifiers} from "../../state/LimitedFoodGatheringSourceModifiersSlice";
 import {selectActivePassiveIncomeFromGatheringVillagerModifiers} from "../../state/PassiveIncomeFromGatheringVillagerModifiersSlice";
 import {selectActiveResourceDropOffModifiers} from "../../state/ResourceDropOffModifiersSlice";
+import {CalculationUtil} from "../../service/production-calculator-service/CalculationUtil";
 
 const productionCalculatorService = serviceLocator.PRODUCTION_CALCULATOR_SERVICE;
 const gatheringRatesService = serviceLocator.GATHERING_RATES_SERVICE;
@@ -54,10 +55,10 @@ function ProductionCalculator() {
     );
     if (!seePreciseNumbers) {
         villagerCost = {
-            foodVillagers: roundVillagerCount(villagerCost.foodVillagers),
-            woodVillagers: roundVillagerCount(villagerCost.woodVillagers),
-            goldVillagers: roundVillagerCount(villagerCost.goldVillagers),
-            stoneVillagers: roundVillagerCount(villagerCost.stoneVillagers),
+            foodVillagers: CalculationUtil.roundVillagerCost(villagerCost.foodVillagers),
+            woodVillagers: CalculationUtil.roundVillagerCost(villagerCost.woodVillagers),
+            goldVillagers: CalculationUtil.roundVillagerCost(villagerCost.goldVillagers),
+            stoneVillagers: CalculationUtil.roundVillagerCost(villagerCost.stoneVillagers),
         }
     }
     let factionDigits = seePreciseNumbers ? 2 : 0;
@@ -82,14 +83,6 @@ function ProductionCalculator() {
             </div>
         </div>
     );
-}
-
-function roundVillagerCount(val: number): number {
-    if (val - Math.floor(val) < 0.3) {
-        return Math.floor(val);
-    } else {
-        return Math.ceil(val);
-    }
 }
 
 export default ProductionCalculator;

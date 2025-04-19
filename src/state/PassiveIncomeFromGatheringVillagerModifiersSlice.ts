@@ -2,6 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import changeCivilization from "./actions/CivilizationChnagedAction";
 import {
     ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS,
+    PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS_DEFAULT,
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 import {RootState} from "../store";
 import PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS
@@ -26,6 +27,11 @@ export interface PassiveIncomeFromGatheringVillagerModifiersState {
     [key: string]: PassiveIncomeFromGatheringVillagerModifierState
 }
 
+export interface UnselectSelectPassiveIncomeFromGatheringVillagerModifiersState {
+    unselect: string[],
+    select: string[]
+}
+
 export const passiveIncomeFromGatheringVillagerModifiers = createSlice({
     name: 'passiveIncomeFromGatheringVillagerModifiers',
     initialState: initialState,
@@ -34,10 +40,15 @@ export const passiveIncomeFromGatheringVillagerModifiers = createSlice({
             let id: string = action.payload;
             state[id].selected = !state[id].selected;
         },
+        unselectSelectPassiveIncomeFromGatheringVillagerModifiers: (state, action: PayloadAction<UnselectSelectPassiveIncomeFromGatheringVillagerModifiersState>) => {
+            action.payload.unselect.forEach(id => state[id].selected = false);
+            action.payload.select.forEach(id => state[id].selected = true);
+        }
     },
     extraReducers: builder => {
-        builder.addCase(changeCivilization, state => {
+        builder.addCase(changeCivilization, (state, action) => {
             ALL_CIVILIZATIONS_PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS.forEach(id => state[id].selected = false);
+            (PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS_DEFAULT[action.payload] || []).forEach(id => state[id].selected = true);
         })
     }
 });
@@ -48,5 +59,5 @@ export let selectActivePassiveIncomeFromGatheringVillagerModifiers = (state: Roo
         .map(id => PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS[id]);
 }
 
-export const {togglePassiveIncomeFromGatheringVillagerModifier} = passiveIncomeFromGatheringVillagerModifiers.actions;
+export const {togglePassiveIncomeFromGatheringVillagerModifier, unselectSelectPassiveIncomeFromGatheringVillagerModifiers} = passiveIncomeFromGatheringVillagerModifiers.actions;
 export default passiveIncomeFromGatheringVillagerModifiers.reducer;
