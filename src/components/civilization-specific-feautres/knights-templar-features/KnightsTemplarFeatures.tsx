@@ -4,6 +4,7 @@ import {KnightsTemplarAgeSelector} from "./knight-templar-age-selector/KnightsTe
 function KnightsTemplarFeatures() {
     return (
         <div className={shared.civilizationSpecificFeatures}>
+            <div>Wood gathered is produced as additional food</div>
             <KnightsTemplarAgeSelector/>
         </div>
     )
