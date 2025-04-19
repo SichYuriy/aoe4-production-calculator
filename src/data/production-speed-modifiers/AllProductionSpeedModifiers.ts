@@ -6,7 +6,7 @@ import allCivilizationModifiers from "../civilization-modifiers/AllCivilizationM
 const PRODUCTION_SPEED_MODIFIERS: { [key: string]: ProductionSpeedModifier } = {
     [ProductionSpeedModifierId.MILITARY_ACADEMY]: {
         id: ProductionSpeedModifierId.MILITARY_ACADEMY,
-        canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT].includes(unitType)),
+        canBeApplied: unit => unit.types.some(unitType => [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT, UnitType.MILITARY_SHIP].includes(unitType)),
         productionSpeedBonus: 0.33
     }
 };

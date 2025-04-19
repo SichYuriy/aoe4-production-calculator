@@ -1558,7 +1558,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'dhow',
         productionTime: 25,
         cost: new UnitCost(80, 0, 150, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.AYYUBIDS],
         common: false
@@ -1569,7 +1569,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'galley',
         productionTime: 25,
         cost: new UnitCost(80, 0, 150, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
@@ -1582,7 +1582,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'junk',
         productionTime: 25,
         cost: new UnitCost(80, 0, 150, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
         common: false
@@ -1593,7 +1593,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'hulk',
         productionTime: 30,
         cost: new UnitCost(110, 30, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE, CivilizationsEnum.RUS,
             CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
@@ -1605,7 +1605,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'dromon',
         productionTime: 30,
         cost: new UnitCost(100, 60, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.BYZANTINES],
         common: false
@@ -1616,7 +1616,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'war cog',
         productionTime: 30,
         cost: new UnitCost(75, 30, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
@@ -1627,7 +1627,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'baghlah',
         productionTime: 30,
         cost: new UnitCost(110, 30, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.AYYUBIDS],
         common: false
@@ -1638,7 +1638,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'war junk',
         productionTime: 30,
         cost: new UnitCost(110, 30, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
         common: false
@@ -1649,7 +1649,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'demolition ship',
         productionTime: 15,
         cost: new UnitCost(0, 80, 80, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH,
             CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI,
@@ -1663,7 +1663,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'explosive junk',
         productionTime: 15,
         cost: new UnitCost(0, 80, 80, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
         common: false
@@ -1674,7 +1674,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'carrack',
         productionTime: 45,
         cost: new UnitCost(200, 200, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE,
             CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER,
@@ -1687,7 +1687,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'baochuan',
         productionTime: 45,
         cost: new UnitCost(200, 200, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY],
         common: false
@@ -1698,7 +1698,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'atakebune',
         productionTime: 45,
         cost: new UnitCost(100, 220, 220, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.JAPANESE],
         common: false
@@ -1709,7 +1709,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'grand galley',
         productionTime: 50,
         cost: new UnitCost(135, 300, 360, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS],
         common: false
@@ -1720,7 +1720,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'hunting canoe',
         productionTime: 25,
         cost: new UnitCost(80, 0, 150, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.MALIANS],
         common: false
@@ -1731,7 +1731,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'war canoe',
         productionTime: 30,
         cost: new UnitCost(110, 30, 200, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.MALIANS],
         common: false
@@ -1742,7 +1742,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'galleas',
         productionTime: 50,
         cost: new UnitCost(200, 300, 360, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false
@@ -1825,7 +1825,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         name: 'venetian galley',
         productionTime: 50,
         cost: new UnitCost(0, 300, 360, 0),
-        types: [],
+        types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false

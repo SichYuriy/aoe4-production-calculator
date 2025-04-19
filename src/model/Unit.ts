@@ -19,6 +19,7 @@ export enum UnitType {
     CAVALRY,
     SIEGE,
     TRANSPORT,
+    MILITARY_SHIP
 }
 
 export enum Building {
