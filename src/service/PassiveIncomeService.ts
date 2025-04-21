@@ -7,6 +7,8 @@ import {PassiveIncomeSourcesState} from "../state/PassiveIncomeSourcesSlice";
 import ProductionVillagerCost from "../model/ProductionVillagerCost";
 import {ResourceType} from "../model/ResourceType";
 import {CalculationUtil} from "./production-calculator-service/CalculationUtil";
+import { DynamicPassiveIncomeModifiersState, DynamicPassiveIncomeModifierState } from "../state/DynamicPassiveIncomeModifiersSlice";
+import DYNAMIC_PASSIVE_INCOME_MODIFIERS from "../data/dynamic-passive-income-modifiers/DynamicPassiveIncomeModifiersId";
 
 export default class PassiveIncomeService {
     getPassiveIncome(incomeModifiers: PassiveIncomeModifiersState, sources: PassiveIncomeSourcesState): ResourcesAmount {
@@ -18,6 +20,18 @@ export default class PassiveIncomeService {
             .filter(modifierState => modifierState.selected)
             .filter(modifierState => getSourceCount(modifierState) > 0)
             .map(modifierState => ResourcesAmount.ofObj(PASSIVE_INCOME_MODIFIERS[modifierState.id]).multiplyByNumber(getSourceCount(modifierState)))
+            .reduce((total, current) => total.add(current), new ResourcesAmount());
+    }
+
+    getDynamicPassiveIncome(incomeModifiers: DynamicPassiveIncomeModifiersState, sources: PassiveIncomeSourcesState): ResourcesAmount {
+        function getSourceCount(modifierState: DynamicPassiveIncomeModifierState) {
+            return sources[DYNAMIC_PASSIVE_INCOME_MODIFIERS[modifierState.id].source].count;
+        }
+
+        return Object.values(incomeModifiers)
+            .filter(modifierState => modifierState.selected)
+            .filter(modifierState => getSourceCount(modifierState) > 0)
+            .map(modifierState => ResourcesAmount.ofObj(modifierState.value).multiplyByNumber(getSourceCount(modifierState)))
             .reduce((total, current) => total.add(current), new ResourcesAmount());
     }
 

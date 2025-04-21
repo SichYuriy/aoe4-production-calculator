@@ -12,6 +12,9 @@ import {UnitCost, UnitType} from "../../model/Unit";
 import CostModifierId from "../cost-modifiers/CostModifierId";
 import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
 import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import DynamicPassiveIncomeModifierId from "../dynamic-passive-income-modifiers/DynamicPassiveIncomeModifiers";
+import DynamicPassiveIncomeModifier from "../../model/DynamicPassiveIncomeModifier";
 
 const darkAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE,
@@ -114,6 +117,12 @@ const PRODUCTION_SPEED_MODIFIERS = {
     [ProductionSpeedModifierId.KINGDOM_OF_FRANCE]: kingdomOfFranceProductionSpeed
 }
 
+let pilgrim: DynamicPassiveIncomeModifier = {
+    id: DynamicPassiveIncomeModifierId.PILGRIM,
+    default: { food: 0, gold: 40, wood: 0, stone: 0 },
+    source: PassiveIncomeSource.PILGRIM,
+}
+
 const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.KNIGHTS_TEMPLAR,
     allGatheringRateModifiers: GATHERING_RATE_MODIFIERS,
@@ -124,8 +133,10 @@ const KNIGHTS_TEMPLAR_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.KNIGHTS_TEMPLAR_SIEGE],
-    passiveIncomeSources: [],
+    passiveIncomeSources: [PassiveIncomeSource.PILGRIM],
     allPassiveIncomeModifiers: {},
+    allDynamicPassiveIncomeModifiers: {[DynamicPassiveIncomeModifierId.PILGRIM]: pilgrim},
+    defaultDynamicPassiveIncomeModifiers: [DynamicPassiveIncomeModifierId.PILGRIM],
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveIncomeFromGatheringVillagerModifiers: PASSIVE_INCOME_FROM_GATHERING_VILLAGER_MODIFIERS,

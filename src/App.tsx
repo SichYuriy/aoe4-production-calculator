@@ -17,36 +17,43 @@ config.autoAddCss = false
 
 function App() {
     return (
-        <div className={s.app}>
-            <div className={`${s.rowBlock} ${s.contentContainer}`}>
-                <UnitsRoster allUnits={Array.from(UNITS.values())}/>
-            </div>
-            <div className={s.rowBlock}>
-                <div className={`${s.columnBlock} ${s.contentContainer} ${s.unitsCountManagementBlock}`}>
-                    <UnitsCountManagement/>
-                </div>
-                <div className={`${s.columnBlock} ${s.contentContainer}`}>
-                    <CommonUpgrades/>
-                </div>
-                <div className={`${s.columnBlock} ${s.contentContainer}`}>
-                    <CivilizationSpecificFeatures/>
-                </div>
-            </div>
-            <div className={s.rowBlock}>
-                <div className={`${s.columnBlock} ${s.contentContainer}`}>
-                    <ProductionCalculator/>
-                </div>
-                <div className={`${s.columnBlock} ${s.contentContainer}`}>
-                    <FoodSourceSelector/>
-                    <hr/>
-                    <GatheringRatesManagement/>
-                </div>
-            </div>
-            <div className={s.rowBlock}>
-                <DataDetails/>
-            </div>
-            <div className={s.footer}><Footer/></div>
+      <div className={s.app}>
+        <div className={`${s.rowBlock} ${s.contentContainer}`}>
+          <UnitsRoster allUnits={Array.from(UNITS.values())} />
         </div>
+        <div className={s.rowBlock}>
+          <div
+            className={`${s.columnBlock} ${s.contentContainer} ${s.unitsCountManagementBlock}`}
+          >
+            <UnitsCountManagement />
+          </div>
+          <div className={`${s.columnBlock} ${s.contentContainer}`}>
+            <CommonUpgrades />
+          </div>
+          <div className={`${s.columnBlock} ${s.contentContainer}`}>
+            <CivilizationSpecificFeatures />
+          </div>
+        </div>
+        <div className={s.rowBlock}>
+          <div className={`${s.columnBlock} ${s.contentContainer}`}>
+            <ProductionCalculator />
+          </div>
+          <div className={`${s.columnBlock} ${s.contentContainer}`}>
+            <FoodSourceSelector />
+            <hr />
+            <GatheringRatesManagement />
+          </div>
+        </div>
+        <div className={s.rowBlock}>
+          <DataDetails />
+        </div>
+        <div className={s.footer}>
+          <Footer />
+        </div>
+        <a className={s.buymeacoffee} href="https://www.buymeacoffee.com/Aoe4">
+          <img alt="buy me a coffee" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Aoe4&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+        </a>
+      </div>
     );
 }
 

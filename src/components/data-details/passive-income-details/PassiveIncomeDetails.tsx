@@ -3,18 +3,24 @@ import {selectActivePassiveIncomeModifiers} from "../../../state/PassiveIncomeMo
 import {
     selectActivePassiveIncomeFromGatheringVillagerModifiers
 } from "../../../state/PassiveIncomeFromGatheringVillagerModifiersSlice";
+import { selectActiveDynamicassiveIncomeModifiers } from "../../../state/DynamicPassiveIncomeModifiersSlice";
 
 function PassiveIncomeDetails() {
     const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
-    const selectedModifiers = useAppSelector(selectActivePassiveIncomeModifiers)
+    const selectedPassiveModifiers = useAppSelector(selectActivePassiveIncomeModifiers)
+        .filter(modifier => passiveIncomeSources[modifier.source].count > 0);
+    const selectedDynamicPassiveModifiers = useAppSelector(selectActiveDynamicassiveIncomeModifiers)
         .filter(modifier => passiveIncomeSources[modifier.source].count > 0);
     const selectedPassiveIncomeFromGatheringVillagerModifiers = useAppSelector(selectActivePassiveIncomeFromGatheringVillagerModifiers)
 
     return (
         <div>
             <div>Passive income:</div>
-            {selectedModifiers.map(modifier =>
+            {selectedPassiveModifiers.map(modifier =>
                 <div key={modifier.id}>{modifier.id}: ({modifier.food}, {modifier.wood}, {modifier.gold}, {modifier.stone})</div>
+            )}
+            {selectedDynamicPassiveModifiers.map(modifier =>
+                <div key={modifier.id}>{modifier.id}: ({modifier.default.food}, {modifier.default.wood}, {modifier.default.gold}, {modifier.default.stone})</div>
             )}
             {selectedPassiveIncomeFromGatheringVillagerModifiers.map(modifier =>
                 <div key={modifier.id}>

@@ -17,7 +17,8 @@ enum PassiveIncomeSource {
     YORISHIRO_FARM_HOUSE = 'YORISHIRO_FARM_HOUSE',
     YORISHIRO_LUMBER_CAMP = 'YORISHIRO_LUMBER_CAMP',
     YORISHIRO_FORGE = 'YORISHIRO_FORGE',
-    MANOR = 'MANOR'
+    MANOR = 'MANOR',
+    PILGRIM = 'PILGRIM'
 }
 
 export default PassiveIncomeSource;
