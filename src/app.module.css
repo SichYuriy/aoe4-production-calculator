@@ -38,3 +38,9 @@ hr {
     margin-top: auto;
 }
 
+.buymeacoffee {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+

@@ -36,7 +36,7 @@ export default class ResourcesAmount {
         return ResourcesAmount.of(0, 0, 0, stone);
     }
 
-    static ofObj(obj: { food: number, wood: number, gold: number, stone: number }): ResourcesAmount {
+    static ofObj(obj: GatheringRates): ResourcesAmount {
         return ResourcesAmount.of(obj.food, obj.wood, obj.gold, obj.stone);
     }
 
@@ -100,6 +100,15 @@ export default class ResourcesAmount {
             woodVillagers: this.wood / other.wood,
             goldVillagers: this.gold / other.gold,
             stoneVillagers: this.stone / other.stone,
+        };
+    }
+
+    public toSerializableObject(): GatheringRates {
+        return {
+            food: this.food,
+            wood: this.wood,
+            gold: this.gold,
+            stone: this.stone
         };
     }
 }

@@ -31,6 +31,7 @@ function ProductionCalculator() {
     const costModifiersPerUnit = useAppSelector(rootState => rootState.costModifiersPerUnit);
     const productionSpeedModifiers = useAppSelector(selectActiveProductionSpeedModifiers);
     const passiveIncomeModifiers = useAppSelector(rootState => rootState.passiveIncomeModifiers);
+    const dynamicPassiveIncomeModifiers = useAppSelector(rootState => rootState.dynamicPassiveIncomeModifiers);
     const passiveIncomeSources = useAppSelector(rootState => rootState.passiveIncomeSources);
     const limitedFoodGatheringSourceModifiers = useAppSelector(selectActiveLimitedFoodGatheringSourceModifiers);
     const passiveIncomeFromGatheringVillagerModifiers = useAppSelector(selectActivePassiveIncomeFromGatheringVillagerModifiers);
@@ -38,6 +39,7 @@ function ProductionCalculator() {
     let gatheringRates = gatheringRatesService.getGatheringRates(foodSource, useCustomGatheringRates, customGatheringRates,
         gatheringRateModifiers, resourceDropOffModifiers);
     let passiveIncome = passiveIncomeService.getPassiveIncome(passiveIncomeModifiers, passiveIncomeSources);
+    let dynamicPassiveIncome = passiveIncomeService.getDynamicPassiveIncome(dynamicPassiveIncomeModifiers, passiveIncomeSources);
     let limitedFoodGatheringSources = limitedFoodGatheringSourceService.getAvailableGatheringSources(limitedFoodGatheringSourceModifiers,
         gatheringRateModifiers, resourceDropOffModifiers);
     let minFoodVillagers: number = useAppSelector(rootState => rootState.minFoodWorkers.value);
@@ -47,6 +49,7 @@ function ProductionCalculator() {
         productionSpeedModifiers,
         costModifiers,
         passiveIncome,
+        dynamicPassiveIncome,
         limitedFoodGatheringSources,
         passiveIncomeFromGatheringVillagerModifiers,
         foodSource,

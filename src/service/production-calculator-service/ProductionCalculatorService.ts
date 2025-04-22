@@ -29,6 +29,7 @@ class ProductionCalculatorService {
                                     productionSpeedModifiers: ProductionSpeedModifier[],
                                     costModifiers: UnitCostModifier[],
                                     passiveIncome: ResourcesAmount,
+                                    dynamicPassiveIncome: ResourcesAmount,
                                     limitedFoodGatheringSources: LimitedFoodGatheringSource[],
                                     passiveIncomeFromGatheringVillagerModifiers: PassiveIncomeFromGatheringVillagerModifier[],
                                     foodSource: FoodSource,
@@ -37,6 +38,7 @@ class ProductionCalculatorService {
         let resourcesNeeded = this.calculateResourcesNeededForUnitProduction(unitsSelected, productionSpeedModifiers, costModifiers, costModifiersPerUnit);
 
         resourcesNeeded = resourcesNeeded.subtractToZero(passiveIncome);
+        resourcesNeeded = resourcesNeeded.subtractToZero(dynamicPassiveIncome);
 
         let uniqueFoodSourceVillagers = this.limitedFoodGatheringSourceService.sendVillagersToUniqueSources(limitedFoodGatheringSources, resourcesNeeded);
         resourcesNeeded = resourcesNeeded.subtractToZero(uniqueFoodSourceVillagers.gatheringRate);

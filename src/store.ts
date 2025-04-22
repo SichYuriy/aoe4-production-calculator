@@ -13,6 +13,7 @@ import minFoodWorkers from "./state/MinFoodWorkersSlice";
 import costModifiersPerUnit from "./state/CostModifiersPerUnitSlice";
 import featureFlags from "./state/FeatureFlagsSlice";
 import resourceDropOffModifiers from "./state/ResourceDropOffModifiersSlice";
+import dynamicPassiveIncomeModifiers from './state/DynamicPassiveIncomeModifiersSlice';
 
 export const store = configureStore({
     reducer: {
@@ -23,6 +24,7 @@ export const store = configureStore({
         costModifiers: costModifiersReducer,
         passiveIncomeSources: passiveIncomeSources,
         passiveIncomeModifiers: passiveIncomeModifiers,
+        dynamicPassiveIncomeModifiers: dynamicPassiveIncomeModifiers,
         limitedFoodGatheringSourceModifiers: limitedFoodGatheringSourceModifiers,
         passiveIncomeFromGatheringVillagerModifiers: passiveIncomeFromGatheringVillagerModifiers,
         civilization: civilizationReducer,
