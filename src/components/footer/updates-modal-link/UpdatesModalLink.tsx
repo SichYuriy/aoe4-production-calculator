@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '156',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Musofadi Warrior cost reduced from 50 Food 30 Gold → 45 Food 30 Gold"
+    },
+    {
         id: '155',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',

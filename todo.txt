@@ -50,10 +50,10 @@ Order of the Dragon
 - Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well. +
 
 ## Japanese
-- Yumi Ashigaru cost reduced from 30 Food 35 Wood → 25 Food 35 Wood.
+- Yumi Ashigaru cost reduced from 30 Food 35 Wood → 25 Food 35 Wood. +
 
 ## Malians
-- Musofadi Warrior cost reduced from 50 Food 30 Gold → 45 Food 30 Gold.
+- Musofadi Warrior cost reduced from 50 Food 30 Gold → 45 Food 30 Gold. +
 
 ## Ottomans
 - Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds.
