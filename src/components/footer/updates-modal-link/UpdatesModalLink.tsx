@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '157',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds."
+    },
+    {
         id: '156',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',

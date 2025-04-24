@@ -56,7 +56,7 @@ Order of the Dragon
 - Musofadi Warrior cost reduced from 50 Food 30 Gold → 45 Food 30 Gold. +
 
 ## Ottomans
-- Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds.
+- Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds. +
 
 ## House of Lancaster
 - Yeoman cost increased from 45 Food and 45 Wood → 50 Food and 45 Wood
