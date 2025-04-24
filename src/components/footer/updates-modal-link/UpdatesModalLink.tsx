@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '159',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Base villager wood income reduced from 0.65 → 0.63"
+    },
+    {
         id: '158',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',
