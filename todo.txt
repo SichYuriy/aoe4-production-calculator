@@ -44,10 +44,10 @@ Order of the Dragon
 ### Patch 13.1.4420
 
 ## Chinese, Zhu Xi's Legacy
-- Grenadier: Cost reduced from 120 Food 60 Wood 60 Gold → 100 Food 60 Wood 60 Gold.
+- Grenadier: Cost reduced from 120 Food 60 Wood 60 Gold → 100 Food 60 Wood 60 Gold. +
 
 ## Delhi Sultanate
-- Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well.
+- Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well. +
 
 ## Japanese
 - Yumi Ashigaru cost reduced from 30 Food 35 Wood → 25 Food 35 Wood.

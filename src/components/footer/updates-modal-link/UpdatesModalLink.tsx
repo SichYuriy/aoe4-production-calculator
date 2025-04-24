@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '153',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well"
+    },
+    {
         id: '152',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',
