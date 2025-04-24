@@ -14,6 +14,12 @@ type UpdateItem = {
 const updates: UpdateItem[] = [
     {
         id: '152',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Grenadier: Cost reduced from 120 Food 60 Wood 60 Gold → 100 Food 60 Wood 60 Gold."
+    },
+    {
+        id: '152',
         date: new Date(2025, 3, 19),
         patch: '13.0.4343',
         description: "Add Knights Templar features (except pilgrims)"
