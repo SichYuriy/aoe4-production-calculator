@@ -13,13 +13,19 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
-        id: '153',
+        id: '155',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Yumi Ashigaru cost reduced from 30 Food 35 Wood → 25 Food 35 Wood"
+    },
+    {
+        id: '154',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',
         description: "Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well"
     },
     {
-        id: '152',
+        id: '153',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',
         description: "Grenadier: Cost reduced from 120 Food 60 Wood 60 Gold → 100 Food 60 Wood 60 Gold."
