@@ -37,24 +37,29 @@ Order of the Dragon
 
 ### Patch 13.0.4343
 
-## House of Lancaster
-- Villagers gather from sheep +20% faster. (Wool Industries additional gather rate from sheep decreased from 25% → 20%.) (44.75 food/min) +
-- Manor income decreased from 70 food and 45 wood → 60 food and 45 wood. +
-- Scutage, Manors additionally generate 40 gold per minute +
-- Ships -10% cheaper to produce +
-- Burgundian imports, handcannoneer cost -25% +
-- Lancaster Wynguard Palace +
+## Knights Templar
+ - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. + - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute
+ - Republic of genoa: Pilgrims generate + 30% gold
 
-Wynguard Palace:
-- Earl’s Retinue train time increased from 45 → 50 seconds
-- Gunpowder Contingent cost increased from 800 wood and 850 gold → 850 wood and 1050 gold.
-- Garrison Command train time increased from 25 → 30 seconds.
+### Patch 13.1.4420
+
+## Chinese, Zhu Xi's Legacy
+- Grenadier: Cost reduced from 120 Food 60 Wood 60 Gold → 100 Food 60 Wood 60 Gold.
+
+## Delhi Sultanate
+- Scholar cost increased from 130 → 135 gold, Dome of Faith updated as well.
+
+## Japanese
+- Yumi Ashigaru cost reduced from 30 Food 35 Wood → 25 Food 35 Wood.
+
+## Malians
+- Musofadi Warrior cost reduced from 50 Food 30 Gold → 45 Food 30 Gold.
+
+## Ottomans
+- Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds.
+
+## House of Lancaster
+- Yeoman cost increased from 45 Food and 45 Wood → 50 Food and 45 Wood
 
 ## Knights Templar
- - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. +
- - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute
- - Republic of genoa: Pilgrims generate + 30% gold
- - No lumber camp upgrades, Lumberjacks deposit wood automatically and gather faster with each Age. (Wood is gathered +15% faster in each Age and 20% of the wood gathered is produced as additional food) +
- - siege units -25% wood +
- - Kingdom of france: Military units: 1) +15% produced faster 2) -5% gold cost
-
+- Base villager wood income reduced from 0.65 → 0.63 (look at knights_templar_wood.txt)
