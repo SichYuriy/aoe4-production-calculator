@@ -59,7 +59,7 @@ Order of the Dragon
 - Akinji: Cost reduced from 90 Food 80 Wood → 80 Food 80 Wood. Production time reduced from 25 → 24 seconds. +
 
 ## House of Lancaster
-- Yeoman cost increased from 45 Food and 45 Wood → 50 Food and 45 Wood
+- Yeoman cost increased from 45 Food and 45 Wood → 50 Food and 45 Wood +
 
 ## Knights Templar
 - Base villager wood income reduced from 0.65 → 0.63 (look at knights_templar_wood.txt)

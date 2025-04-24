@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '158',
+        date: new Date(2025, 3, 23),
+        patch: '13.1.4420',
+        description: "Yeoman cost increased from 45 Food and 45 Wood → 50 Food and 45 Wood"
+    },
+    {
         id: '157',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',

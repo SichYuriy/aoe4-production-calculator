@@ -231,7 +231,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         icon: yeomanIcon,
         name: 'YEOMAN',
         productionTime: 15,
-        cost: new UnitCost(45, 0, 45, 0),
+        cost: new UnitCost(50, 0, 45, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
