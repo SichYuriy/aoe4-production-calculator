@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '160',
+        date: new Date(2025, 4, 4),
+        patch: '13.1.4420',
+        description: "Add pilgrim feature"
+    },
+    {
         id: '159',
         date: new Date(2025, 3, 23),
         patch: '13.1.4420',

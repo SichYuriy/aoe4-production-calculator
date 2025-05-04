@@ -38,7 +38,7 @@ Order of the Dragon
 ### Patch 13.0.4343
 
 ## Knights Templar
- - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. + - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute
+ - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. + - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute +
  - Republic of genoa: Pilgrims generate + 30% gold
 
 ### Patch 13.1.4420

@@ -4,7 +4,7 @@ import UNITS from "./data/unit/Units";
 import UnitsRoster from "./components/units-roster/UnitsRoster";
 import ProductionCalculator from "./components/production-calculator/ProductionCalculator";
 import UnitsCountManagement from "./components/untis-count-management/UnitsCountManagement";
-import { config } from '@fortawesome/fontawesome-svg-core'
+import {config} from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import FoodSourceSelector from "./components/food-source-selector/FoodSourceSelector";
 import GatheringRatesManagement from "./components/gathering-rates/GatheringRatesManagement";
@@ -13,6 +13,7 @@ import CivilizationSpecificFeatures from "./components/civilization-specific-fea
 import DataDetails from "./components/data-details/DataDetails";
 import Footer from "./components/footer/Footer";
 import s from './app.module.css';
+
 config.autoAddCss = false
 
 function App() {
@@ -45,7 +46,9 @@ function App() {
             <div className={s.rowBlock}>
                 <DataDetails/>
             </div>
-            <div className={s.footer}><Footer/></div>
+            <div className={s.footer}>
+                <Footer/>
+            </div>
         </div>
     );
 }

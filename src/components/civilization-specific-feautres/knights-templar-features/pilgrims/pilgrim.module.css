@@ -1,0 +1,20 @@
+.colon {
+    font-size: 1.4em;
+    padding: 20px 0;
+}
+
+.pilgrimCountBlock {
+    font-size: 20px;
+}
+
+.pilgrimCountBlock input {
+    width: 150px;
+}
+
+.pilgrimCountBlock span {
+    padding: 10px;
+}
+
+.pilgrimCountBlock p {
+    text-align: center;
+}
