@@ -16,6 +16,12 @@ const updates: UpdateItem[] = [
         id: '160',
         date: new Date(2025, 4, 4),
         patch: '13.1.4420',
+        description: "Add Republic of Genoa feature"
+    },
+    {
+        id: '160',
+        date: new Date(2025, 4, 4),
+        patch: '13.1.4420',
         description: "Add pilgrim feature"
     },
     {

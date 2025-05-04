@@ -2,6 +2,7 @@ import shared from "../../../shared.module.css";
 import {KnightsTemplarAgeSelector} from "./knight-templar-age-selector/KnightsTemplarAgeSelector";
 import {KingdomOfFrance} from "./kingdom-of-france/KingdomOfFrance";
 import Pilgrims from "./pilgrims/Pilgrims";
+import RepublicOfGenoa from "./republic-of-genoa/RepublicOfGenoa";
 
 function KnightsTemplarFeatures() {
     return (
@@ -16,7 +17,8 @@ function KnightsTemplarFeatures() {
             </div>
             <div className={shared.upgradesRow}>
                 <KingdomOfFrance/>
-            </div>            
+                <RepublicOfGenoa/>
+            </div>
         </div>
     )
 }

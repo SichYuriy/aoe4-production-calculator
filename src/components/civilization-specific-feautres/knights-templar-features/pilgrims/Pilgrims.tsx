@@ -12,12 +12,15 @@ import s from './pilgrim.module.css';
 import DynamicPassiveIncomeModifierId from "../../../../data/dynamic-passive-income-modifiers/DynamicPassiveIncomeModifierId";
 import { setDynamicPassiveIncomeModifierValue } from "../../../../state/DynamicPassiveIncomeModifiersSlice";
 import ResourcesAmount from "../../../../model/ResourcesAmount";
+import {FeatureFlags} from "../../../../data/FeatureFlags";
 
 function Pilgrims() {
     const dispatch = useAppDispatch();
     const passiveIncomeSources: PassiveIncomeSourcesState = useAppSelector((rootState) => rootState.passiveIncomeSources);
-    const defaultGoldValue: number = useAppSelector(rootState => rootState.dynamicPassiveIncomeModifiers[DynamicPassiveIncomeModifierId.PILGRIM].value.gold);
-    const [min, max] = [40, 130];
+    const republicOfGenoaEnabled = !!useAppSelector(rootState => rootState.featureFlags[FeatureFlags.REPUBLIC_OF_GENOA]);
+    const currentGoldValue: number = useAppSelector(rootState => rootState.dynamicPassiveIncomeModifiers[DynamicPassiveIncomeModifierId.PILGRIM].value.gold);
+    const min = republicOfGenoaEnabled ? Math.floor(40 * 1.3) : 40;
+    const max = republicOfGenoaEnabled ? Math.floor(130 * 1.3) : 130;
 
     let pilgrimItem = (
         <UpgradeItemCounter icon={monkIcon}
@@ -38,9 +41,9 @@ function Pilgrims() {
                 <div className={s.colon}>:</div>
             <div className={s.pilgrimCountBlock}>
                 <span>{min}</span>
-                <input type={'range'} min={min} max={max} value={defaultGoldValue} onChange={(e) => changeGoldValue(+e.target.value)}/>
+                <input type={'range'} min={min} max={max} value={currentGoldValue} onChange={(e) => changeGoldValue(+e.target.value)}/>
                 <span>{max}</span>
-                <p>Value: {defaultGoldValue}</p>
+                <p>Value: {currentGoldValue}</p>
             </div>
         </div>
     );
