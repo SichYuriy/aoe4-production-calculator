@@ -73,12 +73,12 @@ describe('ProductionCalculatorService', () => {
 
         it('one passiveIncomeModifier', () => {
             let passiveIncome = ResourcesAmount.of(0, 0, 100, 0);
-            let dynamicPassiveIncome = ResourcesAmount.of(0, 0, 1, 0);
+            let dynamicPassiveIncome = ResourcesAmount.of(0, 0, 0, 0);
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
                 [], [], passiveIncome, dynamicPassiveIncome, [], [], FoodSource.FARM, 0, {})
             expect(actual.foodVillagers).toBeCloseTo(18.75);
             expect(actual.woodVillagers).toBeCloseTo(7);
-            expect(actual.goldVillagers).toBeCloseTo(0.7857);
+            expect(actual.goldVillagers).toBeCloseTo(1.7857);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
@@ -113,7 +113,7 @@ describe('ProductionCalculatorService', () => {
 
         it('all together', () => {
             let passiveIncome = ResourcesAmount.of(0, 0, 100, 0);
-            let dynamicPassiveIncome = ResourcesAmount.of(0, 0, 1, 0);
+            let dynamicPassiveIncome = ResourcesAmount.of(0, 0, 0, 0);
             let limitedFoodGatheringSource: LimitedFoodGatheringSource = {
                 maxVillagers: 5,
                 effectiveGatheringRate: 50
@@ -127,7 +127,7 @@ describe('ProductionCalculatorService', () => {
                 [], FoodSource.FARM, 0, {});
             expect(actual.foodVillagers).toBeCloseTo(16.66);
             expect(actual.woodVillagers).toBeCloseTo(6);
-            expect(actual.goldVillagers).toBeCloseTo(0.61161);
+            expect(actual.goldVillagers).toBeCloseTo(1.61161);
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
     });
