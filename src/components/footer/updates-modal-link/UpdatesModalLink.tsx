@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '163',
+        date: new Date(2025, 6, 6),
+        patch: '14.0.4963',
+        description: "English. Farm gather rate bonus increased in Dark Age, Feudal Age, and Castle Age from 15/20/25% → 20/25/30%"
+    },
+    {
         id: '162',
         date: new Date(2025, 6, 6),
         patch: '14.0.4963',

@@ -16,25 +16,25 @@ import {ResourceType} from "../../model/ResourceType";
 const englishDarkAge: GatheringRateModifier = {
     id: GatheringRateModifierId.ENGLISH_DARK_AGE,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
-        ? {...gatheringRates, food: gatheringRates.food * 1.12}
-        : gatheringRates,
-    description: 'farm * 1.12'
-}
-
-const englishFeudalAge: GatheringRateModifier = {
-    id: GatheringRateModifierId.ENGLISH_FEUDAL_AGE,
-    apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {...gatheringRates, food: gatheringRates.food * 1.17}
         : gatheringRates,
     description: 'farm * 1.17'
 }
 
-const englishCastleAge: GatheringRateModifier = {
-    id: GatheringRateModifierId.ENGLISH_CASTLE_AGE,
+const englishFeudalAge: GatheringRateModifier = {
+    id: GatheringRateModifierId.ENGLISH_FEUDAL_AGE,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
         ? {...gatheringRates, food: gatheringRates.food * 1.20}
         : gatheringRates,
     description: 'farm * 1.20'
+}
+
+const englishCastleAge: GatheringRateModifier = {
+    id: GatheringRateModifierId.ENGLISH_CASTLE_AGE,
+    apply: (gatheringRates, foodSource) => foodSource === FoodSource.FARM
+        ? {...gatheringRates, food: gatheringRates.food * 1.24}
+        : gatheringRates,
+    description: 'farm * 1.24'
 }
 
 const englishImperialAge: GatheringRateModifier = {

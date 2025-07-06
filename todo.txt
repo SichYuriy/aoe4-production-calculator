@@ -38,10 +38,10 @@ Order of the Dragon
 ### Update Preview 14.0.4963
 
 ## Abbasid Dynasty
-- Fresh Foodstuffs Villager discount increased from 35% → 40%
+- Fresh Foodstuffs Villager discount increased from 35% → 40% +
 
 ## English
-- Farm gather rate bonus increased in Dark Age, Feudal Age, and Castle Age from 15/20/25% → 20/25/30%
+- Farm gather rate bonus increased in Dark Age, Feudal Age, and Castle Age from 15/20/25% → 20/25/30% +
 
 ## Mongols
 - Improved food gathering technology effect increased from 5% → 7.5% per technology
