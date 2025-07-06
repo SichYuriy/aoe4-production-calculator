@@ -13,7 +13,13 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
-        id: '160',
+        id: '162',
+        date: new Date(2025, 6, 6),
+        patch: '14.0.4963',
+        description: "Abbasid Dynasty. Fresh Foodstuffs Villager discount increased from 35% → 40%"
+    },
+    {
+        id: '161',
         date: new Date(2025, 4, 4),
         patch: '13.1.4420',
         description: "Add Republic of Genoa feature"

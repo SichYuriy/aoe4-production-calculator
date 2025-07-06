@@ -17,7 +17,7 @@ function Footer() {
             <div className={s.separator}/>
             <a className={s.buymeacoffee} href="https://www.buymeacoffee.com/Aoe4" target={'_blank'} rel="noreferrer">
                 <img alt="buy me a coffee"
-                     src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Aoe4&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/>
+                     src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=aoe4&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/>
             </a>
         </div>
     );

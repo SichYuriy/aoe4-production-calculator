@@ -35,11 +35,13 @@ Order of the Dragon
 
 - Yorishiro Dock and Military Building Production speed reduced from 150% → 125% - Not implemented!
 
-### Patch 13.0.4343
+### Update Preview 14.0.4963
 
-## Knights Templar
- - Heavy Spearman cost increased from 70 food and 30 gold → 80 food and 30 gold. + - pilgrim, passive configurable gold income, max 10 pilgrims, 40 - min gold per minute, 130 - max gold per minute +
- - Republic of genoa: Pilgrims generate + 30% gold
+## Abbasid Dynasty
+- Fresh Foodstuffs Villager discount increased from 35% → 40%
 
-### Patch 13.1.4420
+## English
+- Farm gather rate bonus increased in Dark Age, Feudal Age, and Castle Age from 15/20/25% → 20/25/30%
 
+## Mongols
+- Improved food gathering technology effect increased from 5% → 7.5% per technology

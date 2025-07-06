@@ -68,9 +68,9 @@ const freshFood: UnitCostModifier = {
     canBeApplied: unit => unit.id === 'VILLAGER',
     apply: currentCost => ({
         ...currentCost,
-        food: currentCost.food * 0.65
+        food: currentCost.food * 0.6
     }),
-    description: 'villagerCost * 0.65'
+    description: 'villagerCost * 0.6'
 }
 
 const agriculture: GatheringRateModifier = {
