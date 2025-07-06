@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '164',
+        date: new Date(2025, 6, 6),
+        patch: '14.0.4963',
+        description: "Mongols. Improved food gathering technology effect increased from 5% → 7.5% per technology"
+    },
+    {
         id: '163',
         date: new Date(2025, 6, 6),
         patch: '14.0.4963',
