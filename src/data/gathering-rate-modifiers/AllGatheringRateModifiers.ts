@@ -72,7 +72,7 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
                 return rates;
             }
         },
-        description: `[sheep, berry, farm, cattle] * ${HORTICULTURE_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.15`
+        description: `[sheep, berry, farm, cattle] * ${HORTICULTURE_MULTIPLIER.toFixed(2)}, [twin-minaret-berry] * 1.10`
     },
     [GatheringRateModifierId.FERTILIZATION]: {
         id: GatheringRateModifierId.FERTILIZATION,

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '166',
+        date: new Date(2025, 9, 27),
+        patch: 'Fix 12.0.1974',
+        description: "Cattle ranch bonus food per upgrade decreased from 3.75 to 2.5"
+    },
+    {
         id: '165',
         date: new Date(2025, 6, 13),
         patch: 'Fix 9.2.628',
