@@ -20,6 +20,10 @@ import JapaneseFeatures from "./japanese-features/JapaneseFeatures";
 import ByzantinesFeatures from "./byzantines-features/ByzantinesFeatures";
 import KnightsTemplarFeatures from "./knights-templar-features/KnightsTemplarFeatures";
 import HouseOfLancasterFeatures from "./house-of-lancaster-features/HouseOfLancasterFeatures";
+import GoldenHordeFeatures from "./golden-horde-features/GoldenHordeFeatures";
+import MacedonianDynastyFeatures from "./macedonian-dynasty-features/MacedonianDynastyFeatures";
+import SengokuDaimyoFeatures from "./sengoku-daimyo-features/SengokuDaimyoFeatures";
+import TughlaqDynastyFeatures from "./tughlaq-dynasty-features/TughlaqDynastyFeatures";
 
 function CivilizationSpecificFeatures() {
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
@@ -43,6 +47,10 @@ function CivilizationSpecificFeatures() {
         [CivilizationsEnum.BYZANTINES, <ByzantinesFeatures/>],
         [CivilizationsEnum.KNIGHTS_TEMPLAR, <KnightsTemplarFeatures/>],
         [CivilizationsEnum.HOUSE_OF_LANCASTER, <HouseOfLancasterFeatures/>],
+        [CivilizationsEnum.GOLDEN_HORDE, <GoldenHordeFeatures/>],
+        [CivilizationsEnum.MACEDONIAN_DYNASTY, <MacedonianDynastyFeatures/>],
+        [CivilizationsEnum.SENGOKU_DAIMYO, <SengokuDaimyoFeatures/>],
+        [CivilizationsEnum.TUGHLAQ_DYNASTY, <TughlaqDynastyFeatures/>],
     ]);
     let components: any[] = [];
     civilizationSpecificComponents.forEach((component, civilization) => {

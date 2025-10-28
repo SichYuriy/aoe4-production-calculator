@@ -16,6 +16,10 @@ import JAPANESE_MODIFIERS from "./JapaneseModifiers";
 import BYZANTINES_MODIFIERS from "./ByzantinesModifiers";
 import KNIGHTS_TEMPLAR_MODIFIERS from "./KnightsTemplarModifiers";
 import HOUSE_OF_LANCASTER_MODIFIERS from "./HouseOfLancasterModifiers";
+import GOLDEN_HORDE_MODIFIERS from "./GoldenHordeModifiers";
+import MACEDONIAN_DYNASTY_MODIFIERS from "./MacedonianDynastyModifiers";
+import SENGOKU_DAIMYO_MODIFIERS from "./SengokuDaimyoModifiers";
+import TUGHLAQ_DYNASTY_MODIFIERS from "./TughlaqDynastyModifiers";
 
 const allCivilizationModifiers: CivilizationModifiers[] = [
     FRENCH_MODIFIERS,
@@ -34,7 +38,11 @@ const allCivilizationModifiers: CivilizationModifiers[] = [
     JAPANESE_MODIFIERS,
     BYZANTINES_MODIFIERS,
     KNIGHTS_TEMPLAR_MODIFIERS,
-    HOUSE_OF_LANCASTER_MODIFIERS
-]
+    HOUSE_OF_LANCASTER_MODIFIERS,
+    GOLDEN_HORDE_MODIFIERS,
+    MACEDONIAN_DYNASTY_MODIFIERS,
+    SENGOKU_DAIMYO_MODIFIERS,
+    TUGHLAQ_DYNASTY_MODIFIERS
+];
 
 export default allCivilizationModifiers;

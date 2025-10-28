@@ -85,7 +85,8 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
     CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
     CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
-    CivilizationsEnum.HOUSE_OF_LANCASTER];
+    CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.GOLDEN_HORDE, CivilizationsEnum.MACEDONIAN_DYNASTY,
+    CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.TUGHLAQ_DYNASTY];
 
 const TRADER_PRODUCTION_TIME = 30;
 const VILLAGER_PRODUCTION_TIME = 20;
