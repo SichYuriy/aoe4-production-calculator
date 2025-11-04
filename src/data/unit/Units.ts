@@ -69,14 +69,6 @@ import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
 import wynguardFootmanIcon from '../../icons/wynguard_footman.png'
-import gildedSpearmanIcon from '../../icons/gilded-spearman.png'
-import gildedManAtArmsIcon from '../../icons/gilded-man-at-arms.png'
-import gildedLandsknechtIcon from '../../icons/gilded-landsknecht.png'
-import gildedArcherIcon from '../../icons/gilded-archer.png'
-import gildedCrossbowmanIcon from '../../icons/gilded-crossbowman.png'
-import dragonHandcannoneerIcon from '../../icons/dragon-handcannoneer.png'
-import gildedHorsemanIcon from '../../icons/gilded-horseman.png'
-import gildedKnightIcon from '../../icons/gilded-knight.png'
 import dervishIcon from '../../icons/dervish.png'
 import desertRaiderIcon from '../../icons/desert-raider.png'
 import camelLancerIcon from '../../icons/camel-lancer.png'
@@ -120,6 +112,7 @@ import mansaMusofadiWarriorIcon from '../../icons/mansa-musofadi-warrior-3.png'
 import freebornWarriorIcon from '../../icons/freeborn-warrior-3.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
+import DRAGON_ORDER_UNITS from "./DragonOrderUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -128,8 +121,6 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
     CivilizationsEnum.HOUSE_OF_LANCASTER];
 
-const DRAGON_VILLAGER_COST = 60;
-const DRAGON_VILLAGER_PRODUCTION_TIME = 23;
 const TRADER_PRODUCTION_TIME = 30;
 const TRADER_GOLD_COST = 60;
 const VILLAGER_PRODUCTION_TIME = 20;
@@ -152,35 +143,7 @@ const SPEARMAN_PRODUCTION_TIME = 15;
 const HORSEMAN_UNIT_COST = new UnitCost(100, 0, 20, 0);
 const HORSEMAN_PRODUCTION_TIME = 22.5;
 
-const DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS = 0.35;
-const DRAGON_ORDER_BURGRAVE_COST_DISCOUNT = 0.35;
-
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
-    DRAGON_ORDER_VILLAGER: {
-        id: 'DRAGON_ORDER_VILLAGER',
-        icon: villagerIcon,
-        name: 'dragon villager',
-        productionTime: DRAGON_VILLAGER_PRODUCTION_TIME,
-        cost: new UnitCost(DRAGON_VILLAGER_COST, 0, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 100
-    },
-    PALACE_OF_SWABIA_DRAGON_VILLAGER: {
-        id: 'PALACE_OF_SWABIA_DRAGON_VILLAGER',
-        icon: villagerIcon,
-        name: 'dragon villager',
-        productionTime: DRAGON_VILLAGER_PRODUCTION_TIME  / 3,
-        cost: new UnitCost(DRAGON_VILLAGER_COST / 3, 0, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 200
-    },
     VILLAGER: {
         id: 'VILLAGER',
         icon: villagerIcon,
@@ -259,18 +222,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 800
     },
-    GILDED_ARCHER: {
-        id: 'GILDED_ARCHER',
-        icon: gildedArcherIcon,
-        name: 'gilded archer',
-        productionTime: 18,
-        cost: new UnitCost(60, 0, 100, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 900
-    },
     LONGBOWMAN: {
         id: 'LONGBOWMAN',
         icon: longbowmanIcon,
@@ -297,31 +248,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 1100
-    },
-    GILDED_SPEARMAN: {
-        id: 'GILDED_SPEARMAN',
-        icon: gildedSpearmanIcon,
-        name: 'gilded spearman',
-        productionTime: 18,
-        cost: new UnitCost(120, 0, 40, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 1200
-    },
-    BURGRAVE_PALACE_GILDED_SPEARMAN: {
-        id: 'BURGRAVE_PALACE_GILDED_SPEARMAN',
-        icon: gildedSpearmanIcon,
-        name: 'gilded spearman',
-        productionTime: 18 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
-        cost: new UnitCost(120 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 40 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 1300
     },
     LIMITANEI: {
         id: 'LIMITANEI',
@@ -418,18 +344,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.AYYUBIDS],
         common: false,
         displayOrder: 2100
-    },
-    GILDED_HORSEMAN: {
-        id: 'GILDED_HORSEMAN',
-        icon: gildedHorsemanIcon,
-        name: 'gilded horseman',
-        productionTime: 27,
-        cost: new UnitCost(200, 0, 40, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 2200
     },
     SIPAHI: {
         id: 'SIPAHI',
@@ -589,18 +503,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 3500
     },
-    GILDED_KNIGHT: {
-        id: 'GILDED_KNIGHT',
-        icon: gildedKnightIcon,
-        name: 'gilded knight',
-        productionTime: 42,
-        cost: new UnitCost(280, 200, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 3600
-    },
     CATAPHRACT: {
         id: 'CATAPHRACT',
         icon: cataphractIcon,
@@ -733,31 +635,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 4700
     },
-    GILDED_MAN_AT_ARMS: {
-        id: 'GILDED_MAN_AT_ARMS',
-        icon: gildedManAtArmsIcon,
-        name: 'gilded man at arms',
-        productionTime: 27,
-        cost: new UnitCost(200, 40, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 4800
-    },
-    BURGRAVE_PALACE_GILDED_MAN_AT_ARMS: {
-        id: 'BURGRAVE_PALACE_GILDED_MAN_AT_ARMS',
-        icon: gildedManAtArmsIcon,
-        name: 'gilded man at arms',
-        productionTime: 27 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
-        cost: new UnitCost(200 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 40 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 4900
-    },
     PALACE_GUARD: {
         id: 'PALACE_GUARD',
         icon: palaceGuardIcon,
@@ -818,31 +695,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 5400
     },
-    GILDED_LANDSKNECHT: {
-        id: 'GILDED_LANDSKNECHT',
-        icon: gildedLandsknechtIcon,
-        name: 'gilded landsknecht',
-        productionTime: 27,
-        cost: new UnitCost(120, 200, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 5500
-    },
-    BURGRAVE_PALACE_GILDED_LANDSKNECHT: {
-        id: 'BURGRAVE_PALACE_GILDED_LANDSKNECHT',
-        icon: gildedLandsknechtIcon,
-        name: 'gilded landsknecht',
-        productionTime: 27 * (1 / (1 + DRAGON_ORDER_BURGRAVE_PRODUCTION_SPEED_BONUS)),
-        cost: new UnitCost(120 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 200 * (1 - DRAGON_ORDER_BURGRAVE_COST_DISCOUNT), 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 5600
-    },
     CROSSBOWMAN: {
         id: 'CROSSBOWMAN',
         icon: crossbowmanIcon,
@@ -857,18 +709,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 5700
-    },
-    GILDED_CROSSBOWMAN: {
-        id: 'GILDED_CROSSBOWMAN',
-        icon: gildedCrossbowmanIcon,
-        name: 'gilded crossbowman',
-        productionTime: 27,
-        cost: new UnitCost(160, 80, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 5800
     },
     ONNA_MUSHA: {
         id: 'ONNA_MUSHA',
@@ -1075,18 +915,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.AYYUBIDS, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 7500
-    },
-    DRAGON_HANDCANNONEER: {
-        id: 'DRAGON_HANDCANNONEER',
-        icon: dragonHandcannoneerIcon,
-        name: 'dragon handcannoneer',
-        productionTime: 35,
-        cost: new UnitCost(240, 240, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false,
-        displayOrder: 7600
     },
     OZUTSU: {
         id: 'OZUTSU',
@@ -1951,8 +1779,10 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         displayOrder: 14900
     },
 }));
+DRAGON_ORDER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
-const UNITS_LIST = Object.values(UNITS);
+
+const UNITS_LIST = Array.from(UNITS.values());
 UNITS_LIST.sort((a, b) => a.displayOrder - b.displayOrder);
 
 export { UNITS_LIST, UNITS };
