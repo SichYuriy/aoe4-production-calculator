@@ -165,7 +165,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 100
     },
     PALACE_OF_SWABIA_DRAGON_VILLAGER: {
         id: 'PALACE_OF_SWABIA_DRAGON_VILLAGER',
@@ -177,7 +178,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 200
     },
     VILLAGER: {
         id: 'VILLAGER',
@@ -193,7 +195,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 300
     },
     FLOATING_GATE_VILLAGER: {
         id: 'FLOATING_GATE_VILLAGER',
@@ -205,7 +208,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 400
     },
     CATTLE: {
         id: 'CATTLE',
@@ -216,7 +220,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 500
     },
     ARCHER: {
         id: 'ARCHER',
@@ -227,7 +232,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: true
+        common: true,
+        displayOrder: 600
     },
     YEOMAN: {
         id: 'YEOMAN',
@@ -238,7 +244,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 700
     },
     YUMI_ASHIGARU: {
         id: 'YUMI_ASHIGARU',
@@ -249,7 +256,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 800
     },
     GILDED_ARCHER: {
         id: 'GILDED_ARCHER',
@@ -260,7 +268,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 900
     },
     LONGBOWMAN: {
         id: 'LONGBOWMAN',
@@ -271,7 +280,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ENGLAND],
-        common: false
+        common: false,
+        displayOrder: 1000
     },
     SPEARMAN: {
         id: 'SPEARMAN',
@@ -285,7 +295,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
             CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 1100
     },
     GILDED_SPEARMAN: {
         id: 'GILDED_SPEARMAN',
@@ -296,7 +307,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 1200
     },
     BURGRAVE_PALACE_GILDED_SPEARMAN: {
         id: 'BURGRAVE_PALACE_GILDED_SPEARMAN',
@@ -308,7 +320,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 1300
     },
     LIMITANEI: {
         id: 'LIMITANEI',
@@ -319,7 +332,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false
+        common: false,
+        displayOrder: 1400
     },
     DONSO: {
         id: 'DONSO',
@@ -330,7 +344,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 1500
     },
     ONNA_BUGEISHA: {
         id: 'ONNA_BUGEISHA',
@@ -341,7 +356,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 1600
     },
     SHINOBI: {
         id: 'SHINOBI',
@@ -352,7 +368,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 1700
     },
     HORSEMAN: {
         id: 'HORSEMAN',
@@ -363,7 +380,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: true
+        common: true,
+        displayOrder: 1800
     },
     HOBELAR: {
         id: 'HOBELAR',
@@ -374,7 +392,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 1900
     },
     YUAN_RAIDER: {
         id: 'YUAN_RAIDER',
@@ -385,7 +404,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 2000
     },
     DESERT_RAIDER: {
         id: 'DESERT_RAIDER',
@@ -396,7 +416,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 2100
     },
     GILDED_HORSEMAN: {
         id: 'GILDED_HORSEMAN',
@@ -407,7 +428,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 2200
     },
     SIPAHI: {
         id: 'SIPAHI',
@@ -418,7 +440,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 2300
     },
     GHAZI_RAIDER: {
         id: 'GHAZI_RAIDER',
@@ -429,7 +452,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.DELHI],
-        common: false
+        common: false,
+        displayOrder: 2400
     },
     LANCER: {
         id: 'LANCER',
@@ -440,7 +464,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: true
+        common: true,
+        displayOrder: 2500
     },
     CAMEL_LANCER: {
         id: 'CAMEL_LANCER',
@@ -451,7 +476,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 2600
     },
     KESHIK: {
         id: 'KESHIK',
@@ -462,7 +488,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.MONGOLS],
-        common: false
+        common: false,
+        displayOrder: 2700
     },
     SCHOLAR: {
         id: 'SCHOLAR',
@@ -473,7 +500,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.DELHI],
-        common: false
+        common: false,
+        displayOrder: 2800
     },
     DOME_OF_FAIT_SCHOLAR: {
         id: 'DOME_OF_FAIT_SCHOLAR',
@@ -485,7 +513,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.DELHI],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 2900
     },
     WARRIOR_MONK: {
         id: 'WARRIOR_MONK',
@@ -496,7 +525,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.RUS],
-        common: false
+        common: false,
+        displayOrder: 3000
     },
     SHAOLIN_MONK: {
         id: 'SHAOLIN_MONK',
@@ -507,7 +537,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 3100
     },
     BUDDHIST_MONK: {
         id: 'BUDDHIST_MONK',
@@ -518,7 +549,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 3200
     },
     SHINTO_PRIEST: {
         id: 'SHINTO_PRIEST',
@@ -529,7 +561,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 3300
     },
     DERVISH: {
         id: 'DERVISH',
@@ -540,7 +573,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 3400
     },
     KNIGHT: {
         id: 'KNIGHT',
@@ -552,7 +586,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 3500
     },
     GILDED_KNIGHT: {
         id: 'GILDED_KNIGHT',
@@ -563,7 +598,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 3600
     },
     CATAPHRACT: {
         id: 'CATAPHRACT',
@@ -574,7 +610,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false
+        common: false,
+        displayOrder: 3700
     },
     MOUNTED_SAMURAI: {
         id: 'MOUNTED_SAMURAI',
@@ -585,7 +622,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 3800
     },
     ROYAL_KNIGHT: {
         id: 'ROYAL_KNIGHT',
@@ -596,7 +634,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 3900
     },
     IMPERIAL_GUARD: {
         id: 'IMPERIAL_GUARD',
@@ -607,7 +646,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 4000
     },
     SOFA: {
         id: 'SOFA',
@@ -618,7 +658,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 4100
     },
     JEANNES_RIDER: {
         id: 'JEANNES_RIDER',
@@ -629,7 +670,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.KEEP,
         civilizations: [CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 4200
     },
     JEANNES_CHAMPION: {
         id: 'JEANNES_CHAMPION',
@@ -640,7 +682,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.KEEP,
         civilizations: [CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 4300
     },
     MAN_AT_ARMS: {
         id: 'MAN_AT_ARMS',
@@ -651,7 +694,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: true
+        common: true,
+        displayOrder: 4400
     },
     EARLS_GUARD: {
         id: 'EARLS_GUARD',
@@ -662,7 +706,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 4500
     },
     SAMURAI: {
         id: 'SAMURAI',
@@ -673,7 +718,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 4600
     },
     VARANGIAN_GUARD: {
         id: 'VARANGIAN_GUARD',
@@ -684,7 +730,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false
+        common: false,
+        displayOrder: 4700
     },
     GILDED_MAN_AT_ARMS: {
         id: 'GILDED_MAN_AT_ARMS',
@@ -695,7 +742,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 4800
     },
     BURGRAVE_PALACE_GILDED_MAN_AT_ARMS: {
         id: 'BURGRAVE_PALACE_GILDED_MAN_AT_ARMS',
@@ -707,7 +755,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 4900
     },
     PALACE_GUARD: {
         id: 'PALACE_GUARD',
@@ -718,7 +767,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 5000
     },
     GHULAM: {
         id: 'GHULAM',
@@ -729,7 +779,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 5100
     },
     MUSOFADI_WARRIOR: {
         id: 'MUSOFADI_WARRIOR',
@@ -740,7 +791,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 5200
     },
     MEHTER: {
         id: 'MEHTER',
@@ -751,7 +803,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 5300
     },
     LANDSKNECHT: {
         id: 'LANDSKNECHT',
@@ -762,7 +815,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.HRE],
-        common: false
+        common: false,
+        displayOrder: 5400
     },
     GILDED_LANDSKNECHT: {
         id: 'GILDED_LANDSKNECHT',
@@ -773,7 +827,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 5500
     },
     BURGRAVE_PALACE_GILDED_LANDSKNECHT: {
         id: 'BURGRAVE_PALACE_GILDED_LANDSKNECHT',
@@ -785,7 +840,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 5600
     },
     CROSSBOWMAN: {
         id: 'CROSSBOWMAN',
@@ -799,7 +855,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.DELHI, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 5700
     },
     GILDED_CROSSBOWMAN: {
         id: 'GILDED_CROSSBOWMAN',
@@ -810,7 +867,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 5800
     },
     ONNA_MUSHA: {
         id: 'ONNA_MUSHA',
@@ -821,7 +879,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 5900
     },
     ARBALETRIER: {
         id: 'ARBALETRIER',
@@ -832,7 +891,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 6000
     },
     JAVELIN_THROWER: {
         id: 'JAVELIN_THROWER',
@@ -843,7 +903,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 6100
     },
     MANSA_JAVELINEER: {
         id: 'MANSA_JAVELINEER',
@@ -854,7 +915,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 6200
     },
     MANSA_MUSOFADI_WARRIOR: {
         id: 'MANSA_MUSOFADI_WARRIOR',
@@ -865,7 +927,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 6300
     },
     FREEBORN_WARRIOR: {
         id: 'FREEBORN_WARRIOR',
@@ -876,7 +939,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 6400
     },
     SERJEANT: {
         id: 'SERJEANT',
@@ -888,6 +952,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 6500
     },
     HOSPITALLER_KNIGHT: {
         id: 'HOSPITALLER_KNIGHT',
@@ -899,6 +964,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 6600
     },
     GENOESE_CROSSBOWMAN: {
         id: 'GENOESE_CROSSBOWMAN',
@@ -910,6 +976,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 6700
     },
     HEAVY_SPEARMAN: {
         id: 'HEAVY_SPEARMAN',
@@ -921,6 +988,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 6800
     },
     CONDOTTIERO: {
         id: 'CONDOTTIERO',
@@ -932,6 +1000,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 6900
     },
     TEUTONIC_KNIGHT: {
         id: 'TEUTONIC_KNIGHT',
@@ -943,6 +1012,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 7000
     },
     CHEVALIER_CONFRERE: {
         id: 'CHEVALIER_CONFRERE',
@@ -953,7 +1023,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: false
+        common: false,
+        displayOrder: 7100
     },
     GENITOUR: {
         id: 'GENITOUR',
@@ -964,7 +1035,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: false
+        common: false,
+        displayOrder: 7200
     },
     TEMPLAR_BROTHER: {
         id: 'TEMPLAR_BROTHER',
@@ -975,7 +1047,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: false
+        common: false,
+        displayOrder: 7300
     },
     SZLACHTA_CAVALRY: {
         id: 'SZLACHTA_CAVALRY',
@@ -986,7 +1059,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: false
+        common: false,
+        displayOrder: 7400
     },
     HANDCANNONEER: {
         id: 'HANDCANNONEER',
@@ -999,7 +1073,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND,
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.JEANNE_D_ARC,
             CivilizationsEnum.AYYUBIDS, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 7500
     },
     DRAGON_HANDCANNONEER: {
         id: 'DRAGON_HANDCANNONEER',
@@ -1010,7 +1085,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.DRAGON_ORDER],
-        common: false
+        common: false,
+        displayOrder: 7600
     },
     OZUTSU: {
         id: 'OZUTSU',
@@ -1021,7 +1097,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 7700
     },
     STRELTSY: {
         id: 'STRELTSY',
@@ -1032,7 +1109,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.RUS],
-        common: false
+        common: false,
+        displayOrder: 7800
     },
     JANISSARY: {
         id: 'JANISSARY',
@@ -1043,7 +1121,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 7900
     },
     MUSOFADI_GUNNER: {
         id: 'MUSOFADI_GUNNER',
@@ -1054,7 +1133,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 8000
     },
     HORSE_ARCHER: {
         id: 'HORSE_ARCHER',
@@ -1065,7 +1145,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: null,
         civilizations: [CivilizationsEnum.RUS],
-        common: false
+        common: false,
+        displayOrder: 8100
     },
     AKINJI: {
         id: 'AKINJI',
@@ -1076,7 +1157,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 8200
     },
     MANGUDAI: {
         id: 'MANGUDAI',
@@ -1087,7 +1169,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.MONGOLS],
-        common: false
+        common: false,
+        displayOrder: 8300
     },
     TRADER: {
         id: 'TRADER',
@@ -1098,7 +1181,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: ALL_CIVILIZATIONS.filter(civilization => CivilizationsEnum.KNIGHTS_TEMPLAR !== civilization),
-        common: true
+        common: true,
+        displayOrder: 8400
     },
     VENETIAN_TRADER: {
         id: 'VENETIAN_TRADER',
@@ -1110,6 +1194,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
+        displayOrder: 8500
     },
     SILVER_TREE_TRADER: {
         id: 'SILVER_TREE_TRADER',
@@ -1121,7 +1206,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.MONGOLS],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 8600
     },
     FEUDAL_BAZAAR: {
         id: 'FEUDAL_BAZAAR',
@@ -1134,7 +1220,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.AYYUBIDS],
         common: false,
         civilizationSpecificFeature: true,
-        notAffectedByModifiers: true
+        notAffectedByModifiers: true,
+        displayOrder: 8700
     },
     CASTLE_BAZAAR: {
         id: 'CASTLE_BAZAAR',
@@ -1147,7 +1234,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.AYYUBIDS],
         common: false,
         civilizationSpecificFeature: true,
-        notAffectedByModifiers: true
+        notAffectedByModifiers: true,
+        displayOrder: 8800
     },
     IMPERIAL_BAZAAR: {
         id: 'IMPERIAL_BAZAAR',
@@ -1160,7 +1248,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.AYYUBIDS],
         common: false,
         civilizationSpecificFeature: true,
-        notAffectedByModifiers: true
+        notAffectedByModifiers: true,
+        displayOrder: 8900
     },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',
@@ -1171,7 +1260,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: null,
         civilizations: [CivilizationsEnum.ABBASID],
-        common: false
+        common: false,
+        displayOrder: 9000
     },
     CAMEL_RIDER: {
         id: 'CAMEL_RIDER',
@@ -1182,7 +1272,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: null,
         civilizations: [CivilizationsEnum.ABBASID],
-        common: false
+        common: false,
+        displayOrder: 9100
     },
     ZHUGE_NU: {
         id: 'ZHUGE_NU',
@@ -1193,7 +1284,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 9200
     },
     GRENADIER: {
         id: 'GRENADIER',
@@ -1204,7 +1296,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 9300
     },
     FIRE_LANCER: {
         id: 'FIRE_LANCER',
@@ -1215,7 +1308,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE],
-        common: false
+        common: false,
+        displayOrder: 9400
     },
     TOWER_ELEPHANT: {
         id: 'TOWER_ELEPHANT',
@@ -1226,7 +1320,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.DELHI],
-        common: false
+        common: false,
+        displayOrder: 9500
     },
     WAR_ELEPHANT: {
         id: 'WAR_ELEPHANT',
@@ -1237,7 +1332,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.DELHI],
-        common: false
+        common: false,
+        displayOrder: 9600
     },
     SCOUT: {
         id: 'SCOUT',
@@ -1252,7 +1348,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 9700
     },
     WARRIOR_SCOUT: {
         id: 'WARRIOR_SCOUT',
@@ -1263,7 +1360,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 9800
     },
     FISHING_BOAT: {
         id: 'FISHING_BOAT',
@@ -1274,7 +1372,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: ALL_CIVILIZATIONS.filter(civilization => CivilizationsEnum.RUS !== civilization),
-        common: true
+        common: true,
+        displayOrder: 9900
     },
     RUS_FISHING_BOAT: {
         id: 'RUS_FISHING_BOAT',
@@ -1285,7 +1384,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.RUS],
-        common: false
+        common: false,
+        displayOrder: 10000
     },
     RAM: {
         id: 'RAM',
@@ -1300,7 +1400,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
             CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 10100
     },
     CHEIROSIPHON: {
         id: 'CHEIROSIPHON',
@@ -1311,7 +1412,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: null,
         civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false
+        common: false,
+        displayOrder: 10200
     },
     SPRINGALD: {
         id: 'SPRINGALD',
@@ -1322,7 +1424,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: ALL_CIVILIZATIONS,
-        common: true
+        common: true,
+        displayOrder: 10300
     },
     MANGONEL: {
         id: 'MANGONEL',
@@ -1336,7 +1439,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.JAPANESE,
             CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 10400
     },
     MANJANIQ: {
         id: 'MANJANIQ',
@@ -1347,7 +1451,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 10500
     },
     NEST_OF_BEES: {
         id: 'NEST_OF_BEES',
@@ -1358,7 +1463,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 10600
     },
     COUNTERWEIGHT_TREBUCHET: {
         id: 'COUNTERWEIGHT_TREBUCHET',
@@ -1373,7 +1479,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: true
+        common: true,
+        displayOrder: 10700
     },
     TRACTION_TREBUCHET: {
         id: 'TRACTION_TREBUCHET',
@@ -1384,7 +1491,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.MONGOLS],
-        common: false
+        common: false,
+        displayOrder: 10800
     },
     TOWER_OF_SULTAN: {
         id: 'TOWER_OF_SULTAN',
@@ -1395,7 +1503,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 10900
     },
     BOMBARD: {
         id: 'BOMBARD',
@@ -1409,7 +1518,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES],
-        common: true
+        common: true,
+        displayOrder: 11000
     },
     GREAT_BOMBARD: {
         id: 'GREAT_BOMBARD',
@@ -1420,7 +1530,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 11100
     },
     IMPERIAL_OFFICIAL: {
         id: 'IMPERIAL_OFFICIAL',
@@ -1431,7 +1542,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: null,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 11200
     },
     WYNGUARD_ARMY: {
         id: 'WYNGUARD_ARMY',
@@ -1443,7 +1555,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 11800
     },
     WYNGUARD_RAIDERS: {
         id: 'WYNGUARD_RAIDERS',
@@ -1455,7 +1568,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 11900
     },
     WYNGUARD_RANGERS: {
         id: 'WYNGUARD_RANGERS',
@@ -1467,7 +1581,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 12000
     },
     WYNGUARD_FOOTMAN: {
         id: 'WYNGUARD_FOOTMAN',
@@ -1479,7 +1594,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 12100
     },
     EARLS_RETINUE: {
         id: 'EARLS_RETINUE',
@@ -1491,7 +1607,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 12200
     },
     GARRISON_COMMAND: {
         id: 'GARRISON_COMMAND',
@@ -1503,7 +1620,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 12300
     },
     GUNPOWDER_CONTINGENT: {
         id: 'GUNPOWDER_CONTINGENT',
@@ -1515,7 +1633,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 12400
     },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',
@@ -1526,7 +1645,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [],
         building: Building.DOCK,
         civilizations: ALL_CIVILIZATIONS,
-        common: false
+        common: false,
+        displayOrder: 12500
     },
     DHOW: {
         id: 'DHOW',
@@ -1537,7 +1657,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 12600
     },
     GALLEY: {
         id: 'GALLEY',
@@ -1550,7 +1671,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE, CivilizationsEnum.RUS,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
             CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 12700
     },
     JUNK: {
         id: 'JUNK',
@@ -1561,7 +1683,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 12800
     },
     HULK: {
         id: 'HULK',
@@ -1573,7 +1696,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.HRE, CivilizationsEnum.RUS,
             CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 12900
     },
     DROMON: {
         id: 'DROMON',
@@ -1584,7 +1708,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false
+        common: false,
+        displayOrder: 13000
     },
     WAR_COG: {
         id: 'WAR_COG',
@@ -1595,7 +1720,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 13100
     },
     BAGHLAH: {
         id: 'BAGHLAH',
@@ -1606,7 +1732,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.AYYUBIDS],
-        common: false
+        common: false,
+        displayOrder: 13200
     },
     WAR_JUNK: {
         id: 'WAR_JUNK',
@@ -1617,7 +1744,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 13300
     },
     DEMOLITION_SHIP: {
         id: 'DEMOLITION_SHIP',
@@ -1631,7 +1759,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.BYZANTINES,
             CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 13400
     },
     EXPLOSIVE_JUNK: {
         id: 'EXPLOSIVE_JUNK',
@@ -1642,7 +1771,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 13500
     },
     CARRACK: {
         id: 'CARRACK',
@@ -1655,7 +1785,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.HRE,
             CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER,
             CivilizationsEnum.BYZANTINES, CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false
+        common: false,
+        displayOrder: 13600
     },
     BAOCHUAN: {
         id: 'BAOCHUAN',
@@ -1666,7 +1797,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false
+        common: false,
+        displayOrder: 13700
     },
     ATAKEBUNE: {
         id: 'ATAKEBUNE',
@@ -1677,7 +1809,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.JAPANESE],
-        common: false
+        common: false,
+        displayOrder: 13800
     },
     GRAND_GALLEY: {
         id: 'GRAND_GALLEY',
@@ -1688,7 +1821,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false
+        common: false,
+        displayOrder: 13900
     },
     HUNTING_CANOE: {
         id: 'HUNTING_CANOE',
@@ -1699,7 +1833,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 14000
     },
     WAR_CANOE: {
         id: 'WAR_CANOE',
@@ -1710,7 +1845,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.MALIANS],
-        common: false
+        common: false,
+        displayOrder: 14100
     },
     GALLEAS: {
         id: 'GALLEAS',
@@ -1721,7 +1857,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false
+        common: false,
+        displayOrder: 14200
     },
     WHITE_TOWER_KNIGHT: {
         id: 'WHITE_TOWER_KNIGHT',
@@ -1733,7 +1870,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14300
     },
     WHITE_TOWER_MAN_AT_ARMS: {
         id: 'WHITE_TOWER_MAN_AT_ARMS',
@@ -1745,7 +1883,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14400
     },
     WHITE_TOWER_CROSSBOWMAN: {
         id: 'WHITE_TOWER_CROSSBOWMAN',
@@ -1757,7 +1896,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14500
     },
     WHITE_TOWER_LONGBOWMAN: {
         id: 'WHITE_TOWER_LONGBOWMAN',
@@ -1769,7 +1909,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14600
     },
     WHITE_TOWER_SPEARMAN: {
         id: 'WHITE_TOWER_SPEARMAN',
@@ -1781,7 +1922,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14700
     },
     WHITE_TOWER_HORSEMAN: {
         id: 'WHITE_TOWER_HORSEMAN',
@@ -1793,7 +1935,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
-        civilizationSpecificFeature: true
+        civilizationSpecificFeature: true,
+        displayOrder: 14800
     },
     VENETIAN_GALLEY: {
         id: 'VENETIAN_GALLEY',
@@ -1804,8 +1947,13 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
-        common: false
+        common: false,
+        displayOrder: 14900
     },
 }));
 
+const UNITS_LIST = Object.values(UNITS);
+UNITS_LIST.sort((a, b) => a.displayOrder - b.displayOrder);
+
+export { UNITS_LIST, UNITS };
 export default UNITS;

@@ -11,7 +11,8 @@ export default interface Unit {
     civilizations: CivilizationsEnum[],
     common: boolean,
     civilizationSpecificFeature?: boolean,
-    notAffectedByModifiers?: boolean
+    notAffectedByModifiers?: boolean,
+    displayOrder: number
 }
 
 export enum UnitType {
