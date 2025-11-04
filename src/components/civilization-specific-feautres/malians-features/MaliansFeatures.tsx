@@ -7,7 +7,6 @@ import miningCampIcon from '../../../icons/mining-camp.png';
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import PassiveIncomeModifierId from "../../../data/passive-income-modifiers/PassiveIncomeModifierId";
 import CattleRanch from "./cattle-ranch/CattleRanch";
-import FarimbaGarrison from "./farimba-garrison/FarimbaGarrison";
 import {
     decrementPassiveIncome,
     incrementPassiveIncome,
@@ -41,7 +40,6 @@ function MaliansFeatures() {
                 {pitMineMiningCampItem}
             </div>
             <CattleRanch/>
-            <FarimbaGarrison/>
         </div>
     );
 }

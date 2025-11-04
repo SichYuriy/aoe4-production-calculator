@@ -115,6 +115,9 @@ import venetianGalleyIcon from '../../icons/venetian-galley.png'
 import earlsGuardIcon from '../../icons/earls-guard-1.png'
 import yeomanIcon from '../../icons/yeoman-1.png'
 import hobelarIcon from '../../icons/hobelar-2.png'
+import mansaJavelineerIcon from '../../icons/mansa-javelineer-3.png'
+import mansaMusofadiWarriorIcon from '../../icons/mansa-musofadi-warrior-3.png'
+import freebornWarriorIcon from '../../icons/freeborn-warrior-3.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 
@@ -842,6 +845,39 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MALIANS],
         common: false
     },
+    MANSA_JAVELINEER: {
+        id: 'MANSA_JAVELINEER',
+        icon: mansaJavelineerIcon,
+        name: 'mansa javelineer',
+        productionTime: 23,
+        cost: new UnitCost(80, 40, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
+    MANSA_MUSOFADI_WARRIOR: {
+        id: 'MANSA_MUSOFADI_WARRIOR',
+        icon: mansaMusofadiWarriorIcon,
+        name: 'mansa musofadi',
+        productionTime: 15,
+        cost: new UnitCost(45, 30, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
+    FREEBORN_WARRIOR: {
+        id: 'FREEBORN_WARRIOR',
+        icon: freebornWarriorIcon,
+        name: 'freeborn warrior',
+        productionTime: 15,
+        cost: new UnitCost(90, 35, 0, 0),
+        types: [UnitType.INFANTRY],
+        building: null,
+        civilizations: [CivilizationsEnum.MALIANS],
+        common: false
+    },
     SERJEANT: {
         id: 'SERJEANT',
         icon: serjeantIcon,
@@ -1396,66 +1432,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         building: null,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.ZHU_XIS_LEGACY],
         common: false
-    },
-    FARIMBA_GARRISON_DONSO: {
-        id: 'FARIMBA_GARRISON_DONSO',
-        icon: donsoIcon,
-        name: 'donso',
-        productionTime: 24,
-        cost: new UnitCost(0, 81, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        civilizationSpecificFeature: true
-    },
-    FARIMBA_GARRISON_MUSOFADI_WARRIOR: {
-        id: 'FARIMBA_GARRISON_MUSOFADI_WARRIOR',
-        icon: musofadiWarriorIcon,
-        name: 'musofadi warrior',
-        productionTime: 24,
-        cost: new UnitCost(0, 72, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        civilizationSpecificFeature: true
-    },
-    FARIMBA_GARRISON_ARCHER: {
-        id: 'FARIMBA_GARRISON_ARCHER',
-        icon: archerIcon,
-        name: 'archer',
-        productionTime: 24,
-        cost: new UnitCost(0, 72, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        civilizationSpecificFeature: true
-    },
-    FARIMBA_GARRISON_JAVELIN_THROWER: {
-        id: 'FARIMBA_GARRISON_JAVELIN_THROWER',
-        icon: javelinThrowerIcon,
-        name: 'javelin thrower',
-        productionTime: 37,
-        cost: new UnitCost(0, 108, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        civilizationSpecificFeature: true
-    },
-    FARIMBA_GARRISON_MUSOFADI_GUNNER: {
-        id: 'FARIMBA_GARRISON_MUSOFADI_GUNNER',
-        icon: musofadiGunnerIcon,
-        name: 'musofadi gunner',
-        productionTime: 57,
-        cost: new UnitCost(0, 216, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        civilizationSpecificFeature: true
     },
     WYNGUARD_ARMY: {
         id: 'WYNGUARD_ARMY',

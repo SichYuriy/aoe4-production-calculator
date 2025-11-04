@@ -35,5 +35,10 @@ Order of the Dragon
 
 - Yorishiro Dock and Military Building Production speed reduced from 150% → 125% - Not implemented!
 
-### Update Preview 14.0.4963 +
+### Fix #7.0.5861
+- delete castle age 3
+- add units
+- Mansa Javelineer, food 80, gold 40, 0:23
+- Mansa Musofadi Warrior, food 45, gold 30, 0:15
+- Freeborn Warrior, food 90, gold 35, 0:15
 

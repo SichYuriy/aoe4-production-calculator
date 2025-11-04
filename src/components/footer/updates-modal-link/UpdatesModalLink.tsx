@@ -15,6 +15,12 @@ const updates: UpdateItem[] = [
     {
         id: '166',
         date: new Date(2025, 9, 27),
+        patch: 'Fix season 5',
+        description: "Add Mansa units"
+    },
+    {
+        id: '166',
+        date: new Date(2025, 9, 27),
         patch: 'Fix 12.0.1974',
         description: "Cattle ranch bonus food per upgrade decreased from 3.75 to 2.5"
     },
