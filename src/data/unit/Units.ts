@@ -1,23 +1,16 @@
 import Unit, {Building, UnitCost, UnitType} from "../../model/Unit";
 import spearmanIcon from '../../icons/spearman.png'
-import donsoIcon from '../../icons/donso.png'
 import manAtArmsIcon from '../../icons/man-at-arms.png'
 import jeannesChampionIcon from '../../icons/jeannes-champion.png'
 import jeannesRiderIcon from '../../icons/jeannes-rider.png'
 import ghulamIcon from '../../icons/ghulam-3.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
-import musofadiWarriorIcon from '../../icons/musofadi-warrior.png'
-import sofaIcon from '../../icons/sofa.png'
-import javelinThrowerIcon from '../../icons/javelin_thrower.png'
-import musofadiGunnerIcon from '../../icons/musofadi-gunner.png'
-import warriorScoutIcon from '../../icons/warrior_scout.png'
 import sipahiIcon from '../../icons/sipahi.png'
 import mehterIcon from '../../icons/mehter.png'
 import janissaryIcon from '../../icons/janissary.png'
 import greatBombardIcon from '../../icons/great_bombard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
-import cattleIcon from '../../icons/cattle.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
 import mangudaiIcon from '../../icons/mangudai.png'
 import springaldIcon from '../../icons/springald.png'
@@ -97,13 +90,11 @@ import venetianGalleyIcon from '../../icons/venetian-galley.png'
 import earlsGuardIcon from '../../icons/earls-guard-1.png'
 import yeomanIcon from '../../icons/yeoman-1.png'
 import hobelarIcon from '../../icons/hobelar-2.png'
-import mansaJavelineerIcon from '../../icons/mansa-javelineer-3.png'
-import mansaMusofadiWarriorIcon from '../../icons/mansa-musofadi-warrior-3.png'
-import freebornWarriorIcon from '../../icons/freeborn-warrior-3.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 import DRAGON_ORDER_UNITS from "./DragonOrderUnits";
 import JAPANESE_UNITS from "./JapaneseUnits";
+import MALIAN_UNITS from "./MalianUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -151,18 +142,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 300
-    },
-    CATTLE: {
-        id: 'CATTLE',
-        icon: cattleIcon,
-        name: 'cattle',
-        productionTime: 15,
-        cost: new UnitCost(0, 90, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 500
     },
     ARCHER: {
         id: 'ARCHER',
@@ -226,18 +205,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.BYZANTINES],
         common: false,
         displayOrder: 1400
-    },
-    DONSO: {
-        id: 'DONSO',
-        icon: donsoIcon,
-        name: 'donso',
-        productionTime: 15,
-        cost: new UnitCost(60, 0, 30, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 1500
     },
     HORSEMAN: {
         id: 'HORSEMAN',
@@ -457,18 +424,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 4000
     },
-    SOFA: {
-        id: 'SOFA',
-        icon: sofaIcon,
-        name: 'sofa',
-        productionTime: 26,
-        cost: new UnitCost(120, 60, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 4100
-    },
     JEANNES_RIDER: {
         id: 'JEANNES_RIDER',
         icon: jeannesRiderIcon,
@@ -553,18 +508,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 5100
     },
-    MUSOFADI_WARRIOR: {
-        id: 'MUSOFADI_WARRIOR',
-        icon: musofadiWarriorIcon,
-        name: 'musofadi warrior',
-        productionTime: 15,
-        cost: new UnitCost(45, 30, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 5200
-    },
     MEHTER: {
         id: 'MEHTER',
         icon: mehterIcon,
@@ -615,54 +558,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false,
         displayOrder: 6000
-    },
-    JAVELIN_THROWER: {
-        id: 'JAVELIN_THROWER',
-        icon: javelinThrowerIcon,
-        name: 'javelin thrower',
-        productionTime: 22,
-        cost: new UnitCost(80, 40, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 6100
-    },
-    MANSA_JAVELINEER: {
-        id: 'MANSA_JAVELINEER',
-        icon: mansaJavelineerIcon,
-        name: 'mansa javelineer',
-        productionTime: 23,
-        cost: new UnitCost(80, 40, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 6200
-    },
-    MANSA_MUSOFADI_WARRIOR: {
-        id: 'MANSA_MUSOFADI_WARRIOR',
-        icon: mansaMusofadiWarriorIcon,
-        name: 'mansa musofadi',
-        productionTime: 15,
-        cost: new UnitCost(45, 30, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 6300
-    },
-    FREEBORN_WARRIOR: {
-        id: 'FREEBORN_WARRIOR',
-        icon: freebornWarriorIcon,
-        name: 'freeborn warrior',
-        productionTime: 15,
-        cost: new UnitCost(90, 35, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 6400
     },
     SERJEANT: {
         id: 'SERJEANT',
@@ -821,18 +716,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.OTTOMANS],
         common: false,
         displayOrder: 7900
-    },
-    MUSOFADI_GUNNER: {
-        id: 'MUSOFADI_GUNNER',
-        icon: musofadiGunnerIcon,
-        name: 'musofadi gunner',
-        productionTime: 35,
-        cost: new UnitCost(110, 130, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 8000
     },
     HORSE_ARCHER: {
         id: 'HORSE_ARCHER',
@@ -1048,18 +931,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 9700
-    },
-    WARRIOR_SCOUT: {
-        id: 'WARRIOR_SCOUT',
-        icon: warriorScoutIcon,
-        name: 'warrior scout',
-        productionTime: 14,
-        cost: new UnitCost(90, 0, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 9800
     },
     FISHING_BOAT: {
         id: 'FISHING_BOAT',
@@ -1510,30 +1381,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 13900
     },
-    HUNTING_CANOE: {
-        id: 'HUNTING_CANOE',
-        icon: dhowIcon,
-        name: 'hunting canoe',
-        productionTime: 25,
-        cost: new UnitCost(80, 0, 150, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 14000
-    },
-    WAR_CANOE: {
-        id: 'WAR_CANOE',
-        icon: hulkIcon,
-        name: 'war canoe',
-        productionTime: 30,
-        cost: new UnitCost(110, 30, 200, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.MALIANS],
-        common: false,
-        displayOrder: 14100
-    },
     GALLEAS: {
         id: 'GALLEAS',
         icon: galleasIcon,
@@ -1639,6 +1486,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
 }));
 DRAGON_ORDER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 JAPANESE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+MALIAN_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
