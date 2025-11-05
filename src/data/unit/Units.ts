@@ -7,7 +7,6 @@ import ghulamIcon from '../../icons/ghulam-3.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
-import horseArcherIcon from '../../icons/horse-archer.png'
 import springaldIcon from '../../icons/springald.png'
 import ramIcon from '../../icons/ram.png'
 import mangonelIcon from '../../icons/mangonel.png'
@@ -22,7 +21,6 @@ import camelArcherIcon from '../../icons/camel-archer.png'
 import crossbowmanIcon from '../../icons/crossbowman.png'
 import arbaletrierIcon from '../../icons/arbaletrier.png'
 import handcannoneerIcon from '../../icons/handcannoneer.png'
-import streltsyIcon from '../../icons/streltsy.png'
 import horsemanIcon from '../../icons/horseman.png'
 import lancerIcon from '../../icons/lancer.png'
 import knightIcon from '../../icons/knight.png'
@@ -34,7 +32,6 @@ import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import monkIcon from '../../icons/monk.png'
-import warriorMonkIcon from '../../icons/warrior_monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
 import dhowIcon from '../../icons/dhow.png'
 import hulkIcon from '../../icons/hulk.png'
@@ -69,6 +66,7 @@ import AYYUBIDS_UNITS from "./AyyubidsUnits";
 import OTTOMANS_UNITS from "./OttomansUnits";
 import DELHI_UNITS from "./DelhiUnits";
 import MONGOLS_UNITS from "./MongolsUnits";
+import RUS_UNITS from "./RusUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -156,18 +154,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.ZHU_XIS_LEGACY],
         common: true,
         displayOrder: 2500
-    },
-    WARRIOR_MONK: {
-        id: 'WARRIOR_MONK',
-        icon: warriorMonkIcon,
-        name: 'warrior monk',
-        productionTime: 35,
-        cost: new UnitCost(40, 200, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.RUS],
-        common: false,
-        displayOrder: 3000
     },
     KNIGHT: {
         id: 'KNIGHT',
@@ -427,30 +413,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 7500
     },
-    STRELTSY: {
-        id: 'STRELTSY',
-        icon: streltsyIcon,
-        name: 'streltsy',
-        productionTime: 35,
-        cost: new UnitCost(90, 90, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.RUS],
-        common: false,
-        displayOrder: 7800
-    },
-    HORSE_ARCHER: {
-        id: 'HORSE_ARCHER',
-        icon: horseArcherIcon,
-        name: 'horse archer',
-        productionTime: 22,
-        cost: new UnitCost(80, 0, 40, 0),
-        types: [UnitType.CAVALRY],
-        building: null,
-        civilizations: [CivilizationsEnum.RUS],
-        common: false,
-        displayOrder: 8100
-    },
     TRADER: {
         id: 'TRADER',
         icon: traderIcon,
@@ -562,18 +524,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: ALL_CIVILIZATIONS.filter(civilization => CivilizationsEnum.RUS !== civilization),
         common: true,
         displayOrder: 9900
-    },
-    RUS_FISHING_BOAT: {
-        id: 'RUS_FISHING_BOAT',
-        icon: fishingBoatIcon,
-        name: 'fishing boat',
-        productionTime: 46,
-        cost: new UnitCost(0, 0, 150, 0),
-        types: [],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.RUS],
-        common: false,
-        displayOrder: 10000
     },
     RAM: {
         id: 'RAM',
@@ -874,6 +824,7 @@ AYYUBIDS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 OTTOMANS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 DELHI_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MONGOLS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+RUS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
