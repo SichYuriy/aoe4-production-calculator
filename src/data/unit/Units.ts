@@ -59,9 +59,6 @@ import dervishIcon from '../../icons/dervish.png'
 import desertRaiderIcon from '../../icons/desert-raider.png'
 import camelLancerIcon from '../../icons/camel-lancer.png'
 import towerOfTheSultanIcon from '../../icons/tower-of-the-sultan.png'
-import shaolinMonkIcon from '../../icons/shaolin-monk.png'
-import imperialGuardIcon from '../../icons/imperial-guard.png'
-import yuanRaiderIcon from '../../icons/yuan-raider.png'
 import bazaarIcon from '../../icons/trade-wing-bazaar.png'
 import venetianTraderIcon from '../../icons/venetian-trader.png'
 import serjeantIcon from '../../icons/serjeant.png'
@@ -83,6 +80,7 @@ import MALIAN_UNITS from "./MalianUnits";
 import HOUSE_OF_LANCASTER_UNITS from "./HouseOfLancasterUnits";
 import ENGLISH_UNITS from "./EnglishUnits";
 import BYZANTINES_UNITS from "./ByzantinesUnits";
+import ZHU_XIS_LEGACY_UNITS from "./ZhuXisLegacyUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -158,18 +156,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 1800
-    },
-    YUAN_RAIDER: {
-        id: 'YUAN_RAIDER',
-        icon: yuanRaiderIcon,
-        name: 'yuan raider',
-        productionTime: 22.5,
-        cost: new UnitCost(80, 20, 20, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false,
-        displayOrder: 2000
     },
     DESERT_RAIDER: {
         id: 'DESERT_RAIDER',
@@ -280,18 +266,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 3000
     },
-    SHAOLIN_MONK: {
-        id: 'SHAOLIN_MONK',
-        icon: shaolinMonkIcon,
-        name: 'shaolin monk',
-        productionTime: 20,
-        cost: new UnitCost(200, 0, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false,
-        displayOrder: 3100
-    },
     DERVISH: {
         id: 'DERVISH',
         icon: dervishIcon,
@@ -328,18 +302,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
         common: false,
         displayOrder: 3900
-    },
-    IMPERIAL_GUARD: {
-        id: 'IMPERIAL_GUARD',
-        icon: imperialGuardIcon,
-        name: 'imperial guard',
-        productionTime: 35,
-        cost: new UnitCost(140, 140, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ZHU_XIS_LEGACY],
-        common: false,
-        displayOrder: 4000
     },
     JEANNES_RIDER: {
         id: 'JEANNES_RIDER',
@@ -1203,6 +1165,7 @@ MALIAN_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 HOUSE_OF_LANCASTER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ENGLISH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 BYZANTINES_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+ZHU_XIS_LEGACY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
