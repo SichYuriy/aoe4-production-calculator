@@ -19,27 +19,26 @@ import traderIcon from '../../icons/trader.png'
 import archerIcon from '../../icons/archer.png'
 import camelArcherIcon from '../../icons/camel-archer.png'
 import crossbowmanIcon from '../../icons/crossbowman.png'
-import arbaletrierIcon from '../../icons/arbaletrier.png'
+
 import handcannoneerIcon from '../../icons/handcannoneer.png'
 import horsemanIcon from '../../icons/horseman.png'
 import lancerIcon from '../../icons/lancer.png'
 import knightIcon from '../../icons/knight.png'
-import royalKnightIcon from '../../icons/royal-knight.png'
+
 import camelRiderIcon from '../../icons/camel-rider.png'
 import imperialOfficialIcon from '../../icons/imperial-official.png'
 import zhugeNuIcon from '../../icons/zhuge-nu.png'
 import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
-import monkIcon from '../../icons/monk.png'
+
 import tradeShipIcon from '../../icons/trade-ship.png'
 import dhowIcon from '../../icons/dhow.png'
 import hulkIcon from '../../icons/hulk.png'
-import warCogIcon from '../../icons/war-cog-2.png'
+
 import demolitionShipIcon from '../../icons/demolition_ship.png'
 import carrackIcon from '../../icons/carrack.png'
 import galleyIcon from '../../icons/galley.png'
-import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
 import venetianTraderIcon from '../../icons/venetian-trader.png'
 import serjeantIcon from '../../icons/serjeant.png'
@@ -68,12 +67,18 @@ import DELHI_UNITS from "./DelhiUnits";
 import MONGOLS_UNITS from "./MongolsUnits";
 import RUS_UNITS from "./RusUnits";
 import {
-    CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
+    CROSSBOWMAN_PRODUCTION_TIME,
+    CROSSBOWMAN_UNIT_COST,
+    HORSEMAN_PRODUCTION_TIME,
+    HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
     KNIGHT_UNIT_COST,
     MAN_AT_ARMS_PRODUCTION_TIME,
-    MAN_AT_ARMS_UNIT_COST, SPEARMAN_PRODUCTION_TIME, SPEARMAN_UNIT_COST
+    MAN_AT_ARMS_UNIT_COST,
+    SPEARMAN_PRODUCTION_TIME,
+    SPEARMAN_UNIT_COST
 } from "./CommonUnitsConstants";
+import FRENCH_UNITS from "./FrenchUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -83,7 +88,6 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
     CivilizationsEnum.HOUSE_OF_LANCASTER];
 
 const TRADER_PRODUCTION_TIME = 30;
-const TRADER_GOLD_COST = 60;
 const VILLAGER_PRODUCTION_TIME = 20;
 
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
@@ -167,18 +171,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 3500
-    },
-    ROYAL_KNIGHT: {
-        id: 'ROYAL_KNIGHT',
-        icon: royalKnightIcon,
-        name: 'royal knight',
-        productionTime: KNIGHT_PRODUCTION_TIME,
-        cost: KNIGHT_UNIT_COST,
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false,
-        displayOrder: 3900
     },
     JEANNES_RIDER: {
         id: 'JEANNES_RIDER',
@@ -266,18 +258,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 5700
-    },
-    ARBALETRIER: {
-        id: 'ARBALETRIER',
-        icon: arbaletrierIcon,
-        name: 'arbaletrier',
-        productionTime: CROSSBOWMAN_PRODUCTION_TIME,
-        cost: CROSSBOWMAN_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false,
-        displayOrder: 6000
     },
     SERJEANT: {
         id: 'SERJEANT',
@@ -699,18 +679,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 12900
     },
-    WAR_COG: {
-        id: 'WAR_COG',
-        icon: warCogIcon,
-        name: 'war cog',
-        productionTime: 30,
-        cost: new UnitCost(75, 30, 200, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false,
-        displayOrder: 13100
-    },
     BAGHLAH: {
         id: 'BAGHLAH',
         icon: baghlahIcon,
@@ -788,18 +756,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 13700
     },
-    GALLEAS: {
-        id: 'GALLEAS',
-        icon: galleasIcon,
-        name: 'galleas',
-        productionTime: 50,
-        cost: new UnitCost(200, 300, 360, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.FRENCH, CivilizationsEnum.JEANNE_D_ARC],
-        common: false,
-        displayOrder: 14200
-    },
     VENETIAN_GALLEY: {
         id: 'VENETIAN_GALLEY',
         icon: venetianGalleyIcon,
@@ -825,10 +781,11 @@ OTTOMANS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 DELHI_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MONGOLS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 RUS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+FRENCH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
 UNITS_LIST.sort((a, b) => a.displayOrder - b.displayOrder);
 
-export { UNITS_LIST, UNITS };
+export {UNITS_LIST, UNITS};
 export default UNITS;
