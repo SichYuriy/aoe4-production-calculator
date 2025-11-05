@@ -76,16 +76,6 @@ import towerOfTheSultanIcon from '../../icons/tower-of-the-sultan.png'
 import shaolinMonkIcon from '../../icons/shaolin-monk.png'
 import imperialGuardIcon from '../../icons/imperial-guard.png'
 import yuanRaiderIcon from '../../icons/yuan-raider.png'
-import buddhistIcon from '../../icons/buddhist-monk.png'
-import shintoPriestIcon from '../../icons/shinto-priest.png'
-import samuraiIcon from '../../icons/samurai.png'
-import yumiAshigaruIcon from '../../icons/yumi-ashigaru.png'
-import shinobiIcon from '../../icons/shinobi.png'
-import onnaBugeishaIcon from '../../icons/onna-bugeisha.png'
-import ozutsuIcon from '../../icons/ozutsu.png'
-import onnaMushaIcon from '../../icons/onna-musha.png'
-import mountedSamuraiIcon from '../../icons/mounted-samurai.png'
-import atakebuneIcon from '../../icons/atakebune.png'
 import limitaneiIcon from '../../icons/limitanei.png'
 import varangianGuardIcon from '../../icons/varangian-guard.png'
 import cataphractIcon from '../../icons/cataphract.png'
@@ -113,6 +103,7 @@ import freebornWarriorIcon from '../../icons/freeborn-warrior-3.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 import DRAGON_ORDER_UNITS from "./DragonOrderUnits";
+import JAPANESE_UNITS from "./JapaneseUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -161,19 +152,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 300
     },
-    FLOATING_GATE_VILLAGER: {
-        id: 'FLOATING_GATE_VILLAGER',
-        icon: villagerIcon,
-        name: 'Yorishiro TC villager',
-        productionTime: VILLAGER_PRODUCTION_TIME * (1 / 1.30),
-        cost: new UnitCost(50, 0, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 400
-    },
     CATTLE: {
         id: 'CATTLE',
         icon: cattleIcon,
@@ -209,18 +187,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
         displayOrder: 700
-    },
-    YUMI_ASHIGARU: {
-        id: 'YUMI_ASHIGARU',
-        icon: yumiAshigaruIcon,
-        name: 'yumi ashigaru',
-        productionTime: 13,
-        cost: new UnitCost(25, 0, 35, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 800
     },
     LONGBOWMAN: {
         id: 'LONGBOWMAN',
@@ -272,30 +238,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MALIANS],
         common: false,
         displayOrder: 1500
-    },
-    ONNA_BUGEISHA: {
-        id: 'ONNA_BUGEISHA',
-        icon: onnaBugeishaIcon,
-        name: 'onna-bugeisha',
-        productionTime: 15,
-        cost: new UnitCost(60, 20, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 1600
-    },
-    SHINOBI: {
-        id: 'SHINOBI',
-        icon: shinobiIcon,
-        name: 'shinobi',
-        productionTime: 20,
-        cost: new UnitCost(50, 50, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 1700
     },
     HORSEMAN: {
         id: 'HORSEMAN',
@@ -454,30 +396,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 3100
     },
-    BUDDHIST_MONK: {
-        id: 'BUDDHIST_MONK',
-        icon: buddhistIcon,
-        name: 'buddhist monk',
-        productionTime: 30,
-        cost: new UnitCost(0, 80, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 3200
-    },
-    SHINTO_PRIEST: {
-        id: 'SHINTO_PRIEST',
-        icon: shintoPriestIcon,
-        name: 'shinto priest',
-        productionTime: 30,
-        cost: new UnitCost(0, 150, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 3300
-    },
     DERVISH: {
         id: 'DERVISH',
         icon: dervishIcon,
@@ -514,18 +432,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.BYZANTINES],
         common: false,
         displayOrder: 3700
-    },
-    MOUNTED_SAMURAI: {
-        id: 'MOUNTED_SAMURAI',
-        icon: mountedSamuraiIcon,
-        name: 'mounted samurai',
-        productionTime: 35,
-        cost: new UnitCost(140, 110, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 3800
     },
     ROYAL_KNIGHT: {
         id: 'ROYAL_KNIGHT',
@@ -610,18 +516,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: false,
         displayOrder: 4500
-    },
-    SAMURAI: {
-        id: 'SAMURAI',
-        icon: samuraiIcon,
-        name: 'samurai',
-        productionTime: 20,
-        cost: new UnitCost(100, 30, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 4600
     },
     VARANGIAN_GUARD: {
         id: 'VARANGIAN_GUARD',
@@ -709,18 +603,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 5700
-    },
-    ONNA_MUSHA: {
-        id: 'ONNA_MUSHA',
-        icon: onnaMushaIcon,
-        name: 'onna-musha',
-        productionTime: 24,
-        cost: new UnitCost(80, 60, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 5900
     },
     ARBALETRIER: {
         id: 'ARBALETRIER',
@@ -915,18 +797,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.AYYUBIDS, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 7500
-    },
-    OZUTSU: {
-        id: 'OZUTSU',
-        icon: ozutsuIcon,
-        name: 'ozutsu',
-        productionTime: 35,
-        cost: new UnitCost(85, 155, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 7700
     },
     STRELTSY: {
         id: 'STRELTSY',
@@ -1628,18 +1498,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 13700
     },
-    ATAKEBUNE: {
-        id: 'ATAKEBUNE',
-        icon: atakebuneIcon,
-        name: 'atakebune',
-        productionTime: 45,
-        cost: new UnitCost(100, 220, 220, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.JAPANESE],
-        common: false,
-        displayOrder: 13800
-    },
     GRAND_GALLEY: {
         id: 'GRAND_GALLEY',
         icon: grandGalleyIcon,
@@ -1780,6 +1638,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     },
 }));
 DRAGON_ORDER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+JAPANESE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
