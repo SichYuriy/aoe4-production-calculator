@@ -62,11 +62,6 @@ import towerOfTheSultanIcon from '../../icons/tower-of-the-sultan.png'
 import shaolinMonkIcon from '../../icons/shaolin-monk.png'
 import imperialGuardIcon from '../../icons/imperial-guard.png'
 import yuanRaiderIcon from '../../icons/yuan-raider.png'
-import limitaneiIcon from '../../icons/limitanei.png'
-import varangianGuardIcon from '../../icons/varangian-guard.png'
-import cataphractIcon from '../../icons/cataphract.png'
-import cheirosiphonIcon from '../../icons/cheirosiphon.png'
-import dromonIcon from '../../icons/dromon.png'
 import bazaarIcon from '../../icons/trade-wing-bazaar.png'
 import venetianTraderIcon from '../../icons/venetian-trader.png'
 import serjeantIcon from '../../icons/serjeant.png'
@@ -87,6 +82,7 @@ import JAPANESE_UNITS from "./JapaneseUnits";
 import MALIAN_UNITS from "./MalianUnits";
 import HOUSE_OF_LANCASTER_UNITS from "./HouseOfLancasterUnits";
 import ENGLISH_UNITS from "./EnglishUnits";
+import BYZANTINES_UNITS from "./ByzantinesUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -150,18 +146,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 1100
-    },
-    LIMITANEI: {
-        id: 'LIMITANEI',
-        icon: limitaneiIcon,
-        name: 'limitanei',
-        productionTime: 17,
-        cost: new UnitCost(80, 0, 10, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false,
-        displayOrder: 1400
     },
     HORSEMAN: {
         id: 'HORSEMAN',
@@ -333,18 +317,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 3500
     },
-    CATAPHRACT: {
-        id: 'CATAPHRACT',
-        icon: cataphractIcon,
-        name: 'cataphract',
-        productionTime: 40,
-        cost: new UnitCost(180, 150, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false,
-        displayOrder: 3700
-    },
     ROYAL_KNIGHT: {
         id: 'ROYAL_KNIGHT',
         icon: royalKnightIcon,
@@ -404,18 +376,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 4400
-    },
-    VARANGIAN_GUARD: {
-        id: 'VARANGIAN_GUARD',
-        icon: varangianGuardIcon,
-        name: 'varangian guard',
-        productionTime: 25,
-        cost: new UnitCost(90, 40, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false,
-        displayOrder: 4700
     },
     PALACE_GUARD: {
         id: 'PALACE_GUARD',
@@ -905,18 +865,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 10100
     },
-    CHEIROSIPHON: {
-        id: 'CHEIROSIPHON',
-        icon: cheirosiphonIcon,
-        name: 'cheirosiphon',
-        productionTime: 30,
-        cost: new UnitCost(0, 60, 200, 0),
-        types: [UnitType.SIEGE],
-        building: null,
-        civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false,
-        displayOrder: 10200
-    },
     SPRINGALD: {
         id: 'SPRINGALD',
         icon: springaldIcon,
@@ -1123,18 +1071,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 12900
     },
-    DROMON: {
-        id: 'DROMON',
-        icon: dromonIcon,
-        name: 'dromon',
-        productionTime: 30,
-        cost: new UnitCost(100, 60, 200, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.BYZANTINES],
-        common: false,
-        displayOrder: 13000
-    },
     WAR_COG: {
         id: 'WAR_COG',
         icon: warCogIcon,
@@ -1266,6 +1202,7 @@ JAPANESE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MALIAN_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 HOUSE_OF_LANCASTER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ENGLISH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+BYZANTINES_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
