@@ -5,10 +5,6 @@ import jeannesChampionIcon from '../../icons/jeannes-champion.png'
 import jeannesRiderIcon from '../../icons/jeannes-rider.png'
 import ghulamIcon from '../../icons/ghulam-3.png'
 import palaceGuardIcon from '../../icons/palace-guard.png'
-import sipahiIcon from '../../icons/sipahi.png'
-import mehterIcon from '../../icons/mehter.png'
-import janissaryIcon from '../../icons/janissary.png'
-import greatBombardIcon from '../../icons/great_bombard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
@@ -51,7 +47,6 @@ import hulkIcon from '../../icons/hulk.png'
 import warCogIcon from '../../icons/war-cog-2.png'
 import demolitionShipIcon from '../../icons/demolition_ship.png'
 import carrackIcon from '../../icons/carrack.png'
-import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
@@ -77,6 +72,7 @@ import ENGLISH_UNITS from "./EnglishUnits";
 import BYZANTINES_UNITS from "./ByzantinesUnits";
 import ZHU_XIS_LEGACY_UNITS from "./ZhuXisLegacyUnits";
 import AYYUBIDS_UNITS from "./AyyubidsUnits";
+import OTTOMANS_UNITS from "./OttomansUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -152,18 +148,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 1800
-    },
-    SIPAHI: {
-        id: 'SIPAHI',
-        icon: sipahiIcon,
-        name: 'sipahi',
-        productionTime: 30,
-        cost: new UnitCost(120, 0, 40, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 2300
     },
     GHAZI_RAIDER: {
         id: 'GHAZI_RAIDER',
@@ -322,18 +306,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.AYYUBIDS],
         common: false,
         displayOrder: 5100
-    },
-    MEHTER: {
-        id: 'MEHTER',
-        icon: mehterIcon,
-        name: 'mehter',
-        productionTime: 28,
-        cost: new UnitCost(100, 80, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 5300
     },
     LANDSKNECHT: {
         id: 'LANDSKNECHT',
@@ -520,18 +492,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 7800
     },
-    JANISSARY: {
-        id: 'JANISSARY',
-        icon: janissaryIcon,
-        name: 'janissary',
-        productionTime: 24,
-        cost: new UnitCost(60, 100, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 7900
-    },
     HORSE_ARCHER: {
         id: 'HORSE_ARCHER',
         icon: horseArcherIcon,
@@ -543,18 +503,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.RUS],
         common: false,
         displayOrder: 8100
-    },
-    AKINJI: {
-        id: 'AKINJI',
-        icon: horseArcherIcon,
-        name: 'akinji',
-        productionTime: 24,
-        cost: new UnitCost(80, 0, 80, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 8200
     },
     MANGUDAI: {
         id: 'MANGUDAI',
@@ -827,18 +775,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 11000
     },
-    GREAT_BOMBARD: {
-        id: 'GREAT_BOMBARD',
-        icon: greatBombardIcon,
-        name: 'great bombard',
-        productionTime: 60,
-        cost: new UnitCost(0, 800, 450, 0),
-        types: [UnitType.SIEGE],
-        building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 11100
-    },
     IMPERIAL_OFFICIAL: {
         id: 'IMPERIAL_OFFICIAL',
         icon: imperialOfficialIcon,
@@ -1016,18 +952,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 13700
     },
-    GRAND_GALLEY: {
-        id: 'GRAND_GALLEY',
-        icon: grandGalleyIcon,
-        name: 'grand galley',
-        productionTime: 50,
-        cost: new UnitCost(135, 300, 360, 0),
-        types: [UnitType.MILITARY_SHIP],
-        building: Building.DOCK,
-        civilizations: [CivilizationsEnum.OTTOMANS],
-        common: false,
-        displayOrder: 13900
-    },
     GALLEAS: {
         id: 'GALLEAS',
         icon: galleasIcon,
@@ -1061,6 +985,7 @@ ENGLISH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 BYZANTINES_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ZHU_XIS_LEGACY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 AYYUBIDS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+OTTOMANS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
