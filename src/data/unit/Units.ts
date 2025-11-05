@@ -26,7 +26,6 @@ import arbaletrierIcon from '../../icons/arbaletrier.png'
 import handcannoneerIcon from '../../icons/handcannoneer.png'
 import streltsyIcon from '../../icons/streltsy.png'
 import horsemanIcon from '../../icons/horseman.png'
-import ghaziRaiderIcon from '../../icons/ghazi-raider-2.png'
 import lancerIcon from '../../icons/lancer.png'
 import keshikIcon from '../../icons/keshik-2.png'
 import knightIcon from '../../icons/knight.png'
@@ -36,8 +35,6 @@ import imperialOfficialIcon from '../../icons/imperial-official.png'
 import zhugeNuIcon from '../../icons/zhuge-nu.png'
 import fireLancerIcon from '../../icons/fire-lancer.png'
 import grenadierIcon from '../../icons/grenadier.png'
-import towerElephantIcon from '../../icons/tower-war-elephant.png'
-import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import monkIcon from '../../icons/monk.png'
 import warriorMonkIcon from '../../icons/warrior_monk.png'
@@ -73,6 +70,7 @@ import BYZANTINES_UNITS from "./ByzantinesUnits";
 import ZHU_XIS_LEGACY_UNITS from "./ZhuXisLegacyUnits";
 import AYYUBIDS_UNITS from "./AyyubidsUnits";
 import OTTOMANS_UNITS from "./OttomansUnits";
+import DELHI_UNITS from "./DelhiUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -149,18 +147,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 1800
     },
-    GHAZI_RAIDER: {
-        id: 'GHAZI_RAIDER',
-        icon: ghaziRaiderIcon,
-        name: 'ghazi raider',
-        productionTime: 25,
-        cost: new UnitCost(110, 0, 30, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.DELHI],
-        common: false,
-        displayOrder: 2400
-    },
     LANCER: {
         id: 'LANCER',
         icon: lancerIcon,
@@ -184,31 +170,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MONGOLS],
         common: false,
         displayOrder: 2700
-    },
-    SCHOLAR: {
-        id: 'SCHOLAR',
-        icon: monkIcon,
-        name: 'scholar',
-        productionTime: 30,
-        cost: new UnitCost(0, 135, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.DELHI],
-        common: false,
-        displayOrder: 2800
-    },
-    DOME_OF_FAIT_SCHOLAR: {
-        id: 'DOME_OF_FAIT_SCHOLAR',
-        icon: monkIcon,
-        name: 'scholar',
-        productionTime: 30,
-        cost: new UnitCost(0, 80, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.DELHI],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 2900
     },
     WARRIOR_MONK: {
         id: 'WARRIOR_MONK',
@@ -613,30 +574,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 9400
     },
-    TOWER_ELEPHANT: {
-        id: 'TOWER_ELEPHANT',
-        icon: towerElephantIcon,
-        name: 'tower elephant',
-        productionTime: 60,
-        cost: new UnitCost(400, 600, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.DELHI],
-        common: false,
-        displayOrder: 9500
-    },
-    WAR_ELEPHANT: {
-        id: 'WAR_ELEPHANT',
-        icon: warElephantIcon,
-        name: 'war elephant',
-        productionTime: 60,
-        cost: new UnitCost(400, 350, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.DELHI],
-        common: false,
-        displayOrder: 9600
-    },
     SCOUT: {
         id: 'SCOUT',
         icon: scoutIcon,
@@ -986,6 +923,7 @@ BYZANTINES_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ZHU_XIS_LEGACY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 AYYUBIDS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 OTTOMANS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+DELHI_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
