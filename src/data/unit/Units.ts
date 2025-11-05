@@ -46,9 +46,6 @@ import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
 import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
 import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
-import earlsRetinueIcon from '../../icons/earls-retinue-1.png'
-import garrisonCommandIcon from '../../icons/garrison-command-1.png'
-import gunpowderContingentIcon from '../../icons/gunpowder-contingent-1.png'
 import monkIcon from '../../icons/monk.png'
 import warriorMonkIcon from '../../icons/warrior_monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
@@ -87,14 +84,12 @@ import genitourIcon from '../../icons/genitour.png'
 import templarBrotherIcon from '../../icons/templar-brother.png'
 import szlachtaCavalryIcon from '../../icons/szlachta-cavalry.png'
 import venetianGalleyIcon from '../../icons/venetian-galley.png'
-import earlsGuardIcon from '../../icons/earls-guard-1.png'
-import yeomanIcon from '../../icons/yeoman-1.png'
-import hobelarIcon from '../../icons/hobelar-2.png'
 
 import CivilizationsEnum from "../CivilizationsEnum";
 import DRAGON_ORDER_UNITS from "./DragonOrderUnits";
 import JAPANESE_UNITS from "./JapaneseUnits";
 import MALIAN_UNITS from "./MalianUnits";
+import HOUSE_OF_LANCASTER_UNITS from "./HouseOfLancasterUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -155,18 +150,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 600
     },
-    YEOMAN: {
-        id: 'YEOMAN',
-        icon: yeomanIcon,
-        name: 'YEOMAN',
-        productionTime: 15,
-        cost: new UnitCost(50, 0, 45, 0),
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        displayOrder: 700
-    },
     LONGBOWMAN: {
         id: 'LONGBOWMAN',
         icon: longbowmanIcon,
@@ -217,18 +200,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 1800
-    },
-    HOBELAR: {
-        id: 'HOBELAR',
-        icon: hobelarIcon,
-        name: 'hobelar',
-        productionTime: 15,
-        cost: new UnitCost(70, 20, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        displayOrder: 1900
     },
     YUAN_RAIDER: {
         id: 'YUAN_RAIDER',
@@ -459,18 +430,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 4400
-    },
-    EARLS_GUARD: {
-        id: 'EARLS_GUARD',
-        icon: earlsGuardIcon,
-        name: 'earls guard',
-        productionTime: 23,
-        cost: new UnitCost(100, 20, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        displayOrder: 4500
     },
     VARANGIAN_GUARD: {
         id: 'VARANGIAN_GUARD',
@@ -1166,45 +1125,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizationSpecificFeature: true,
         displayOrder: 12100
     },
-    EARLS_RETINUE: {
-        id: 'EARLS_RETINUE',
-        icon: earlsRetinueIcon,
-        name: 'earls retinue',
-        productionTime: 50,
-        cost: new UnitCost(650, 200, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: null,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 12200
-    },
-    GARRISON_COMMAND: {
-        id: 'GARRISON_COMMAND',
-        icon: garrisonCommandIcon,
-        name: 'garrison command',
-        productionTime: 30,
-        cost: new UnitCost(300, 0, 150, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 12300
-    },
-    GUNPOWDER_CONTINGENT: {
-        id: 'GUNPOWDER_CONTINGENT',
-        icon: gunpowderContingentIcon,
-        name: 'gunpowder contingent',
-        productionTime: 65,
-        cost: new UnitCost(0, 1050, 850, 0),
-        types: [UnitType.SIEGE],
-        building: null,
-        civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 12400
-    },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',
         icon: tradeShipIcon,
@@ -1487,6 +1407,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
 DRAGON_ORDER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 JAPANESE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MALIAN_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+HOUSE_OF_LANCASTER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
