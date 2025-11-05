@@ -8,12 +8,10 @@ import palaceGuardIcon from '../../icons/palace-guard.png'
 import landsknechtIcon from '../../icons/landsknecht.png'
 import villagerIcon from '../../icons/villager.png'
 import horseArcherIcon from '../../icons/horse-archer.png'
-import mangudaiIcon from '../../icons/mangudai.png'
 import springaldIcon from '../../icons/springald.png'
 import ramIcon from '../../icons/ram.png'
 import mangonelIcon from '../../icons/mangonel.png'
 import counterweightTrebuchetIcon from '../../icons/counterweight-trebuchet.png'
-import tractionTrebuchetIcon from '../../icons/traction-trebuchet.png'
 import nestOfBeesIcon from '../../icons/nest-of-bees.png'
 import bombardIcon from '../../icons/bombard.png'
 import scoutIcon from '../../icons/scout.png'
@@ -27,7 +25,6 @@ import handcannoneerIcon from '../../icons/handcannoneer.png'
 import streltsyIcon from '../../icons/streltsy.png'
 import horsemanIcon from '../../icons/horseman.png'
 import lancerIcon from '../../icons/lancer.png'
-import keshikIcon from '../../icons/keshik-2.png'
 import knightIcon from '../../icons/knight.png'
 import royalKnightIcon from '../../icons/royal-knight.png'
 import camelRiderIcon from '../../icons/camel-rider.png'
@@ -71,6 +68,7 @@ import ZHU_XIS_LEGACY_UNITS from "./ZhuXisLegacyUnits";
 import AYYUBIDS_UNITS from "./AyyubidsUnits";
 import OTTOMANS_UNITS from "./OttomansUnits";
 import DELHI_UNITS from "./DelhiUnits";
+import MONGOLS_UNITS from "./MongolsUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -158,18 +156,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.ZHU_XIS_LEGACY],
         common: true,
         displayOrder: 2500
-    },
-    KESHIK: {
-        id: 'KESHIK',
-        icon: keshikIcon,
-        name: 'keshik',
-        productionTime: 30,
-        cost: new UnitCost(120, 80, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.MONGOLS],
-        common: false,
-        displayOrder: 2700
     },
     WARRIOR_MONK: {
         id: 'WARRIOR_MONK',
@@ -465,18 +451,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 8100
     },
-    MANGUDAI: {
-        id: 'MANGUDAI',
-        icon: mangudaiIcon,
-        name: 'mangudai',
-        productionTime: 28,
-        cost: new UnitCost(90, 60, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.MONGOLS],
-        common: false,
-        displayOrder: 8300
-    },
     TRADER: {
         id: 'TRADER',
         icon: traderIcon,
@@ -500,19 +474,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: false,
         displayOrder: 8500
-    },
-    SILVER_TREE_TRADER: {
-        id: 'SILVER_TREE_TRADER',
-        icon: traderIcon,
-        name: 'silver tree trader',
-        productionTime: TRADER_PRODUCTION_TIME * (1 / 1.4),
-        cost: new UnitCost(0, TRADER_GOLD_COST * 0.6, 60, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.MONGOLS],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 8600
     },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',
@@ -684,18 +645,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HOUSE_OF_LANCASTER],
         common: true,
         displayOrder: 10700
-    },
-    TRACTION_TREBUCHET: {
-        id: 'TRACTION_TREBUCHET',
-        icon: tractionTrebuchetIcon,
-        name: 'traction trebuchet',
-        productionTime: 30,
-        cost: new UnitCost(0, 100, 300, 0),
-        types: [UnitType.SIEGE],
-        building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.MONGOLS],
-        common: false,
-        displayOrder: 10800
     },
     BOMBARD: {
         id: 'BOMBARD',
@@ -924,6 +873,7 @@ ZHU_XIS_LEGACY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 AYYUBIDS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 OTTOMANS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 DELHI_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+MONGOLS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
