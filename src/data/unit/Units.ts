@@ -24,7 +24,6 @@ import scoutIcon from '../../icons/scout.png'
 import fishingBoatIcon from '../../icons/fishing-boat.png'
 import traderIcon from '../../icons/trader.png'
 import archerIcon from '../../icons/archer.png'
-import longbowmanIcon from '../../icons/longbowman.png'
 import camelArcherIcon from '../../icons/camel-archer.png'
 import crossbowmanIcon from '../../icons/crossbowman.png'
 import arbaletrierIcon from '../../icons/arbaletrier.png'
@@ -44,8 +43,6 @@ import grenadierIcon from '../../icons/grenadier.png'
 import towerElephantIcon from '../../icons/tower-war-elephant.png'
 import warElephantIcon from '../../icons/war-elephant.png'
 import wynguardArmyIcon from '../../icons/wynguard-army.png'
-import wynguardRaidersIcon from '../../icons/wynguard-raiders.png'
-import wynguardRangersIcon from '../../icons/wynguard-rangers.png'
 import monkIcon from '../../icons/monk.png'
 import warriorMonkIcon from '../../icons/warrior_monk.png'
 import tradeShipIcon from '../../icons/trade-ship.png'
@@ -58,7 +55,6 @@ import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
-import wynguardFootmanIcon from '../../icons/wynguard_footman.png'
 import dervishIcon from '../../icons/dervish.png'
 import desertRaiderIcon from '../../icons/desert-raider.png'
 import camelLancerIcon from '../../icons/camel-lancer.png'
@@ -90,6 +86,14 @@ import DRAGON_ORDER_UNITS from "./DragonOrderUnits";
 import JAPANESE_UNITS from "./JapaneseUnits";
 import MALIAN_UNITS from "./MalianUnits";
 import HOUSE_OF_LANCASTER_UNITS from "./HouseOfLancasterUnits";
+import ENGLISH_UNITS from "./EnglishUnits";
+import {
+    CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
+    KNIGHT_PRODUCTION_TIME,
+    KNIGHT_UNIT_COST,
+    MAN_AT_ARMS_PRODUCTION_TIME,
+    MAN_AT_ARMS_UNIT_COST, SPEARMAN_PRODUCTION_TIME, SPEARMAN_UNIT_COST
+} from "./CommonUnitsConstants";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -101,24 +105,6 @@ const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, Civil
 const TRADER_PRODUCTION_TIME = 30;
 const TRADER_GOLD_COST = 60;
 const VILLAGER_PRODUCTION_TIME = 20;
-
-const KNIGHT_UNIT_COST = new UnitCost(140, 100, 0, 0);
-const KNIGHT_PRODUCTION_TIME = 35;
-
-const MAN_AT_ARMS_UNIT_COST = new UnitCost(100, 20, 0, 0);
-const MAN_AT_ARMS_PRODUCTION_TIME = 22.5;
-
-const CROSSBOWMAN_UNIT_COST = new UnitCost(80, 40, 0, 0);
-const CROSSBOWMAN_PRODUCTION_TIME = 22.5;
-
-const LONGBOWMAN_UNIT_COST = new UnitCost(40, 0, 50, 0);
-const LONGBOWMAN_PRODUCTION_TIME = 15;
-
-const SPEARMAN_UNIT_COST = new UnitCost(60, 0, 20, 0);
-const SPEARMAN_PRODUCTION_TIME = 15;
-
-const HORSEMAN_UNIT_COST = new UnitCost(100, 0, 20, 0);
-const HORSEMAN_PRODUCTION_TIME = 22.5;
 
 const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
     VILLAGER: {
@@ -149,18 +135,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR],
         common: true,
         displayOrder: 600
-    },
-    LONGBOWMAN: {
-        id: 'LONGBOWMAN',
-        icon: longbowmanIcon,
-        name: 'longbowman',
-        productionTime: LONGBOWMAN_PRODUCTION_TIME,
-        cost: LONGBOWMAN_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        displayOrder: 1000
     },
     SPEARMAN: {
         id: 'SPEARMAN',
@@ -1086,45 +1060,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizationSpecificFeature: true,
         displayOrder: 11800
     },
-    WYNGUARD_RAIDERS: {
-        id: 'WYNGUARD_RAIDERS',
-        icon: wynguardRaidersIcon,
-        name: 'wynguard raiders',
-        productionTime: 25,
-        cost: new UnitCost(650, 200, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 11900
-    },
-    WYNGUARD_RANGERS: {
-        id: 'WYNGUARD_RANGERS',
-        icon: wynguardRangersIcon,
-        name: 'wynguard rangers',
-        productionTime: 45,
-        cost: new UnitCost(0, 300, 450, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 12000
-    },
-    WYNGUARD_FOOTMAN: {
-        id: 'WYNGUARD_FOOTMAN',
-        icon: wynguardFootmanIcon,
-        name: 'wynguard footmen',
-        productionTime: 45,
-        cost: new UnitCost(300, 400, 0, 0),
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 12100
-    },
     TRADE_SHIP: {
         id: 'TRADE_SHIP',
         icon: tradeShipIcon,
@@ -1313,84 +1248,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: false,
         displayOrder: 14200
     },
-    WHITE_TOWER_KNIGHT: {
-        id: 'WHITE_TOWER_KNIGHT',
-        icon: knightIcon,
-        name: 'knight',
-        productionTime: KNIGHT_PRODUCTION_TIME,
-        cost: KNIGHT_UNIT_COST,
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14300
-    },
-    WHITE_TOWER_MAN_AT_ARMS: {
-        id: 'WHITE_TOWER_MAN_AT_ARMS',
-        icon: manAtArmsIcon,
-        name: 'man at arms',
-        productionTime: MAN_AT_ARMS_PRODUCTION_TIME,
-        cost: MAN_AT_ARMS_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14400
-    },
-    WHITE_TOWER_CROSSBOWMAN: {
-        id: 'WHITE_TOWER_CROSSBOWMAN',
-        icon: crossbowmanIcon,
-        name: 'crossbowman',
-        productionTime: CROSSBOWMAN_PRODUCTION_TIME,
-        cost: CROSSBOWMAN_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14500
-    },
-    WHITE_TOWER_LONGBOWMAN: {
-        id: 'WHITE_TOWER_LONGBOWMAN',
-        icon: longbowmanIcon,
-        name: 'longbowman',
-        productionTime: LONGBOWMAN_PRODUCTION_TIME,
-        cost: LONGBOWMAN_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14600
-    },
-    WHITE_TOWER_SPEARMAN: {
-        id: 'WHITE_TOWER_SPEARMAN',
-        icon: spearmanIcon,
-        name: 'spearman',
-        productionTime: SPEARMAN_PRODUCTION_TIME,
-        cost: SPEARMAN_UNIT_COST,
-        types: [UnitType.INFANTRY],
-        building: null,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14700
-    },
-    WHITE_TOWER_HORSEMAN: {
-        id: 'WHITE_TOWER_HORSEMAN',
-        icon: horsemanIcon,
-        name: 'horseman',
-        productionTime: HORSEMAN_PRODUCTION_TIME,
-        cost: HORSEMAN_UNIT_COST,
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.ENGLAND],
-        common: false,
-        civilizationSpecificFeature: true,
-        displayOrder: 14800
-    },
     VENETIAN_GALLEY: {
         id: 'VENETIAN_GALLEY',
         icon: venetianGalleyIcon,
@@ -1408,6 +1265,7 @@ DRAGON_ORDER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 JAPANESE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MALIAN_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 HOUSE_OF_LANCASTER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+ENGLISH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
