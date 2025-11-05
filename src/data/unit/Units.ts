@@ -55,11 +55,6 @@ import grandGalleyIcon from '../../icons/grand_galley.png'
 import galleyIcon from '../../icons/galley.png'
 import galleasIcon from '../../icons/galleass.png'
 import baghlahIcon from '../../icons/baghlah.png'
-import dervishIcon from '../../icons/dervish.png'
-import desertRaiderIcon from '../../icons/desert-raider.png'
-import camelLancerIcon from '../../icons/camel-lancer.png'
-import towerOfTheSultanIcon from '../../icons/tower-of-the-sultan.png'
-import bazaarIcon from '../../icons/trade-wing-bazaar.png'
 import venetianTraderIcon from '../../icons/venetian-trader.png'
 import serjeantIcon from '../../icons/serjeant.png'
 import hospitallerKnightIcon from '../../icons/hospitaller-knight.png'
@@ -81,6 +76,7 @@ import HOUSE_OF_LANCASTER_UNITS from "./HouseOfLancasterUnits";
 import ENGLISH_UNITS from "./EnglishUnits";
 import BYZANTINES_UNITS from "./ByzantinesUnits";
 import ZHU_XIS_LEGACY_UNITS from "./ZhuXisLegacyUnits";
+import AYYUBIDS_UNITS from "./AyyubidsUnits";
 import {
     CROSSBOWMAN_PRODUCTION_TIME, CROSSBOWMAN_UNIT_COST, HORSEMAN_PRODUCTION_TIME, HORSEMAN_UNIT_COST,
     KNIGHT_PRODUCTION_TIME,
@@ -157,18 +153,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 1800
     },
-    DESERT_RAIDER: {
-        id: 'DESERT_RAIDER',
-        icon: desertRaiderIcon,
-        name: 'desert raider',
-        productionTime: 30,
-        cost: new UnitCost(80, 50, 50, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        displayOrder: 2100
-    },
     SIPAHI: {
         id: 'SIPAHI',
         icon: sipahiIcon,
@@ -204,18 +188,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.DELHI, CivilizationsEnum.ZHU_XIS_LEGACY],
         common: true,
         displayOrder: 2500
-    },
-    CAMEL_LANCER: {
-        id: 'CAMEL_LANCER',
-        icon: camelLancerIcon,
-        name: 'camel lancer',
-        productionTime: 35,
-        cost: new UnitCost(130, 110, 0, 0),
-        types: [UnitType.CAVALRY],
-        building: Building.STABLE,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        displayOrder: 2600
     },
     KESHIK: {
         id: 'KESHIK',
@@ -265,18 +237,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.RUS],
         common: false,
         displayOrder: 3000
-    },
-    DERVISH: {
-        id: 'DERVISH',
-        icon: dervishIcon,
-        name: 'dervish',
-        productionTime: 40,
-        cost: new UnitCost(60, 140, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        displayOrder: 3400
     },
     KNIGHT: {
         id: 'KNIGHT',
@@ -645,48 +605,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizationSpecificFeature: true,
         displayOrder: 8600
     },
-    FEUDAL_BAZAAR: {
-        id: 'FEUDAL_BAZAAR',
-        icon: bazaarIcon,
-        name: 'feudal bazaar',
-        productionTime: 60 * 3,
-        cost: new UnitCost(0, 150 * 4, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        civilizationSpecificFeature: true,
-        notAffectedByModifiers: true,
-        displayOrder: 8700
-    },
-    CASTLE_BAZAAR: {
-        id: 'CASTLE_BAZAAR',
-        icon: bazaarIcon,
-        name: 'castle bazaar',
-        productionTime: 60 * 3,
-        cost: new UnitCost(0, 350 * 4, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        civilizationSpecificFeature: true,
-        notAffectedByModifiers: true,
-        displayOrder: 8800
-    },
-    IMPERIAL_BAZAAR: {
-        id: 'IMPERIAL_BAZAAR',
-        icon: bazaarIcon,
-        name: 'imperial bazaar',
-        productionTime: 60 * 3,
-        cost: new UnitCost(0, 425 * 4, 0, 0),
-        types: [],
-        building: null,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        civilizationSpecificFeature: true,
-        notAffectedByModifiers: true,
-        displayOrder: 8900
-    },
     CAMEL_ARCHER: {
         id: 'CAMEL_ARCHER',
         icon: camelArcherIcon,
@@ -854,18 +772,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         common: true,
         displayOrder: 10400
     },
-    MANJANIQ: {
-        id: 'MANJANIQ',
-        icon: mangonelIcon,
-        name: 'manganiq',
-        productionTime: 40,
-        cost: new UnitCost(0, 200, 400, 0),
-        types: [UnitType.SIEGE],
-        building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        displayOrder: 10500
-    },
     NEST_OF_BEES: {
         id: 'NEST_OF_BEES',
         icon: nestOfBeesIcon,
@@ -905,18 +811,6 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.MONGOLS],
         common: false,
         displayOrder: 10800
-    },
-    TOWER_OF_SULTAN: {
-        id: 'TOWER_OF_SULTAN',
-        icon: towerOfTheSultanIcon,
-        name: 'tower of sultan',
-        productionTime: 140,
-        cost: new UnitCost(0, 350, 650, 0),
-        types: [UnitType.SIEGE],
-        building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.AYYUBIDS],
-        common: false,
-        displayOrder: 10900
     },
     BOMBARD: {
         id: 'BOMBARD',
@@ -1166,6 +1060,7 @@ HOUSE_OF_LANCASTER_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ENGLISH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 BYZANTINES_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 ZHU_XIS_LEGACY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+AYYUBIDS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
