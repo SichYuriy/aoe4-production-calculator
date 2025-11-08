@@ -16,6 +16,7 @@ import {
     MAN_AT_ARMS_PRODUCTION_TIME,
     MAN_AT_ARMS_UNIT_COST, SPEARMAN_PRODUCTION_TIME, SPEARMAN_UNIT_COST
 } from "./CommonUnitsConstants";
+import ResourcesAmount from "../../model/ResourcesAmount";
 
 const LONGBOWMAN_UNIT_COST = new UnitCost(40, 0, 50, 0);
 const LONGBOWMAN_PRODUCTION_TIME = 15;
@@ -32,6 +33,19 @@ const ENGLISH_UNITS: Unit[] = [
         civilizations: [CivilizationsEnum.ENGLAND],
         common: false,
         displayOrder: 1000
+    },
+    {
+        id: 'COUNCIL_HALL_LONGBOWMAN',
+        icon: longbowmanIcon,
+        name: 'longbowman',
+        productionTime: LONGBOWMAN_PRODUCTION_TIME / 2,
+        cost: ResourcesAmount.ofObj(LONGBOWMAN_UNIT_COST).multiplyByNumber(0.95),
+        types: [UnitType.INFANTRY],
+        building: Building.ARCHERY,
+        civilizations: [CivilizationsEnum.ENGLAND],
+        common: false,
+        civilizationSpecificFeature: true,
+        displayOrder: 1050
     },
     {
         id: 'WYNGUARD_RAIDERS',

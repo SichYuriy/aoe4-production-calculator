@@ -13,8 +13,14 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
-        id: '166',
-        date: new Date(2025, 9, 27),
+        id: '168',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Council Hall now produces Longbowmen at a 5% discount"
+    },
+    {
+        id: '167',
+        date: new Date(),
         patch: 'Fix season 5',
         description: "Add Mansa units"
     },

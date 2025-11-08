@@ -12,7 +12,7 @@ function SilverTree() {
                      selected={units['SILVER_TREE_TRADER'] > 0}
                      onClick={units['SILVER_TREE_TRADER'] > 0 ? () => dispatch(decrement('SILVER_TREE_TRADER')) : () => dispatch(increment('SILVER_TREE_TRADER'))}
                      tooltip={{header: 'Silver Tree', text: 'Produces trader with 50% gold discount'}}/>
-    )
+    );
 }
 
 export default SilverTree;

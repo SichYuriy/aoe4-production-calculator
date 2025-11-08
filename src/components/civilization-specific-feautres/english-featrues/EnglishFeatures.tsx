@@ -5,6 +5,7 @@ import EnglishMma from "./english-mma/EnglishMma";
 import WynguardPalace from "./wynguard-palace/WynguardPalace";
 import Enclosures from "./enclosures/Enclosures";
 import WhiteTower from "./white-tower/WhiteTower";
+import CouncilHall from "./council-hall/CouncilHall";
 
 function EnglishFeatures() {
     return (
@@ -16,7 +17,10 @@ function EnglishFeatures() {
             </div>
             <WhiteTower/>
             <WynguardPalace/>
-            <Enclosures/>
+            <div className={shared.upgradesRow}>
+                <CouncilHall/>
+                <Enclosures/>
+            </div>
         </div>
     )
 }

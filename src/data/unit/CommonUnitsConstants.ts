@@ -1,6 +1,4 @@
-import Unit, {UnitCost} from "../../model/Unit";
-import villagerIcon from "../../icons/villager.png";
-import CivilizationsEnum from "../CivilizationsEnum";
+import {UnitCost} from "../../model/Unit";
 
 export const KNIGHT_UNIT_COST = new UnitCost(140, 100, 0, 0);
 export const KNIGHT_PRODUCTION_TIME = 35;
