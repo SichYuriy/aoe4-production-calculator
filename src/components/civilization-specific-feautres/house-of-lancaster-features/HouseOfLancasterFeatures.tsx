@@ -28,7 +28,7 @@ function HouseOfLancasterFeatures() {
     let scutage = <UpgradeItem icon={scutageIcon}
                                selected={passiveIncomeModifiers[PassiveIncomeModifierId.SCUTAGE].selected}
                                onClick={() => dispatch(togglePassiveIncomeModifier(PassiveIncomeModifierId.SCUTAGE))}
-                               tooltip={{header: 'Scutage', text: 'Manors generate 40 gold per minute'}}/>
+                               tooltip={{header: 'Scutage', text: 'Manors generate 30 gold per minute'}}/>
     let burgundianImports = <UpgradeItem icon={burgundianImportsIcon}
                                selected={costModifiers[CostModifierId.BURGUNDIANS_IMPORTS]}
                                onClick={() => dispatch(toggleCostModifier(CostModifierId.BURGUNDIANS_IMPORTS))}

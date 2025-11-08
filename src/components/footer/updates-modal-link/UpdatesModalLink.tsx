@@ -13,6 +13,18 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '172',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Manor base income reduced from 60 Food 45 Wood → 30 Food 10 Wood per minute"
+    },
+    {
+        id: '171',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Manors now have an aura that generates 4 Food and 2 Wood per minute per Villager"
+    },
+    {
         id: '170',
         date: new Date(),
         patch: '15.1.6970',

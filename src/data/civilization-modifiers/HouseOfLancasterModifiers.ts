@@ -29,9 +29,9 @@ const sheepGatheringRateBonus: GatheringRateModifier = {
 
 const manor: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.MANOR,
-    food: 60,
+    food: 30,
     gold: 0,
-    wood: 45,
+    wood: 10,
     stone: 0,
     source: PassiveIncomeSource.MANOR
 }
@@ -48,7 +48,7 @@ const manorVillager: PassiveIncomeModifier = {
 const scutage: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.SCUTAGE,
     food: 0,
-    gold: 40,
+    gold: 30,
     wood: 0,
     stone: 0,
     source: PassiveIncomeSource.MANOR
