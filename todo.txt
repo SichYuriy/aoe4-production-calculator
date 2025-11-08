@@ -39,9 +39,9 @@ Order of the Dragon
 
 - English, Council Hall now produces Longbowmen at a 5% discount. +
 - Malians, Freeborn Warrior cost reduced from 90 Food 35 Gold → 80 Food 35 Gold. +
-- Mongols, Food improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
-- Mongols, Wood improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
-- Mongols, Gold improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
+- Mongols, Food improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate. +
+- Mongols, Wood improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate. +
+- Mongols, Gold improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate. +
 - Rus, Hunting Cabin income reduced by 15%. (not implemented)
 - HoL: Manors now have an aura that generates 4 Food and 2 Wood per minute per Villager. Does not stack with multiple Manors
 - HoL: Manor base income reduced from 60 Food 45 Wood → 30 Food 10 Wood per minute

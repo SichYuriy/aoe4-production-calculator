@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '170',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Update mongol improved eco upgrades"
+    },
+    {
         id: '169',
         date: new Date(),
         patch: '15.1.6970',

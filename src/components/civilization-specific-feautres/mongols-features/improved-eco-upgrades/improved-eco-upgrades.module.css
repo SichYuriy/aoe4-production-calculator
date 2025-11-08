@@ -1,5 +1,5 @@
-.upgradesColumn {
+.improvedUpgrades {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     gap: 10px;
 }
