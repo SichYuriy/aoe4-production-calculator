@@ -62,7 +62,7 @@ const HOUSE_OF_LANCASTER_UNITS: Unit[] = [
         icon: garrisonCommandIcon,
         name: 'garrison command',
         productionTime: 30,
-        cost: new UnitCost(300, 0, 150, 0),
+        cost: new UnitCost(300, 0, 200, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '173',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Wynguard Garrison Command cost increased from 300 Food 150 Wood → 300 Food 200 Wood"
+    },
+    {
         id: '172',
         date: new Date(),
         patch: '15.1.6970',
