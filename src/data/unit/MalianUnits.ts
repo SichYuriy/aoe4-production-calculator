@@ -103,7 +103,7 @@ const MALIAN_UNITS: Unit[] = [
         icon: freebornWarriorIcon,
         name: 'freeborn warrior',
         productionTime: 15,
-        cost: new UnitCost(90, 35, 0, 0),
+        cost: new UnitCost(80, 35, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
         civilizations: [CivilizationsEnum.MALIANS],

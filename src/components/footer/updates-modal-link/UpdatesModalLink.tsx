@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '169',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Freeborn Warrior cost reduced from 90 Food 35 Gold → 80 Food 35 Gold"
+    },
+    {
         id: '168',
         date: new Date(),
         patch: '15.1.6970',

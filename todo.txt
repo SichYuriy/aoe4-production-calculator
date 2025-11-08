@@ -37,8 +37,8 @@ Order of the Dragon
 
 ### Patch 15.1.6970
 
-- English, Council Hall now produces Longbowmen at a 5% discount.
-- Malians, Freeborn Warrior cost reduced from 90 Food 35 Gold → 80 Food 35 Gold.
+- English, Council Hall now produces Longbowmen at a 5% discount. +
+- Malians, Freeborn Warrior cost reduced from 90 Food 35 Gold → 80 Food 35 Gold. +
 - Mongols, Food improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
 - Mongols, Wood improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
 - Mongols, Gold improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate.
