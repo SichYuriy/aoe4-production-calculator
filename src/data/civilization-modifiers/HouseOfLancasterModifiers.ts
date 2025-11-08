@@ -12,6 +12,13 @@ import UnitCostModifier from "../../model/UnitCostModifier";
 import Unit, {UnitCost} from "../../model/Unit";
 import ResourcesAmount from "../../model/ResourcesAmount";
 
+export const MANOR_VILLAGER_INCOME = {
+    food: 4,
+    gold: 0,
+    wood: 2,
+    stone: 0,
+}
+
 const sheepGatheringRateBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.HOUSE_OF_LANCASTER_SHEEP,
     apply: (gatheringRates, foodSource) => foodSource === FoodSource.SHEEP
@@ -27,6 +34,15 @@ const manor: PassiveIncomeModifier = {
     wood: 45,
     stone: 0,
     source: PassiveIncomeSource.MANOR
+}
+
+const manorVillager: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.MANOR_VILLAGER,
+    food: MANOR_VILLAGER_INCOME.food,
+    gold: MANOR_VILLAGER_INCOME.gold,
+    wood: MANOR_VILLAGER_INCOME.wood,
+    stone: MANOR_VILLAGER_INCOME.stone,
+    source: PassiveIncomeSource.MANOR_VILLAGER
 }
 
 const scutage: PassiveIncomeModifier = {
@@ -51,6 +67,7 @@ const GATHERING_RATE_MODIFIERS = {
 
 const PASSIVE_INCOME_MODIFIERS = {
     [PassiveIncomeModifierId.MANOR]: manor,
+    [PassiveIncomeModifierId.MANOR_VILLAGER]: manorVillager,
     [PassiveIncomeModifierId.SCUTAGE]: scutage
 }
 
@@ -67,9 +84,9 @@ const HOUSE_OF_LANCASTER_MODIFIERS: CivilizationModifiers = {
     defaultProductionSpeedModifiers: [],
     allCostModifiers: COST_MODIFIERS,
     defaultCostModifiers: [CostModifierId.ENGLISH_DOCKS],
-    passiveIncomeSources: [PassiveIncomeSource.MANOR],
+    passiveIncomeSources: [PassiveIncomeSource.MANOR, PassiveIncomeSource.MANOR_VILLAGER],
     allPassiveIncomeModifiers: PASSIVE_INCOME_MODIFIERS,
-    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.MANOR],
+    defaultPassiveIncomeModifiers: [PassiveIncomeModifierId.MANOR, PassiveIncomeModifierId.MANOR_VILLAGER],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveIncomeFromGatheringVillagerModifiers: {},
     allCostModifiersPerUnit: {},

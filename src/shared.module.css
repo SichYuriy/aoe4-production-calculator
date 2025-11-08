@@ -25,6 +25,7 @@
 .upgradesRow {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .civilizationSpecificFeatures {

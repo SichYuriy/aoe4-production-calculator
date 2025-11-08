@@ -43,10 +43,10 @@ Order of the Dragon
 - Mongols, Wood improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate. +
 - Mongols, Gold improved upgrades have been merged into a single technology: Improved. Effect set to 20% increased Food gather rate. +
 - Rus, Hunting Cabin income reduced by 15%. (not implemented)
-- HoL: Manors now have an aura that generates 4 Food and 2 Wood per minute per Villager. Does not stack with multiple Manors
+- HoL: Manors now have an aura that generates 4 Food and 2 Wood per minute per Villager. Does not stack with multiple Manors +
 - HoL: Manor base income reduced from 60 Food 45 Wood → 30 Food 10 Wood per minute
-- HoL: Wynguard Garrison Command cost increased from 300 Food 150 Wood → 300 Food 200 Wood. (not for English???)
-- HoL: Scutage ??
+- HoL: Wynguard Garrison Command cost increased from 300 Food 150 Wood → 300 Food 200 Wood.
+- HoL: Scutage 30 gold
 - KT: Republic of Genoa, Pilgrims Gold income improvement decreased from 30% → 20%
 - KT: Villager Wood gather rate decreased from 0.63 → 0.60
 - KT: Villager Wood gather rate scaling per age increased from 15% → 20%

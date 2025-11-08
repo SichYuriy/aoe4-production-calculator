@@ -13,6 +13,7 @@ import EnglishDocks from "../english-featrues/english-docks/EnglishDocks";
 import CostModifierId from "../../../data/cost-modifiers/CostModifierId";
 import {CostModifierState, toggleCostModifier} from "../../../state/CostModifiersSlice";
 import {LancasterWynguardPalace} from "./wynguard-palace/LancasterWynguardPalace";
+import ManorVillagers from "./manor-villagers/ManorVillagers";
 
 function HouseOfLancasterFeatures() {
     const dispatch = useAppDispatch();
@@ -39,10 +40,14 @@ function HouseOfLancasterFeatures() {
             <EnglishDocks/>
             <div className={shared.upgradesRow}>
                 {manorItem}
+                <ManorVillagers/>
                 {scutage}
-                {burgundianImports}
             </div>
             <LancasterWynguardPalace/>
+            <div className={shared.upgradesRow}>
+                {burgundianImports}
+            </div>
+
         </div>
     );
 }

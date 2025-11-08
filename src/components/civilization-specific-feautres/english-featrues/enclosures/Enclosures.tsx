@@ -12,6 +12,7 @@ import Tooltip from "../../../tooltip/Tooltip";
 import farmIcon from "../../../../icons/farm.png";
 import {setMinFoodWorkers} from "../../../../state/MinFoodWorkersSlice";
 import s from './enslosures.module.css';
+import {FormEvent} from "react";
 
 const TOOLTIP = 'Set farmers count. It will have no effect if you set number less than required for constant production. ' +
     'Do not forget set farm food source to use in combination with enclosures.'
@@ -25,6 +26,13 @@ function Enclosures() {
 
     function toggle() {
         dispatch(togglePassiveIncomeFromGatheringVillagerModifier(PassiveIncomeFromGatheringVillagerModifierId.ENCLOSURES))
+    }
+
+    function removeLeadingZeros(event: FormEvent<any>) {
+        const input: any = event.target;
+        if (input && input.value.length > 1) {
+            input.value = input.value.replace(/^0+/, '');
+        }
     }
 
     return (
@@ -41,7 +49,7 @@ function Enclosures() {
             </Tooltip>
             <div>:</div>
             <div className={s.farmersCountBlock}>
-                <input type={'number'} min={0} value={minFoodVillagers} onChange={e => dispatch(setMinFoodWorkers(+e.target.value))}/>
+                <input type={'number'} onInput={removeLeadingZeros} min={0} value={minFoodVillagers} onChange={e => dispatch(setMinFoodWorkers(+e.target.value))}/>
             </div>
         </div>
     );
