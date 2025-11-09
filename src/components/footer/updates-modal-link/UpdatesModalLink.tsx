@@ -14,61 +14,61 @@ type UpdateItem = {
 const updates: UpdateItem[] = [
     {
         id: '176',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "KT: Villager Wood gather rate scaling per age increased from 15% → 20%"
     },
     {
         id: '175',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "KT: Villager Wood gather rate decreased from 0.63 → 0.60"
     },
     {
         id: '174',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Republic of Genoa, Pilgrims Gold income improvement decreased from 30% → 20%"
     },
     {
         id: '173',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Wynguard Garrison Command cost increased from 300 Food 150 Wood → 300 Food 200 Wood"
     },
     {
         id: '172',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Manor base income reduced from 60 Food 45 Wood → 30 Food 10 Wood per minute"
     },
     {
         id: '171',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Manors now have an aura that generates 4 Food and 2 Wood per minute per Villager"
     },
     {
         id: '170',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Update mongol improved eco upgrades"
     },
     {
         id: '169',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Freeborn Warrior cost reduced from 90 Food 35 Gold → 80 Food 35 Gold"
     },
     {
         id: '168',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: '15.1.6970',
         description: "Council Hall now produces Longbowmen at a 5% discount"
     },
     {
         id: '167',
-        date: new Date(),
+        date: new Date(2025, 10, 8),
         patch: 'Fix season 5',
         description: "Add Mansa units"
     },
