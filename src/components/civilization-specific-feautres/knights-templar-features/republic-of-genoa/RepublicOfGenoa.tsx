@@ -6,6 +6,7 @@ import {disableFeature, enableFeature} from "../../../../state/FeatureFlagsSlice
 import DynamicPassiveIncomeModifierId from "../../../../data/dynamic-passive-income-modifiers/DynamicPassiveIncomeModifierId";
 import {setDynamicPassiveIncomeModifierValue} from "../../../../state/DynamicPassiveIncomeModifiersSlice";
 import ResourcesAmount from "../../../../model/ResourcesAmount";
+import {REPUBLIC_OF_GENOA_MODIFIER} from "../../../../data/civilization-modifiers/KnightsTemplarModifiers";
 
 function RepublicOfGenoa() {
     const dispatch = useAppDispatch();
@@ -14,14 +15,14 @@ function RepublicOfGenoa() {
 
     function toggle() {
         if (republicOfGenoaEnabled) {
-            const newGoldValue = Math.max(Math.ceil(currentGoldValue / 1.3), 40);
+            const newGoldValue = Math.max(Math.ceil(currentGoldValue / REPUBLIC_OF_GENOA_MODIFIER), 40);
             dispatch(setDynamicPassiveIncomeModifierValue({
                 id: DynamicPassiveIncomeModifierId.PILGRIM,
                 income: ResourcesAmount.ofGold(newGoldValue).toSerializableObject()
             }));
             dispatch(disableFeature(FeatureFlags.REPUBLIC_OF_GENOA));
         } else {
-            const newGoldValue = Math.floor(currentGoldValue * 1.3);
+            const newGoldValue = Math.floor(currentGoldValue * REPUBLIC_OF_GENOA_MODIFIER);
             dispatch(setDynamicPassiveIncomeModifierValue({
                 id: DynamicPassiveIncomeModifierId.PILGRIM,
                 income: ResourcesAmount.ofGold(newGoldValue).toSerializableObject()
@@ -35,7 +36,7 @@ function RepublicOfGenoa() {
             <UpgradeItem icon={republicOfGenoaIcon}
                          selected={republicOfGenoaEnabled}
                          onClick={toggle}
-                         tooltip={{header: 'Republic of Genoa', text: 'Pilgrims generate +30% gold'}}
+                         tooltip={{header: 'Republic of Genoa', text: 'Pilgrims generate +20% gold'}}
                          iconHeight={'auto'}/>
         </div>
     );

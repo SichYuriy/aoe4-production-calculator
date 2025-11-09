@@ -47,6 +47,6 @@ Order of the Dragon
 - HoL: Manor base income reduced from 60 Food 45 Wood → 30 Food 10 Wood per minute +
 - HoL: Scutage 30 gold +
 - HoL: Wynguard Garrison Command cost increased from 300 Food 150 Wood → 300 Food 200 Wood. +
-- KT: Republic of Genoa, Pilgrims Gold income improvement decreased from 30% → 20%
+- KT: Republic of Genoa, Pilgrims Gold income improvement decreased from 30% → 20% +
 - KT: Villager Wood gather rate decreased from 0.63 → 0.60
 - KT: Villager Wood gather rate scaling per age increased from 15% → 20%

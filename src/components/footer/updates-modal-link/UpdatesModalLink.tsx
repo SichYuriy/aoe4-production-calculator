@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '174',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "Republic of Genoa, Pilgrims Gold income improvement decreased from 30% → 20%"
+    },
+    {
         id: '173',
         date: new Date(),
         patch: '15.1.6970',

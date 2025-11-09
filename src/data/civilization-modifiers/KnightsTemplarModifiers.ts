@@ -94,6 +94,8 @@ const kingdomOfFranceUnitCost: UnitCostModifier = {
     description: 'militaryUnit.gold * 0.95'
 }
 
+export const REPUBLIC_OF_GENOA_MODIFIER = 1.2;
+
 const GATHERING_RATE_MODIFIERS = {
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE]: darkAgeWoodBonus,
     [GatheringRateModifierId.KNIGHTS_TEMPLAR_FEUDAL_AGE]: feudalAgeWoodBonus,

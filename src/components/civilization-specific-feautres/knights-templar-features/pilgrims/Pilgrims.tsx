@@ -13,14 +13,15 @@ import DynamicPassiveIncomeModifierId from "../../../../data/dynamic-passive-inc
 import { setDynamicPassiveIncomeModifierValue } from "../../../../state/DynamicPassiveIncomeModifiersSlice";
 import ResourcesAmount from "../../../../model/ResourcesAmount";
 import {FeatureFlags} from "../../../../data/FeatureFlags";
+import {REPUBLIC_OF_GENOA_MODIFIER} from "../../../../data/civilization-modifiers/KnightsTemplarModifiers";
 
 function Pilgrims() {
     const dispatch = useAppDispatch();
     const passiveIncomeSources: PassiveIncomeSourcesState = useAppSelector((rootState) => rootState.passiveIncomeSources);
     const republicOfGenoaEnabled = !!useAppSelector(rootState => rootState.featureFlags[FeatureFlags.REPUBLIC_OF_GENOA]);
     const currentGoldValue: number = useAppSelector(rootState => rootState.dynamicPassiveIncomeModifiers[DynamicPassiveIncomeModifierId.PILGRIM].value.gold);
-    const min = republicOfGenoaEnabled ? Math.floor(40 * 1.3) : 40;
-    const max = republicOfGenoaEnabled ? Math.floor(130 * 1.3) : 130;
+    const min = republicOfGenoaEnabled ? Math.floor(40 * REPUBLIC_OF_GENOA_MODIFIER) : 40;
+    const max = republicOfGenoaEnabled ? Math.floor(130 * REPUBLIC_OF_GENOA_MODIFIER) : 130;
 
     let pilgrimItem = (
         <UpgradeItemCounter icon={monkIcon}
