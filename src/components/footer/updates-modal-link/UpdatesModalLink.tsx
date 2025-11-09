@@ -13,6 +13,18 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '176',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "KT: Villager Wood gather rate scaling per age increased from 15% → 20%"
+    },
+    {
+        id: '175',
+        date: new Date(),
+        patch: '15.1.6970',
+        description: "KT: Villager Wood gather rate decreased from 0.63 → 0.60"
+    },
+    {
         id: '174',
         date: new Date(),
         patch: '15.1.6970',

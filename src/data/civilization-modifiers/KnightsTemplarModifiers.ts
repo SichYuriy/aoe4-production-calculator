@@ -16,55 +16,89 @@ import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource
 import DynamicPassiveIncomeModifierId from "../dynamic-passive-income-modifiers/DynamicPassiveIncomeModifierId";
 import DynamicPassiveIncomeModifier from "../../model/DynamicPassiveIncomeModifier";
 
+
+// wood gathering rate test, 11/08/2025
+// vils 6
+// start wood: 100
+
+
+// dark age:
+
+// start at 00:15
+// end at 04:15
+// end wood: 860/ 879/ 883
+// 774 / 24 = 32.25
+
+// feudal age:
+// start at 01:45
+// end at 05:45
+// start wood: 49950
+// end wood: 50865
+// 915 / 24 = 38.125
+
+// castle age:
+// start wood: 50865
+// start at 08:30
+// end at 12:30
+// end wood: 51917
+// 1052 / 24 = 43.8333
+
+// imperial age:
+// start wood: 51917
+// start at 14:25
+// end at 18:25
+// end wood: 53117
+// 1200 / 24 = 50
+
 const darkAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_DARK_AGE,
-    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.0861}),
-    description: 'wood * 1.08'
+    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.0403}),
+    description: 'wood * 1.04'
 }
 
 const feudalAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_FEUDAL_AGE,
-    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1402}),
-    description: 'wood * 1.14'
+    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1822}),
+    description: 'wood * 1.18'
 }
 
 const castleAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_CASTLE_AGE,
-    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1141}),
-    description: 'wood * 1.11'
+    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1497}),
+    description: 'wood * 1.15'
 }
 
 const imperialAgeWoodBonus: GatheringRateModifier = {
     id: GatheringRateModifierId.KNIGHTS_TEMPLAR_IMPERIAL_AGE,
-    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1379}),
-    description: 'wood * 1.14'
+    apply: gatheringRates => ({...gatheringRates, wood: gatheringRates.wood * 1.1406}),
+    description: 'wood * 1.1407'
 }
 
 const foodFromWoodDarkAge: PassiveIncomeFromGatheringVillagerModifier = {
     id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_DARK_AGE,
     gatheringResource: ResourceType.WOOD,
-    incomeAmount: ResourcesAmount.ofFood(6.73),
+    incomeAmount: ResourcesAmount.ofFood(6.45),
     foodSources:[]
 }
 
 const foodFromWoodFeudalAge: PassiveIncomeFromGatheringVillagerModifier = {
     id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_FEUDAL_AGE,
     gatheringResource: ResourceType.WOOD,
-    incomeAmount: ResourcesAmount.ofFood(7.68),
+    incomeAmount: ResourcesAmount.ofFood(7.625),
     foodSources:[]
 }
 
 const foodFromWoodCastleAge: PassiveIncomeFromGatheringVillagerModifier = {
     id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_CASTLE_AGE,
     gatheringResource: ResourceType.WOOD,
-    incomeAmount: ResourcesAmount.ofFood(8.55),
+    incomeAmount: ResourcesAmount.ofFood(8.7667),
     foodSources:[]
 }
 
 const foodFromWoodImperialAge: PassiveIncomeFromGatheringVillagerModifier = {
     id: PassiveIncomeFromGatheringVillagerModifierId.TEMPLAR_KNIGHT_FOOD_FROM_WOOD_IMPERIAL_AGE,
     gatheringResource: ResourceType.WOOD,
-    incomeAmount: ResourcesAmount.ofFood(9.73),
+    incomeAmount: ResourcesAmount.ofFood(10),
     foodSources:[]
 }
 
