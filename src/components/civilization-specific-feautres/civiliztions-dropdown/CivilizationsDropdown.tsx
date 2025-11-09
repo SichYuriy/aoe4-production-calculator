@@ -18,10 +18,6 @@ import japaneseFlagIcon from "../../../icons/flag_japanese.png";
 import jeanneFlagIcon from "../../../icons/flag_Jeanne_d_Arc.png";
 import orderOfTheDragonFlagIcon from "../../../icons/flag_order_of_the_dragon.png";
 import zhuXiLegacyFlagIcon from "../../../icons/flag_Zhu_Xi_Legacy.png";
-import goldenHordeFlagIcon from "../../../icons/flga_golden_horde.png";
-import macedonianDynastyFlagIcon from "../../../icons/flag_macedonian_dynasty.png";
-import sengokuDaimyoFlagIcon from "../../../icons/flag_sengoku_daimyo.png";
-import tughlaqDynastyFlagIcon from "../../../icons/flag_tughlaq_dynasty.png";
 import CivilizationsEnum from "../../../data/CivilizationsEnum";
 import s from './civilizations-dropdown.module.css'
 import shared from '../../../shared.module.css'
@@ -53,10 +49,6 @@ function CivilizationsDropdown(props: { selected: CivilizationsEnum, onSelect: (
         [CivilizationsEnum.BYZANTINES]: {id: CivilizationsEnum.BYZANTINES, icon: byzantinesFlagIcon, name: 'Byzantines'},
         [CivilizationsEnum.KNIGHTS_TEMPLAR]: {id: CivilizationsEnum.KNIGHTS_TEMPLAR, icon: knightsTemplarIcon, name: 'Knights Templar'},
         [CivilizationsEnum.HOUSE_OF_LANCASTER]: {id: CivilizationsEnum.HOUSE_OF_LANCASTER, icon: houseOfLancasterIcon, name: 'House of Lancaster'},
-        [CivilizationsEnum.GOLDEN_HORDE]: {id: CivilizationsEnum.GOLDEN_HORDE, icon: goldenHordeFlagIcon, name: 'Golden Horde'},
-        [CivilizationsEnum.MACEDONIAN_DYNASTY]: {id: CivilizationsEnum.MACEDONIAN_DYNASTY, icon: macedonianDynastyFlagIcon, name: 'Macedonian Dynasty'},
-        [CivilizationsEnum.SENGOKU_DAIMYO]: {id: CivilizationsEnum.SENGOKU_DAIMYO, icon: sengokuDaimyoFlagIcon, name: 'Sengoku Daimyo'},
-        [CivilizationsEnum.TUGHLAQ_DYNASTY]: {id: CivilizationsEnum.TUGHLAQ_DYNASTY, icon: tughlaqDynastyFlagIcon, name: 'Tughlaq Dynasty'},
     }
 
     return (
