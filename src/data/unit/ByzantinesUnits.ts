@@ -39,7 +39,7 @@ const BYZANTINES_UNITS: Unit[] = [
         cost: new UnitCost(90, 40, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.BYZANTINES],
+        civilizations: [CivilizationsEnum.BYZANTINES, CivilizationsEnum.MACEDONIAN_DYNASTY],
         common: false,
         displayOrder: 4700
     },
@@ -47,11 +47,11 @@ const BYZANTINES_UNITS: Unit[] = [
         id: 'CHEIROSIPHON',
         icon: cheirosiphonIcon,
         name: 'cheirosiphon',
-        productionTime: 30,
+        productionTime: 35,
         cost: new UnitCost(0, 60, 200, 0),
         types: [UnitType.SIEGE],
         building: null,
-        civilizations: [CivilizationsEnum.BYZANTINES],
+        civilizations: [CivilizationsEnum.BYZANTINES, CivilizationsEnum.MACEDONIAN_DYNASTY],
         common: false,
         displayOrder: 10200
     },
@@ -63,7 +63,7 @@ const BYZANTINES_UNITS: Unit[] = [
         cost: new UnitCost(100, 60, 200, 0),
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.BYZANTINES],
+        civilizations: [CivilizationsEnum.BYZANTINES, CivilizationsEnum.MACEDONIAN_DYNASTY],
         common: false,
         displayOrder: 13000
     },
