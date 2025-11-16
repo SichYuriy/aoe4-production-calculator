@@ -36,7 +36,7 @@ const JAPANESE_UNITS: Unit[] = [
         cost: new UnitCost(25, 0, 35, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
-        civilizations: [CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.JAPANESE, CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 800
     },
@@ -132,7 +132,7 @@ const JAPANESE_UNITS: Unit[] = [
         cost: new UnitCost(85, 155, 0, 0),
         types: [UnitType.INFANTRY],
         building: null,
-        civilizations: [CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.JAPANESE, CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 7700
     },
@@ -144,7 +144,7 @@ const JAPANESE_UNITS: Unit[] = [
         cost: new UnitCost(100, 220, 220, 0),
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.JAPANESE, CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 13800
     },

@@ -80,6 +80,7 @@ import {
 } from "./CommonUnitsConstants";
 import FRENCH_UNITS from "./FrenchUnits";
 import TUGHLAQ_DYNASTY_UNITS from "./TughlaqDynastyUnits";
+import SENGOKU_DAIMYO_UNITS from "./SengokuDaimyoUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -108,9 +109,9 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
             CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
             CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
-            CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
-            CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
-            CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES,
+            CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 300
     },
@@ -140,7 +141,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND,
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
-            CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 1100
     },
@@ -531,7 +533,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
             CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER,
-            CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 10100
     },
@@ -559,7 +561,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.JAPANESE,
             CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER,
-            CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 10400
     },
@@ -587,7 +589,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.FRENCH, CivilizationsEnum.CHINESE, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR,
-            CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 10700
     },
@@ -602,7 +604,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         civilizations: [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE, CivilizationsEnum.ENGLAND,
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS,
-            CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.TUGHLAQ_DYNASTY],
+            CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.TUGHLAQ_DYNASTY,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: true,
         displayOrder: 11000
     },
@@ -678,7 +681,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(80, 0, 150, 0),
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 12800
     },
@@ -715,7 +719,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(110, 30, 200, 0),
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 13300
     },
@@ -742,7 +747,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 80, 80, 0),
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
-        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE],
+        civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
+            CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 13500
     },
@@ -799,6 +805,7 @@ MONGOLS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 RUS_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 FRENCH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 TUGHLAQ_DYNASTY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+SENGOKU_DAIMYO_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
