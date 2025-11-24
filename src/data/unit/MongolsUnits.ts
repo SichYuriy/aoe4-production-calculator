@@ -54,7 +54,7 @@ const MONGOLS_UNITS: Unit[] = [
         cost: new UnitCost(0, 100, 300, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
-        civilizations: [CivilizationsEnum.MONGOLS],
+        civilizations: [CivilizationsEnum.MONGOLS, CivilizationsEnum.GOLDEN_HORDE],
         common: false,
         displayOrder: 10800
     },

@@ -82,6 +82,7 @@ import FRENCH_UNITS from "./FrenchUnits";
 import TUGHLAQ_DYNASTY_UNITS from "./TughlaqDynastyUnits";
 import SENGOKU_DAIMYO_UNITS from "./SengokuDaimyoUnits";
 import MACEDONIAN_DYNASTY_UNITS from "./MacedonianDynastyUnits";
+import GOLDEN_HORDE_UNITS from "./GoldenHordeUnits";
 
 const ALL_CIVILIZATIONS: CivilizationsEnum[] = [CivilizationsEnum.ABBASID, CivilizationsEnum.CHINESE, CivilizationsEnum.HRE,
     CivilizationsEnum.ENGLAND, CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS,
@@ -420,7 +421,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 60, 60, 0),
         types: [],
         building: null,
-        civilizations: ALL_CIVILIZATIONS.filter(civilization => CivilizationsEnum.KNIGHTS_TEMPLAR !== civilization),
+        civilizations: allExcept([CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.GOLDEN_HORDE]),
         common: true,
         displayOrder: 8400
     },
@@ -537,7 +538,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS, CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC,
             CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.JAPANESE, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER,
-            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO],
+            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.GOLDEN_HORDE],
         common: true,
         displayOrder: 10100
     },
@@ -545,7 +546,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         id: 'SPRINGALD',
         icon: springaldIcon,
         name: 'springald',
-        productionTime: 30,
+        productionTime: 20,
         cost: new UnitCost(0, 100, 150, 0),
         types: [UnitType.SIEGE],
         building: Building.SIEGE_WORKSHOP,
@@ -565,7 +566,8 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS, CivilizationsEnum.OTTOMANS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.JAPANESE,
             CivilizationsEnum.BYZANTINES, CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER,
-            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.MACEDONIAN_DYNASTY],
+            CivilizationsEnum.TUGHLAQ_DYNASTY, CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.MACEDONIAN_DYNASTY,
+            CivilizationsEnum.GOLDEN_HORDE],
         common: true,
         displayOrder: 10400
     },
@@ -610,7 +612,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.DELHI, CivilizationsEnum.FRENCH, CivilizationsEnum.MONGOLS, CivilizationsEnum.RUS,
             CivilizationsEnum.MALIANS, CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS,
             CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE, CivilizationsEnum.BYZANTINES, CivilizationsEnum.TUGHLAQ_DYNASTY,
-            CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.MACEDONIAN_DYNASTY],
+            CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.MACEDONIAN_DYNASTY, CivilizationsEnum.GOLDEN_HORDE],
         common: true,
         displayOrder: 11000
     },
@@ -647,7 +649,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         cost: new UnitCost(0, 100, 100, 0),
         types: [],
         building: Building.DOCK,
-        civilizations: ALL_CIVILIZATIONS,
+        civilizations: allExcept([CivilizationsEnum.GOLDEN_HORDE]),
         common: false,
         displayOrder: 12500
     },
@@ -687,7 +689,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
         types: [UnitType.MILITARY_SHIP],
         building: Building.DOCK,
         civilizations: [CivilizationsEnum.CHINESE, CivilizationsEnum.MONGOLS, CivilizationsEnum.ZHU_XIS_LEGACY, CivilizationsEnum.JAPANESE,
-            CivilizationsEnum.SENGOKU_DAIMYO],
+            CivilizationsEnum.SENGOKU_DAIMYO, CivilizationsEnum.GOLDEN_HORDE],
         common: false,
         displayOrder: 12800
     },
@@ -742,7 +744,7 @@ const UNITS: Map<string, Unit> = new Map<string, Unit>(Object.entries({
             CivilizationsEnum.HRE, CivilizationsEnum.RUS, CivilizationsEnum.ABBASID, CivilizationsEnum.DELHI,
             CivilizationsEnum.JEANNE_D_ARC, CivilizationsEnum.DRAGON_ORDER, CivilizationsEnum.AYYUBIDS, CivilizationsEnum.BYZANTINES,
             CivilizationsEnum.KNIGHTS_TEMPLAR, CivilizationsEnum.HOUSE_OF_LANCASTER, CivilizationsEnum.TUGHLAQ_DYNASTY,
-            CivilizationsEnum.MACEDONIAN_DYNASTY],
+            CivilizationsEnum.MACEDONIAN_DYNASTY, CivilizationsEnum.GOLDEN_HORDE],
         common: false,
         displayOrder: 13400
     },
@@ -814,6 +816,7 @@ FRENCH_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 TUGHLAQ_DYNASTY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 SENGOKU_DAIMYO_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 MACEDONIAN_DYNASTY_UNITS.forEach(unit => UNITS.set(unit.id, unit));
+GOLDEN_HORDE_UNITS.forEach(unit => UNITS.set(unit.id, unit));
 
 
 const UNITS_LIST = Array.from(UNITS.values());
