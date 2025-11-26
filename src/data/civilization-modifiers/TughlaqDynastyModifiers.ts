@@ -6,6 +6,7 @@ import ResourcesAmount from "../../model/ResourcesAmount";
 import GatheringRateModifier from "../../model/GatheringRateModifier";
 import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
 import GatheringRates from "../../model/GatheringRates";
+import {muslimBerries} from "./MuslimModifiers";
 
 const eco0ResourceDropOff: ResourceDropOffModifier = {
     id: ResourceDropOffModifierId.TUGHLAQ_ECO_0,
@@ -55,8 +56,9 @@ const TUGHLAQ_DYNASTY_MODIFIERS: CivilizationModifiers = {
         [GatheringRateModifierId.TUGHLAQ_ECO_1]: eco1GatheringRate,
         [GatheringRateModifierId.TUGHLAQ_ECO_2]: eco2GatheringRate,
         [GatheringRateModifierId.TUGHLAQ_ECO_3]: eco3GatheringRate,
+        [GatheringRateModifierId.MUSLIM_BERRIES]: muslimBerries
     },
-    defaultGatheringRateModifiers: [],
+    defaultGatheringRateModifiers: [GatheringRateModifierId.MUSLIM_BERRIES],
     allProductionSpeedModifiers: {},
     defaultProductionSpeedModifiers: [],
     allCostModifiers: {},
