@@ -2,7 +2,8 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import RESOURCE_DROP_OFF_MODIFIERS from "../data/resource-drop-off-modifiers/AllResourceDropOffModifiers";
 import changeCivilization from "./actions/CivilizationChnagedAction";
 import {
-    ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS
+    ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS,
+    RESOURCE_DROP_OFF_MODIFIERS_DEFAULT
 } from "../data/civilization-modifiers/AllCivilizationSpecificModifiers";
 import {RootState} from "../store";
 import ResourceDropOffModifier from "../model/ResourceDropOffModifier";
@@ -36,8 +37,9 @@ export const resourceDropOffModifiers = createSlice({
         }
     },
     extraReducers: builder => {
-        builder.addCase(changeCivilization, state => {
+        builder.addCase(changeCivilization, (state, action) => {
             ALL_CIVILIZATIONS_RESOURCE_DROP_OFF_MODIFIERS.forEach(id => state[id] = false);
+            (RESOURCE_DROP_OFF_MODIFIERS_DEFAULT[action.payload] || []).forEach(id => state[id] = true)
         })
     }
 });

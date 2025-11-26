@@ -40,3 +40,11 @@ Order of the Dragon
 - English, Council Hall now produces Longbowmen at a 5% discount. +
 - Rus, Hunting Cabin income reduced by 15%. (not implemented)
 
+## Tughlaq features
+
+- [p1] muslim berries
+- [p1] dome of faith: imam, healer elephant
+- [p2] governor 1
+- [p2] hisar academy
+
+
