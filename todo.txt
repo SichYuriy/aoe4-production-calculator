@@ -42,7 +42,7 @@ Order of the Dragon
 
 ## Tughlaq features
 
-- [p1] dome of faith: imam, healer elephant
+- [p1] dome of faith: imam, healer elephant +
 - [p2] governor 1
 - [p2] hisar academy
 

@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '178',
+        date: new Date(2025, 10, 25),
+        patch: '15.1.6970',
+        description: "Add core Tughlaq features"
+    },
+    {
         id: '177',
         date: new Date(2025, 10, 23),
         patch: '15.1.6970',
