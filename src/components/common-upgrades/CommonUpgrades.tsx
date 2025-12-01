@@ -1,6 +1,7 @@
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import UpgradeItem from "../upgrade-item/UpgradeItem";
 import wheelbarrowIcon from '../../icons/wheelbarrow.png';
+import survivalTechIcon from '../../icons/survivalTech.png'
 import forestryIcon from '../../icons/forestry.png';
 import militaryAcademyIcon from '../../icons/military-academy.png';
 import {toggleGatheringRateModifier} from "../../state/GatheringRateModifiersSlice";
@@ -31,6 +32,9 @@ function CommonUpgrades() {
     let wheelbarrowItem = <UpgradeItem icon={wheelbarrowIcon}
                                        selected={gatheringRateModifiers[GatheringRateModifierId.WHEELBARROW]}
                                        onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.WHEELBARROW))}/>
+    let survivalTechItem = <UpgradeItem icon={survivalTechIcon}
+                                       selected={gatheringRateModifiers[GatheringRateModifierId.SURVIVALTECH]}
+                                       onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.SURVIVALTECH))}/>                                
     let forestryItem = <UpgradeItem icon={forestryIcon}
                                     selected={gatheringRateModifiers[GatheringRateModifierId.FORESTRY]}
                                     onClick={() => dispatch(toggleGatheringRateModifier(GatheringRateModifierId.FORESTRY))}/>
@@ -62,6 +66,7 @@ function CommonUpgrades() {
                 <div className={s.upgradesColumn}>
                     <div className={s.upgradesRow}>
                         <div className={s.singleUpgrade}>{wheelbarrowItem}</div>
+                        <div className={s.singleUpgrade}>{survivalTechItem}</div>
                         {showWoodUpgrades ? <div className={s.singleUpgrade}>{forestryItem}</div> : ''}
                         <div className={s.singleUpgrade}>{militaryAcademyItem}</div>
                     </div>
