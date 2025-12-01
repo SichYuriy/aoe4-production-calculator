@@ -1,5 +1,6 @@
 import GlobalCivilizationSelect from "./global-cilivization-select/GlobalCivilizationSelect";
 import {useAppSelector} from "../../hooks";
+import HowToUse from '../footer/how-to-use/HowToUse'
 import CivilizationsEnum from "../../data/CivilizationsEnum";
 import FrenchFeatures from "./french-features/FrenchFeatures";
 import EnglishFeatures from "./english-featrues/EnglishFeatures";
@@ -64,7 +65,10 @@ function CivilizationSpecificFeatures() {
     return (
         <div>
             <div><h3>Civilization:</h3></div>
-            <GlobalCivilizationSelect/>
+            <div className={shared.civilizationSpecificFeaturesSelectContainer}>
+              <GlobalCivilizationSelect />
+              <HowToUse />
+            </div>
             {components}
         </div>
     )
