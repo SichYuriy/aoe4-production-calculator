@@ -1,5 +1,6 @@
 import GlobalCivilizationSelect from "./global-cilivization-select/GlobalCivilizationSelect";
 import {useAppSelector} from "../../hooks";
+import HowToUse from '../footer/how-to-use/HowToUse'
 import CivilizationsEnum from "../../data/CivilizationsEnum";
 import FrenchFeatures from "./french-features/FrenchFeatures";
 import EnglishFeatures from "./english-featrues/EnglishFeatures";
@@ -28,7 +29,7 @@ import TughlaqDynastyFeatures from "./tughlaq-dynasty-features/TughlaqDynastyFea
 function CivilizationSpecificFeatures() {
     const selectedCivilization: CivilizationsEnum = useAppSelector((rootState) => rootState.civilization.selected);
     let civilizationSpecificComponents: Map<CivilizationsEnum, any> = new Map<CivilizationsEnum, any>([
-        [CivilizationsEnum.RANDOM, <div/>],
+        [CivilizationsEnum.RANDOM, <HowToUse/>],
         [CivilizationsEnum.ABBASID, <AbbasidFeatures/>],
         [CivilizationsEnum.CHINESE, <ChineseFeatures/>],
         [CivilizationsEnum.HRE, <HreFeatures/>],

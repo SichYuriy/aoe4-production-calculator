@@ -28,6 +28,12 @@
     align-items: center;
 }
 
+.civilizationSpecificFeaturesSelectContainer {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
 .civilizationSpecificFeatures {
     display: flex;
     gap: 10px;

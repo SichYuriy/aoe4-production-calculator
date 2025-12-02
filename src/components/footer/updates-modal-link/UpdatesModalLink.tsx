@@ -13,6 +13,12 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '179',
+        date: new Date(2025, 10, 25),
+        patch: '15.1.6970',
+        description: "Add survival technics"
+    },
+    {
         id: '178',
         date: new Date(2025, 10, 25),
         patch: '15.1.6970',

@@ -31,6 +31,20 @@ const GATHERING_RATES_MODIFIERS: { [key: string]: GatheringRateModifier } = {
         },
         description: '[berries, deer] * 1.0952, [sheep, cattle] * 1.03, [farm] * 1.032, [wood, gold, stone] * 1.07'
     },
+    [GatheringRateModifierId.SURVIVALTECH]: {
+        id: GatheringRateModifierId.SURVIVALTECH,
+        apply: (rates, foodSource) => {
+            let foodMultiplier = 1;
+            if ([FoodSource.DEER].includes(foodSource)) {
+                foodMultiplier = 1.15;
+            }
+            return {
+                ...rates,
+                food: rates.food * foodMultiplier
+            };
+        },
+        description: '[deer] * 1.15'
+    },
     [GatheringRateModifierId.DOUBLE_BROADAX]: {
         id: GatheringRateModifierId.DOUBLE_BROADAX,
         apply: rates => {
