@@ -13,8 +13,14 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '180',
+        date: new Date(2025, 11, 1),
+        patch: '15.1.6970',
+        description: "Fix golden horde units cost"
+    },
+    {
         id: '179',
-        date: new Date(2025, 10, 25),
+        date: new Date(2025, 11, 1),
         patch: '15.1.6970',
         description: "Add survival technics"
     },
