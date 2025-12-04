@@ -3,6 +3,7 @@ import berryIcon from '../../icons/berrybush.png';
 import deerIcon from '../../icons/deer.png';
 import farmIcon from '../../icons/farm.png';
 import cattleIcon from '../../icons/cattle.png';
+import stockyardIcon from '../../icons/stockyard-1.png';
 import s from './food-source-selector.module.css'
 import FoodSource from "../../model/FoodSource";
 import {useAppDispatch, useAppSelector} from "../../hooks";
@@ -41,6 +42,12 @@ function FoodSourceSelector() {
                 <Tooltip text={'Use only with Malians'} header={'Cattle'}>
                     <input type={'radio'} value={FoodSource.CATTLE} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.CATTLE}/>
                     <img src={cattleIcon} className={s.foodSourceRadioIcon} alt={'cattle'}/>
+                </Tooltip>
+            </label>
+            <label>
+                <Tooltip text={'Use only with Golden Horde'} header={'Stockyard'}>
+                    <input type={'radio'} value={FoodSource.STOCKYARD} name={'food-source'} onChange={dispatchChange} checked={foodSource === FoodSource.STOCKYARD}/>
+                    <img src={stockyardIcon} className={s.foodSourceRadioIcon} alt={'stockyard'}/>
                 </Tooltip>
             </label>
         </div>

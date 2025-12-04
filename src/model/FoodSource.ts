@@ -4,7 +4,8 @@ enum FoodSource {
     DEER = 'DEER',
     FARM = 'FARM',
     TWIN_MINARET_BERRY = 'TWIN_MINARET_BERRY',
-    CATTLE = 'CATTLE'
+    CATTLE = 'CATTLE',
+    STOCKYARD = 'STOCKYARD'
 }
 
 export default FoodSource;

@@ -46,4 +46,11 @@ Order of the Dragon
 - [p2] governor 1
 - [p2] hisar academy
 
+## Golden horde
+
+- [p1] Stockyard: food source (38.67) +
+- [p1] edicts ? production speed edict, stockyard edict (gold from stockyard)
+- [p1] rotation grazing 10%, over grazing 10% (stockyard food)
+- [p2] yam networks trade
+- [p2] increased supplies (production speed +50%)
 
