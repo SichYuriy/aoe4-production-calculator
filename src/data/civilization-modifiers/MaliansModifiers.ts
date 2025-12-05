@@ -61,7 +61,7 @@ let cattleRanchCattle: PassiveIncomeModifier = {
 
 let fulaniCarrolCattle: PassiveIncomeModifier = {
     id: PassiveIncomeModifierId.FULANI_CARROL_CATTLE,
-    food: 20,
+    food: 18,
     gold: 0,
     wood: 0,
     stone: 0,

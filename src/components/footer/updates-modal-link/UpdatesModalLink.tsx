@@ -13,6 +13,24 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '183',
+        date: new Date(2025, 11, 4),
+        patch: '15.2.7380',
+        description: "Raider Elephant cost reduced from 200 Food 40 Wood to 180 Food 40 Wood"
+    },
+    {
+        id: '182',
+        date: new Date(2025, 11, 4),
+        patch: '15.2.7380',
+        description: "Fulani Corral food generation per Cattle reduced from 20 to 18"
+    },
+    {
+        id: '181',
+        date: new Date(2025, 11, 4),
+        patch: '15.2.7380',
+        description: "Increased the Food cost of the Yumi Ashigaru from 25 to 30"
+    },
+    {
         id: '180',
         date: new Date(2025, 11, 1),
         patch: '15.1.6970',

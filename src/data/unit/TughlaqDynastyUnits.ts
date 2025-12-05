@@ -16,7 +16,7 @@ const TUGHLAQ_DYNASTY_UNITS: Unit[] = [
         icon: raiderElephant,
         name: 'raider elephant',
         productionTime: 25,
-        cost: new UnitCost(200, 0, 40, 0),
+        cost: new UnitCost(180, 0, 40, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.TUGHLAQ_DYNASTY],

@@ -33,7 +33,7 @@ const JAPANESE_UNITS: Unit[] = [
         icon: yumiAshigaruIcon,
         name: 'yumi ashigaru',
         productionTime: 13,
-        cost: new UnitCost(25, 0, 35, 0),
+        cost: new UnitCost(30, 0, 35, 0),
         types: [UnitType.INFANTRY],
         building: Building.ARCHERY,
         civilizations: [CivilizationsEnum.JAPANESE, CivilizationsEnum.SENGOKU_DAIMYO],
