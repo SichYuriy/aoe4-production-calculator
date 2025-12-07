@@ -40,6 +40,7 @@ Order of the Dragon
 - English, Council Hall now produces Longbowmen at a 5% discount. +
 - Rus, Hunting Cabin income reduced by 15%. (not implemented)
 
+
 ## Tughlaq features
 
 - [p1] dome of faith: imam, healer elephant +
@@ -49,8 +50,10 @@ Order of the Dragon
 ## Golden horde
 
 - [p1] Stockyard: food source (38.67) +
-- [p1] edicts ? production speed edict, stockyard edict (gold from stockyard)
+- [p1] edicts ? production speed edict, [enabled by default], production military speed +20% +
+- [p1] stockyard edict (gold from stockyard) 40 gold per stockyard +
+- [p1] increased supplies (production speed +50%)
 - [p1] rotation grazing 10%, over grazing 10% (stockyard food)
-- [p2] yam networks trade
-- [p2] increased supplies (production speed +50%)
+- [p2] yam networks trade (The Golden Tent will generate 10 Gold every 10 seconds for each Fortified Outpost, up to a maximum of 6 Fortified Outposts.)
+
 

@@ -1,16 +1,43 @@
 import CivilizationModifiers from "../../model/CivilizationModifiers";
 import CivilizationsEnum from "../CivilizationsEnum";
+import ProductionSpeedModifier from "../../model/ProductionSpeedModifier";
+import ProductionSpeedModifierId from "../production-speed-modifiers/ProductionSpeedModifierId";
+import {UnitType} from "../../model/Unit";
+import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
+import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
+import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+
+const productionSpeedEdict: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT,
+    canBeApplied: unit => unit.types.some(unitType =>
+        [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT, UnitType.MILITARY_SHIP].includes(unitType)
+    ),
+    productionSpeedBonus: 0.2
+}
+
+const stockyardEdict: PassiveIncomeModifier = {
+    id: PassiveIncomeModifierId.STOCKYARD_EDICT,
+    food: 0,
+    gold: 40,
+    wood:0,
+    stone: 0,
+    source: PassiveIncomeSource.STOCKYARD
+}
 
 const GOLDEN_HORDE_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.GOLDEN_HORDE,
     allGatheringRateModifiers: {},
     defaultGatheringRateModifiers: [],
-    allProductionSpeedModifiers: {},
-    defaultProductionSpeedModifiers: [],
+    allProductionSpeedModifiers: {
+        [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT]: productionSpeedEdict
+    },
+    defaultProductionSpeedModifiers: [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT],
     allCostModifiers: {},
     defaultCostModifiers: [],
-    passiveIncomeSources: [],
-    allPassiveIncomeModifiers: {},
+    passiveIncomeSources: [PassiveIncomeSource.STOCKYARD],
+    allPassiveIncomeModifiers: {
+        [PassiveIncomeModifierId.STOCKYARD_EDICT]: stockyardEdict
+    },
     defaultPassiveIncomeModifiers: [],
     allLimitedFoodGatheringSourceModifiers: {},
     allPassiveIncomeFromGatheringVillagerModifiers: {},

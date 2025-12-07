@@ -62,6 +62,22 @@ describe('ProductionCalculatorService', () => {
             expect(actual.stoneVillagers).toBeCloseTo(0);
         });
 
+        it('multiple productionSpeedModifier should be multiplicative', () => {
+            let actual = subject.calculateProductionVillagerCost(
+                gatheringRates,
+                {'WHITE_TOWER_MAN_AT_ARMS': 1},
+                [
+                    PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.ENGLISH_MMA],
+                    PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.WHITE_TOWER],
+                    PRODUCTION_SPEED_MODIFIERS[ProductionSpeedModifierId.MILITARY_ACADEMY]
+                ],
+                [], new ResourcesAmount(), new ResourcesAmount(), [], [], FoodSource.FARM, 0, {})
+            expect(actual.foodVillagers).toBeCloseTo(23.275);
+            expect(actual.woodVillagers).toBeCloseTo(0);
+            expect(actual.goldVillagers).toBeCloseTo(4.655);
+            expect(actual.stoneVillagers).toBeCloseTo(0);
+        });
+
         it('one costModifier', () => {
             let actual = subject.calculateProductionVillagerCost(gatheringRates, unitsSelected,
                 [], [COST_MODIFIERS[CostModifierId.FRENCH_CASTLE]], new ResourcesAmount(), new ResourcesAmount(), [], [], FoodSource.FARM, 0, {})
