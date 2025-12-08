@@ -6,6 +6,9 @@ import {UnitType} from "../../model/Unit";
 import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
+import GatheringRateModifier from "../../model/GatheringRateModifier";
+import GatheringRateModifierId from "../gathering-rate-modifiers/GatheringRateModifierId";
+import FoodSource from "../../model/FoodSource";
 
 const productionSpeedEdict: ProductionSpeedModifier = {
     id: ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT,
@@ -24,9 +27,28 @@ const stockyardEdict: PassiveIncomeModifier = {
     source: PassiveIncomeSource.STOCKYARD
 }
 
+const rotationGrazing: GatheringRateModifier = {
+    id: GatheringRateModifierId.ROTATION_GRAZING,
+    apply: (gatheringRates, foodSource) => foodSource === FoodSource.STOCKYARD
+        ? {...gatheringRates, food: gatheringRates.food * 1.097}
+        : gatheringRates,
+    description: 'stockyard * 1.097'
+}
+
+const overGrazing: GatheringRateModifier = {
+    id: GatheringRateModifierId.OVER_GRAZING,
+    apply: (gatheringRates, foodSource) => foodSource === FoodSource.STOCKYARD
+        ? {...gatheringRates, food: gatheringRates.food * 1.095}
+        : gatheringRates,
+    description: 'stockyard * 1.095'
+}
+
 const GOLDEN_HORDE_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.GOLDEN_HORDE,
-    allGatheringRateModifiers: {},
+    allGatheringRateModifiers: {
+        [GatheringRateModifierId.ROTATION_GRAZING]: rotationGrazing,
+        [GatheringRateModifierId.OVER_GRAZING]: overGrazing
+    },
     defaultGatheringRateModifiers: [],
     allProductionSpeedModifiers: {
         [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT]: productionSpeedEdict
