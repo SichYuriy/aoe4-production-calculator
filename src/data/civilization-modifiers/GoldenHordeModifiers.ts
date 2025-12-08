@@ -43,6 +43,14 @@ const overGrazing: GatheringRateModifier = {
     description: 'stockyard * 1.095'
 }
 
+const increasedSupplies: ProductionSpeedModifier = {
+    id: ProductionSpeedModifierId.INCREASED_SUPPLIES,
+    canBeApplied: unit => unit.types.some(unitType =>
+        [UnitType.INFANTRY, UnitType.CAVALRY, UnitType.SIEGE, UnitType.TRANSPORT, UnitType.MILITARY_SHIP].includes(unitType)
+    ),
+    productionSpeedBonus: 0.5
+}
+
 const GOLDEN_HORDE_MODIFIERS: CivilizationModifiers = {
     civilization: CivilizationsEnum.GOLDEN_HORDE,
     allGatheringRateModifiers: {
@@ -51,7 +59,8 @@ const GOLDEN_HORDE_MODIFIERS: CivilizationModifiers = {
     },
     defaultGatheringRateModifiers: [],
     allProductionSpeedModifiers: {
-        [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT]: productionSpeedEdict
+        [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT]: productionSpeedEdict,
+        [ProductionSpeedModifierId.INCREASED_SUPPLIES]: increasedSupplies
     },
     defaultProductionSpeedModifiers: [ProductionSpeedModifierId.PRODUCTION_SPEED_EDICT],
     allCostModifiers: {},

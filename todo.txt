@@ -52,8 +52,8 @@ Order of the Dragon
 - [p1] Stockyard: food source (38.67) +
 - [p1] edicts ? production speed edict, [enabled by default], production military speed +20% +
 - [p1] stockyard edict (gold from stockyard) 40 gold per stockyard +
-- [p1] increased supplies (production speed +50%)
-- [p1] rotation grazing 10%, over grazing 10% (stockyard food)
+- [p1] increased supplies (production speed +50%) +
+- [p1] rotation grazing 10%, over grazing 10% (stockyard food) +
 - [p2] yam networks trade (The Golden Tent will generate 10 Gold every 10 seconds for each Fortified Outpost, up to a maximum of 6 Fortified Outposts.)
 
 
