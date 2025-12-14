@@ -56,4 +56,8 @@ Order of the Dragon
 - [p1] rotation grazing 10%, over grazing 10% (stockyard food) +
 - [p2] yam networks trade (The Golden Tent will generate 10 Gold every 10 seconds for each Fortified Outpost, up to a maximum of 6 Fortified Outposts.)
 
+## Macedonian dynasty
+
+- [p1] Grand Winery +30% food gathering speed +
+
 
