@@ -20,7 +20,12 @@ enum PassiveIncomeSource {
     MANOR = 'MANOR',
     MANOR_VILLAGER = 'MANOR_VILLAGER',
     PILGRIM = 'PILGRIM',
-    STOCKYARD = 'STOCKYARD'
+    STOCKYARD = 'STOCKYARD',
+    BOAR_YATAI = 'BOAR_YATAI',
+    DEER_YATAI = 'DEER_YATAI',
+    BERRY_YATAI = 'BERRY_YATAI',
+    SHEEP_YATAI = 'SHEEP_YATAI',
+    FARM_YATAI = 'FARM_YATAI'
 }
 
 export default PassiveIncomeSource;

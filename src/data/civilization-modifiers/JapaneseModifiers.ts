@@ -9,7 +9,7 @@ import PassiveIncomeModifier from "../../model/PassiveIncomeModifier";
 import PassiveIncomeModifierId from "../passive-income-modifiers/PassiveIncomeModifierId";
 import PassiveIncomeSource from "../passive-income-modifiers/PassiveIncomeSource";
 
-const japaneseFishingBoats: UnitCostModifier = {
+export const japaneseFishingBoats: UnitCostModifier = {
     id: CostModifierId.JAPANESE_FISHING_BOATS,
     canBeApplied: unit => unit.id === 'FISHING_BOAT',
     apply: currentCost => ({

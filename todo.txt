@@ -61,3 +61,11 @@ Order of the Dragon
 - [p1] Grand Winery +30% food gathering speed +
 
 
+## Sengoku
+
+- fishing ships 25% cheaper +
+- yatai: 60 food boar, berries 36, deer 48, sheep 2, farm 4 +
+- sake brewery 5 vils, 280 gold per minute
+
+
+
