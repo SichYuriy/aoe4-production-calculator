@@ -67,5 +67,13 @@ Order of the Dragon
 - yatai: 60 food boar, berries 36, deer 48, sheep 2, farm 4 +
 - sake brewery 5 vils, 280 gold per minute
 
+-- implementation: ?? (implementation difficulty is not worth of an effect on calculator)
+--- gathering rate upgrades and resource drop off modifiers depend on resource sources
+--- mining upgrades: first 2 react on sake brewery, third does not react on sake brewery
+--- new limitedResourceSourceModifier: takes villagers while needed, has priority to sort by (single modifier works with single resource type)
+--- new service for limitedResourceSourceModifier
+--- gathering rate service: new method to accept baseGatheringRates and only specific gatheringRateModifiers/resourceDropOffModifiers
+--- using new service
+
 
 

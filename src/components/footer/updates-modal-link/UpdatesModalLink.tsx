@@ -13,6 +13,18 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '186',
+        date: new Date(2025, 11, 21),
+        patch: '15.2.7380',
+        description: "Add core Sengoku Daimyo features"
+    },
+    {
+        id: '185',
+        date: new Date(2025, 11, 21),
+        patch: '15.2.7380',
+        description: "Add core Macedonian features"
+    },
+    {
         id: '184',
         date: new Date(2025, 11, 7),
         patch: '15.2.7380',
