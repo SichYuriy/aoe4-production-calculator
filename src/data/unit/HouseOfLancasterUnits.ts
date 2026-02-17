@@ -25,7 +25,7 @@ const HOUSE_OF_LANCASTER_UNITS: Unit[] = [
         icon: hobelarIcon,
         name: 'hobelar',
         productionTime: 15,
-        cost: new UnitCost(70, 20, 0, 0),
+        cost: new UnitCost(75, 20, 0, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
         civilizations: [CivilizationsEnum.HOUSE_OF_LANCASTER],

@@ -76,4 +76,13 @@ Order of the Dragon
 --- using new service
 
 
+### Patch 15.3.8338
+
+Increase Hobelar cost from 70 Food 20 Gold → 75 Food 20 Gold
+
+Genoese Crossbowman cost reduced from 100 Gold → 90 Gold.
+
+Hisar Academy resource generation per active Governor increased from 50 Food 50 Gold → 70 Food 70 Gold.
+
+
 

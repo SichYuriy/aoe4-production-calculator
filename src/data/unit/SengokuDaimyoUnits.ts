@@ -51,7 +51,7 @@ const SENGOKU_DAIMYO_UNITS: Unit[] = [
         cost: new UnitCost(115, 0, 30, 0),
         types: [UnitType.CAVALRY],
         building: Building.STABLE,
-        civilizations: [CivilizationsEnum.CHINESE],
+        civilizations: [CivilizationsEnum.SENGOKU_DAIMYO],
         common: false,
         displayOrder: 1800
     },

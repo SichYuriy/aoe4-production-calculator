@@ -13,6 +13,24 @@ type UpdateItem = {
 
 const updates: UpdateItem[] = [
     {
+        id: '189',
+        date: new Date(2026, 1, 16),
+        patch: '15.3.8338',
+        description: "Genoese Crossbowman cost reduced from 100 Gold → 90 Gold"
+    },
+    {
+        id: '188',
+        date: new Date(2026, 1, 16),
+        patch: '15.3.8338',
+        description: "Increase Hobelar cost from 70 Food 20 Gold → 75 Food 20 Gold"
+    },
+    {
+        id: '187',
+        date: new Date(2026, 0, 8),
+        patch: '15.2.7380',
+        description: "Fix yari cavalry civilization"
+    },
+    {
         id: '186',
         date: new Date(2025, 11, 21),
         patch: '15.2.7380',
